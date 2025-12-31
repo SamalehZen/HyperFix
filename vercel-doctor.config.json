@@ -1,0 +1,9 @@
+{
+  "ignore": {
+    "rules": [
+      "vercel-doctor/vercel-large-static-asset",
+      "vercel-doctor/vercel-consider-bun-runtime",
+      "vercel-doctor/vercel-consider-fluid-compute"
+    ]
+  }
+}
