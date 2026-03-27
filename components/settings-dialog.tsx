@@ -24,6 +24,7 @@ import {
 import { useState, useEffect, useMemo } from 'react';
 import { sileo } from 'sileo';
 import { useQuery } from '@tanstack/react-query';
+import { SlidersHorizontal } from 'lucide-react';
 import { cn, getSearchGroups, SearchGroupId } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { useSelectedProfileIcon } from '@/hooks/use-selected-profile-icon';
@@ -197,10 +198,10 @@ export function PreferencesSection({ user }: { user: any }) {
     setItems(newItems);
     try {
       setAgentOrder(newItems);
-      sileo.success({ title: 'Ordre des agents mis à jour', description: 'Les changements ont été enregistrés' });
+      sileo.success({ title: 'Ordre des agents mis à jour', description: 'Les changements ont été enregistrés', icon: <SlidersHorizontal size={14} /> });
     } catch (e) {
       setItems(previous);
-      sileo.error({ title: "Impossible d'enregistrer l'ordre", description: "Veuillez réessayer" });
+      sileo.error({ title: "Impossible d'enregistrer l'ordre", description: "Veuillez réessayer", icon: <SlidersHorizontal size={14} /> });
     }
   };
 

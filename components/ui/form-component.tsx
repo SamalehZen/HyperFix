@@ -11,7 +11,7 @@ import {
   getAcceptedFileTypes,
   shouldBypassRateLimits,
 } from '@/ai/providers';
-import { X, Check, ChevronsUpDown, Wand2, Upload, CheckIcon, ArrowUpRight } from 'lucide-react';
+import { X, Check, ChevronsUpDown, Wand2, Upload, CheckIcon, ArrowUpRight, Mic, Shield, ShieldAlert, AlertCircle, FileText, Image as ImageIcon, Clock } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogDescription } from '@/components/ui/dialog';
 import { cn, SearchGroup, SearchGroupId, getSearchGroups, SearchProvider } from '@/lib/utils';
 import { track } from '@vercel/analytics';
@@ -1298,13 +1298,13 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
   const handleEnhance = useCallback(async () => {
     if (!input || input.trim().length === 0) {
-      sileo.error({ title: 'Please enter a prompt to enhance', description: 'Type something first' });
+      sileo.error({ title: 'Please enter a prompt to enhance', description: 'Type something first', icon: <Wand2 size={14} /> });
       return;
     }
     if (isProcessing || isEnhancing) return;
 
     const originalInput = input;
-    const toastId = sileo.show({ title: 'Enhancing your prompt...', description: 'Please wait' });
+    const toastId = sileo.show({ title: 'Enhancing your prompt...', description: 'Please wait', icon: <Wand2 size={14} /> });
     try {
       setIsEnhancing(true);
 
@@ -1314,19 +1314,19 @@ const FormComponent: React.FC<FormComponentProps> = ({
         setInput('');
         typewriterText(result.enhanced);
         sileo.dismiss(toastId);
-        sileo.success({ title: '✨ Prompt enhanced successfully!', description: 'Your prompt has been improved' });
+        sileo.success({ title: '✨ Prompt enhanced successfully!', description: 'Your prompt has been improved', icon: <Wand2 size={14} /> });
         setIsEnhancing(false);
         inputRef.current?.focus();
       } else {
         setInput(originalInput);
         sileo.dismiss(toastId);
-        sileo.error({ title: result?.error || 'Failed to enhance prompt', description: 'Please try again' });
+        sileo.error({ title: result?.error || 'Failed to enhance prompt', description: 'Please try again', icon: <Wand2 size={14} /> });
         setIsEnhancing(false);
       }
     } catch (e) {
       setInput(originalInput);
       sileo.dismiss(toastId);
-      sileo.error({ title: 'Failed to enhance prompt', description: 'Please try again' });
+      sileo.error({ title: 'Failed to enhance prompt', description: 'Please try again', icon: <Wand2 size={14} /> });
       setIsEnhancing(false);
     }
   }, [
@@ -1352,14 +1352,14 @@ const FormComponent: React.FC<FormComponentProps> = ({
     } else {
       try {
         if (typeof window === 'undefined') {
-          sileo.error({ title: 'Voice recognition is only available in the browser.', description: 'Please use a browser to record' });
+          sileo.error({ title: 'Voice recognition is only available in the browser.', description: 'Please use a browser to record', icon: <Mic size={14} /> });
           return;
         }
 
         const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
         
         if (!SpeechRecognition) {
-          sileo.error({ title: 'Speech recognition is not supported in this browser. Try Chrome, Edge, or Safari.', description: 'Please switch browsers' });
+          sileo.error({ title: 'Speech recognition is not supported in this browser. Try Chrome, Edge, or Safari.', description: 'Please switch browsers', icon: <Mic size={14} /> });
           return;
         }
 
@@ -1395,13 +1395,13 @@ const FormComponent: React.FC<FormComponentProps> = ({
           console.error('Speech recognition error:', event.error);
           
           if (event.error === 'no-speech') {
-            sileo.error({ title: 'No speech detected. Please try again.', description: 'Speak clearly into your microphone' });
+            sileo.error({ title: 'No speech detected. Please try again.', description: 'Speak clearly into your microphone', icon: <Mic size={14} /> });
           } else if (event.error === 'not-allowed') {
-            sileo.error({ title: 'Microphone access denied. Enable it in your browser settings.', description: 'Check your permissions' });
+            sileo.error({ title: 'Microphone access denied. Enable it in your browser settings.', description: 'Check your permissions', icon: <Mic size={14} /> });
           } else if (event.error === 'network') {
-            sileo.error({ title: 'Network error. Please check your connection.', description: 'Verify your internet connection' });
+            sileo.error({ title: 'Network error. Please check your connection.', description: 'Verify your internet connection', icon: <Mic size={14} /> });
           } else {
-            sileo.error({ title: `Speech recognition error: ${event.error}`, description: 'Please try again' });
+            sileo.error({ title: `Speech recognition error: ${event.error}`, description: 'Please try again', icon: <Mic size={14} /> });
           }
           
           cleanupSpeechRecognition();
@@ -1416,7 +1416,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
         recognition.start();
       } catch (error) {
         console.error('Error starting speech recognition:', error);
-        sileo.error({ title: 'Could not start speech recognition. Please try again.', description: 'An unexpected error occurred' });
+        sileo.error({ title: 'Could not start speech recognition. Please try again.', description: 'An unexpected error occurred', icon: <Mic size={14} /> });
         setIsRecording(false);
       }
     }
@@ -1429,7 +1429,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
       if (newValue.length > MAX_INPUT_CHARS) {
         setInput(newValue);
-        sileo.error({ title: `Your input exceeds the maximum of ${MAX_INPUT_CHARS} characters.`, description: 'Please shorten your text' });
+        sileo.error({ title: `Your input exceeds the maximum of ${MAX_INPUT_CHARS} characters.`, description: 'Please shorten your text', icon: <AlertCircle size={14} /> });
       } else {
         setInput(newValue);
       }
@@ -1484,7 +1484,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
       }
     } catch (error) {
       console.error('Error uploading file:', error);
-      sileo.error({ title: `Failed to upload ${file.name}: ${error instanceof Error ? error.message : 'Unknown error'}`, description: 'Please try again' });
+      sileo.error({ title: `Failed to upload ${file.name}: ${error instanceof Error ? error.message : 'Unknown error'}`, description: 'Please try again', icon: <Upload size={14} /> });
       throw error;
     }
   }, []);
@@ -1532,7 +1532,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           'Unsupported files:',
           unsupportedFiles.map((f) => `${f.name} (${f.type})`),
         );
-        sileo.error({ title: `Some files are not supported: ${unsupportedFiles.map((f) => f.name).join(', ')}`, description: 'Only images and PDFs are accepted' });
+        sileo.error({ title: `Some files are not supported: ${unsupportedFiles.map((f) => f.name).join(', ')}`, description: 'Only images and PDFs are accepted', icon: <Upload size={14} /> });
       }
 
       if (blockedPdfFiles.length > 0) {
@@ -1543,6 +1543,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
         sileo.error({
           title: 'PDF uploads require Pro subscription. Upgrade to access PDF analysis.',
           description: 'Pro subscription required',
+          icon: <FileText size={14} />,
           button: {
             title: 'Upgrade',
             onClick: () => (window.location.href = '/pricing'),
@@ -1567,7 +1568,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           setSelectedModel(compatibleModel.value);
         } else {
           console.warn('No PDF-compatible model found');
-          sileo.error({ title: 'PDFs are only supported by Gemini and Claude models', description: 'Please switch model or remove PDFs' });
+          sileo.error({ title: 'PDFs are only supported by Gemini and Claude models', description: 'Please switch model or remove PDFs', icon: <FileText size={14} /> });
 
           if (imageFiles.length === 0) {
             event.target.value = '';
@@ -1588,7 +1589,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
       const totalAttachments = attachments.length + validFiles.length;
       if (totalAttachments > MAX_FILES) {
-        sileo.error({ title: `You can only attach up to ${MAX_FILES} files.`, description: 'Please remove some files first' });
+        sileo.error({ title: `You can only attach up to ${MAX_FILES} files.`, description: 'Please remove some files first', icon: <Upload size={14} /> });
         event.target.value = '';
         return;
       }
@@ -1602,7 +1603,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
       if (imageFiles.length > 0) {
         try {
           console.log('Checking image moderation for', imageFiles.length, 'images');
-          sileo.info({ title: 'Checking images for safety...', description: 'This may take a moment' });
+          sileo.info({ title: 'Checking images for safety...', description: 'This may take a moment', icon: <Shield size={14} /> });
 
           const imageDataURLs = await Promise.all(imageFiles.map((file) => fileToDataURL(file)));
 
@@ -1613,7 +1614,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
             const [status, category] = moderationResult.split('\n');
             if (status === 'unsafe') {
               console.warn('Unsafe image detected, category:', category);
-              sileo.error({ title: `Image content violates safety guidelines (${category}). Please choose different images.`, description: 'Inappropriate content detected' });
+              sileo.error({ title: `Image content violates safety guidelines (${category}). Please choose different images.`, description: 'Inappropriate content detected', icon: <ShieldAlert size={14} /> });
               event.target.value = '';
               return;
             }
@@ -1622,7 +1623,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           console.log('Images passed moderation check');
         } catch (error) {
           console.error('Error during image moderation:', error);
-          sileo.error({ title: 'Unable to verify image safety. Please try again.', description: 'Moderation check failed' });
+          sileo.error({ title: 'Unable to verify image safety. Please try again.', description: 'Moderation check failed', icon: <ShieldAlert size={14} /> });
           event.target.value = '';
           return;
         }
@@ -1653,13 +1654,14 @@ const FormComponent: React.FC<FormComponentProps> = ({
           sileo.success({ title:
             `${uploadedAttachments.length} file${uploadedAttachments.length > 1 ? 's' : ''} uploaded successfully`,
             description: 'Files are ready to use',
+            icon: <Upload size={14} />,
           });
         } else {
-          sileo.error({ title: 'No files were successfully uploaded', description: 'Please try again' });
+          sileo.error({ title: 'No files were successfully uploaded', description: 'Please try again', icon: <Upload size={14} /> });
         }
       } catch (error) {
         console.error('Error uploading files!', error);
-        sileo.error({ title: 'Failed to upload one or more files. Please try again.', description: 'An error occurred during upload' });
+        sileo.error({ title: 'Failed to upload one or more files. Please try again.', description: 'An error occurred during upload', icon: <Upload size={14} /> });
       } finally {
         setUploadQueue([]);
         event.target.value = '';
@@ -1715,11 +1717,11 @@ const FormComponent: React.FC<FormComponentProps> = ({
       );
 
       if (allFiles.length === 0) {
-        sileo.error({ title: 'No files detected in drop', description: 'Please try again' });
+        sileo.error({ title: 'No files detected in drop', description: 'Please try again', icon: <Upload size={14} /> });
         return;
       }
 
-      sileo.info({ title: `Detected ${allFiles.length} dropped files`, description: 'Processing files...' });
+      sileo.info({ title: `Detected ${allFiles.length} dropped files`, description: 'Processing files...', icon: <Upload size={14} /> });
 
       const imageFiles: File[] = [];
       const pdfFiles: File[] = [];
@@ -1757,7 +1759,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           'Unsupported files:',
           unsupportedFiles.map((f) => `${f.name} (${f.type})`),
         );
-        sileo.error({ title: `Some files not supported: ${unsupportedFiles.map((f) => f.name).join(', ')}`, description: 'Only images and PDFs are accepted' });
+        sileo.error({ title: `Some files not supported: ${unsupportedFiles.map((f) => f.name).join(', ')}`, description: 'Only images and PDFs are accepted', icon: <Upload size={14} /> });
       }
 
       if (oversizedFiles.length > 0) {
@@ -1765,7 +1767,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           'Oversized files:',
           oversizedFiles.map((f) => `${f.name} (${f.size} bytes)`),
         );
-        sileo.error({ title: `Some files exceed the 5MB limit: ${oversizedFiles.map((f) => f.name).join(', ')}`, description: 'Please reduce file size' });
+        sileo.error({ title: `Some files exceed the 5MB limit: ${oversizedFiles.map((f) => f.name).join(', ')}`, description: 'Please reduce file size', icon: <Upload size={14} /> });
       }
 
       if (blockedPdfFiles.length > 0) {
@@ -1776,6 +1778,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
         sileo.error({
           title: 'PDF uploads require Pro subscription. Upgrade to access PDF analysis.',
           description: 'Pro subscription required',
+          icon: <FileText size={14} />,
           button: {
             title: 'Upgrade',
             onClick: () => (window.location.href = '/pricing'),
@@ -1784,7 +1787,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
       }
 
       if (imageFiles.length === 0 && pdfFiles.length === 0) {
-        sileo.error({ title: 'Only image and PDF files are supported', description: 'Please select valid files' });
+        sileo.error({ title: 'Only image and PDF files are supported', description: 'Please select valid files', icon: <Upload size={14} /> });
         return;
       }
 
@@ -1797,10 +1800,10 @@ const FormComponent: React.FC<FormComponentProps> = ({
         if (compatibleModel) {
           console.log('Switching to compatible model:', compatibleModel.value);
           setSelectedModel(compatibleModel.value);
-          sileo.info({ title: `Switching to ${compatibleModel.label} to support PDF files`, description: 'Model changed automatically' });
+          sileo.info({ title: `Switching to ${compatibleModel.label} to support PDF files`, description: 'Model changed automatically', icon: <FileText size={14} /> });
         } else {
           console.warn('No PDF-compatible model found');
-          sileo.error({ title: 'PDFs are only supported by Gemini and Claude models', description: 'Please switch model or remove PDFs' });
+          sileo.error({ title: 'PDFs are only supported by Gemini and Claude models', description: 'Please switch model or remove PDFs', icon: <FileText size={14} /> });
           if (imageFiles.length === 0) return;
         }
       }
@@ -1817,20 +1820,20 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
       const totalAttachments = attachments.length + validFiles.length;
       if (totalAttachments > MAX_FILES) {
-        sileo.error({ title: `You can only attach up to ${MAX_FILES} files.`, description: 'Please remove some files first' });
+        sileo.error({ title: `You can only attach up to ${MAX_FILES} files.`, description: 'Please remove some files first', icon: <Upload size={14} /> });
         return;
       }
 
       if (validFiles.length === 0) {
         console.error('No valid files to upload after filtering');
-        sileo.error({ title: 'No valid files to upload', description: 'Please check your files' });
+        sileo.error({ title: 'No valid files to upload', description: 'Please check your files', icon: <Upload size={14} /> });
         return;
       }
 
       if (imageFiles.length > 0) {
         try {
           console.log('Checking image moderation for', imageFiles.length, 'images');
-          sileo.info({ title: 'Checking images for safety...', description: 'This may take a moment' });
+          sileo.info({ title: 'Checking images for safety...', description: 'This may take a moment', icon: <Shield size={14} /> });
 
           const imageDataURLs = await Promise.all(imageFiles.map((file) => fileToDataURL(file)));
 
@@ -1841,7 +1844,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
             const [status, category] = moderationResult.split('\n');
             if (status === 'unsafe') {
               console.warn('Unsafe image detected, category:', category);
-              sileo.error({ title: `Image content violates safety guidelines (${category}). Please choose different images.`, description: 'Inappropriate content detected' });
+              sileo.error({ title: `Image content violates safety guidelines (${category}). Please choose different images.`, description: 'Inappropriate content detected', icon: <ShieldAlert size={14} /> });
               return;
             }
           }
@@ -1849,7 +1852,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           console.log('Images passed moderation check');
         } catch (error) {
           console.error('Error during image moderation:', error);
-          sileo.error({ title: 'Unable to verify image safety. Please try again.', description: 'Moderation check failed' });
+          sileo.error({ title: 'Unable to verify image safety. Please try again.', description: 'Moderation check failed', icon: <ShieldAlert size={14} /> });
           return;
         }
       }
@@ -1873,7 +1876,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
       }
 
       setUploadQueue(validFiles.map((file) => file.name));
-      sileo.info({ title: `Starting upload of ${validFiles.length} files...`, description: 'Please wait' });
+      sileo.info({ title: `Starting upload of ${validFiles.length} files...`, description: 'Please wait', icon: <Upload size={14} /> });
 
       setTimeout(async () => {
         try {
@@ -1899,13 +1902,14 @@ const FormComponent: React.FC<FormComponentProps> = ({
             sileo.success({ title:
               `${uploadedAttachments.length} file${uploadedAttachments.length > 1 ? 's' : ''} uploaded successfully`,
               description: 'Files are ready to use',
+              icon: <Upload size={14} />,
             });
           } else {
-            sileo.error({ title: 'No files were successfully uploaded', description: 'Please try again' });
+            sileo.error({ title: 'No files were successfully uploaded', description: 'Please try again', icon: <Upload size={14} /> });
           }
         } catch (error) {
           console.error('Error during file upload:', error);
-          sileo.error({ title: 'Upload failed. Please check console for details.', description: 'An error occurred during upload' });
+          sileo.error({ title: 'Upload failed. Please check console for details.', description: 'An error occurred during upload', icon: <Upload size={14} /> });
         } finally {
           setUploadQueue([]);
         }
@@ -1925,7 +1929,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
       const totalAttachments = attachments.length + imageItems.length;
       if (totalAttachments > MAX_FILES) {
-        sileo.error({ title: `You can only attach up to ${MAX_FILES} files.`, description: 'Please remove some files first' });
+        sileo.error({ title: `You can only attach up to ${MAX_FILES} files.`, description: 'Please remove some files first', icon: <Upload size={14} /> });
         return;
       }
 
@@ -1937,7 +1941,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           'Oversized files:',
           oversizedFiles.map((f) => `${f.name} (${f.size} bytes)`),
         );
-        sileo.error({ title: `Some files exceed the 5MB limit: ${oversizedFiles.map((f) => f.name || 'unnamed').join(', ')}`, description: 'Please reduce file size' });
+        sileo.error({ title: `Some files exceed the 5MB limit: ${oversizedFiles.map((f) => f.name || 'unnamed').join(', ')}`, description: 'Please reduce file size', icon: <Upload size={14} /> });
 
         const validFiles = files.filter((file) => file.size <= MAX_FILE_SIZE);
         if (validFiles.length === 0) return;
@@ -1954,7 +1958,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
       if (filesToUpload.length > 0) {
         try {
           console.log('Checking image moderation for', filesToUpload.length, 'pasted images');
-          sileo.info({ title: 'Checking pasted images for safety...', description: 'This may take a moment' });
+          sileo.info({ title: 'Checking pasted images for safety...', description: 'This may take a moment', icon: <Shield size={14} /> });
 
           const imageDataURLs = await Promise.all(filesToUpload.map((file) => fileToDataURL(file)));
 
@@ -1968,6 +1972,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
               sileo.error({ title:
                 `Pasted image content violates safety guidelines (${category}). Please choose different images.`,
                 description: 'Inappropriate content detected',
+                icon: <ShieldAlert size={14} />,
               });
               return;
             }
@@ -1976,7 +1981,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           console.log('Pasted images passed moderation check');
         } catch (error) {
           console.error('Error during pasted image moderation:', error);
-          sileo.error({ title: 'Unable to verify pasted image safety. Please try again.', description: 'Moderation check failed' });
+          sileo.error({ title: 'Unable to verify pasted image safety. Please try again.', description: 'Moderation check failed', icon: <ShieldAlert size={14} /> });
           return;
         }
       }
@@ -1989,10 +1994,10 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
         setAttachments((currentAttachments) => [...currentAttachments, ...uploadedAttachments]);
 
-        sileo.success({ title: 'Image pasted successfully', description: 'Image is ready to use' });
+        sileo.success({ title: 'Image pasted successfully', description: 'Image is ready to use', icon: <ImageIcon size={14} /> });
       } catch (error) {
         console.error('Error uploading pasted files!', error);
-        sileo.error({ title: 'Failed to upload pasted image. Please try again.', description: 'An error occurred during upload' });
+        sileo.error({ title: 'Failed to upload pasted image. Please try again.', description: 'An error occurred during upload', icon: <ImageIcon size={14} /> });
       } finally {
         setUploadQueue([]);
       }
@@ -2019,24 +2024,24 @@ const FormComponent: React.FC<FormComponentProps> = ({
       event.preventDefault();
 
       if (status !== 'ready') {
-        sileo.error({ title: 'Please wait for the current response to complete!', description: 'Generation in progress' });
+        sileo.error({ title: 'Please wait for the current response to complete!', description: 'Generation in progress', icon: <Clock size={14} /> });
         return;
       }
 
       if (isRecording) {
-        sileo.error({ title: 'Please stop recording before submitting!', description: 'Stop voice recording first' });
+        sileo.error({ title: 'Please stop recording before submitting!', description: 'Stop voice recording first', icon: <Mic size={14} /> });
         return;
       }
 
       const shouldBypassLimitsForThisModel = shouldBypassRateLimits(selectedModel, user);
 
       if (isLimitBlocked && !shouldBypassLimitsForThisModel) {
-        sileo.error({ title: 'Daily search limit reached. Please upgrade to Pro for unlimited searches.', description: 'Upgrade your plan to continue' });
+        sileo.error({ title: 'Daily search limit reached. Please upgrade to Pro for unlimited searches.', description: 'Upgrade your plan to continue', icon: <Clock size={14} /> });
         return;
       }
 
       if (input.length > MAX_INPUT_CHARS) {
-        sileo.error({ title: `Your input exceeds the maximum of ${MAX_INPUT_CHARS} characters. Please shorten your message.`, description: 'Message is too long' });
+        sileo.error({ title: `Your input exceeds the maximum of ${MAX_INPUT_CHARS} characters. Please shorten your message.`, description: 'Message is too long', icon: <AlertCircle size={14} /> });
         return;
       }
 
@@ -2074,7 +2079,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
           fileInputRef.current.value = '';
         }
       } else {
-        sileo.error({ title: 'Please enter a search query or attach an image.', description: 'Your message cannot be empty' });
+        sileo.error({ title: 'Please enter a search query or attach an image.', description: 'Your message cannot be empty', icon: <AlertCircle size={14} /> });
       }
     },
     [
@@ -2113,7 +2118,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
   const triggerFileInput = useCallback(() => {
     if (attachments.length >= MAX_FILES) {
-      sileo.error({ title: `You can only attach up to ${MAX_FILES} images.`, description: 'Please remove some files first' });
+      sileo.error({ title: `You can only attach up to ${MAX_FILES} images.`, description: 'Please remove some files first', icon: <Upload size={14} /> });
       return;
     }
 
@@ -2136,13 +2141,13 @@ const FormComponent: React.FC<FormComponentProps> = ({
           }
           event.preventDefault();
           if (isProcessing) {
-            sileo.error({ title: 'Please wait for the response to complete!', description: 'Generation in progress' });
+            sileo.error({ title: 'Please wait for the response to complete!', description: 'Generation in progress', icon: <Clock size={14} /> });
           } else if (isRecording) {
-            sileo.error({ title: 'Please stop recording before submitting!', description: 'Stop voice recording first' });
+            sileo.error({ title: 'Please stop recording before submitting!', description: 'Stop voice recording first', icon: <Mic size={14} /> });
           } else {
             const shouldBypassLimitsForThisModel = shouldBypassRateLimits(selectedModel, user);
             if (isLimitBlocked && !shouldBypassLimitsForThisModel) {
-              sileo.error({ title: 'Daily search limit reached. Please upgrade to Pro for unlimited searches.', description: 'Upgrade your plan to continue' });
+              sileo.error({ title: 'Daily search limit reached. Please upgrade to Pro for unlimited searches.', description: 'Upgrade your plan to continue', icon: <Clock size={14} /> });
             } else {
               submitForm();
               setTimeout(() => {
@@ -2156,13 +2161,13 @@ const FormComponent: React.FC<FormComponentProps> = ({
           }
           event.preventDefault();
           if (isProcessing) {
-            sileo.error({ title: 'Please wait for the response to complete!', description: 'Generation in progress' });
+            sileo.error({ title: 'Please wait for the response to complete!', description: 'Generation in progress', icon: <Clock size={14} /> });
           } else if (isRecording) {
-            sileo.error({ title: 'Please stop recording before submitting!', description: 'Stop voice recording first' });
+            sileo.error({ title: 'Please stop recording before submitting!', description: 'Stop voice recording first', icon: <Mic size={14} /> });
           } else {
             const shouldBypassLimitsForThisModel = shouldBypassRateLimits(selectedModel, user);
             if (isLimitBlocked && !shouldBypassLimitsForThisModel) {
-              sileo.error({ title: 'Daily search limit reached. Please upgrade to Pro for unlimited searches.', description: 'Upgrade your plan to continue' });
+              sileo.error({ title: 'Daily search limit reached. Please upgrade to Pro for unlimited searches.', description: 'Upgrade your plan to continue', icon: <Clock size={14} /> });
             } else {
               submitForm();
               setTimeout(() => {

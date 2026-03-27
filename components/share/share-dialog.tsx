@@ -15,6 +15,7 @@ import { sileo } from 'sileo';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
+import { ClipboardCheck, Globe, Lock, Share2 } from 'lucide-react';
 
 interface ShareDialogProps {
   isOpen: boolean;
@@ -54,14 +55,14 @@ export function ShareDialog({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
-      sileo.success({ title: 'Lien copié dans le presse-papiers', description: 'Vous pouvez maintenant le coller où vous voulez' });
+      sileo.success({ title: 'Lien copié dans le presse-papiers', description: 'Vous pouvez maintenant le coller où vous voulez', icon: <ClipboardCheck size={14} /> });
       console.log('✅ URL copied to clipboard successfully');
 
       // Reset copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       console.error('❌ Failed to copy to clipboard:', error);
-      sileo.error({ title: "Échec de la copie du lien", description: "Veuillez réessayer" });
+      sileo.error({ title: "Échec de la copie du lien", description: "Veuillez réessayer", icon: <ClipboardCheck size={14} /> });
     }
   };
 
@@ -85,7 +86,7 @@ export function ShareDialog({
         error: error instanceof Error ? error.message : error,
         stack: error instanceof Error ? error.stack : undefined,
       });
-      sileo.error({ title: "Échec du partage de la conversation", description: "Veuillez réessayer ultérieurement" });
+      sileo.error({ title: "Échec du partage de la conversation", description: "Veuillez réessayer ultérieurement", icon: <Share2 size={14} /> });
     } finally {
       setIsChangingVisibility(false);
     }
@@ -100,7 +101,7 @@ export function ShareDialog({
       console.log('📡 Changing visibility to private');
       await onVisibilityChange('private');
       console.log('✅ Visibility changed to private successfully');
-      sileo.success({ title: 'La conversation est maintenant privée', description: 'Elle n\'est plus accessible publiquement' });
+      sileo.success({ title: 'La conversation est maintenant privée', description: 'Elle n\'est plus accessible publiquement', icon: <Lock size={14} /> });
       console.log('🍞 Success toast shown: Chat is now private');
 
       // Close dialog after successful private change
@@ -112,7 +113,7 @@ export function ShareDialog({
         error: error instanceof Error ? error.message : error,
         stack: error instanceof Error ? error.stack : undefined,
       });
-      sileo.error({ title: "Échec de la mise en privé de la conversation", description: "Veuillez réessayer" });
+      sileo.error({ title: "Échec de la mise en privé de la conversation", description: "Veuillez réessayer", icon: <Lock size={14} /> });
       console.log('🍞 Error toast shown: Failed to make chat private');
     } finally {
       setIsChangingVisibility(false);

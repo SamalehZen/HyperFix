@@ -24,6 +24,9 @@ import {
   AlertCircle,
   RefreshCw,
   LogIn,
+  ClipboardCheck,
+  Link,
+  MessageSquare,
 } from 'lucide-react';
 import { TextUIPart, UIMessagePart } from 'ai';
 import { MarkdownRenderer } from '@/components/markdown';
@@ -361,7 +364,7 @@ const MessageEditor: React.FC<MessageEditorProps> = ({
         onSubmit={async (e) => {
           e.preventDefault();
           if (!draftContent.trim()) {
-            sileo.error({ title: 'Please enter a valid message.', description: 'Your message cannot be empty' });
+            sileo.error({ title: 'Please enter a valid message.', description: 'Your message cannot be empty', icon: <MessageSquare size={14} /> });
             return;
           }
 
@@ -419,7 +422,7 @@ const MessageEditor: React.FC<MessageEditorProps> = ({
             await regenerate();
           } catch (error) {
             console.error('Error updating message:', error);
-            sileo.error({ title: 'Failed to update message. Please try again.', description: 'An error occurred while saving' });
+            sileo.error({ title: 'Failed to update message. Please try again.', description: 'An error occurred while saving', icon: <MessageSquare size={14} /> });
           } finally {
             setIsSubmitting(false);
           }
@@ -821,7 +824,7 @@ export const Message: React.FC<MessageProps> = ({
                             .join('')
                             .trim() || '',
                         );
-                        sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere' });
+                        sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
                       }}
                       className={`h-7 w-7 ${(!user || !isOwner) && selectedVisibilityType === 'public'
                         ? 'rounded-md'
@@ -966,7 +969,7 @@ export const Message: React.FC<MessageProps> = ({
                           .join('')
                           .trim() || '',
                       );
-                      sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere' });
+                      sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
                     }}
                     className={`h-7 w-7 ${(!user || !isOwner) && selectedVisibilityType === 'public'
                       ? 'rounded-md'
@@ -1204,7 +1207,7 @@ export const EditableAttachmentsBadge = ({
                   size="icon"
                   onClick={() => {
                     navigator.clipboard.writeText(fileAttachments[selectedIndex].url);
-                    sileo.success({ title: 'File URL copied to clipboard', description: 'You can now paste it anywhere' });
+                    sileo.success({ title: 'File URL copied to clipboard', description: 'You can now paste it anywhere', icon: <Link size={14} /> });
                   }}
                   className="h-8 w-8 rounded-md text-muted-foreground dark:text-muted-foreground"
                   title="Copy link"
@@ -1490,7 +1493,7 @@ export const AttachmentsBadge = ({ attachments }: { attachments: Attachment[] })
                   size="icon"
                   onClick={() => {
                     navigator.clipboard.writeText(fileAttachments[selectedIndex].url);
-                    sileo.success({ title: 'File URL copied to clipboard', description: 'You can now paste it anywhere' });
+                    sileo.success({ title: 'File URL copied to clipboard', description: 'You can now paste it anywhere', icon: <Link size={14} /> });
                   }}
                   className="h-8 w-8 rounded-md text-muted-foreground dark:text-muted-foreground"
                   title="Copy link"

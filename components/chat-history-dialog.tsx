@@ -446,7 +446,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
       await deleteChat(id);
     },
     onSuccess: (_, id) => {
-      sileo.success({ title: 'Conversation supprimée', description: 'La conversation a été supprimée définitivement' });
+      sileo.success({ title: 'Conversation supprimée', description: 'La conversation a été supprimée définitivement', icon: <Trash size={14} /> });
       // Update cache after successful deletion
       queryClient.setQueryData(['chats', user?.id], (oldData: any) => {
         if (!oldData) return oldData;
@@ -461,7 +461,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
     },
     onError: (error) => {
       console.error('Failed to delete chat:', error);
-      sileo.error({ title: 'Échec de la suppression de la conversation. Veuillez réessayer.', description: 'Une erreur est survenue' });
+      sileo.error({ title: 'Échec de la suppression de la conversation. Veuillez réessayer.', description: 'Une erreur est survenue', icon: <Trash size={14} /> });
       queryClient.invalidateQueries({ queryKey: ['chats', user?.id] });
     },
   });
@@ -472,7 +472,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
     },
     onSuccess: (updatedChat, { id, title }) => {
       if (updatedChat) {
-        sileo.success({ title: 'Titre mis à jour', description: 'Le nouveau titre a été enregistré' });
+        sileo.success({ title: 'Titre mis à jour', description: 'Le nouveau titre a été enregistré', icon: <Pencil size={14} /> });
         // Update cache after successful title update
         queryClient.setQueryData(['chats', user?.id], (oldData: any) => {
           if (!oldData) return oldData;
@@ -485,12 +485,12 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
           };
         });
       } else {
-        sileo.error({ title: 'Échec de la mise à jour du titre. Veuillez réessayer.', description: 'Une erreur est survenue' });
+        sileo.error({ title: 'Échec de la mise à jour du titre. Veuillez réessayer.', description: 'Une erreur est survenue', icon: <Pencil size={14} /> });
       }
     },
     onError: (error) => {
       console.error('Failed to update chat title:', error);
-      sileo.error({ title: 'Échec de la mise à jour du titre. Veuillez réessayer.', description: 'Une erreur est survenue' });
+      sileo.error({ title: 'Échec de la mise à jour du titre. Veuillez réessayer.', description: 'Une erreur est survenue', icon: <Pencil size={14} /> });
     },
   });
 
@@ -582,7 +582,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
       } catch (error) {
         // Error handling is done in mutation callbacks, but we should reset state
         console.error('Delete chat error:', error);
-        sileo.error({ title: 'Échec de la suppression de la conversation. Veuillez réessayer.', description: 'Une erreur est survenue' });
+        sileo.error({ title: 'Échec de la suppression de la conversation. Veuillez réessayer.', description: 'Une erreur est survenue', icon: <Trash size={14} /> });
       }
     },
     [deleteMutation, currentChatId],
@@ -618,12 +618,12 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
       e.stopPropagation();
 
       if (!editingTitle.trim()) {
-        sileo.error({ title: 'Le titre ne peut pas être vide', description: 'Veuillez saisir un titre' });
+        sileo.error({ title: 'Le titre ne peut pas être vide', description: 'Veuillez saisir un titre', icon: <Pencil size={14} /> });
         return;
       }
 
       if (editingTitle.trim().length > 100) {
-        sileo.error({ title: 'Le titre est trop long (100 caractères max)', description: 'Veuillez raccourcir le titre' });
+        sileo.error({ title: 'Le titre est trop long (100 caractères max)', description: 'Veuillez raccourcir le titre', icon: <Pencil size={14} /> });
         return;
       }
 

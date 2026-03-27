@@ -12,6 +12,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useSession, signOut } from '@/lib/auth-client';
 import { sileo } from 'sileo';
+import { LogOut } from 'lucide-react';
 import {
   SignOutIcon,
   SignInIcon,
@@ -198,18 +199,18 @@ const UserProfile = memo(
                     fetchOptions: {
                       onRequest: () => {
                         setSigningOut(true);
-                        sileo.show({ title: 'Signing out...', description: 'Veuillez patienter' });
+                        sileo.show({ title: 'Signing out...', description: 'Veuillez patienter', icon: <LogOut size={14} /> });
                       },
                       onSuccess: () => {
                         setSigningOut(false);
                         localStorage.clear();
                         sileo.clear();
-                        sileo.success({ title: 'Signed out successfully', description: 'Vous avez été déconnecté' });
+                        sileo.success({ title: 'Signed out successfully', description: 'Vous avez été déconnecté', icon: <LogOut size={14} /> });
                         window.location.href = '/sign-in';
                       },
                       onError: () => {
                         setSigningOut(false);
-                        sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer' });
+                        sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer', icon: <LogOut size={14} /> });
                         window.location.reload();
                       },
                     },
