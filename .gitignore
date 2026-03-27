@@ -37,3 +37,7 @@ yarn-error.log*
 next-env.d.ts
 
 certificates
+-e 
+# Environment files
+*.env
+*.env.*
