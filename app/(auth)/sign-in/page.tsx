@@ -13,7 +13,7 @@ export default function SignInPage() {
         if (data?.label) {
           sileo.success({ title: 'Profil sélectionné', description: data.label, duration: 3000 });
         } else {
-          sileo.success({ title: 'Profil sélectionné', duration: 3000 });
+          sileo.success({ title: 'Profil sélectionné', description: 'Votre profil est prêt', duration: 3000 });
         }
         localStorage.removeItem('hyper:selected-profile');
       }

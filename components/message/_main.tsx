@@ -361,7 +361,7 @@ const MessageEditor: React.FC<MessageEditorProps> = ({
         onSubmit={async (e) => {
           e.preventDefault();
           if (!draftContent.trim()) {
-            sileo.error({ title: 'Please enter a valid message.' });
+            sileo.error({ title: 'Please enter a valid message.', description: 'Your message cannot be empty' });
             return;
           }
 
@@ -419,7 +419,7 @@ const MessageEditor: React.FC<MessageEditorProps> = ({
             await regenerate();
           } catch (error) {
             console.error('Error updating message:', error);
-            sileo.error({ title: 'Failed to update message. Please try again.' });
+            sileo.error({ title: 'Failed to update message. Please try again.', description: 'An error occurred while saving' });
           } finally {
             setIsSubmitting(false);
           }

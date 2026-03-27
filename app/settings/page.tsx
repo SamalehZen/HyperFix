@@ -96,7 +96,7 @@ function SettingsPageInner() {
       refetch();
     } catch {}
     setAvatarDialogOpen(false);
-    sileo.success({ title: 'Photo de profil mise à jour' });
+    sileo.success({ title: 'Photo de profil mise à jour', description: 'Votre nouvelle photo est maintenant visible' });
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -104,12 +104,12 @@ function SettingsPageInner() {
     if (!file) return;
     
     if (!file.type.startsWith('image/')) {
-      sileo.error({ title: 'Veuillez sélectionner une image' });
+      sileo.error({ title: 'Veuillez sélectionner une image', description: 'Seuls les fichiers image sont acceptés' });
       return;
     }
     
     if (file.size > 10 * 1024 * 1024) {
-      sileo.error({ title: 'L\'image doit faire moins de 10MB' });
+      sileo.error({ title: 'L\'image doit faire moins de 10MB', description: 'Veuillez choisir une image plus légère' });
       return;
     }
     
@@ -129,7 +129,7 @@ function SettingsPageInner() {
       setCustomAvatars((prev) => [url, ...prev.filter(u => u !== url)].slice(0, 6));
       await handleSelectAvatar(url);
     } catch (error) {
-      sileo.error({ title: 'Échec de l\'upload' });
+      sileo.error({ title: 'Échec de l\'upload', description: 'Veuillez réessayer ultérieurement' });
     } finally {
       setIsUploading(false);
       if (fileInputRef.current) fileInputRef.current.value = '';
@@ -176,20 +176,20 @@ function SettingsPageInner() {
                 try {
                   await signOut({
                     fetchOptions: {
-                      onRequest: () => { sileo.show({ title: 'Signing out...' }); },
+                      onRequest: () => { sileo.show({ title: 'Signing out...', description: 'Veuillez patienter' }); },
                       onSuccess: () => {
                         sileo.clear();
-                        sileo.success({ title: 'Signed out' });
+                        sileo.success({ title: 'Signed out', description: 'Vous avez été déconnecté avec succès' });
                         if (typeof window !== 'undefined') window.location.href = '/new';
                       },
                       onError: () => {
                         sileo.clear();
-                        sileo.error({ title: 'Failed to sign out' });
+                        sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer' });
                       },
                     },
                   });
                 } catch (e) {
-                  sileo.error({ title: 'Failed to sign out' });
+                  sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer' });
                 }
               }}
               className="h-7 px-3 text-xs !shadow-none"

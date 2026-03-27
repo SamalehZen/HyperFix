@@ -198,18 +198,18 @@ const UserProfile = memo(
                     fetchOptions: {
                       onRequest: () => {
                         setSigningOut(true);
-                        sileo.show({ title: 'Signing out...' });
+                        sileo.show({ title: 'Signing out...', description: 'Veuillez patienter' });
                       },
                       onSuccess: () => {
                         setSigningOut(false);
                         localStorage.clear();
                         sileo.clear();
-                        sileo.success({ title: 'Signed out successfully' });
+                        sileo.success({ title: 'Signed out successfully', description: 'Vous avez été déconnecté' });
                         window.location.href = '/sign-in';
                       },
                       onError: () => {
                         setSigningOut(false);
-                        sileo.error({ title: 'Failed to sign out' });
+                        sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer' });
                         window.location.reload();
                       },
                     },

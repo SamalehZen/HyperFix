@@ -61,7 +61,7 @@ export function ShareDialog({
       setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       console.error('❌ Failed to copy to clipboard:', error);
-      sileo.error({ title: "Échec de la copie du lien" });
+      sileo.error({ title: "Échec de la copie du lien", description: "Veuillez réessayer" });
     }
   };
 
@@ -85,7 +85,7 @@ export function ShareDialog({
         error: error instanceof Error ? error.message : error,
         stack: error instanceof Error ? error.stack : undefined,
       });
-      sileo.error({ title: "Échec du partage de la conversation" });
+      sileo.error({ title: "Échec du partage de la conversation", description: "Veuillez réessayer ultérieurement" });
     } finally {
       setIsChangingVisibility(false);
     }
@@ -100,7 +100,7 @@ export function ShareDialog({
       console.log('📡 Changing visibility to private');
       await onVisibilityChange('private');
       console.log('✅ Visibility changed to private successfully');
-      sileo.success({ title: 'La conversation est maintenant privée' });
+      sileo.success({ title: 'La conversation est maintenant privée', description: 'Elle n\'est plus accessible publiquement' });
       console.log('🍞 Success toast shown: Chat is now private');
 
       // Close dialog after successful private change
@@ -112,7 +112,7 @@ export function ShareDialog({
         error: error instanceof Error ? error.message : error,
         stack: error instanceof Error ? error.stack : undefined,
       });
-      sileo.error({ title: "Échec de la mise en privé de la conversation" });
+      sileo.error({ title: "Échec de la mise en privé de la conversation", description: "Veuillez réessayer" });
       console.log('🍞 Error toast shown: Failed to make chat private');
     } finally {
       setIsChangingVisibility(false);

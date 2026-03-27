@@ -74,14 +74,14 @@ const LazyCodeBlockComponent: React.FC<CodeBlockProps> = ({ children, language, 
       sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere' });
     } catch (error) {
       console.error('Failed to copy code:', error);
-      sileo.error({ title: 'Failed to copy code' });
+      sileo.error({ title: 'Failed to copy code', description: 'Please try again' });
     }
   }, [children]);
 
   const toggleWrap = useCallback(() => {
     setIsWrapped((prev) => {
       const newState = !prev;
-      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled' });
+      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled', description: newState ? 'Lines will wrap to fit the view' : 'Lines will scroll horizontally' });
       return newState;
     });
   }, []);
@@ -164,14 +164,14 @@ const SyncCodeBlock: React.FC<CodeBlockProps> = ({ language, children, elementKe
       sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere' });
     } catch (error) {
       console.error('Failed to copy code:', error);
-      sileo.error({ title: 'Failed to copy code' });
+      sileo.error({ title: 'Failed to copy code', description: 'Please try again' });
     }
   }, [children]);
 
   const toggleWrap = useCallback(() => {
     setIsWrapped((prev) => {
       const newState = !prev;
-      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled' });
+      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled', description: newState ? 'Lines will wrap to fit the view' : 'Lines will scroll horizontally' });
       return newState;
     });
   }, []);
@@ -458,7 +458,7 @@ const InlineCode: React.FC<{ code: string; elementKey: string }> = React.memo(({
       sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere' });
     } catch (error) {
       console.error('Failed to copy code:', error);
-      sileo.error({ title: 'Failed to copy code' });
+      sileo.error({ title: 'Failed to copy code', description: 'Please try again' });
     }
   }, [code]);
 

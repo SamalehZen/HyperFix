@@ -37,11 +37,11 @@ export function ShareIconDialog({
 
     try {
       await onVisibilityChange('public');
-      sileo.success({ title: 'La conversation est maintenant publique et prête à être partagée' });
+      sileo.success({ title: 'La conversation est maintenant publique et prête à être partagée', description: 'Le lien de partage est maintenant actif' });
       console.log('✅ ShareIconDialog: Successfully made chat public');
     } catch (error) {
       console.error('❌ ShareIconDialog: Error making chat public:', error);
-      sileo.error({ title: 'Échec de la mise en public de la conversation' });
+      sileo.error({ title: 'Échec de la mise en public de la conversation', description: 'Veuillez réessayer' });
       onClose();
     } finally {
       setIsChangingVisibility(false);
@@ -54,12 +54,12 @@ export function ShareIconDialog({
 
     try {
       await onVisibilityChange('private');
-      sileo.success({ title: 'La conversation est maintenant privée' });
+      sileo.success({ title: 'La conversation est maintenant privée', description: 'Elle n\'est plus accessible publiquement' });
       console.log('✅ ShareIconDialog: Successfully made chat private');
       onClose();
     } catch (error) {
       console.error('❌ ShareIconDialog: Error making chat private:', error);
-      sileo.error({ title: 'Échec de la mise en privé de la conversation' });
+      sileo.error({ title: 'Échec de la mise en privé de la conversation', description: 'Veuillez réessayer' });
     } finally {
       setIsChangingVisibility(false);
     }
@@ -74,7 +74,7 @@ export function ShareIconDialog({
       console.log('✅ ShareIconDialog: Link copied to clipboard');
     } catch (error) {
       console.error('❌ ShareIconDialog: Error copying link:', error);
-      sileo.error({ title: 'Échec de la copie du lien' });
+      sileo.error({ title: 'Échec de la copie du lien', description: 'Veuillez réessayer' });
     }
   };
 

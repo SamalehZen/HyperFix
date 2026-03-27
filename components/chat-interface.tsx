@@ -227,7 +227,7 @@ const ChatInterface = memo(
         setSelectedModel('hyper-default');
 
         // Show a toast notification to inform the user
-        sileo.info({ title: 'Switched to default model - Pro subscription required for premium models' });
+        sileo.info({ title: 'Switched to default model - Pro subscription required for premium models', description: 'Upgrade to Pro to access all models' });
       }
     }, [selectedModel, isUserPro, proStatusLoading, setSelectedModel]);
 
@@ -546,7 +546,7 @@ const ChatInterface = memo(
             dispatch({ type: 'SET_VISIBILITY_TYPE', payload: visibility });
             console.log('🔄 Dispatched SET_VISIBILITY_TYPE with:', visibility);
 
-            sileo.success({ title: `Chat is now ${visibility}` });
+            sileo.success({ title: `Chat is now ${visibility}`, description: 'La visibilité a été mise à jour' });
             console.log('🍞 Success toast shown:', `Chat is now ${visibility}`);
 
             // Invalidate cache to refresh the list with updated visibility
@@ -557,7 +557,7 @@ const ChatInterface = memo(
               result,
               success_check: result?.success,
             });
-            sileo.error({ title: 'Failed to update chat visibility' });
+            sileo.error({ title: 'Failed to update chat visibility', description: 'Please try again' });
             console.log('🍞 Error toast shown: Failed to update chat visibility');
           }
         } catch (error) {
@@ -567,7 +567,7 @@ const ChatInterface = memo(
             error: error instanceof Error ? error.message : error,
             stack: error instanceof Error ? error.stack : undefined,
           });
-          sileo.error({ title: 'Failed to update chat visibility' });
+          sileo.error({ title: 'Failed to update chat visibility', description: 'Please try again' });
           console.log('🍞 Error toast shown: Failed to update chat visibility');
         }
       },

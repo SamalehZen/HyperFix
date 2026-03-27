@@ -197,10 +197,10 @@ export function PreferencesSection({ user }: { user: any }) {
     setItems(newItems);
     try {
       setAgentOrder(newItems);
-      sileo.success({ title: 'Ordre des agents mis à jour' });
+      sileo.success({ title: 'Ordre des agents mis à jour', description: 'Les changements ont été enregistrés' });
     } catch (e) {
       setItems(previous);
-      sileo.error({ title: "Impossible d'enregistrer l'ordre" });
+      sileo.error({ title: "Impossible d'enregistrer l'ordre", description: "Veuillez réessayer" });
     }
   };
 

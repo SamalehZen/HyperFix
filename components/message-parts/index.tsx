@@ -237,7 +237,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                               URL.revokeObjectURL(url);
                             } catch (e) {
                               console.error(e);
-                              sileo.error({ title: "Échec du téléchargement Excel" });
+                              sileo.error({ title: "Échec du téléchargement Excel", description: "Veuillez réessayer" });
                             }
                           }}
                           className="size-8 p-0 rounded-full"
@@ -290,19 +290,19 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                         variant="ghost"
                         size="icon"
                         onClick={async () => {
-                          const toastId = sileo.show({ title: 'Génération du PDF...' });
+                          const toastId = sileo.show({ title: 'Génération du PDF...', description: 'Veuillez patienter' });
                           try {
                             await downloadResponseAsPdf(
                               part.text,
                               modelLabel || undefined,
                             );
                             sileo.dismiss(toastId);
-                            sileo.success({ title: 'PDF téléchargé avec succès' });
+                            sileo.success({ title: 'PDF téléchargé avec succès', description: 'Le fichier est prêt' });
                           } catch (error: any) {
                             console.error('PDF export error:', error);
                             const errorMsg = error?.message || String(error) || 'Erreur inconnue';
                             sileo.dismiss(toastId);
-                            sileo.error({ title: `Échec PDF: ${errorMsg.slice(0, 100)}`, duration: 8000 });
+                            sileo.error({ title: `Échec PDF: ${errorMsg.slice(0, 100)}`, description: 'Veuillez réessayer', duration: 8000 });
                           }
                         }}
                         className="size-8 p-0 rounded-full"
