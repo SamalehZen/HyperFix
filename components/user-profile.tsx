@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useSession, signOut } from '@/lib/auth-client';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import {
   SignOutIcon,
   SignInIcon,
@@ -198,18 +198,18 @@ const UserProfile = memo(
                     fetchOptions: {
                       onRequest: () => {
                         setSigningOut(true);
-                        toast.loading('Signing out...');
+                        sileo.show({ title: 'Signing out...' });
                       },
                       onSuccess: () => {
                         setSigningOut(false);
                         localStorage.clear();
-                        toast.success('Signed out successfully');
-                        toast.dismiss();
+                        sileo.clear();
+                        sileo.success({ title: 'Signed out successfully' });
                         window.location.href = '/sign-in';
                       },
                       onError: () => {
                         setSigningOut(false);
-                        toast.error('Failed to sign out');
+                        sileo.error({ title: 'Failed to sign out' });
                         window.location.reload();
                       },
                     },

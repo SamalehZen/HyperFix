@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { Button } from '@/components/ui/button';
 import {
   models,
@@ -378,7 +378,7 @@ export const ModelSwitcher: React.FC<ModelSwitcherProps> = React.memo(
       if (currentModelExists && currentModelRequiresPro && !isProUser && selectedModel !== 'hyper-default') {
         setSelectedModel('hyper-default');
 
-        toast.info('Switched to default model - Pro subscription required for premium models');
+        sileo.info({ title: 'Switched to default model - Pro subscription required for premium models' });
       }
     }, [selectedModel, isProUser, isSubscriptionLoading, setSelectedModel, availableModels]);
 

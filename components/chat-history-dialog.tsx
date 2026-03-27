@@ -31,7 +31,7 @@ import {
 } from 'date-fns';
 import { deleteChat, getUserChats, loadMoreChats, updateChatTitle } from '@/app/actions';
 import { Button } from './ui/button';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { User } from '@/lib/db/schema';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useMutation, useQueryClient, useInfiniteQuery } from '@tanstack/react-query';
@@ -446,7 +446,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
       await deleteChat(id);
     },
     onSuccess: (_, id) => {
-      toast.success('Conversation supprimée');
+      sileo.success({ title: 'Conversation supprimée' });
       // Update cache after successful deletion
       queryClient.setQueryData(['chats', user?.id], (oldData: any) => {
         if (!oldData) return oldData;
@@ -461,7 +461,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
     },
     onError: (error) => {
       console.error('Failed to delete chat:', error);
-      toast.error('Échec de la suppression de la conversation. Veuillez réessayer.');
+      sileo.error({ title: 'Échec de la suppression de la conversation. Veuillez réessayer.' });
       queryClient.invalidateQueries({ queryKey: ['chats', user?.id] });
     },
   });
@@ -472,7 +472,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
     },
     onSuccess: (updatedChat, { id, title }) => {
       if (updatedChat) {
-        toast.success('Titre mis à jour');
+        sileo.success({ title: 'Titre mis à jour' });
         // Update cache after successful title update
         queryClient.setQueryData(['chats', user?.id], (oldData: any) => {
           if (!oldData) return oldData;
@@ -485,12 +485,12 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
           };
         });
       } else {
-        toast.error('Échec de la mise à jour du titre. Veuillez réessayer.');
+        sileo.error({ title: 'Échec de la mise à jour du titre. Veuillez réessayer.' });
       }
     },
     onError: (error) => {
       console.error('Failed to update chat title:', error);
-      toast.error('Échec de la mise à jour du titre. Veuillez réessayer.');
+      sileo.error({ title: 'Échec de la mise à jour du titre. Veuillez réessayer.' });
     },
   });
 
@@ -582,7 +582,7 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
       } catch (error) {
         // Error handling is done in mutation callbacks, but we should reset state
         console.error('Delete chat error:', error);
-        toast.error('Échec de la suppression de la conversation. Veuillez réessayer.');
+        sileo.error({ title: 'Échec de la suppression de la conversation. Veuillez réessayer.' });
       }
     },
     [deleteMutation, currentChatId],
@@ -618,12 +618,12 @@ export function ChatHistoryDialog({ open, onOpenChange, user }: ChatHistoryDialo
       e.stopPropagation();
 
       if (!editingTitle.trim()) {
-        toast.error('Le titre ne peut pas être vide');
+        sileo.error({ title: 'Le titre ne peut pas être vide' });
         return;
       }
 
       if (editingTitle.trim().length > 100) {
-        toast.error('Le titre est trop long (100 caractères max)');
+        sileo.error({ title: 'Le titre est trop long (100 caractères max)' });
         return;
       }
 

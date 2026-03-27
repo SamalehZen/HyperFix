@@ -11,7 +11,7 @@ import {
 } from '@phosphor-icons/react';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Share03Icon } from '@hugeicons/core-free-icons';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
@@ -54,14 +54,14 @@ export function ShareDialog({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
-      toast.success('Lien copié dans le presse-papiers');
+      sileo.success({ title: 'Lien copié dans le presse-papiers' });
       console.log('✅ URL copied to clipboard successfully');
 
       // Reset copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       console.error('❌ Failed to copy to clipboard:', error);
-      toast.error("Échec de la copie du lien");
+      sileo.error({ title: "Échec de la copie du lien" });
     }
   };
 
@@ -85,7 +85,7 @@ export function ShareDialog({
         error: error instanceof Error ? error.message : error,
         stack: error instanceof Error ? error.stack : undefined,
       });
-      toast.error("Échec du partage de la conversation");
+      sileo.error({ title: "Échec du partage de la conversation" });
     } finally {
       setIsChangingVisibility(false);
     }
@@ -100,7 +100,7 @@ export function ShareDialog({
       console.log('📡 Changing visibility to private');
       await onVisibilityChange('private');
       console.log('✅ Visibility changed to private successfully');
-      toast.success('La conversation est maintenant privée');
+      sileo.success({ title: 'La conversation est maintenant privée' });
       console.log('🍞 Success toast shown: Chat is now private');
 
       // Close dialog after successful private change
@@ -112,7 +112,7 @@ export function ShareDialog({
         error: error instanceof Error ? error.message : error,
         stack: error instanceof Error ? error.stack : undefined,
       });
-      toast.error("Échec de la mise en privé de la conversation");
+      sileo.error({ title: "Échec de la mise en privé de la conversation" });
       console.log('🍞 Error toast shown: Failed to make chat private');
     } finally {
       setIsChangingVisibility(false);

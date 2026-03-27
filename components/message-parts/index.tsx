@@ -7,7 +7,7 @@ import { ChatTextHighlighter } from '@/components/chat-text-highlighter';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { deleteTrailingMessages } from '@/app/actions';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { cn } from '@/lib/utils';
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
@@ -237,7 +237,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                               URL.revokeObjectURL(url);
                             } catch (e) {
                               console.error(e);
-                              toast.error("Échec du téléchargement Excel");
+                              sileo.error({ title: "Échec du téléchargement Excel" });
                             }
                           }}
                           className="size-8 p-0 rounded-full"
@@ -273,7 +273,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                         size="icon"
                         onClick={() => {
                           navigator.clipboard.writeText(part.text);
-                          toast.success('Copied to clipboard');
+                          sileo.success({ title: 'Copied to clipboard' });
                         }}
                         className="size-8 p-0 rounded-full"
                       >
@@ -290,17 +290,19 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                         variant="ghost"
                         size="icon"
                         onClick={async () => {
+                          const toastId = sileo.show({ title: 'Génération du PDF...' });
                           try {
-                            toast.loading('Génération du PDF...', { id: 'pdf-export' });
                             await downloadResponseAsPdf(
                               part.text,
                               modelLabel || undefined,
                             );
-                            toast.success('PDF téléchargé avec succès', { id: 'pdf-export' });
+                            sileo.dismiss(toastId);
+                            sileo.success({ title: 'PDF téléchargé avec succès' });
                           } catch (error: any) {
                             console.error('PDF export error:', error);
                             const errorMsg = error?.message || String(error) || 'Erreur inconnue';
-                            toast.error(`Échec PDF: ${errorMsg.slice(0, 100)}`, { id: 'pdf-export', duration: 8000 });
+                            sileo.dismiss(toastId);
+                            sileo.error({ title: `Échec PDF: ${errorMsg.slice(0, 100)}`, duration: 8000 });
                           }
                         }}
                         className="size-8 p-0 rounded-full"

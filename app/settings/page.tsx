@@ -24,7 +24,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 import { signOut } from '@/lib/auth-client';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { ArrowLeftIcon, PencilSimpleIcon } from '@phosphor-icons/react';
@@ -96,7 +96,7 @@ function SettingsPageInner() {
       refetch();
     } catch {}
     setAvatarDialogOpen(false);
-    toast.success('Photo de profil mise à jour');
+    sileo.success({ title: 'Photo de profil mise à jour' });
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -104,12 +104,12 @@ function SettingsPageInner() {
     if (!file) return;
     
     if (!file.type.startsWith('image/')) {
-      toast.error('Veuillez sélectionner une image');
+      sileo.error({ title: 'Veuillez sélectionner une image' });
       return;
     }
     
     if (file.size > 10 * 1024 * 1024) {
-      toast.error('L\'image doit faire moins de 10MB');
+      sileo.error({ title: 'L\'image doit faire moins de 10MB' });
       return;
     }
     
@@ -129,7 +129,7 @@ function SettingsPageInner() {
       setCustomAvatars((prev) => [url, ...prev.filter(u => u !== url)].slice(0, 6));
       await handleSelectAvatar(url);
     } catch (error) {
-      toast.error('Échec de l\'upload');
+      sileo.error({ title: 'Échec de l\'upload' });
     } finally {
       setIsUploading(false);
       if (fileInputRef.current) fileInputRef.current.value = '';
@@ -176,20 +176,20 @@ function SettingsPageInner() {
                 try {
                   await signOut({
                     fetchOptions: {
-                      onRequest: () => { toast.loading('Signing out...'); },
+                      onRequest: () => { sileo.show({ title: 'Signing out...' }); },
                       onSuccess: () => {
-                        toast.dismiss();
-                        toast.success('Signed out');
+                        sileo.clear();
+                        sileo.success({ title: 'Signed out' });
                         if (typeof window !== 'undefined') window.location.href = '/new';
                       },
                       onError: () => {
-                        toast.dismiss();
-                        toast.error('Failed to sign out');
+                        sileo.clear();
+                        sileo.error({ title: 'Failed to sign out' });
                       },
                     },
                   });
                 } catch (e) {
-                  toast.error('Failed to sign out');
+                  sileo.error({ title: 'Failed to sign out' });
                 }
               }}
               className="h-7 px-3 text-xs !shadow-none"

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { GlobeHemisphereWestIcon, LockIcon, CopyIcon, CheckIcon, ShareIcon, XIcon } from '@phosphor-icons/react';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
@@ -37,11 +37,11 @@ export function ShareIconDialog({
 
     try {
       await onVisibilityChange('public');
-      toast.success('La conversation est maintenant publique et prête à être partagée');
+      sileo.success({ title: 'La conversation est maintenant publique et prête à être partagée' });
       console.log('✅ ShareIconDialog: Successfully made chat public');
     } catch (error) {
       console.error('❌ ShareIconDialog: Error making chat public:', error);
-      toast.error('Échec de la mise en public de la conversation');
+      sileo.error({ title: 'Échec de la mise en public de la conversation' });
       onClose();
     } finally {
       setIsChangingVisibility(false);
@@ -54,12 +54,12 @@ export function ShareIconDialog({
 
     try {
       await onVisibilityChange('private');
-      toast.success('La conversation est maintenant privée');
+      sileo.success({ title: 'La conversation est maintenant privée' });
       console.log('✅ ShareIconDialog: Successfully made chat private');
       onClose();
     } catch (error) {
       console.error('❌ ShareIconDialog: Error making chat private:', error);
-      toast.error('Échec de la mise en privé de la conversation');
+      sileo.error({ title: 'Échec de la mise en privé de la conversation' });
     } finally {
       setIsChangingVisibility(false);
     }
@@ -69,12 +69,12 @@ export function ShareIconDialog({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
-      toast.success('Lien copié dans le presse-papiers');
+      sileo.success({ title: 'Lien copié dans le presse-papiers' });
       setTimeout(() => setCopied(false), 2000);
       console.log('✅ ShareIconDialog: Link copied to clipboard');
     } catch (error) {
       console.error('❌ ShareIconDialog: Error copying link:', error);
-      toast.error('Échec de la copie du lien');
+      sileo.error({ title: 'Échec de la copie du lien' });
     }
   };
 

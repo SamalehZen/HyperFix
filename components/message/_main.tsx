@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Dialog, DialogClose, DialogContent } from '@/components/ui/dialog';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import {
   ArrowRight,
   ChevronDown,
@@ -361,7 +361,7 @@ const MessageEditor: React.FC<MessageEditorProps> = ({
         onSubmit={async (e) => {
           e.preventDefault();
           if (!draftContent.trim()) {
-            toast.error('Please enter a valid message.');
+            sileo.error({ title: 'Please enter a valid message.' });
             return;
           }
 
@@ -419,7 +419,7 @@ const MessageEditor: React.FC<MessageEditorProps> = ({
             await regenerate();
           } catch (error) {
             console.error('Error updating message:', error);
-            toast.error('Failed to update message. Please try again.');
+            sileo.error({ title: 'Failed to update message. Please try again.' });
           } finally {
             setIsSubmitting(false);
           }
@@ -821,7 +821,7 @@ export const Message: React.FC<MessageProps> = ({
                             .join('')
                             .trim() || '',
                         );
-                        toast.success('Copied to clipboard');
+                        sileo.success({ title: 'Copied to clipboard' });
                       }}
                       className={`h-7 w-7 ${(!user || !isOwner) && selectedVisibilityType === 'public'
                         ? 'rounded-md'
@@ -966,7 +966,7 @@ export const Message: React.FC<MessageProps> = ({
                           .join('')
                           .trim() || '',
                       );
-                      toast.success('Copied to clipboard');
+                      sileo.success({ title: 'Copied to clipboard' });
                     }}
                     className={`h-7 w-7 ${(!user || !isOwner) && selectedVisibilityType === 'public'
                       ? 'rounded-md'
@@ -1204,7 +1204,7 @@ export const EditableAttachmentsBadge = ({
                   size="icon"
                   onClick={() => {
                     navigator.clipboard.writeText(fileAttachments[selectedIndex].url);
-                    toast.success('File URL copied to clipboard');
+                    sileo.success({ title: 'File URL copied to clipboard' });
                   }}
                   className="h-8 w-8 rounded-md text-muted-foreground dark:text-muted-foreground"
                   title="Copy link"
@@ -1490,7 +1490,7 @@ export const AttachmentsBadge = ({ attachments }: { attachments: Attachment[] })
                   size="icon"
                   onClick={() => {
                     navigator.clipboard.writeText(fileAttachments[selectedIndex].url);
-                    toast.success('File URL copied to clipboard');
+                    sileo.success({ title: 'File URL copied to clipboard' });
                   }}
                   className="h-8 w-8 rounded-md text-muted-foreground dark:text-muted-foreground"
                   title="Copy link"
