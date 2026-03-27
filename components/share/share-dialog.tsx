@@ -54,7 +54,7 @@ export function ShareDialog({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
-      sileo.success({ title: 'Lien copié dans le presse-papiers' });
+      sileo.success({ title: 'Lien copié dans le presse-papiers', description: 'Vous pouvez maintenant le coller où vous voulez' });
       console.log('✅ URL copied to clipboard successfully');
 
       // Reset copied state after 2 seconds

@@ -71,7 +71,7 @@ const LazyCodeBlockComponent: React.FC<CodeBlockProps> = ({ children, language, 
       await navigator.clipboard.writeText(children);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
-      sileo.success({ title: 'Code copied to clipboard' });
+      sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere' });
     } catch (error) {
       console.error('Failed to copy code:', error);
       sileo.error({ title: 'Failed to copy code' });
@@ -161,7 +161,7 @@ const SyncCodeBlock: React.FC<CodeBlockProps> = ({ language, children, elementKe
       await navigator.clipboard.writeText(children);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
-      sileo.success({ title: 'Code copied to clipboard' });
+      sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere' });
     } catch (error) {
       console.error('Failed to copy code:', error);
       sileo.error({ title: 'Failed to copy code' });
@@ -455,7 +455,7 @@ const InlineCode: React.FC<{ code: string; elementKey: string }> = React.memo(({
       await navigator.clipboard.writeText(code);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 1500);
-      sileo.success({ title: 'Code copied to clipboard' });
+      sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere' });
     } catch (error) {
       console.error('Failed to copy code:', error);
       sileo.error({ title: 'Failed to copy code' });
@@ -1063,7 +1063,7 @@ export const CopyButton = React.memo(({ text }: { text: string }) => {
     await navigator.clipboard.writeText(text);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
-    sileo.success({ title: 'Copied to clipboard' });
+    sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere' });
   }, [text]);
 
   return (

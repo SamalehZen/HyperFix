@@ -821,7 +821,7 @@ export const Message: React.FC<MessageProps> = ({
                             .join('')
                             .trim() || '',
                         );
-                        sileo.success({ title: 'Copied to clipboard' });
+                        sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere' });
                       }}
                       className={`h-7 w-7 ${(!user || !isOwner) && selectedVisibilityType === 'public'
                         ? 'rounded-md'
@@ -966,7 +966,7 @@ export const Message: React.FC<MessageProps> = ({
                           .join('')
                           .trim() || '',
                       );
-                      sileo.success({ title: 'Copied to clipboard' });
+                      sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere' });
                     }}
                     className={`h-7 w-7 ${(!user || !isOwner) && selectedVisibilityType === 'public'
                       ? 'rounded-md'
@@ -1204,7 +1204,7 @@ export const EditableAttachmentsBadge = ({
                   size="icon"
                   onClick={() => {
                     navigator.clipboard.writeText(fileAttachments[selectedIndex].url);
-                    sileo.success({ title: 'File URL copied to clipboard' });
+                    sileo.success({ title: 'File URL copied to clipboard', description: 'You can now paste it anywhere' });
                   }}
                   className="h-8 w-8 rounded-md text-muted-foreground dark:text-muted-foreground"
                   title="Copy link"
@@ -1490,7 +1490,7 @@ export const AttachmentsBadge = ({ attachments }: { attachments: Attachment[] })
                   size="icon"
                   onClick={() => {
                     navigator.clipboard.writeText(fileAttachments[selectedIndex].url);
-                    sileo.success({ title: 'File URL copied to clipboard' });
+                    sileo.success({ title: 'File URL copied to clipboard', description: 'You can now paste it anywhere' });
                   }}
                   className="h-8 w-8 rounded-md text-muted-foreground dark:text-muted-foreground"
                   title="Copy link"

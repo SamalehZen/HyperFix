@@ -273,7 +273,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                         size="icon"
                         onClick={() => {
                           navigator.clipboard.writeText(part.text);
-                          sileo.success({ title: 'Copied to clipboard' });
+                          sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere' });
                         }}
                         className="size-8 p-0 rounded-full"
                       >
