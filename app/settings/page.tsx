@@ -24,10 +24,11 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 import { signOut } from '@/lib/auth-client';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { ArrowLeftIcon, PencilSimpleIcon } from '@phosphor-icons/react';
+import { Camera, ImageOff, LogOut } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -96,7 +97,7 @@ function SettingsPageInner() {
       refetch();
     } catch {}
     setAvatarDialogOpen(false);
-    toast.success('Photo de profil mise à jour');
+    sileo.success({ title: 'Photo de profil mise à jour', description: 'Votre nouvelle photo est maintenant visible', icon: <Camera size={14} /> });
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -104,12 +105,12 @@ function SettingsPageInner() {
     if (!file) return;
     
     if (!file.type.startsWith('image/')) {
-      toast.error('Veuillez sélectionner une image');
+      sileo.error({ title: 'Veuillez sélectionner une image', description: 'Seuls les fichiers image sont acceptés', icon: <ImageOff size={14} /> });
       return;
     }
     
     if (file.size > 10 * 1024 * 1024) {
-      toast.error('L\'image doit faire moins de 10MB');
+      sileo.error({ title: 'L\'image doit faire moins de 10MB', description: 'Veuillez choisir une image plus légère', icon: <ImageOff size={14} /> });
       return;
     }
     
@@ -129,7 +130,7 @@ function SettingsPageInner() {
       setCustomAvatars((prev) => [url, ...prev.filter(u => u !== url)].slice(0, 6));
       await handleSelectAvatar(url);
     } catch (error) {
-      toast.error('Échec de l\'upload');
+      sileo.error({ title: 'Échec de l\'upload', description: 'Veuillez réessayer ultérieurement', icon: <ImageOff size={14} /> });
     } finally {
       setIsUploading(false);
       if (fileInputRef.current) fileInputRef.current.value = '';
@@ -176,20 +177,20 @@ function SettingsPageInner() {
                 try {
                   await signOut({
                     fetchOptions: {
-                      onRequest: () => { toast.loading('Signing out...'); },
+                      onRequest: () => { sileo.show({ title: 'Signing out...', description: 'Veuillez patienter', icon: <LogOut size={14} /> }); },
                       onSuccess: () => {
-                        toast.dismiss();
-                        toast.success('Signed out');
+                        sileo.clear();
+                        sileo.success({ title: 'Signed out', description: 'Vous avez été déconnecté avec succès', icon: <LogOut size={14} /> });
                         if (typeof window !== 'undefined') window.location.href = '/new';
                       },
                       onError: () => {
-                        toast.dismiss();
-                        toast.error('Failed to sign out');
+                        sileo.clear();
+                        sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer', icon: <LogOut size={14} /> });
                       },
                     },
                   });
                 } catch (e) {
-                  toast.error('Failed to sign out');
+                  sileo.error({ title: 'Failed to sign out', description: 'Veuillez réessayer', icon: <LogOut size={14} /> });
                 }
               }}
               className="h-7 px-3 text-xs !shadow-none"

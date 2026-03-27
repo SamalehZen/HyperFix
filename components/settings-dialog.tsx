@@ -22,8 +22,9 @@ import {
   LightningIcon,
 } from '@phosphor-icons/react';
 import { useState, useEffect, useMemo } from 'react';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { useQuery } from '@tanstack/react-query';
+import { SlidersHorizontal } from 'lucide-react';
 import { cn, getSearchGroups, SearchGroupId } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { useSelectedProfileIcon } from '@/hooks/use-selected-profile-icon';
@@ -197,10 +198,10 @@ export function PreferencesSection({ user }: { user: any }) {
     setItems(newItems);
     try {
       setAgentOrder(newItems);
-      toast.success('Ordre des agents mis à jour');
+      sileo.success({ title: 'Ordre des agents mis à jour', description: 'Les changements ont été enregistrés', icon: <SlidersHorizontal size={14} /> });
     } catch (e) {
       setItems(previous);
-      toast.error("Impossible d'enregistrer l'ordre");
+      sileo.error({ title: "Impossible d'enregistrer l'ordre", description: "Veuillez réessayer", icon: <SlidersHorizontal size={14} /> });
     }
   };
 

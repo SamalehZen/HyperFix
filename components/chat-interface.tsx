@@ -10,8 +10,9 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { Crown02Icon } from '@hugeicons/core-free-icons';
 import { useRouter } from 'next/navigation';
 import { parseAsString, useQueryState } from 'nuqs';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { v4 as uuidv4 } from 'uuid';
+import { Globe, Lock, WifiOff, Zap } from 'lucide-react';
 
 // Internal app imports
 import { updateChatVisibility } from '@/app/actions';
@@ -227,7 +228,7 @@ const ChatInterface = memo(
         setSelectedModel('hyper-default');
 
         // Show a toast notification to inform the user
-        toast.info('Switched to default model - Pro subscription required for premium models');
+        sileo.info({ title: 'Switched to default model - Pro subscription required for premium models', description: 'Upgrade to Pro to access all models', icon: <Zap size={14} /> });
       }
     }, [selectedModel, isUserPro, proStatusLoading, setSelectedModel]);
 
@@ -354,15 +355,11 @@ const ChatInterface = memo(
         if (error instanceof ChatSDKError) {
           console.log('ChatSDK Error:', error.type, error.surface, error.message);
           if (error.type === 'offline' || error.surface === 'stream') {
-            toast.error('Connection Error', {
-              description: error.message,
-            });
+            sileo.error({ title: 'Connection Error', description: error.message, icon: <WifiOff size={14} /> });
           }
         } else {
           console.error('Chat error:', error.cause, error.message);
-          toast.error('An error occurred.', {
-            description: `Oops! An error occurred while processing your request. ${error.cause || error.message}`,
-          });
+          sileo.error({ title: 'An error occurred.', description: `Oops! An error occurred while processing your request. ${error.cause || error.message}`, icon: <WifiOff size={14} /> });
         }
         try {
           setDataStream(() => []);
@@ -550,7 +547,7 @@ const ChatInterface = memo(
             dispatch({ type: 'SET_VISIBILITY_TYPE', payload: visibility });
             console.log('🔄 Dispatched SET_VISIBILITY_TYPE with:', visibility);
 
-            toast.success(`Chat is now ${visibility}`);
+            sileo.success({ title: `Chat is now ${visibility}`, description: 'La visibilité a été mise à jour', icon: visibility === 'public' ? <Globe size={14} /> : <Lock size={14} /> });
             console.log('🍞 Success toast shown:', `Chat is now ${visibility}`);
 
             // Invalidate cache to refresh the list with updated visibility
@@ -561,7 +558,7 @@ const ChatInterface = memo(
               result,
               success_check: result?.success,
             });
-            toast.error('Failed to update chat visibility');
+            sileo.error({ title: 'Failed to update chat visibility', description: 'Please try again', icon: <Globe size={14} /> });
             console.log('🍞 Error toast shown: Failed to update chat visibility');
           }
         } catch (error) {
@@ -571,7 +568,7 @@ const ChatInterface = memo(
             error: error instanceof Error ? error.message : error,
             stack: error instanceof Error ? error.stack : undefined,
           });
-          toast.error('Failed to update chat visibility');
+          sileo.error({ title: 'Failed to update chat visibility', description: 'Please try again', icon: <Globe size={14} /> });
           console.log('🍞 Error toast shown: Failed to update chat visibility');
         }
       },

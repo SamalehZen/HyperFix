@@ -662,3 +662,25 @@ body {
 .dark .sh__token--punctuation {
   color: #03dac6;
 }
+
+/* -------------------------------- Sileo Toast Overrides -------------------------------- */
+
+/* Override state colors so badge/title contrast well against --foreground fill */
+[data-sileo-toast] :is([data-sileo-badge], [data-sileo-title])[data-state] {
+  --_c: var(--background);
+  --sileo-tone: var(--_c);
+  --sileo-tone-bg: color-mix(in oklch, var(--_c) 20%, transparent);
+}
+
+/* Description text */
+[data-sileo-description] {
+  color: color-mix(in oklch, var(--background) 65%, transparent);
+}
+
+/* Button inside toast */
+[data-sileo-button][data-state] {
+  --_c: var(--background);
+  --sileo-btn-color: var(--_c);
+  --sileo-btn-bg: color-mix(in oklch, var(--_c) 15%, transparent);
+  --sileo-btn-bg-hover: color-mix(in oklch, var(--_c) 25%, transparent);
+}

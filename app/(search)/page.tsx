@@ -14,7 +14,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { toast } from 'sonner';
+import { sileo } from 'sileo';
 import { Spinner } from '@/components/ui/spinner';
 
 const ChatInterface = dynamic(() => import('@/components/chat-interface').then((m) => m.ChatInterface), {
@@ -105,7 +105,8 @@ export default function Home() {
         }
       }
     } catch {}
-    toast('Connexion…', {
+    sileo.show({
+      title: 'Connexion…',
       description: p?.label ? `Profil: ${p.label}` : undefined,
       icon: <Spinner className="size-3.5" />,
       duration: 900,

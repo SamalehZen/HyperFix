@@ -37,6 +37,7 @@ const nextConfig: NextConfig = {
       '@hugeicons/react',
       '@hugeicons/core-free-icons',
       'date-fns',
+      'sileo',
     ],
     serverActions: {
       bodySizeLimit: '20mb',
