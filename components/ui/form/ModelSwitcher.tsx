@@ -378,7 +378,7 @@ export const ModelSwitcher: React.FC<ModelSwitcherProps> = React.memo(
       if (currentModelExists && currentModelRequiresPro && !isProUser && selectedModel !== 'hyper-default') {
         setSelectedModel('hyper-default');
 
-        sileo.info({ title: 'Switched to default model - Pro subscription required for premium models' });
+        sileo.info({ title: 'Switched to default model - Pro subscription required for premium models', description: 'Upgrade to Pro to access all models', icon: <Zap size={14} /> });
       }
     }, [selectedModel, isProUser, isSubscriptionLoading, setSelectedModel, availableModels]);
 

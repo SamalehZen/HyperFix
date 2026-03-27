@@ -14,7 +14,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/h
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import { Check, Copy, WrapText, ArrowLeftRight, Download } from 'lucide-react';
+import { Check, Copy, WrapText, ArrowLeftRight, Download, ClipboardCheck } from 'lucide-react';
 import { sileo } from 'sileo';
 
 interface MarkdownRendererProps {
@@ -71,17 +71,17 @@ const LazyCodeBlockComponent: React.FC<CodeBlockProps> = ({ children, language, 
       await navigator.clipboard.writeText(children);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
-      sileo.success({ title: 'Code copied to clipboard' });
+      sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
     } catch (error) {
       console.error('Failed to copy code:', error);
-      sileo.error({ title: 'Failed to copy code' });
+      sileo.error({ title: 'Failed to copy code', description: 'Please try again', icon: <ClipboardCheck size={14} /> });
     }
   }, [children]);
 
   const toggleWrap = useCallback(() => {
     setIsWrapped((prev) => {
       const newState = !prev;
-      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled' });
+      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled', description: newState ? 'Lines will wrap to fit the view' : 'Lines will scroll horizontally', icon: <WrapText size={14} /> });
       return newState;
     });
   }, []);
@@ -161,17 +161,17 @@ const SyncCodeBlock: React.FC<CodeBlockProps> = ({ language, children, elementKe
       await navigator.clipboard.writeText(children);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
-      sileo.success({ title: 'Code copied to clipboard' });
+      sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
     } catch (error) {
       console.error('Failed to copy code:', error);
-      sileo.error({ title: 'Failed to copy code' });
+      sileo.error({ title: 'Failed to copy code', description: 'Please try again', icon: <ClipboardCheck size={14} /> });
     }
   }, [children]);
 
   const toggleWrap = useCallback(() => {
     setIsWrapped((prev) => {
       const newState = !prev;
-      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled' });
+      sileo.success({ title: newState ? 'Code wrap enabled' : 'Code wrap disabled', description: newState ? 'Lines will wrap to fit the view' : 'Lines will scroll horizontally', icon: <WrapText size={14} /> });
       return newState;
     });
   }, []);
@@ -455,10 +455,10 @@ const InlineCode: React.FC<{ code: string; elementKey: string }> = React.memo(({
       await navigator.clipboard.writeText(code);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 1500);
-      sileo.success({ title: 'Code copied to clipboard' });
+      sileo.success({ title: 'Code copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
     } catch (error) {
       console.error('Failed to copy code:', error);
-      sileo.error({ title: 'Failed to copy code' });
+      sileo.error({ title: 'Failed to copy code', description: 'Please try again', icon: <ClipboardCheck size={14} /> });
     }
   }, [code]);
 
@@ -1063,7 +1063,7 @@ export const CopyButton = React.memo(({ text }: { text: string }) => {
     await navigator.clipboard.writeText(text);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
-    sileo.success({ title: 'Copied to clipboard' });
+    sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
   }, [text]);
 
   return (

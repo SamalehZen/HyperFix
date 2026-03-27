@@ -5,6 +5,7 @@ import { GlobeHemisphereWestIcon, LockIcon, CopyIcon, CheckIcon, ShareIcon, XIco
 import { sileo } from 'sileo';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Globe, Lock, ClipboardCheck } from 'lucide-react';
 
 interface ShareIconDialogProps {
   isOpen: boolean;
@@ -37,11 +38,11 @@ export function ShareIconDialog({
 
     try {
       await onVisibilityChange('public');
-      sileo.success({ title: 'La conversation est maintenant publique et prête à être partagée' });
+      sileo.success({ title: 'La conversation est maintenant publique et prête à être partagée', description: 'Le lien de partage est maintenant actif', icon: <Globe size={14} /> });
       console.log('✅ ShareIconDialog: Successfully made chat public');
     } catch (error) {
       console.error('❌ ShareIconDialog: Error making chat public:', error);
-      sileo.error({ title: 'Échec de la mise en public de la conversation' });
+      sileo.error({ title: 'Échec de la mise en public de la conversation', description: 'Veuillez réessayer', icon: <Globe size={14} /> });
       onClose();
     } finally {
       setIsChangingVisibility(false);
@@ -54,12 +55,12 @@ export function ShareIconDialog({
 
     try {
       await onVisibilityChange('private');
-      sileo.success({ title: 'La conversation est maintenant privée' });
+      sileo.success({ title: 'La conversation est maintenant privée', description: 'Elle n\'est plus accessible publiquement', icon: <Lock size={14} /> });
       console.log('✅ ShareIconDialog: Successfully made chat private');
       onClose();
     } catch (error) {
       console.error('❌ ShareIconDialog: Error making chat private:', error);
-      sileo.error({ title: 'Échec de la mise en privé de la conversation' });
+      sileo.error({ title: 'Échec de la mise en privé de la conversation', description: 'Veuillez réessayer', icon: <Lock size={14} /> });
     } finally {
       setIsChangingVisibility(false);
     }
@@ -69,12 +70,12 @@ export function ShareIconDialog({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
-      sileo.success({ title: 'Lien copié dans le presse-papiers' });
+      sileo.success({ title: 'Lien copié dans le presse-papiers', description: 'Vous pouvez maintenant le coller où vous voulez', icon: <ClipboardCheck size={14} /> });
       setTimeout(() => setCopied(false), 2000);
       console.log('✅ ShareIconDialog: Link copied to clipboard');
     } catch (error) {
       console.error('❌ ShareIconDialog: Error copying link:', error);
-      sileo.error({ title: 'Échec de la copie du lien' });
+      sileo.error({ title: 'Échec de la copie du lien', description: 'Veuillez réessayer', icon: <ClipboardCheck size={14} /> });
     }
   };
 

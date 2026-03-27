@@ -27,6 +27,9 @@ import {
   Info,
   Download,
   FileDown,
+  ClipboardCheck,
+  FileText,
+  FileSpreadsheet,
 } from 'lucide-react';
 import {
   ClockIcon as PhosphorClockIcon,
@@ -237,7 +240,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                               URL.revokeObjectURL(url);
                             } catch (e) {
                               console.error(e);
-                              sileo.error({ title: "Échec du téléchargement Excel" });
+                              sileo.error({ title: "Échec du téléchargement Excel", description: "Veuillez réessayer", icon: <FileSpreadsheet size={14} /> });
                             }
                           }}
                           className="size-8 p-0 rounded-full"
@@ -273,7 +276,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                         size="icon"
                         onClick={() => {
                           navigator.clipboard.writeText(part.text);
-                          sileo.success({ title: 'Copied to clipboard' });
+                          sileo.success({ title: 'Copied to clipboard', description: 'You can now paste it anywhere', icon: <ClipboardCheck size={14} /> });
                         }}
                         className="size-8 p-0 rounded-full"
                       >
@@ -290,19 +293,19 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
                         variant="ghost"
                         size="icon"
                         onClick={async () => {
-                          const toastId = sileo.show({ title: 'Génération du PDF...' });
+                          const toastId = sileo.show({ title: 'Génération du PDF...', description: 'Veuillez patienter', icon: <FileText size={14} /> });
                           try {
                             await downloadResponseAsPdf(
                               part.text,
                               modelLabel || undefined,
                             );
                             sileo.dismiss(toastId);
-                            sileo.success({ title: 'PDF téléchargé avec succès' });
+                            sileo.success({ title: 'PDF téléchargé avec succès', description: 'Le fichier est prêt', icon: <FileText size={14} /> });
                           } catch (error: any) {
                             console.error('PDF export error:', error);
                             const errorMsg = error?.message || String(error) || 'Erreur inconnue';
                             sileo.dismiss(toastId);
-                            sileo.error({ title: `Échec PDF: ${errorMsg.slice(0, 100)}`, duration: 8000 });
+                            sileo.error({ title: `Échec PDF: ${errorMsg.slice(0, 100)}`, description: 'Veuillez réessayer', icon: <FileText size={14} />, duration: 8000 });
                           }
                         }}
                         className="size-8 p-0 rounded-full"
