@@ -3,6 +3,8 @@
 import katex from 'katex';
 import { marked } from 'marked';
 
+marked.setOptions({ gfm: true, breaks: false });
+
 export interface PdfExportOptions {
   content: string;
   modelName?: string;
@@ -70,11 +72,27 @@ const renderLatex = (markdown: string): string => {
     }
   });
 
+  result = result.replace(/\\\[([\s\S]+?)\\\]/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: true, throwOnError: false });
+    } catch {
+      return `\\[${expr}\\]`;
+    }
+  });
+
   result = result.replace(/(?<!\$)\$(?!\$)([^\s$](?:[^$]*[^\s$])?)\$(?!\$)/g, (_, expr) => {
     try {
       return katex.renderToString(expr.trim(), { displayMode: false, throwOnError: false });
     } catch {
       return `$${expr}$`;
+    }
+  });
+
+  result = result.replace(/\\\((.+?)\\\)/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: false, throwOnError: false });
+    } catch {
+      return `\\(${expr}\\)`;
     }
   });
 
@@ -84,10 +102,6 @@ const renderLatex = (markdown: string): string => {
 };
 
 const renderMarkdownToHtml = (markdown: string): string => {
-  marked.setOptions({
-    gfm: true,
-    breaks: false,
-  });
   const withLatex = renderLatex(markdown);
   return marked.parse(withLatex) as string;
 };
@@ -147,6 +161,15 @@ const applyInlineStyles = (html: string): string => {
 
   div.querySelectorAll('input[type="checkbox"]').forEach((el) => {
     (el as HTMLInputElement).style.marginRight = '6px';
+  });
+
+  div.querySelectorAll('ul ul, ul ol, ol ul, ol ol').forEach((el) => {
+    (el as HTMLElement).style.marginTop = '0';
+    (el as HTMLElement).style.marginBottom = '0';
+  });
+
+  div.querySelectorAll('li > p').forEach((el) => {
+    (el as HTMLElement).style.marginTop = '12px';
   });
 
   return div.innerHTML;
@@ -228,7 +251,7 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   document.body.appendChild(container);
 
   const iframe = document.createElement('iframe');
-  iframe.style.cssText = 'width:900px;height:3000px;border:none;background:#fff;';
+  iframe.style.cssText = 'width:900px;border:none;background:#fff;';
   container.appendChild(iframe);
 
   const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
@@ -242,6 +265,10 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   iframeDoc.close();
 
   await new Promise((r) => setTimeout(r, 300));
+
+  const scrollH = iframeDoc.documentElement?.scrollHeight || 3000;
+  iframe.style.height = `${Math.max(scrollH + 200, 3000)}px`;
+  await new Promise((r) => setTimeout(r, 100));
 
   const iframeWin = iframe.contentWindow;
   if (iframeWin?.document?.fonts?.ready) {
@@ -312,6 +339,22 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
         },
       })
       .from(pdfContent)
+      .toPdf()
+      .get('pdf')
+      .then((pdf: any) => {
+        const total = pdf.internal.getNumberOfPages();
+        for (let i = 1; i <= total; i++) {
+          pdf.setPage(i);
+          pdf.setFontSize(9);
+          pdf.setTextColor(136, 136, 136);
+          pdf.text(
+            `${i} / ${total}`,
+            pdf.internal.pageSize.getWidth() / 2,
+            pdf.internal.pageSize.getHeight() - 15,
+            { align: 'center' },
+          );
+        }
+      })
       .save();
   } finally {
     document.body.removeChild(container);
