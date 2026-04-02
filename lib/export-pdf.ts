@@ -1,5 +1,6 @@
 'use client';
 
+import katex from 'katex';
 import { marked } from 'marked';
 
 export interface PdfExportOptions {
@@ -47,12 +48,48 @@ const formatPdfDate = (date: Date): string => {
   });
 };
 
+const KATEX_CSS_CDN = 'https://cdn.jsdelivr.net/npm/katex@0.16.23/dist/katex.min.css';
+
+const renderLatex = (markdown: string): string => {
+  const codeBlocks: string[] = [];
+  let result = markdown.replace(/```[\s\S]*?```/g, (m) => {
+    codeBlocks.push(m);
+    return `\x00CB${codeBlocks.length - 1}\x00`;
+  });
+  const inlineCodes: string[] = [];
+  result = result.replace(/`[^`]+`/g, (m) => {
+    inlineCodes.push(m);
+    return `\x00IC${inlineCodes.length - 1}\x00`;
+  });
+
+  result = result.replace(/\$\$([\s\S]+?)\$\$/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: true, throwOnError: false });
+    } catch {
+      return `$$${expr}$$`;
+    }
+  });
+
+  result = result.replace(/(?<!\$)\$(?!\$)([^\s$](?:[^$]*[^\s$])?)\$(?!\$)/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: false, throwOnError: false });
+    } catch {
+      return `$${expr}$`;
+    }
+  });
+
+  result = result.replace(/\x00IC(\d+)\x00/g, (_, i) => inlineCodes[parseInt(i)]);
+  result = result.replace(/\x00CB(\d+)\x00/g, (_, i) => codeBlocks[parseInt(i)]);
+  return result;
+};
+
 const renderMarkdownToHtml = (markdown: string): string => {
   marked.setOptions({
     gfm: true,
     breaks: false,
   });
-  return marked.parse(markdown) as string;
+  const withLatex = renderLatex(markdown);
+  return marked.parse(withLatex) as string;
 };
 
 const applyInlineStyles = (html: string): string => {
@@ -128,9 +165,11 @@ const buildPdfHtml = (opts: {
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="${KATEX_CSS_CDN}" crossorigin="anonymous">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #fff; color: #111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .katex-display { display: block; margin: 1em 0; text-align: center; }
 </style>
 </head>
 <body>
@@ -203,6 +242,45 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   iframeDoc.close();
 
   await new Promise((r) => setTimeout(r, 300));
+
+  const iframeWin = iframe.contentWindow;
+  if (iframeWin?.document?.fonts?.ready) {
+    await Promise.race([
+      iframeWin.document.fonts.ready,
+      new Promise((r) => setTimeout(r, 3000)),
+    ]);
+  }
+
+  iframeDoc.querySelectorAll('.katex, .katex-display').forEach((root) => {
+    const walk = (el: Element) => {
+      const computed = iframeWin?.getComputedStyle(el as HTMLElement);
+      if (computed) {
+        const h = el as HTMLElement;
+        h.style.fontFamily = computed.fontFamily;
+        h.style.fontSize = computed.fontSize;
+        h.style.fontStyle = computed.fontStyle;
+        h.style.fontWeight = computed.fontWeight;
+        h.style.display = computed.display;
+        h.style.verticalAlign = computed.verticalAlign;
+        h.style.textAlign = computed.textAlign;
+        h.style.lineHeight = computed.lineHeight;
+        h.style.position = computed.position;
+        h.style.top = computed.top;
+        h.style.left = computed.left;
+        h.style.width = computed.width;
+        h.style.height = computed.height;
+        h.style.margin = computed.margin;
+        h.style.padding = computed.padding;
+        h.style.borderBottom = computed.borderBottom;
+        h.style.minWidth = computed.minWidth;
+        h.style.overflow = computed.overflow;
+        h.style.boxSizing = computed.boxSizing;
+        h.style.color = computed.color;
+      }
+      Array.from(el.children).forEach(walk);
+    };
+    walk(root);
+  });
 
   const pdfContent = iframeDoc.querySelector('#pdf-content');
   if (!pdfContent) {
