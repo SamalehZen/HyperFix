@@ -90,6 +90,7 @@
     "katex": "^0.16.23",
     "lucide-react": "^0.545.0",
     "luxon": "^3.7.1",
+    "marked": "^17.0.5",
     "marked-react": "^3.0.1",
     "motion": "^12.23.22",
     "next": "15.5.7",
