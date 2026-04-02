@@ -43,7 +43,7 @@ export function InstallPrompt() {
             {/* App Icon */}
             <HyperLogo className="size-9" />
             <div className="flex-grow">
-              <p className="text-sm font-semibold text-foreground">Installer Hyper sur votre appareil</p>
+              <p className="text-sm font-semibold text-foreground">Installer HyperFix sur votre appareil</p>
               <p className="mt-0.5 text-xs text-muted-foreground inline-flex items-center gap-1">
                 Touchez <Share className="w-3 h-3 text-primary" /> puis &quot;Ajouter à l’écran d’accueil&quot;{' '}
                 <span role="img" aria-label="plus icon" className="text-primary font-medium">

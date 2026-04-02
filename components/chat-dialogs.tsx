@@ -118,7 +118,7 @@ export const PostMessageUpgradeDialog = React.memo(({ open, onOpenChange }: Post
           <div className="relative h-80 overflow-hidden rounded-t-lg">
             <Image
               src="/placeholder.png"
-              alt="Hyper Pro"
+              alt="HyperFix Pro"
               width={1200}
               height={630}
               className="w-full h-full object-cover"
@@ -148,7 +148,7 @@ export const PostMessageUpgradeDialog = React.memo(({ open, onOpenChange }: Post
               </div>
               <DialogTitle className="flex items-center gap-3 text-white mb-2">
                 <span className="text-4xl font-medium flex items-center gap-2 font-be-vietnam-pro">
-                  hyper
+                  HyperFix
                   <ProBadge className="!text-white !bg-white/20 !ring-white/30 font-light text-xl !tracking-normal" />
                 </span>
               </DialogTitle>
@@ -197,7 +197,7 @@ export const PostMessageUpgradeDialog = React.memo(({ open, onOpenChange }: Post
           <div className="flex items-center gap-4">
             <CheckIcon className="size-4 text-primary flex-shrink-0" />
             <div className="space-y-1">
-              <p className="text-sm font-medium text-foreground">Hyper Fix</p>
+              <p className="text-sm font-medium text-foreground">HyperFix</p>
               <p className="text-xs text-muted-foreground">Automated search monitoring on your schedule</p>
             </div>
           </div>

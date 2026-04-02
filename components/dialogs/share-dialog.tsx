@@ -28,7 +28,7 @@ export function ShareIconDialog({
   const [copied, setCopied] = useState(false);
 
   // Generate the share URL
-  const shareUrl = chatId ? `https://hyper.vercel.app/search/${chatId}` : '';
+  const shareUrl = chatId ? `https://hypeer.vercel.app/search/${chatId}` : '';
 
   const handleMakePublic = async () => {
     if (currentVisibility === 'public') return;
@@ -83,7 +83,7 @@ export function ShareIconDialog({
     if (navigator.share) {
       navigator
         .share({
-          title: 'Conversation Hyper',
+          title: 'Conversation HyperFix',
           url: shareUrl,
         })
         .then(() => {

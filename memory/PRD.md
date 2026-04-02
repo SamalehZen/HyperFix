@@ -1,4 +1,4 @@
-# PRD - Hyper App Toast Enhancements
+# PRD - HyperFix App Toast Enhancements
 
 ## Problem Statement
 1. L'utilisateur voulait que tous les toasts Sileo aient l'effet de morphing SVG gooey

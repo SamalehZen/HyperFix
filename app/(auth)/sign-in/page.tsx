@@ -21,5 +21,5 @@ export default function SignInPage() {
     } catch {}
   }, []);
 
-  return <AuthCard title="Bon retour" description="Connectez-vous pour continuer vers Hyper Fix" />;
+  return <AuthCard title="Bon retour" description="Connectez-vous pour continuer vers HyperFix" />;
 }

@@ -97,7 +97,7 @@ async function createUser(
 
 async function main() {
   console.log('╔══════════════════════════════════════════════════════╗');
-  console.log('║     🚀 Initialisation du Dashboard Admin Hyper      ║');
+  console.log('║    🚀 Initialisation du Dashboard Admin HyperFix    ║');
   console.log('╚══════════════════════════════════════════════════════╝');
 
   // 1. Vérifications préalables

@@ -1,10 +1,17 @@
 'use client';
 
+import katex from 'katex';
+import { marked } from 'marked';
+
+marked.setOptions({ gfm: true, breaks: false });
+
 export interface PdfExportOptions {
   content: string;
   modelName?: string;
   title?: string;
 }
+
+const LOGO_SVG = `<svg viewBox="410 260 380 375" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28"><path d="M 593.85 445.59 Q 599.96 442.96 603.41 437.40 Q 628.58 396.82 643.10 374.10 Q 648.95 364.94 650.03 363.03 C 652.80 358.13 656.14 353.64 659.66 348.01 Q 685.84 306.13 704.24 277.53 C 710.45 267.87 722.16 265.20 731.45 272.39 Q 733.88 274.27 737.06 279.49 Q 746.51 295.02 774.00 337.83 C 779.62 346.58 781.66 352.13 776.01 361.01 Q 761.80 383.34 728.28 436.54 C 722.64 445.50 722.41 450.90 728.07 459.69 Q 737.16 473.78 774.10 531.97 Q 778.92 539.57 779.25 542.64 Q 779.87 548.56 776.24 554.48 C 763.95 574.53 749.55 596.95 736.36 618.35 Q 731.06 626.94 721.20 627.63 C 712.86 628.21 707.46 623.80 703.21 617.05 Q 678.41 577.68 668.20 561.62 Q 661.93 551.74 661.37 549.59 Q 659.63 542.79 663.57 536.33 Q 679.53 510.22 703.03 474.01 C 706.20 469.13 707.04 466.44 706.20 461.09 C 705.31 455.43 700.53 450.87 695.14 449.62 Q 690.87 448.63 684.75 448.67 Q 648.06 448.88 609.50 448.60 Q 600.88 448.54 594.57 455.09 C 591.21 458.58 587.48 465.21 583.81 471.06 Q 543.14 535.88 503.77 598.26 Q 501.21 602.32 494.95 612.63 Q 488.99 622.43 485.96 624.35 C 476.99 630.05 465.12 627.99 459.30 618.69 Q 440.31 588.34 421.09 558.03 Q 416.63 551.00 416.21 548.18 C 415.41 542.80 416.55 539.23 419.78 534.22 Q 428.83 520.18 468.93 456.54 Q 474.30 448.02 468.62 439.05 Q 445.18 401.98 420.88 363.82 Q 416.80 357.41 416.12 353.73 Q 415.05 347.99 418.24 342.90 Q 457.56 280.13 459.46 277.23 C 467.22 265.36 483.19 265.34 490.80 277.48 Q 491.14 278.02 501.55 294.72 Q 501.98 295.41 532.37 343.12 Q 535.35 347.80 534.54 353.04 Q 534.02 356.39 530.25 362.36 Q 511.36 392.23 491.76 423.54 Q 485.58 433.40 493.01 442.01 C 496.72 446.31 501.93 447.01 507.80 447.00 Q 579.00 446.91 583.83 447.06 Q 590.01 447.24 593.85 445.59 Z" fill="#111111"/></svg>`;
 
 const generateSlug = (text: string): string => {
   return text
@@ -18,114 +25,203 @@ const generateSlug = (text: string): string => {
 };
 
 const extractTitle = (markdown: string): string => {
-  const h1Match = markdown.match(/^#\s+(.+)$/m);
-  if (h1Match) return h1Match[1].trim();
-
-  const h2Match = markdown.match(/^##\s+(.+)$/m);
-  if (h2Match) return h2Match[1].trim();
-
-  const boldMatch = markdown.match(/\*\*([^*]+)\*\*/);
-  if (boldMatch) return boldMatch[1].trim();
-
-  const firstLine = markdown.split('\n').find((line) => line.trim().length > 10);
-  if (firstLine) {
-    const cleaned = firstLine.replace(/[#*_`]/g, '').trim();
-    return cleaned.length > 60 ? cleaned.slice(0, 60) + '...' : cleaned;
+  const h1 = markdown.match(/^#\s+(.+)$/m);
+  if (h1) return h1[1].trim();
+  const h2 = markdown.match(/^##\s+(.+)$/m);
+  if (h2) return h2[1].trim();
+  const bold = markdown.match(/\*\*([^*]+)\*\*/);
+  if (bold) return bold[1].trim();
+  const first = markdown.split('\n').find((l) => l.trim().length > 10);
+  if (first) {
+    const c = first.replace(/[#*_`]/g, '').trim();
+    return c.length > 60 ? c.slice(0, 60) + '...' : c;
   }
-
   return 'HyperFix Response';
 };
 
-const escapeHtml = (text: string): string => {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+const formatPdfDate = (date: Date): string => {
+  return date.toLocaleString('fr-FR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  });
 };
 
-const markdownToHtml = (markdown: string): string => {
-  let html = markdown;
+const KATEX_CSS_CDN = 'https://cdn.jsdelivr.net/npm/katex@0.16.23/dist/katex.min.css';
 
+const renderLatex = (markdown: string): string => {
   const codeBlocks: string[] = [];
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
-    const index = codeBlocks.length;
-    codeBlocks.push(`<pre style="background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 14px; overflow-x: auto; font-family: Consolas, Monaco, monospace; font-size: 13px; line-height: 1.5; margin: 14px 0; color: #333;"><code>${escapeHtml(code.trim())}</code></pre>`);
-    return `__CODE_BLOCK_${index}__`;
+  let result = markdown.replace(/```[\s\S]*?```/g, (m) => {
+    codeBlocks.push(m);
+    return `\x00CB${codeBlocks.length - 1}\x00`;
+  });
+  const inlineCodes: string[] = [];
+  result = result.replace(/`[^`]+`/g, (m) => {
+    inlineCodes.push(m);
+    return `\x00IC${inlineCodes.length - 1}\x00`;
   });
 
-  html = html.replace(/^#### (.+)$/gm, '<h4 style="font-size: 15px; font-weight: 600; color: #222; margin: 18px 0 8px 0;">$1</h4>');
-  html = html.replace(/^### (.+)$/gm, '<h3 style="font-size: 17px; font-weight: 600; color: #222; margin: 20px 0 10px 0;">$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2 style="font-size: 19px; font-weight: 700; color: #111; margin: 24px 0 12px 0;">$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '');
-
-  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong style="font-weight: 600; color: #111;">$1</strong>');
-  html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-  html = html.replace(/`([^`]+)`/g, '<code style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; font-size: 14px; color: #c7254e;">$1</code>');
-
-  html = html.replace(/^>\s*(.+)$/gm, '<blockquote style="border-left: 4px solid #6366f1; padding: 10px 16px; margin: 16px 0; background-color: #f9fafb; color: #555;">$1</blockquote>');
-
-  html = html.replace(/^---$/gm, '<hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">');
-
-  const lines = html.split('\n');
-  const processedLines: string[] = [];
-  let inList = false;
-  let listType = '';
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const bulletMatch = line.match(/^(\s*)[-*•]\s+(.+)$/);
-    const numberedMatch = line.match(/^(\s*)(\d+)\.\s+(.+)$/);
-
-    if (bulletMatch) {
-      if (!inList || listType !== 'ul') {
-        if (inList) processedLines.push('</ul>');
-        inList = true;
-        listType = 'ul';
-        processedLines.push('<ul style="margin: 14px 0; padding-left: 24px; color: #333;">');
-      }
-      processedLines.push(`<li style="margin: 8px 0; line-height: 1.6;">${bulletMatch[2]}</li>`);
-    } else if (numberedMatch) {
-      if (!inList || listType !== 'ol') {
-        if (inList) processedLines.push('</ol>');
-        inList = true;
-        listType = 'ol';
-        processedLines.push('<ol style="margin: 14px 0; padding-left: 24px; color: #333;">');
-      }
-      processedLines.push(`<li style="margin: 8px 0; line-height: 1.6;">${numberedMatch[3]}</li>`);
-    } else {
-      if (inList && line.trim() === '') {
-        continue;
-      }
-      if (inList && !line.match(/^\s+/)) {
-        processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
-        inList = false;
-        listType = '';
-      }
-
-      if (line.trim() === '') {
-        processedLines.push('');
-      } else if (line.startsWith('__CODE_BLOCK_')) {
-        processedLines.push(line);
-      } else if (!line.startsWith('<')) {
-        processedLines.push(`<p style="margin: 12px 0; line-height: 1.7; color: #333; font-size: 15px;">${line}</p>`);
-      } else {
-        processedLines.push(line);
-      }
+  result = result.replace(/\$\$([\s\S]+?)\$\$/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: true, throwOnError: false });
+    } catch {
+      return `$$${expr}$$`;
     }
-  }
-
-  if (inList) {
-    processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
-  }
-
-  html = processedLines.join('\n');
-
-  codeBlocks.forEach((block, index) => {
-    html = html.replace(`__CODE_BLOCK_${index}__`, block);
   });
 
-  return html;
+  result = result.replace(/\\\[([\s\S]+?)\\\]/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: true, throwOnError: false });
+    } catch {
+      return `\\[${expr}\\]`;
+    }
+  });
+
+  result = result.replace(/(?<!\$)\$(?!\$)([^\s$](?:[^$]*[^\s$])?)\$(?!\$)/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: false, throwOnError: false });
+    } catch {
+      return `$${expr}$`;
+    }
+  });
+
+  result = result.replace(/\\\((.+?)\\\)/g, (_, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: false, throwOnError: false });
+    } catch {
+      return `\\(${expr}\\)`;
+    }
+  });
+
+  result = result.replace(/\x00IC(\d+)\x00/g, (_, i) => inlineCodes[parseInt(i)]);
+  result = result.replace(/\x00CB(\d+)\x00/g, (_, i) => codeBlocks[parseInt(i)]);
+  return result;
 };
+
+const renderMarkdownToHtml = (markdown: string): string => {
+  const withLatex = renderLatex(markdown);
+  return marked.parse(withLatex) as string;
+};
+
+const applyInlineStyles = (html: string): string => {
+  const div = document.createElement('div');
+  div.innerHTML = html;
+
+  const styleMap: Record<string, string> = {
+    h1: 'font-size:26px;font-weight:700;color:#111111;margin:24px 0 12px;line-height:1.25;padding-bottom:8px;border-bottom:1px solid #d1d5db;',
+    h2: 'font-size:22px;font-weight:700;color:#111111;margin:24px 0 12px;line-height:1.25;padding-bottom:6px;border-bottom:1px solid #e5e7eb;',
+    h3: 'font-size:18px;font-weight:700;color:#111111;margin:20px 0 10px;line-height:1.25;',
+    h4: 'font-size:16px;font-weight:700;color:#111111;margin:18px 0 8px;line-height:1.25;',
+    h5: 'font-size:15px;font-weight:700;color:#111111;margin:18px 0 8px;',
+    h6: 'font-size:14px;font-weight:700;color:#555555;margin:18px 0 8px;',
+    p: 'margin:0 0 14px;line-height:1.75;color:#111111;font-size:15px;',
+    strong: 'font-weight:700;color:#111111;',
+    em: 'font-style:italic;',
+    a: 'color:#111111;text-decoration:underline;text-underline-offset:2px;',
+    ul: 'margin:0 0 14px;padding-left:2em;color:#111111;',
+    ol: 'margin:0 0 14px;padding-left:2em;color:#111111;',
+    li: 'margin:4px 0;line-height:1.6;color:#111111;',
+    blockquote: 'margin:0 0 14px;padding:0 1em;color:#333333;border-left:4px solid #111111;',
+    pre: 'margin:0 0 14px;padding:14px 16px;white-space:pre-wrap;word-wrap:break-word;background:#1e1e2e;color:#f8f8f2;border-radius:8px;line-height:1.5;overflow:visible;',
+    table: 'width:100%;border-collapse:collapse;border-spacing:0;margin:0 0 14px;',
+    th: 'font-weight:700;color:#111111;background:#f3f4f6;padding:8px 12px;border:1px solid #d1d5db;text-align:left;',
+    td: 'padding:8px 12px;border:1px solid #d1d5db;color:#111111;vertical-align:top;',
+    hr: 'height:1px;border:0;background:#d1d5db;margin:20px 0;',
+    img: 'max-width:100%;height:auto;border-radius:8px;',
+  };
+
+  for (const [tag, style] of Object.entries(styleMap)) {
+    div.querySelectorAll(tag).forEach((el) => {
+      (el as HTMLElement).style.cssText += style;
+    });
+  }
+
+  div.querySelectorAll('code').forEach((el) => {
+    const parent = el.parentElement;
+    if (parent && parent.tagName.toLowerCase() === 'pre') {
+      (el as HTMLElement).style.cssText =
+        'background:transparent;color:inherit;padding:0;border-radius:0;font-size:13px;white-space:pre-wrap;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;';
+    } else {
+      (el as HTMLElement).style.cssText =
+        'font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:0.9em;background:#f3f4f6;color:#111111;border-radius:4px;padding:0.2em 0.4em;';
+    }
+  });
+
+  div.querySelectorAll('tbody').forEach((tbody) => {
+    const rows = tbody.querySelectorAll('tr');
+    rows.forEach((row, index) => {
+      if (index % 2 === 1) {
+        (row as HTMLElement).style.backgroundColor = '#f9fafb';
+      }
+    });
+  });
+
+  div.querySelectorAll('input[type="checkbox"]').forEach((el) => {
+    (el as HTMLInputElement).style.marginRight = '6px';
+  });
+
+  div.querySelectorAll('ul ul, ul ol, ol ul, ol ol').forEach((el) => {
+    (el as HTMLElement).style.marginTop = '0';
+    (el as HTMLElement).style.marginBottom = '0';
+  });
+
+  div.querySelectorAll('li > p').forEach((el) => {
+    (el as HTMLElement).style.marginTop = '12px';
+  });
+
+  return div.innerHTML;
+};
+
+const buildPdfHtml = (opts: {
+  content: string;
+  modelName: string;
+  title: string;
+  date: string;
+}): string => {
+  const rawHtml = renderMarkdownToHtml(opts.content);
+  const bodyHtml = applyInlineStyles(rawHtml);
+
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="${KATEX_CSS_CDN}" crossorigin="anonymous">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #fff; color: #111; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .katex-display { display: block; margin: 1em 0; text-align: center; }
+</style>
+</head>
+<body>
+<div id="pdf-content" style="width:794px;margin:0 auto;padding:48px 52px 40px;background:#ffffff;">
+
+  <div id="pdf-header" style="border-bottom:2px solid #111111;padding-bottom:16px;margin-bottom:24px;">
+    <div style="display:inline-flex;align-items:center;gap:10px;vertical-align:middle;">
+      ${LOGO_SVG}
+      <span style="font-size:22px;font-weight:700;color:#111111;line-height:28px;">HyperFix</span>
+    </div>
+    <div style="margin-top:6px;font-size:11px;color:#555555;">Model: ${escapeHtml(opts.modelName)} • Date: ${escapeHtml(opts.date)}</div>
+  </div>
+
+  <div style="font-size:15px;line-height:1.75;color:#111111;word-wrap:break-word;">
+    ${bodyHtml}
+  </div>
+
+  <div style="margin-top:32px;padding-top:14px;border-top:2px solid #111111;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#555555;">
+    <span><strong style="color:#111111;">HyperFix</strong> — La fixation, notre raison d\u2019être.</span>
+    <span>\u00a9 ${new Date().getFullYear()} HyperFix</span>
+  </div>
+
+</div>
+</body>
+</html>`;
+};
+
+const escapeHtml = (str: string): string =>
+  str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promise<void> => {
   const { content, modelName = 'Gemini', title: customTitle } = options;
@@ -135,124 +231,131 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   }
 
   const title = customTitle || extractTitle(content);
-  const date = new Date().toLocaleString('fr-FR', {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-  });
-
-  const htmlContent = markdownToHtml(content);
+  const date = formatPdfDate(new Date());
+  const filename = `hyperfix-${generateSlug(title)}.pdf`;
 
   let html2pdf: any;
   try {
-    const module = await import('html2pdf.js');
-    html2pdf = module.default || module;
-  } catch (importError) {
-    throw new Error(`Import html2pdf échoué: ${importError}`);
+    const mod = await import('html2pdf.js');
+    html2pdf = mod.default || mod;
+  } catch (e) {
+    throw new Error(`Import html2pdf failed: ${e}`);
   }
 
-  if (!html2pdf) {
-    throw new Error('html2pdf module non chargé');
-  }
+  const fullHtml = buildPdfHtml({ content, modelName, title, date });
 
-  const wrapper = document.createElement('div');
-  wrapper.id = 'pdf-export-wrapper';
-  wrapper.style.cssText = 'position: fixed; left: -10000px; top: 0; z-index: -9999;';
-  
+  const container = document.createElement('div');
+  container.style.cssText = 'position:fixed;left:-9999px;top:0;z-index:-1;';
+  document.body.appendChild(container);
+
   const iframe = document.createElement('iframe');
-  iframe.style.cssText = 'width: 800px; height: 2000px; border: none;';
-  wrapper.appendChild(iframe);
-  document.body.appendChild(wrapper);
+  iframe.style.cssText = 'width:900px;border:none;background:#fff;';
+  container.appendChild(iframe);
 
   const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
   if (!iframeDoc) {
-    document.body.removeChild(wrapper);
-    throw new Error('Impossible de créer le document iframe');
+    document.body.removeChild(container);
+    throw new Error('Cannot access iframe document');
   }
 
   iframeDoc.open();
-  iframeDoc.write(`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      background: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <div style="padding: 40px; background: #fff; color: #333;">
-    
-    <div style="border-bottom: 2px solid #e0e0e0; padding-bottom: 18px; margin-bottom: 28px;">
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-        <svg width="28" height="28" viewBox="0 0 910 934" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M647.664 197.775C569.13 189.049 525.5 145.419 516.774 66.8849C508.048 145.419 464.418 189.049 385.884 197.775C464.418 206.501 508.048 250.131 516.774 328.665C525.5 250.131 569.13 206.501 647.664 197.775Z" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M516.774 304.217C510.299 275.491 498.208 252.087 480.335 234.214C462.462 216.341 439.058 204.251 410.333 197.775C439.059 191.3 462.462 179.209 480.335 161.336C498.208 143.463 510.299 120.06 516.774 91.334C523.25 120.059 535.34 143.463 553.213 161.336C571.086 179.209 594.49 191.3 623.216 197.775C594.49 204.251 571.086 216.341 553.213 234.214C535.34 252.087 523.25 275.491 516.774 304.217Z" fill="#6366f1" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M857.5 508.116C763.259 497.644 710.903 445.288 700.432 351.047C689.961 445.288 637.605 497.644 543.364 508.116C637.605 518.587 689.961 570.943 700.432 665.184C710.903 570.943 763.259 518.587 857.5 508.116Z" stroke="#6366f1" stroke-width="20" stroke-linejoin="round"/>
-          <path d="M700.432 615.957C691.848 589.05 678.575 566.357 660.383 548.165C642.191 529.973 619.499 516.7 592.593 508.116C619.499 499.533 642.191 486.258 660.383 468.066C678.575 449.874 691.848 427.181 700.432 400.274C709.015 427.181 722.289 449.874 740.481 468.066C758.673 486.258 781.365 499.533 808.271 508.116C781.365 516.7 758.673 529.973 740.481 548.165C722.289 566.357 709.015 589.05 700.432 615.957Z" stroke="#6366f1" stroke-width="20" stroke-linejoin="round"/>
-          <path d="M889.949 121.237C831.049 114.692 798.326 81.9698 791.782 23.0692C785.237 81.9698 752.515 114.692 693.614 121.237C752.515 127.781 785.237 160.504 791.782 219.404C798.326 160.504 831.049 127.781 889.949 121.237Z" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M791.782 196.795C786.697 176.937 777.869 160.567 765.16 147.858C752.452 135.15 736.082 126.322 716.226 121.237C736.082 116.152 752.452 107.324 765.16 94.6152C777.869 81.9065 786.697 65.5368 791.782 45.6797C796.867 65.5367 805.695 81.9066 818.403 94.6152C831.112 107.324 847.481 116.152 867.338 121.237C847.481 126.322 831.112 135.15 818.403 147.858C805.694 160.567 796.867 176.937 791.782 196.795Z" fill="#6366f1" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M760.632 764.337C720.719 814.616 669.835 855.1 611.872 882.692C553.91 910.285 490.404 924.255 426.213 923.533C362.022 922.812 298.846 907.419 241.518 878.531C184.19 849.643 134.228 808.026 95.4548 756.863C56.6815 705.7 30.1238 646.346 17.8129 583.343C5.50206 520.339 7.76432 455.354 24.4266 393.359C41.0889 331.364 71.7099 274.001 113.947 225.658C156.184 177.315 208.919 139.273 268.117 114.442" stroke="#6366f1" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span style="font-size: 24px; font-weight: 700; color: #111;">HyperFix</span>
-      </div>
-      <div style="font-size: 13px; color: #666;">
-        Model: ${modelName} • Date: ${date}
-      </div>
-    </div>
-
-    <h1 style="font-size: 26px; font-weight: 700; color: #111; margin-bottom: 28px; line-height: 1.3;">
-      ${title}
-    </h1>
-
-    <div style="font-size: 15px; color: #333;">
-      ${htmlContent}
-    </div>
-
-    <div style="margin-top: 50px; padding-top: 18px; border-top: 2px solid #e0e0e0; font-size: 11px; color: #999; text-align: center;">
-      Generer par HyperFix • © ${new Date().getFullYear()} HyperFix
-    </div>
-  </div>
-</body>
-</html>
-  `);
+  iframeDoc.write(fullHtml);
   iframeDoc.close();
 
-  await new Promise(resolve => setTimeout(resolve, 100));
+  await new Promise((r) => setTimeout(r, 300));
 
-  const filename = `hyperfix-${generateSlug(title)}.pdf`;
+  const scrollH = iframeDoc.documentElement?.scrollHeight || 3000;
+  iframe.style.height = `${Math.max(scrollH + 200, 3000)}px`;
+  await new Promise((r) => setTimeout(r, 100));
+
+  const iframeWin = iframe.contentWindow;
+  if (iframeWin?.document?.fonts?.ready) {
+    await Promise.race([
+      iframeWin.document.fonts.ready,
+      new Promise((r) => setTimeout(r, 3000)),
+    ]);
+  }
+
+  iframeDoc.querySelectorAll('.katex, .katex-display').forEach((root) => {
+    const walk = (el: Element) => {
+      const computed = iframeWin?.getComputedStyle(el as HTMLElement);
+      if (computed) {
+        const h = el as HTMLElement;
+        h.style.fontFamily = computed.fontFamily;
+        h.style.fontSize = computed.fontSize;
+        h.style.fontStyle = computed.fontStyle;
+        h.style.fontWeight = computed.fontWeight;
+        h.style.display = computed.display;
+        h.style.verticalAlign = computed.verticalAlign;
+        h.style.textAlign = computed.textAlign;
+        h.style.lineHeight = computed.lineHeight;
+        h.style.position = computed.position;
+        h.style.top = computed.top;
+        h.style.left = computed.left;
+        h.style.width = computed.width;
+        h.style.height = computed.height;
+        h.style.margin = computed.margin;
+        h.style.padding = computed.padding;
+        h.style.borderBottom = computed.borderBottom;
+        h.style.minWidth = computed.minWidth;
+        h.style.overflow = computed.overflow;
+        h.style.boxSizing = computed.boxSizing;
+        h.style.color = computed.color;
+      }
+      Array.from(el.children).forEach(walk);
+    };
+    walk(root);
+  });
+
+  const pdfContent = iframeDoc.querySelector('#pdf-content');
+  if (!pdfContent) {
+    document.body.removeChild(container);
+    throw new Error('Cannot find #pdf-content element');
+  }
 
   try {
     await html2pdf()
       .set({
-        margin: [12, 12, 16, 12],
+        margin: 0,
         filename,
-        image: { type: 'jpeg', quality: 0.95 },
-        html2canvas: { 
-          scale: 2, 
-          useCORS: true, 
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
           logging: false,
           backgroundColor: '#ffffff',
+          windowWidth: 900,
         },
-        jsPDF: { 
-          unit: 'mm', 
-          format: 'a4', 
-          orientation: 'portrait' 
+        jsPDF: {
+          unit: 'pt',
+          format: 'a4',
+          orientation: 'portrait',
+        },
+        pagebreak: {
+          mode: ['css', 'legacy'],
+          avoid: ['tr', 'pre', 'blockquote', '#pdf-header'],
         },
       })
-      .from(iframeDoc.body)
+      .from(pdfContent)
+      .toPdf()
+      .get('pdf')
+      .then((pdf: any) => {
+        const total = pdf.internal.getNumberOfPages();
+        for (let i = 1; i <= total; i++) {
+          pdf.setPage(i);
+          pdf.setFontSize(9);
+          pdf.setTextColor(136, 136, 136);
+          pdf.text(
+            `${i} / ${total}`,
+            pdf.internal.pageSize.getWidth() / 2,
+            pdf.internal.pageSize.getHeight() - 15,
+            { align: 'center' },
+          );
+        }
+      })
       .save();
   } finally {
-    document.body.removeChild(wrapper);
+    document.body.removeChild(container);
   }
 };
 

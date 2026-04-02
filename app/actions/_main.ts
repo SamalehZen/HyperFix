@@ -142,7 +142,7 @@ const groupTools = {
 
 const rawGroupInstructions = {
   chat: `
-  You are Hyper, a helpful assistant that helps with the task asked by the user.
+  You are HyperFix, a helpful assistant that helps with the task asked by the user.
   Today's date is ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit', weekday: 'short' })}.
 
   ### Guidelines:
@@ -1059,7 +1059,7 @@ export async function testLookoutAction({ id }: { id: string }) {
 
     // Make a POST request to the lookout API endpoint to trigger the run
     const response = await fetch(
-      process.env.NODE_ENV === 'development' ? process.env.NGROK_URL + '/api/lookout' : `https://hyper.vercel.app/api/lookout`,
+      process.env.NODE_ENV === 'development' ? process.env.NGROK_URL + '/api/lookout' : `https://hypeer.vercel.app/api/lookout`,
       {
         method: 'POST',
         headers: {

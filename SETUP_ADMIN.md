@@ -1,6 +1,6 @@
-# 🚀 Configuration Initiale du Dashboard Admin Hyper
+# 🚀 Configuration Initiale du Dashboard Admin HyperFix
 
-Ce guide vous accompagne dans la mise en place du dashboard administrateur de Hyper, de la création de la base de données jusqu'à la connexion au dashboard.
+Ce guide vous accompagne dans la mise en place du dashboard administrateur de HyperFix, de la création de la base de données jusqu'à la connexion au dashboard.
 
 ## 📋 Prérequis
 
@@ -19,7 +19,7 @@ Avant de commencer, assurez-vous d'avoir :
 
 ```bash
 git clone [votre-repo]
-cd hyper
+cd HyperFix
 pnpm install
 ```
 
@@ -364,4 +364,4 @@ Une fois connecté, vous aurez accès à :
 
 **Bon développement ! 🚀**
 
-*Documentation créée pour Hyper Admin Dashboard v1.0*
+*Documentation créée pour HyperFix Admin Dashboard v1.0*
