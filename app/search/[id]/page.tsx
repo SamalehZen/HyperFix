@@ -38,9 +38,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const id = (await params).id;
   const chat = await fetchChatWithBackoff(id);
   const user = await getUser();
-  // if not chat, return Hyper Chat
+  // if not chat, return HyperFix Chat
   if (!chat) {
-    return { title: 'Hyper Chat' };
+    return { title: 'HyperFix Chat' };
   }
   let title;
   // if chat is public, return title
@@ -50,24 +50,24 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   // if chat is private, return title
   if (chat.visibility === 'private') {
     if (!user) {
-      title = 'Hyper Chat';
+      title = 'HyperFix Chat';
     }
     if (user!.id !== chat.userId) {
-      title = 'Hyper Chat';
+      title = 'HyperFix Chat';
     }
     title = chat.title;
   }
   return {
     title: title,
-    description: 'A search in hyper.vercel.app',
+    description: 'A search on hypeer.vercel.app',
     openGraph: {
       title: title,
-      url: `https://hyper.vercel.app/search/${id}`,
-      description: 'A search in hyper.vercel.app',
-      siteName: 'hyper.vercel.app',
+      url: `https://hypeer.vercel.app/search/${id}`,
+      description: 'A search on hypeer.vercel.app',
+      siteName: 'HyperFix',
       images: [
         {
-          url: `https://hyper.vercel.app/api/og/chat/${id}`,
+          url: `https://hypeer.vercel.app/api/og/chat/${id}`,
           width: 1200,
           height: 630,
         },
@@ -76,20 +76,19 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     twitter: {
       card: 'summary_large_image',
       title: title,
-      url: `https://hyper.vercel.app/search/${id}`,
-      description: 'A search in hyper.vercel.app',
-      siteName: 'hyper.vercel.app',
-      creator: '@hyperai',
+      url: `https://hypeer.vercel.app/search/${id}`,
+      description: 'A search on hypeer.vercel.app',
+      siteName: 'HyperFix',
       images: [
         {
-          url: `https://hyper.vercel.app/api/og/chat/${id}`,
+          url: `https://hypeer.vercel.app/api/og/chat/${id}`,
           width: 1200,
           height: 630,
         },
       ],
     },
     alternates: {
-      canonical: `https://hyper.vercel.app/search/${id}`,
+      canonical: `https://hypeer.vercel.app/search/${id}`,
     },
   } as Metadata;
 }

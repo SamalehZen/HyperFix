@@ -954,7 +954,7 @@ export const ModelSwitcher: React.FC<ModelSwitcherProps> = React.memo(
                         </>
                       ) : (
                         <div className="flex items-center gap-3 flex-wrap">
-                          <span className="text-xl sm:text-2xl font-be-vietnam-pro">Hyper</span>
+                          <span className="text-xl sm:text-2xl font-be-vietnam-pro">HyperFix</span>
                           <ProBadge className="!text-white !bg-white/20 !ring-white/30 font-extralight" />
                         </div>
                       )}
@@ -1045,7 +1045,7 @@ export const ModelSwitcher: React.FC<ModelSwitcherProps> = React.memo(
               <div className="flex items-center gap-4">
                 <CheckIcon className="size-4 text-primary flex-shrink-0" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium text-foreground">Hyper Fix</p>
+                  <p className="text-sm font-medium text-foreground">HyperFix</p>
                   <p className="text-xs text-muted-foreground">Automated search monitoring on your schedule</p>
                 </div>
               </div>

@@ -1,10 +1,409 @@
 'use client';
 
+import React from 'react';
+import type { Components } from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { flushSync } from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { HyperLogo } from '@/components/logos/hyper-logo';
+
 export interface PdfExportOptions {
   content: string;
   modelName?: string;
   title?: string;
 }
+
+const h = React.createElement;
+
+const pdfStyles = `
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    width: 794px;
+    margin: 0 auto;
+  }
+
+  #pdf-root {
+    width: 100%;
+  }
+
+  .pdf-shell {
+    width: 100%;
+    padding: 48px 52px 40px;
+    background: #ffffff;
+    color: #111111;
+  }
+
+  .pdf-header {
+    border-bottom: 2px solid #111111;
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+
+  .pdf-brand-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .pdf-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pdf-brand-name {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111111;
+  }
+
+  .pdf-brand-tagline {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4b5563;
+  }
+
+  .pdf-badge {
+    border: 1px solid #111111;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #111111;
+    background: #ffffff;
+  }
+
+  .pdf-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .pdf-meta-card {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    padding: 10px 12px;
+  }
+
+  .pdf-meta-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7280;
+  }
+
+  .pdf-meta-value {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #111111;
+    word-break: break-word;
+  }
+
+  .pdf-title-block {
+    margin-bottom: 26px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .pdf-title-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 10px;
+  }
+
+  .pdf-title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #111111;
+  }
+
+  .pdf-title-subtitle {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  .pdf-content {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #111111;
+  }
+
+  .pdf-content > :first-child {
+    margin-top: 0;
+  }
+
+  .pdf-content h1,
+  .pdf-content h2,
+  .pdf-content h3,
+  .pdf-content h4,
+  .pdf-content h5,
+  .pdf-content h6 {
+    margin: 28px 0 12px;
+    color: #111111;
+    line-height: 1.3;
+    font-weight: 800;
+    break-after: avoid-page;
+  }
+
+  .pdf-content h1 { font-size: 28px; }
+  .pdf-content h2 { font-size: 24px; }
+  .pdf-content h3 { font-size: 20px; }
+  .pdf-content h4 { font-size: 17px; }
+  .pdf-content h5 { font-size: 15px; }
+  .pdf-content h6 { font-size: 14px; }
+
+  .pdf-content p,
+  .pdf-content ul,
+  .pdf-content ol,
+  .pdf-content blockquote,
+  .pdf-content pre,
+  .pdf-content hr,
+  .pdf-table-wrapper {
+    margin: 0 0 16px;
+  }
+
+  .pdf-content p,
+  .pdf-content li,
+  .pdf-content td,
+  .pdf-content th {
+    color: #111111;
+  }
+
+  .pdf-content ul,
+  .pdf-content ol {
+    padding-left: 24px;
+  }
+
+  .pdf-content li + li {
+    margin-top: 6px;
+  }
+
+  .pdf-content ul ul,
+  .pdf-content ul ol,
+  .pdf-content ol ul,
+  .pdf-content ol ol {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .pdf-blockquote {
+    border-left: 4px solid #111111;
+    background: #f9fafb;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 16px;
+    color: #1f2937;
+    font-style: italic;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .pdf-blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  .pdf-link {
+    color: #111111;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    word-break: break-word;
+  }
+
+  .pdf-link:visited {
+    color: #111111;
+  }
+
+  .pdf-code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.92em;
+    background: #f3f4f6;
+    color: #111111;
+    border-radius: 4px;
+    padding: 0.15em 0.45em;
+    word-break: break-word;
+  }
+
+  .pdf-pre {
+    background: #111827;
+    color: #f9fafb;
+    border-radius: 10px;
+    padding: 16px 18px;
+    overflow-x: visible;
+    white-space: pre-wrap;
+    word-break: break-word;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .pdf-pre .pdf-code,
+  .pdf-pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    white-space: pre-wrap;
+  }
+
+  .pdf-hr {
+    border: 0;
+    border-top: 1px solid #d1d5db;
+    margin: 24px 0;
+  }
+
+  .pdf-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .pdf-table-wrapper {
+    width: 100%;
+    overflow: visible;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .pdf-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .pdf-thead {
+    display: table-header-group;
+    background: #f3f4f6;
+  }
+
+  .pdf-tbody {
+    display: table-row-group;
+  }
+
+  .pdf-tr {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .pdf-th,
+  .pdf-td {
+    border: 1px solid #d1d5db;
+    padding: 10px 12px;
+    vertical-align: top;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .pdf-th {
+    background: #f3f4f6;
+    color: #111111;
+    font-weight: 800;
+  }
+
+  .pdf-table tbody tr:nth-child(even) {
+    background: #fafafa;
+  }
+
+  .pdf-table p,
+  .pdf-table ul,
+  .pdf-table ol,
+  .pdf-table blockquote,
+  .pdf-table pre {
+    margin-bottom: 10px;
+  }
+
+  .pdf-table p:last-child,
+  .pdf-table ul:last-child,
+  .pdf-table ol:last-child,
+  .pdf-table blockquote:last-child,
+  .pdf-table pre:last-child {
+    margin-bottom: 0;
+  }
+
+  .pdf-table th[align='left'],
+  .pdf-table td[align='left'] {
+    text-align: left;
+  }
+
+  .pdf-table th[align='center'],
+  .pdf-table td[align='center'] {
+    text-align: center;
+  }
+
+  .pdf-table th[align='right'],
+  .pdf-table td[align='right'] {
+    text-align: right;
+  }
+
+  .pdf-content input[type='checkbox'] {
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+    accent-color: #111111;
+    transform: translateY(1px);
+  }
+
+  .pdf-content .task-list-item {
+    list-style: none;
+    margin-left: -20px;
+  }
+
+  .pdf-footer {
+    margin-top: 34px;
+    padding-top: 16px;
+    border-top: 2px solid #111111;
+  }
+
+  .pdf-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 11px;
+    color: #4b5563;
+  }
+
+  .pdf-footer strong {
+    color: #111111;
+  }
+`;
 
 const generateSlug = (text: string): string => {
   return text
@@ -36,95 +435,139 @@ const extractTitle = (markdown: string): string => {
   return 'HyperFix Response';
 };
 
-const escapeHtml = (text: string): string => {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-};
+const stripLeadingTitle = (markdown: string, title: string): string => {
+  const trimmed = markdown.trimStart();
+  const normalizedTitle = title.trim();
+  const patterns = [/^#\s+(.+)\s*(?:\n|$)/, /^##\s+(.+)\s*(?:\n|$)/, /^\*\*([^*]+)\*\*\s*(?:\n|$)/];
 
-const markdownToHtml = (markdown: string): string => {
-  let html = markdown;
-
-  const codeBlocks: string[] = [];
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
-    const index = codeBlocks.length;
-    codeBlocks.push(`<pre style="background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 14px; overflow-x: auto; font-family: Consolas, Monaco, monospace; font-size: 13px; line-height: 1.5; margin: 14px 0; color: #333;"><code>${escapeHtml(code.trim())}</code></pre>`);
-    return `__CODE_BLOCK_${index}__`;
-  });
-
-  html = html.replace(/^#### (.+)$/gm, '<h4 style="font-size: 15px; font-weight: 600; color: #222; margin: 18px 0 8px 0;">$1</h4>');
-  html = html.replace(/^### (.+)$/gm, '<h3 style="font-size: 17px; font-weight: 600; color: #222; margin: 20px 0 10px 0;">$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2 style="font-size: 19px; font-weight: 700; color: #111; margin: 24px 0 12px 0;">$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '');
-
-  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong style="font-weight: 600; color: #111;">$1</strong>');
-  html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-  html = html.replace(/`([^`]+)`/g, '<code style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; font-size: 14px; color: #c7254e;">$1</code>');
-
-  html = html.replace(/^>\s*(.+)$/gm, '<blockquote style="border-left: 4px solid #6366f1; padding: 10px 16px; margin: 16px 0; background-color: #f9fafb; color: #555;">$1</blockquote>');
-
-  html = html.replace(/^---$/gm, '<hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">');
-
-  const lines = html.split('\n');
-  const processedLines: string[] = [];
-  let inList = false;
-  let listType = '';
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const bulletMatch = line.match(/^(\s*)[-*•]\s+(.+)$/);
-    const numberedMatch = line.match(/^(\s*)(\d+)\.\s+(.+)$/);
-
-    if (bulletMatch) {
-      if (!inList || listType !== 'ul') {
-        if (inList) processedLines.push('</ul>');
-        inList = true;
-        listType = 'ul';
-        processedLines.push('<ul style="margin: 14px 0; padding-left: 24px; color: #333;">');
-      }
-      processedLines.push(`<li style="margin: 8px 0; line-height: 1.6;">${bulletMatch[2]}</li>`);
-    } else if (numberedMatch) {
-      if (!inList || listType !== 'ol') {
-        if (inList) processedLines.push('</ol>');
-        inList = true;
-        listType = 'ol';
-        processedLines.push('<ol style="margin: 14px 0; padding-left: 24px; color: #333;">');
-      }
-      processedLines.push(`<li style="margin: 8px 0; line-height: 1.6;">${numberedMatch[3]}</li>`);
-    } else {
-      if (inList && line.trim() === '') {
-        continue;
-      }
-      if (inList && !line.match(/^\s+/)) {
-        processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
-        inList = false;
-        listType = '';
-      }
-
-      if (line.trim() === '') {
-        processedLines.push('');
-      } else if (line.startsWith('__CODE_BLOCK_')) {
-        processedLines.push(line);
-      } else if (!line.startsWith('<')) {
-        processedLines.push(`<p style="margin: 12px 0; line-height: 1.7; color: #333; font-size: 15px;">${line}</p>`);
-      } else {
-        processedLines.push(line);
-      }
+  for (const pattern of patterns) {
+    const match = trimmed.match(pattern);
+    if (match && match[1].trim() === normalizedTitle) {
+      return trimmed.slice(match[0].length).trimStart();
     }
   }
 
-  if (inList) {
-    processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
-  }
+  return trimmed;
+};
 
-  html = processedLines.join('\n');
-
-  codeBlocks.forEach((block, index) => {
-    html = html.replace(`__CODE_BLOCK_${index}__`, block);
+const formatPdfDate = (date: Date): string => {
+  return date.toLocaleString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
   });
+};
 
-  return html;
+const createMetaCard = (label: string, value: string, key: string) => {
+  return h('div', { className: 'pdf-meta-card', key }, [
+    h('div', { className: 'pdf-meta-label', key: `${key}-label` }, label),
+    h('div', { className: 'pdf-meta-value', key: `${key}-value` }, value),
+  ]);
+};
+
+const pdfMarkdownComponents: Components = {
+  table({ children }) {
+    return h('div', { className: 'pdf-table-wrapper' }, h('table', { className: 'pdf-table' }, children));
+  },
+  thead({ children }) {
+    return h('thead', { className: 'pdf-thead' }, children);
+  },
+  tbody({ children }) {
+    return h('tbody', { className: 'pdf-tbody' }, children);
+  },
+  tr({ children }) {
+    return h('tr', { className: 'pdf-tr' }, children);
+  },
+  th({ children, node: _node, className, ...props }: any) {
+    return h('th', { ...props, className: ['pdf-th', className].filter(Boolean).join(' ') }, children);
+  },
+  td({ children, node: _node, className, ...props }: any) {
+    return h('td', { ...props, className: ['pdf-td', className].filter(Boolean).join(' ') }, children);
+  },
+  a({ children, node: _node, href, className, ...props }: any) {
+    return h(
+      'a',
+      {
+        ...props,
+        href: href || '#',
+        target: '_blank',
+        rel: 'noreferrer',
+        className: ['pdf-link', className].filter(Boolean).join(' '),
+      },
+      children,
+    );
+  },
+  blockquote({ children }) {
+    return h('blockquote', { className: 'pdf-blockquote' }, children);
+  },
+  pre({ children }) {
+    return h('pre', { className: 'pdf-pre' }, children);
+  },
+  code({ children, node: _node, className, ...props }: any) {
+    return h('code', { ...props, className: ['pdf-code', className].filter(Boolean).join(' ') }, children);
+  },
+  hr() {
+    return h('hr', { className: 'pdf-hr' });
+  },
+  img({ node: _node, className, ...props }: any) {
+    return h('img', { ...props, className: ['pdf-image', className].filter(Boolean).join(' ') });
+  },
+};
+
+const buildPdfDocument = ({
+  content,
+  modelName,
+  title,
+  date,
+}: {
+  content: string;
+  modelName: string;
+  title: string;
+  date: string;
+}) => {
+  const bodyContent = stripLeadingTitle(content, title);
+
+  return h('div', { className: 'pdf-shell' }, [
+    h('header', { className: 'pdf-header', key: 'header' }, [
+      h('div', { className: 'pdf-brand-row', key: 'brand-row' }, [
+        h('div', { className: 'pdf-brand', key: 'brand' }, [
+          h(HyperLogo, { width: 28, height: 28, color: '#111111', key: 'logo' }),
+          h('div', { key: 'brand-copy' }, [
+            h('div', { className: 'pdf-brand-name', key: 'brand-name' }, 'HyperFix'),
+            h('div', { className: 'pdf-brand-tagline', key: 'brand-tagline' }, 'La fixation — notre raison d’être.'),
+          ]),
+        ]),
+        h('div', { className: 'pdf-badge', key: 'badge' }, 'PDF export'),
+      ]),
+      h('div', { className: 'pdf-meta-grid', key: 'meta-grid' }, [
+        createMetaCard('Titre', title, 'title'),
+        createMetaCard('Modèle', modelName, 'model'),
+        createMetaCard('Exporté le', date, 'date'),
+      ]),
+    ]),
+    h('section', { className: 'pdf-title-block', key: 'title-block' }, [
+      h('div', { className: 'pdf-title-label', key: 'title-label' }, 'Contenu de la discussion'),
+      h('h1', { className: 'pdf-title', key: 'title' }, title),
+      h(
+        'p',
+        { className: 'pdf-title-subtitle', key: 'title-subtitle' },
+        'Export structuré pour impression et partage, avec rendu Markdown enrichi, tableaux GFM, blocs de code et typographie noire à forte lisibilité.',
+      ),
+    ]),
+    h(
+      'main',
+      { className: 'pdf-content', key: 'content' },
+      h(ReactMarkdown, { remarkPlugins: [remarkGfm], components: pdfMarkdownComponents }, bodyContent),
+    ),
+    h('footer', { className: 'pdf-footer', key: 'footer' }, [
+      h('div', { className: 'pdf-footer-row', key: 'footer-row' }, [
+        h('span', { key: 'footer-left' }, [h('strong', { key: 'footer-strong' }, 'HyperFix'), ' — document exporté en PDF']),
+        h('span', { key: 'footer-right' }, `© ${new Date().getFullYear()} HyperFix`),
+      ]),
+    ]),
+  ]);
 };
 
 export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promise<void> => {
@@ -135,16 +578,7 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   }
 
   const title = customTitle || extractTitle(content);
-  const date = new Date().toLocaleString('fr-FR', {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-  });
-
-  const htmlContent = markdownToHtml(content);
+  const date = formatPdfDate(new Date());
 
   let html2pdf: any;
   try {
@@ -161,9 +595,9 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   const wrapper = document.createElement('div');
   wrapper.id = 'pdf-export-wrapper';
   wrapper.style.cssText = 'position: fixed; left: -10000px; top: 0; z-index: -9999;';
-  
+
   const iframe = document.createElement('iframe');
-  iframe.style.cssText = 'width: 800px; height: 2000px; border: none;';
+  iframe.style.cssText = 'width: 900px; height: 2400px; border: none; background: #ffffff;';
   wrapper.appendChild(iframe);
   document.body.appendChild(wrapper);
 
@@ -174,84 +608,52 @@ export const generatePdfFromMarkdown = async (options: PdfExportOptions): Promis
   }
 
   iframeDoc.open();
-  iframeDoc.write(`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      background: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <div style="padding: 40px; background: #fff; color: #333;">
-    
-    <div style="border-bottom: 2px solid #e0e0e0; padding-bottom: 18px; margin-bottom: 28px;">
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-        <svg width="28" height="28" viewBox="0 0 910 934" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M647.664 197.775C569.13 189.049 525.5 145.419 516.774 66.8849C508.048 145.419 464.418 189.049 385.884 197.775C464.418 206.501 508.048 250.131 516.774 328.665C525.5 250.131 569.13 206.501 647.664 197.775Z" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M516.774 304.217C510.299 275.491 498.208 252.087 480.335 234.214C462.462 216.341 439.058 204.251 410.333 197.775C439.059 191.3 462.462 179.209 480.335 161.336C498.208 143.463 510.299 120.06 516.774 91.334C523.25 120.059 535.34 143.463 553.213 161.336C571.086 179.209 594.49 191.3 623.216 197.775C594.49 204.251 571.086 216.341 553.213 234.214C535.34 252.087 523.25 275.491 516.774 304.217Z" fill="#6366f1" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M857.5 508.116C763.259 497.644 710.903 445.288 700.432 351.047C689.961 445.288 637.605 497.644 543.364 508.116C637.605 518.587 689.961 570.943 700.432 665.184C710.903 570.943 763.259 518.587 857.5 508.116Z" stroke="#6366f1" stroke-width="20" stroke-linejoin="round"/>
-          <path d="M700.432 615.957C691.848 589.05 678.575 566.357 660.383 548.165C642.191 529.973 619.499 516.7 592.593 508.116C619.499 499.533 642.191 486.258 660.383 468.066C678.575 449.874 691.848 427.181 700.432 400.274C709.015 427.181 722.289 449.874 740.481 468.066C758.673 486.258 781.365 499.533 808.271 508.116C781.365 516.7 758.673 529.973 740.481 548.165C722.289 566.357 709.015 589.05 700.432 615.957Z" stroke="#6366f1" stroke-width="20" stroke-linejoin="round"/>
-          <path d="M889.949 121.237C831.049 114.692 798.326 81.9698 791.782 23.0692C785.237 81.9698 752.515 114.692 693.614 121.237C752.515 127.781 785.237 160.504 791.782 219.404C798.326 160.504 831.049 127.781 889.949 121.237Z" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M791.782 196.795C786.697 176.937 777.869 160.567 765.16 147.858C752.452 135.15 736.082 126.322 716.226 121.237C736.082 116.152 752.452 107.324 765.16 94.6152C777.869 81.9065 786.697 65.5368 791.782 45.6797C796.867 65.5367 805.695 81.9066 818.403 94.6152C831.112 107.324 847.481 116.152 867.338 121.237C847.481 126.322 831.112 135.15 818.403 147.858C805.694 160.567 796.867 176.937 791.782 196.795Z" fill="#6366f1" stroke="#6366f1" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M760.632 764.337C720.719 814.616 669.835 855.1 611.872 882.692C553.91 910.285 490.404 924.255 426.213 923.533C362.022 922.812 298.846 907.419 241.518 878.531C184.19 849.643 134.228 808.026 95.4548 756.863C56.6815 705.7 30.1238 646.346 17.8129 583.343C5.50206 520.339 7.76432 455.354 24.4266 393.359C41.0889 331.364 71.7099 274.001 113.947 225.658C156.184 177.315 208.919 139.273 268.117 114.442" stroke="#6366f1" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span style="font-size: 24px; font-weight: 700; color: #111;">HyperFix</span>
-      </div>
-      <div style="font-size: 13px; color: #666;">
-        Model: ${modelName} • Date: ${date}
-      </div>
-    </div>
-
-    <h1 style="font-size: 26px; font-weight: 700; color: #111; margin-bottom: 28px; line-height: 1.3;">
-      ${title}
-    </h1>
-
-    <div style="font-size: 15px; color: #333;">
-      ${htmlContent}
-    </div>
-
-    <div style="margin-top: 50px; padding-top: 18px; border-top: 2px solid #e0e0e0; font-size: 11px; color: #999; text-align: center;">
-      Generer par HyperFix • © ${new Date().getFullYear()} HyperFix
-    </div>
-  </div>
-</body>
-</html>
-  `);
+  iframeDoc.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><style>${pdfStyles}</style></head><body><div id="pdf-root"></div></body></html>`);
   iframeDoc.close();
 
-  await new Promise(resolve => setTimeout(resolve, 100));
+  const mountNode = iframeDoc.getElementById('pdf-root');
+  if (!mountNode) {
+    document.body.removeChild(wrapper);
+    throw new Error('Impossible de créer le conteneur PDF');
+  }
 
-  const filename = `hyperfix-${generateSlug(title)}.pdf`;
+  const root = createRoot(mountNode);
 
   try {
+    flushSync(() => {
+      root.render(buildPdfDocument({ content, modelName, title, date }));
+    });
+
+    await new Promise((resolve) => setTimeout(resolve, 200));
+
+    const filename = `hyperfix-${generateSlug(title)}.pdf`;
+
     await html2pdf()
       .set({
-        margin: [12, 12, 16, 12],
+        margin: 0,
         filename,
-        image: { type: 'jpeg', quality: 0.95 },
-        html2canvas: { 
-          scale: 2, 
-          useCORS: true, 
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
           logging: false,
           backgroundColor: '#ffffff',
+          windowWidth: 900,
         },
-        jsPDF: { 
-          unit: 'mm', 
-          format: 'a4', 
-          orientation: 'portrait' 
+        jsPDF: {
+          unit: 'pt',
+          format: 'a4',
+          orientation: 'portrait',
+        },
+        pagebreak: {
+          mode: ['css', 'legacy'],
+          avoid: ['tr', 'pre', 'blockquote', '.pdf-header', '.pdf-title-block'],
         },
       })
-      .from(iframeDoc.body)
+      .from(mountNode)
       .save();
   } finally {
+    root.unmount();
     document.body.removeChild(wrapper);
   }
 };

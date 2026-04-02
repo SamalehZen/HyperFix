@@ -2,10 +2,9 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Hyper - AI-Powered Search & Management Engine',
-    short_name: 'Hyper',
-    description:
-      'Moteur de recherche et de gestion propulsé par l\'intelligence artificielle, conçu pour les entreprises. Hyper utilise des modèles IA avancés comme GPT-4, Claude et Grok.',
+    name: 'HyperFix, la fixation — notre raison d’être.',
+    short_name: 'HyperFix',
+    description: 'HyperFix, la fixation — notre raison d’être.',
     start_url: '/',
     display: 'standalone',
     categories: ['search', 'ai', 'productivity'],

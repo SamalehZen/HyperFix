@@ -1,6 +1,6 @@
 # Chart Sandbox Integration Guide
 
-This document explains how the Chart Sandbox code execution and visualization toolkit is integrated into Hyper. It covers architecture, tool registration, UI wiring, validation steps, and troubleshooting tips.
+This document explains how the Chart Sandbox code execution and visualization toolkit is integrated into HyperFix. It covers architecture, tool registration, UI wiring, validation steps, and troubleshooting tips.
 
 ## Directory Overview
 
@@ -53,7 +53,7 @@ Tool outputs are routed to the chat renderer (`components/message-parts/index.ts
 
 Each tool can be triggered naturally through chat prompts. A few examples:
 
-- **JavaScript execution** – `Exécute ce code JavaScript : console.log('Hello Hyper');`
+- **JavaScript execution** – `Exécute ce code JavaScript : console.log('Hello HyperFix');`
 - **Python execution** – `Lance ce code Python pour calculer la suite de Fibonacci jusque 20.`
 - **Tableau Markdown** – `Structure ces ventes (Europe: 120, US: 95, Asie: 140) dans un tableau Markdown clair.`
 - **Analyse textuelle** – `Décris textuellement la répartition des ventes par région sans générer de graphique.`
@@ -67,7 +67,7 @@ The assistant automatically chooses the correct tool when the user request match
 
 - **Workers & sandboxing**: `call-worker.ts` spins up a module worker (`lib/code-runner/worker.ts`) which routes execution to either `safeJsRun` or `safePythonRun`. Both runners include guardrails against infinite loops, prototype pollution, and forbidden APIs.
 - **Pyodide**: `safe-python-run.ts` lazily loads Pyodide from `https://cdn.jsdelivr.net/pyodide/v0.23.4/full/`. The CSP allows this origin, and stdout/stderr are captured to stream logs (including base64-encoded Matplotlib images).
-- **UI**: Viewer components s’appuient sur la design system Hyper (`components/ui/*`). Les charts utilisent Recharts, les diagrammes Mermaid sont rendus via `mermaid-diagram.tsx`, et chaque carte expose un bouton JSON pour visualiser le payload brut.
+- **UI**: Viewer components s’appuient sur la design system HyperFix (`components/ui/*`). Les charts utilisent Recharts, les diagrammes Mermaid sont rendus via `mermaid-diagram.tsx`, et chaque carte expose un bouton JSON pour visualiser le payload brut.
 - **Exports**: `TableViewer` exposes CSV/Excel download buttons powered by SheetJS (`xlsx`), loaded dynamically on demand.
 
 ## Adding New Visualizations
@@ -103,4 +103,4 @@ The Vitest suite `lib/tools/__tests__/code-execution.test.ts` ensures tool schem
 
 ---
 
-For questions or future extensions (e.g., scatter charts, pivot tables, or multi-step notebooks), follow the same pattern: define a tool schema, register it, and implement a viewer consistent with the Hyper UI.
+For questions or future extensions (e.g., scatter charts, pivot tables, or multi-step notebooks), follow the same pattern: define a tool schema, register it, and implement a viewer consistent with the HyperFix UI.

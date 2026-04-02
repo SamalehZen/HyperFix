@@ -40,7 +40,7 @@ export function ShareDialog({
   const [isChangingVisibility, setIsChangingVisibility] = useState(false);
 
   // Generate the share URL
-  const shareUrl = chatId ? `https://hyper.vercel.app/search/${chatId}` : '';
+  const shareUrl = chatId ? `https://hypeer.vercel.app/search/${chatId}` : '';
 
   // Reset copied state when dialog opens/closes
   useEffect(() => {
@@ -147,7 +147,7 @@ export function ShareDialog({
     console.log('📱 Using native share API:', shareUrl);
     try {
       await navigator.share({
-        title: 'Conversation Hyper partagée',
+        title: 'Conversation HyperFix partagée',
         url: shareUrl,
       });
       console.log('✅ Native share completed');

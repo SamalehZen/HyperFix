@@ -408,7 +408,7 @@ async function seedEvents(userIds: string[]) {
 
 async function main() {
   console.log('╔══════════════════════════════════════════════════════╗');
-  console.log('║   🎲 Génération de Données de Test - Hyper Admin    ║');
+  console.log('║  🎲 Génération de Données de Test - HyperFix Admin  ║');
   console.log('╚══════════════════════════════════════════════════════╝');
 
   console.log('\n⚠️  Cette opération va créer des données de test dans la base.');

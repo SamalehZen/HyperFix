@@ -97,7 +97,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/blog',
-        destination: 'https://blog.hyper.vercel.app',
+        destination: 'https://hypeer.vercel.app/',
         permanent: true,
       },
     ];
