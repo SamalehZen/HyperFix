@@ -199,11 +199,9 @@ const buildPdfHtml = (opts: {
 <div id="pdf-content" style="width:794px;margin:0 auto;padding:48px 52px 40px;background:#ffffff;">
 
   <div id="pdf-header" style="border-bottom:2px solid #111111;padding-bottom:16px;margin-bottom:24px;">
-    <div style="display:flex;align-items:center;gap:10px;">
+    <div style="display:inline-flex;align-items:center;gap:10px;vertical-align:middle;">
       ${LOGO_SVG}
-      <div>
-        <div style="font-size:22px;font-weight:700;color:#111111;line-height:1;">HyperFix</div>
-      </div>
+      <span style="font-size:22px;font-weight:700;color:#111111;line-height:28px;">HyperFix</span>
     </div>
     <div style="margin-top:6px;font-size:11px;color:#555555;">Model: ${escapeHtml(opts.modelName)} • Date: ${escapeHtml(opts.date)}</div>
   </div>
