@@ -4,10 +4,10 @@ import { z } from 'zod';
 
 export const serverEnv = createEnv({
   server: {
-    GOOGLE_GENERATIVE_AI_API_KEY: z.string().min(1),
+    GOOGLE_GENERATIVE_AI_API_KEY: z.string().optional().default(''),
     DATABASE_URL: z.string().min(1),
-    REDIS_URL: z.string().min(1),
-    BLOB_READ_WRITE_TOKEN: z.string().min(1),
+    REDIS_URL: z.string().optional().default(''),
+    BLOB_READ_WRITE_TOKEN: z.string().optional().default(''),
 
     LOCAL_AUTH_SECRET: z.string().optional(),
 
@@ -29,7 +29,7 @@ export const serverEnv = createEnv({
     ELEVENLABS_API_KEY: z.string().optional().default('deprecated'),
     TAVILY_API_KEY: z.string().optional().default('deprecated'),
     EXA_API_KEY: z.string().optional().default('deprecated'),
-    SERPER_API_KEY: z.string().min(1, 'Serper API key is required for EAN search'),
+    SERPER_API_KEY: z.string().optional().default(''),
     VALYU_API_KEY: z.string().optional().default('deprecated'),
     TMDB_API_KEY: z.string().optional().default('deprecated'),
     YT_ENDPOINT: z.string().optional().default('deprecated'),

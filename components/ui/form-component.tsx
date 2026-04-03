@@ -1022,6 +1022,10 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
   const [isRecording, setIsRecording] = useState(false);
   const speechRecognitionRef = useRef<any>(null);
+  const userStoppedRecordingRef = useRef(false);
+  const baseTextRef = useRef('');
+  const restartCountRef = useRef(0);
+  const MAX_RESTARTS = 5;
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [isTypewriting, setIsTypewriting] = useState(false);
   const [showUpgradeDialog, setShowUpgradeDialog] = useState(false);
@@ -1047,6 +1051,10 @@ const FormComponent: React.FC<FormComponentProps> = ({
   const cleanupSpeechRecognition = useCallback(() => {
     if (speechRecognitionRef.current) {
       try {
+        speechRecognitionRef.current.onend = null;
+        speechRecognitionRef.current.onerror = null;
+        speechRecognitionRef.current.onresult = null;
+        speechRecognitionRef.current.onstart = null;
         speechRecognitionRef.current.stop();
       } catch (e) {
         console.error('Error stopping speech recognition:', e);
@@ -1054,6 +1062,8 @@ const FormComponent: React.FC<FormComponentProps> = ({
       speechRecognitionRef.current = null;
     }
     setIsRecording(false);
+    baseTextRef.current = '';
+    restartCountRef.current = 0;
   }, []);
 
   useEffect(() => {
@@ -1068,14 +1078,17 @@ const FormComponent: React.FC<FormComponentProps> = ({
     const finishHandler = () => {
       setIsEnhancing(false);
       setIsTypewriting(false);
-      setIsRecording(false);
+      if (isRecording) {
+        userStoppedRecordingRef.current = true;
+        cleanupSpeechRecognition();
+      }
       try {
         inputRef.current?.focus({ preventScroll: true });
       } catch { }
     };
     window.addEventListener('chat-stream-finished', finishHandler);
     return () => window.removeEventListener('chat-stream-finished', finishHandler);
-  }, [inputRef]);
+  }, [inputRef, isRecording, cleanupSpeechRecognition]);
 
   // Fetch discount config when needed
   const fetchDiscountConfigForm = useCallback(async () => {
@@ -1343,6 +1356,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
   const handleRecord = useCallback(async () => {
     if (isRecording && speechRecognitionRef.current) {
+      userStoppedRecordingRef.current = true;
       try {
         speechRecognitionRef.current.stop();
       } catch (e) {
@@ -1363,55 +1377,100 @@ const FormComponent: React.FC<FormComponentProps> = ({
           return;
         }
 
-        const recognition = new SpeechRecognition();
-        recognition.continuous = true;
-        recognition.interimResults = true;
-        recognition.lang = 'fr-FR';
-        recognition.maxAlternatives = 1;
+        userStoppedRecordingRef.current = false;
+        restartCountRef.current = 0;
+        baseTextRef.current = input ? input + ' ' : '';
 
         let finalTranscript = '';
 
-        recognition.onstart = () => {
-          console.log('Speech recognition started');
-          setIsRecording(true);
-        };
+        const fatalErrors = ['not-allowed', 'service-not-allowed', 'language-not-supported', 'audio-capture', 'aborted'];
 
-        recognition.onresult = (event: any) => {
-          let interimTranscript = '';
-          
-          for (let i = event.resultIndex; i < event.results.length; i++) {
-            const transcript = event.results[i][0].transcript;
-            if (event.results[i].isFinal) {
-              finalTranscript += transcript + ' ';
-            } else {
-              interimTranscript += transcript;
+        const createRecognitionInstance = () => {
+          const rec = new SpeechRecognition();
+          rec.continuous = true;
+          rec.interimResults = true;
+          rec.lang = 'fr-FR';
+          rec.maxAlternatives = 1;
+
+          rec.onstart = () => {
+            setIsRecording(true);
+          };
+
+          rec.onresult = (event: any) => {
+            restartCountRef.current = 0;
+            let interimTranscript = '';
+            
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+              const transcript = event.results[i][0].transcript;
+              if (event.results[i].isFinal) {
+                finalTranscript += transcript + ' ';
+              } else {
+                interimTranscript += transcript;
+              }
             }
-          }
-          
-          setInput(finalTranscript + interimTranscript);
+            
+            setInput(baseTextRef.current + finalTranscript + interimTranscript);
+          };
+
+          rec.onerror = (event: any) => {
+            console.error('Speech recognition error:', event.error);
+
+            if (fatalErrors.includes(event.error)) {
+              if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+                sileo.error({ title: 'Microphone access denied. Enable it in your browser settings.', description: 'Check your permissions', icon: <Mic size={14} /> });
+              } else if (event.error === 'audio-capture') {
+                sileo.error({ title: 'Aucun microphone détecté.', description: 'Vérifiez que votre micro est branché', icon: <Mic size={14} /> });
+              } else {
+                sileo.error({ title: `Speech recognition error: ${event.error}`, description: 'Please try again', icon: <Mic size={14} /> });
+              }
+              userStoppedRecordingRef.current = true;
+              cleanupSpeechRecognition();
+            } else {
+              if (event.error === 'no-speech') {
+                sileo.show({ title: 'Aucune voix détectée, l\'écoute continue...', description: 'Parlez dans votre microphone', icon: <Mic size={14} /> });
+              } else if (event.error === 'network') {
+                sileo.show({ title: 'Problème réseau, tentative de reprise...', description: 'Vérifiez votre connexion', icon: <Mic size={14} /> });
+              }
+            }
+          };
+
+          rec.onend = () => {
+            if (userStoppedRecordingRef.current || !isMounted.current) {
+              cleanupSpeechRecognition();
+              return;
+            }
+
+            restartCountRef.current += 1;
+            if (restartCountRef.current > MAX_RESTARTS) {
+              sileo.error({ title: 'La reconnaissance vocale s\'est arrêtée.', description: 'Cliquez à nouveau pour redémarrer', icon: <Mic size={14} /> });
+              cleanupSpeechRecognition();
+              return;
+            }
+
+            setIsRecording(true);
+            const delay = Math.min(300 * restartCountRef.current, 2000);
+            setTimeout(() => {
+              if (userStoppedRecordingRef.current || !isMounted.current) {
+                cleanupSpeechRecognition();
+                return;
+              }
+              try {
+                baseTextRef.current = baseTextRef.current + finalTranscript;
+                finalTranscript = '';
+                const newRec = createRecognitionInstance();
+                speechRecognitionRef.current = newRec;
+                newRec.start();
+              } catch (e) {
+                console.error('Error restarting speech recognition:', e);
+                cleanupSpeechRecognition();
+              }
+            }, delay);
+          };
+
+          return rec;
         };
 
-        recognition.onerror = (event: any) => {
-          console.error('Speech recognition error:', event.error);
-          
-          if (event.error === 'no-speech') {
-            sileo.error({ title: 'No speech detected. Please try again.', description: 'Speak clearly into your microphone', icon: <Mic size={14} /> });
-          } else if (event.error === 'not-allowed') {
-            sileo.error({ title: 'Microphone access denied. Enable it in your browser settings.', description: 'Check your permissions', icon: <Mic size={14} /> });
-          } else if (event.error === 'network') {
-            sileo.error({ title: 'Network error. Please check your connection.', description: 'Verify your internet connection', icon: <Mic size={14} /> });
-          } else {
-            sileo.error({ title: `Speech recognition error: ${event.error}`, description: 'Please try again', icon: <Mic size={14} /> });
-          }
-          
-          cleanupSpeechRecognition();
-        };
-
-        recognition.onend = () => {
-          console.log('Speech recognition ended');
-          cleanupSpeechRecognition();
-        };
-
+        const recognition = createRecognitionInstance();
         speechRecognitionRef.current = recognition;
         recognition.start();
       } catch (error) {
@@ -1420,7 +1479,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
         setIsRecording(false);
       }
     }
-  }, [isRecording, cleanupSpeechRecognition, setInput]);
+  }, [isRecording, cleanupSpeechRecognition, setInput, input]);
 
   const handleInput = useCallback(
     (event: React.ChangeEvent<HTMLTextAreaElement>) => {
