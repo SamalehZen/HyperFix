@@ -1385,6 +1385,8 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
         const fatalErrors = ['not-allowed', 'service-not-allowed', 'language-not-supported', 'audio-capture', 'aborted'];
 
+        let hasReceivedResult = false;
+
         const createRecognitionInstance = () => {
           const rec = new SpeechRecognition();
           rec.continuous = true;
@@ -1393,11 +1395,12 @@ const FormComponent: React.FC<FormComponentProps> = ({
           rec.maxAlternatives = 1;
 
           rec.onstart = () => {
-            restartCountRef.current = 0;
             setIsRecording(true);
           };
 
           rec.onresult = (event: any) => {
+            hasReceivedResult = true;
+            restartCountRef.current = 0;
             let interimTranscript = '';
             
             for (let i = event.resultIndex; i < event.results.length; i++) {
@@ -1425,6 +1428,12 @@ const FormComponent: React.FC<FormComponentProps> = ({
               }
               userStoppedRecordingRef.current = true;
               cleanupSpeechRecognition();
+            } else {
+              if (event.error === 'no-speech') {
+                sileo.show({ title: 'Aucune voix détectée, l\'écoute continue...', description: 'Parlez dans votre microphone', icon: <Mic size={14} /> });
+              } else if (event.error === 'network') {
+                sileo.show({ title: 'Problème réseau, tentative de reprise...', description: 'Vérifiez votre connexion', icon: <Mic size={14} /> });
+              }
             }
           };
 
@@ -1441,6 +1450,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
               return;
             }
 
+            setIsRecording(true);
             const delay = Math.min(300 * restartCountRef.current, 2000);
             setTimeout(() => {
               if (userStoppedRecordingRef.current || !isMounted.current) {
@@ -1450,6 +1460,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
               try {
                 baseTextRef.current = baseTextRef.current + finalTranscript;
                 finalTranscript = '';
+                hasReceivedResult = false;
                 const newRec = createRecognitionInstance();
                 speechRecognitionRef.current = newRec;
                 newRec.start();
