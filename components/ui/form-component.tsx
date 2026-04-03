@@ -1385,8 +1385,6 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
         const fatalErrors = ['not-allowed', 'service-not-allowed', 'language-not-supported', 'audio-capture', 'aborted'];
 
-        let hasReceivedResult = false;
-
         const createRecognitionInstance = () => {
           const rec = new SpeechRecognition();
           rec.continuous = true;
@@ -1399,7 +1397,6 @@ const FormComponent: React.FC<FormComponentProps> = ({
           };
 
           rec.onresult = (event: any) => {
-            hasReceivedResult = true;
             restartCountRef.current = 0;
             let interimTranscript = '';
             
@@ -1460,7 +1457,6 @@ const FormComponent: React.FC<FormComponentProps> = ({
               try {
                 baseTextRef.current = baseTextRef.current + finalTranscript;
                 finalTranscript = '';
-                hasReceivedResult = false;
                 const newRec = createRecognitionInstance();
                 speechRecognitionRef.current = newRec;
                 newRec.start();
