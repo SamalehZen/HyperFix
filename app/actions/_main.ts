@@ -90,10 +90,10 @@ export async function generateTitleFromUserMessage({ message }: { message: UIMes
 }
 
 export async function enhancePrompt(raw: string) {
-  try {
-    const system = `You are an expert prompt engineer. You are given a prompt and you need to enhance it.
+  const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit', weekday: 'short' });
+  const fallbackSystem = `You are an expert prompt engineer. You are given a prompt and you need to enhance it.
 
-Today's Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit', weekday: 'short' })}.
+Today's Date: ${today}.
 
 Guidelines (MANDATORY):
 - Preserve the user's original intent and constraints
@@ -108,19 +108,71 @@ Guidelines (MANDATORY):
 - Make sure the prompt is not an answer to the user's query!!
 - Return ONLY the improved prompt text, with no quotes or commentary or answer to the user's query!!
 - Just return the improved prompt text in plain text format, no other text or commentary or markdown or anything else!!`;
+  const systemPrompt = `Tu es un expert en reformulation de requêtes de recherche.
+Date du jour : ${today}.
 
-    const { text } = await generateText({
+Ta mission : transformer une requête utilisateur brute en une version structurée optimisée pour la recherche.
+
+## Règles pour "enhanced" (requête principale améliorée)
+- Préserve l'intention et la LANGUE de l'utilisateur
+- Rends-la spécifique, non ambiguë, et actionnable
+- Ajoute le contexte manquant : entités, période, lieu, format
+- Supprime le flou, les pronoms, le langage vague — utilise des noms propres
+- Concis mais dense en information (1-2 phrases max de plus que l'original)
+- Ce n'est PAS une réponse — c'est une meilleure QUESTION
+- INTERDIT de répondre à la question de l'utilisateur
+
+## Règles pour "subQueries" (2-3 sous-requêtes parallèles)
+- Chaque sous-requête couvre un ANGLE DIFFÉRENT
+- Au moins 1 question en langage naturel ("comment", "quels", "pourquoi"...)
+- Au moins 1 requête type mots-clés (pour moteur de recherche)
+- Maximum 3 sous-requêtes, dans la MÊME LANGUE que l'input
+
+## Règles pour "temporalQualifier"
+- Si la requête est sensible au temps, retourne un qualificateur ("2026", "récent", "actuel")
+- Sinon, retourne null
+
+## Règles pour "language"
+- Code ISO 639-1 de la langue de l'input ("fr", "en", "ar", etc.)`;
+
+  try {
+    const { object } = await generateObject({
       model: hyper.languageModel('hyper-enhance'),
       temperature: 0.6,
       topP: 0.95,
       maxOutputTokens: 1024,
-      system,
+      system: systemPrompt,
       prompt: raw,
+      schema: z.object({
+        enhanced: z.string().describe('Enhanced main prompt in the same language as input'),
+        subQueries: z.array(z.string()).min(1).max(3).describe('2-3 focused sub-queries covering different angles'),
+        temporalQualifier: z.string().nullable().describe('Time qualifier if time-sensitive, null otherwise'),
+        language: z.string().describe('ISO 639-1 language code of the input'),
+      }),
     });
 
-    return { success: true, enhanced: text.trim() };
-  } catch (error) {
-    return { success: false, error: 'Failed to enhance prompt' };
+    return {
+      success: true,
+      enhanced: object.enhanced.trim(),
+      subQueries: object.subQueries.map((subQuery) => subQuery.trim()),
+      temporalQualifier: object.temporalQualifier?.trim() ?? null,
+      language: object.language.trim(),
+    };
+  } catch (structuredError) {
+    try {
+      const { text } = await generateText({
+        model: hyper.languageModel('hyper-enhance'),
+        temperature: 0.6,
+        topP: 0.95,
+        maxOutputTokens: 1024,
+        system: fallbackSystem,
+        prompt: raw,
+      });
+
+      return { success: true, enhanced: text.trim() };
+    } catch (fallbackError) {
+      return { success: false, error: 'Failed to enhance prompt' };
+    }
   }
 }
 
