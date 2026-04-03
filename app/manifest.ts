@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: 'HyperFix',
     description: 'HyperFix, la fixation — notre raison d’être.',
     start_url: '/',
-    display: 'standalone',
+    display: 'minimal-ui',
     categories: ['search', 'ai', 'productivity'],
     background_color: '#171717',
     icons: [
