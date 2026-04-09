@@ -1,4 +1,9 @@
 import type { FinalClassification, PipelineMetrics } from '@/lib/cyrus/types';
+import type { DetailedMetrics } from '@/lib/cyrus/metrics';
+
+function isDetailedMetrics(m: PipelineMetrics): m is DetailedMetrics {
+  return 'routingResults' in m && 'validationResults' in m;
+}
 
 export function formatClassificationsToMarkdown(
   classifications: FinalClassification[],
@@ -31,15 +36,38 @@ export function formatClassificationsToMarkdown(
   }
 
   const durationSec = (metrics.durationMs / 1000).toFixed(1);
-  const needsReview = allRows.filter(
-    (r) => r.status === 'needs_review' || r.status === 'fallback_used',
-  ).length;
 
-  lines.push('');
-  lines.push('---');
-  lines.push(
-    `📊 **Résumé** : ${allRows.length} articles classés | ${metrics.cacheHits} depuis cache | ${needsReview} à vérifier | Temps : ${durationSec}s`,
-  );
+  if (isDetailedMetrics(metrics)) {
+    const cacheHitRate =
+      metrics.uniqueLabels > 0
+        ? ((metrics.cacheHits / metrics.uniqueLabels) * 100).toFixed(1)
+        : '0.0';
+
+    lines.push('');
+    lines.push('---');
+    lines.push(
+      `📊 **Résumé** : ${allRows.length} articles classés en ${durationSec}s`,
+    );
+    lines.push(
+      `- ✅ ${metrics.validationResults.classified} classés | ⚠️ ${metrics.validationResults.needsReview} à vérifier | ❓ ${metrics.validationResults.fallbackUsed} fallback`,
+    );
+    lines.push(
+      `- 💾 Cache : ${metrics.cacheHits} hits (${cacheHitRate}%) | 🔍 ${metrics.expertCalls} appels experts`,
+    );
+    lines.push(
+      `- 📦 Secteurs : ${metrics.sectorsUsed.join(', ') || 'aucun'}`,
+    );
+  } else {
+    const needsReview = allRows.filter(
+      (r) => r.status === 'needs_review' || r.status === 'fallback_used',
+    ).length;
+
+    lines.push('');
+    lines.push('---');
+    lines.push(
+      `📊 **Résumé** : ${allRows.length} articles classés | ${metrics.cacheHits} depuis cache | ${needsReview} à vérifier | Temps : ${durationSec}s`,
+    );
+  }
 
   return lines.join('\n');
 }
