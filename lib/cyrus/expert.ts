@@ -5,27 +5,42 @@ import type {
   ExpertDecision,
   NormalizedRecord,
   CandidateNode,
+  SectorTaxonomy,
 } from '@/lib/cyrus/types';
 import { loadSectorTaxonomy } from '@/lib/cyrus/taxonomy';
 import { buildExpertPrompt } from '@/ai/prompts/cyrus-sector-expert';
 
-const ExpertOutputSchema = z.object({
-  classifications: z.array(
-    z.object({
-      rawLabel: z.string(),
-      sectorCode: z.string(),
-      sectorName: z.string(),
-      rayonCode: z.string(),
-      rayonName: z.string(),
-      familleCode: z.string(),
-      familleName: z.string(),
-      sousFamilleCode: z.string(),
-      sousFamilleName: z.string(),
-      confidence: z.number().min(0).max(1),
-      reason: z.string(),
-    }),
-  ),
-});
+function extractCodes(sector: SectorTaxonomy, level: string): [string, ...string[]] {
+  const codes = [...new Set(
+    sector.nodes.filter((n) => n.level === level).map((n) => n.code),
+  )];
+  if (codes.length === 0) return [''];
+  return codes as [string, ...string[]];
+}
+
+function buildDynamicSchema(sector: SectorTaxonomy) {
+  const rayonCodes = extractCodes(sector, 'rayon');
+  const familleCodes = extractCodes(sector, 'famille');
+  const sousFamilleCodes = extractCodes(sector, 'sous-famille');
+
+  return z.object({
+    classifications: z.array(
+      z.object({
+        rawLabel: z.string(),
+        sectorCode: z.literal(sector.sectorCode),
+        sectorName: z.literal(sector.sectorName),
+        rayonCode: z.enum(rayonCodes),
+        rayonName: z.string(),
+        familleCode: z.enum(familleCodes),
+        familleName: z.string(),
+        sousFamilleCode: z.enum(sousFamilleCodes),
+        sousFamilleName: z.string(),
+        confidence: z.number().min(0).max(1),
+        reason: z.string(),
+      }),
+    ),
+  });
+}
 
 export async function classifyInSector(
   sectorCode: string,
@@ -47,11 +62,12 @@ export async function classifyInSector(
   }
 
   const prompt = buildExpertPrompt(sectorTaxonomy, allCandidates, labelStrings);
+  const schema = buildDynamicSchema(sectorTaxonomy);
 
   try {
     const { object } = await generateObject({
       model: hyper.languageModel('hyper-default'),
-      schema: ExpertOutputSchema,
+      schema,
       prompt,
     });
 
