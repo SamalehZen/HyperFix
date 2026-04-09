@@ -1,0 +1,4943 @@
+{
+  "sectorCode": "07",
+  "sectorName": "BAZAR",
+  "sectorId": "sector-07",
+  "nodes": [
+    {
+      "id": "rayon-070",
+      "level": "rayon",
+      "code": "070",
+      "name": "MENAGE",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-701-070",
+      "level": "famille",
+      "code": "701",
+      "name": "VAISSELLE",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-701-070",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "AMUSE BOUCHE ET MINIATURE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-701-070",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PORCELAINE BLANCHE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-701-070",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "PORCELAINE DECOREE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-701-070",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "FAIENCE ET COULEUR",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-701-070",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "ARDOISE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-701-070",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "SERVICE DE TABLE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-701-070",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "PLATS DE SERVICE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-701-070",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "AUTRES",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-701-070",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "MELAMINE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-110-701-070",
+      "level": "sous-famille",
+      "code": "110",
+      "name": "COUVERTS DE TABLE",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-111-701-070",
+      "level": "sous-famille",
+      "code": "111",
+      "name": "MENAGERES",
+      "parentId": "famille-701-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-702-070",
+      "level": "famille",
+      "code": "702",
+      "name": "USTENSILES DE CUISINE",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-702-070",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "COUTELLERIE DE CUISINE",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-702-070",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "SET COUTEAUX",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-702-070",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "GADGETS",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-702-070",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "CISEAUX",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-702-070",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "PLANCHE A DECOUPER",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-702-070",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "CONDIMENTS",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-702-070",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "PREPARATION",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-702-070",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "BALANCE ET MINUTEUR",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-702-070",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "GADGET INDIEN",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-702-070",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "ISOTHERME",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-702-070",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "PLASTIC DE TABLE",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-212-702-070",
+      "level": "sous-famille",
+      "code": "212",
+      "name": "PLATEAUX",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-213-702-070",
+      "level": "sous-famille",
+      "code": "213",
+      "name": "ARTICLE EVIERS",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-214-702-070",
+      "level": "sous-famille",
+      "code": "214",
+      "name": "AUTRES",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-215-702-070",
+      "level": "sous-famille",
+      "code": "215",
+      "name": "ARTICLES BOIS",
+      "parentId": "famille-702-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-703-070",
+      "level": "famille",
+      "code": "703",
+      "name": "VERRERIE",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-703-070",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "ASSIETTES ET COUPES",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-703-070",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "VERRES",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-703-070",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "VERRE APERO",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-703-070",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "CARAFES - BOUTEILLES",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-703-070",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "SEAU A GLACE",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-703-070",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "BONBONNIERES",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-703-070",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "VERRE CRISTAL",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-308-703-070",
+      "level": "sous-famille",
+      "code": "308",
+      "name": "SERVICE VERRE/ACCESOIRE",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-309-703-070",
+      "level": "sous-famille",
+      "code": "309",
+      "name": "CADEAUX",
+      "parentId": "famille-703-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-704-070",
+      "level": "famille",
+      "code": "704",
+      "name": "CAFE/PETIT DEJEUNER",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-704-070",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "TASSES",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-704-070",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "MUGS",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-704-070",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "BOLS",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-704-070",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "CAFETIERE/THEIERE",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-704-070",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "SERVICE A CAFE/THE",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-704-070",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "AUTRES",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-704-070",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "THERMOS/BTEILLE ISOTHERME",
+      "parentId": "famille-704-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-705-070",
+      "level": "famille",
+      "code": "705",
+      "name": "CUISSON",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-705-070",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "POELE",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-705-070",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "FAITOUT",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-705-070",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "CASSEROLE",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-705-070",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "KADAI / WOKS",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-705-070",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "AUTOCUISEUR - COCOTTES",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-705-070",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "PLAT A FOUR",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-705-070",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "SILICONE",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-508-705-070",
+      "level": "sous-famille",
+      "code": "508",
+      "name": "ARTICLES MICRO ONDES",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-509-705-070",
+      "level": "sous-famille",
+      "code": "509",
+      "name": "ACCESSOIRES - AUTRES",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-511-705-070",
+      "level": "sous-famille",
+      "code": "511",
+      "name": "SET DE CUISSON",
+      "parentId": "famille-705-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-706-070",
+      "level": "famille",
+      "code": "706",
+      "name": "UTILITAIRE DE CUISINE",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-706-070",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "BOCAUX ET BOITES",
+      "parentId": "famille-706-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-706-070",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "RANGEMENT",
+      "parentId": "famille-706-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-706-070",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "EGOUTTOIRS-RANGE COUVERTS",
+      "parentId": "famille-706-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-706-070",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "SUPPORTS ET PATERES",
+      "parentId": "famille-706-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-706-070",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "ASSIETTE PLASTIQUE",
+      "parentId": "famille-706-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-707-070",
+      "level": "famille",
+      "code": "707",
+      "name": "ENTRETIEN DU LINGE",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-707-070",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "PANIERS A LINGE",
+      "parentId": "famille-707-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-707-070",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "ETENDOIR/PINCE",
+      "parentId": "famille-707-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-707-070",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "TABLE A REPASSER/HOUSSE",
+      "parentId": "famille-707-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-707-070",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "CINTRE",
+      "parentId": "famille-707-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-707-070",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "MACHINE A COUDRE/ACCESOIR",
+      "parentId": "famille-707-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-708-070",
+      "level": "famille",
+      "code": "708",
+      "name": "RANGEM. PLASTIC/CORBEILLE",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-708-070",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "RANGEMENT PLASTIC",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-708-070",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "RANGEMENT METALIC",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-708-070",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "POUBELLE CUISINE",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-708-070",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "POUBELLE SALLE DE BAIN",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-708-070",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "BOITE DECO",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-708-070",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "VANNERIE",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-708-070",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "AUTRES",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-708-070",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "PANIER/BASSINE",
+      "parentId": "famille-708-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-709-070",
+      "level": "famille",
+      "code": "709",
+      "name": "ARTICLES JETABLES",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-709-070",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "VAISSELLE JETABLE",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-709-070",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "VAISSELLE PLASTIQUE",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-709-070",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "AMUSE BOUCHE ET APERO",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-709-070",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "ACCESSOIRES CAOUTCHOUC",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-709-070",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "ALUMINIUM FOOD SAVERS",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-709-070",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "ARTICLE DE NOEL",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-907-709-070",
+      "level": "sous-famille",
+      "code": "907",
+      "name": "ARTICLE DE FETE",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-908-709-070",
+      "level": "sous-famille",
+      "code": "908",
+      "name": "PAILLE",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-909-709-070",
+      "level": "sous-famille",
+      "code": "909",
+      "name": "SERVIETTE JETABLE",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-910-709-070",
+      "level": "sous-famille",
+      "code": "910",
+      "name": "AUTRES",
+      "parentId": "famille-709-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-711-070",
+      "level": "famille",
+      "code": "711",
+      "name": "BOUGIE ET SENTEUR",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-711-070",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BOUGIES",
+      "parentId": "famille-711-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-711-070",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "POT POURRIS",
+      "parentId": "famille-711-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-711-070",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "SENTEURS",
+      "parentId": "famille-711-070",
+      "aliases": []
+    },
+    {
+      "id": "famille-712-070",
+      "level": "famille",
+      "code": "712",
+      "name": "SOUVENIRS",
+      "parentId": "rayon-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-712-070",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CADEAUX",
+      "parentId": "famille-712-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-712-070",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "FIGURINES",
+      "parentId": "famille-712-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-712-070",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "SHEESHA",
+      "parentId": "famille-712-070",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-712-070",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "SHEESHA ACCESSORIES",
+      "parentId": "famille-712-070",
+      "aliases": []
+    },
+    {
+      "id": "rayon-071",
+      "level": "rayon",
+      "code": "071",
+      "name": "SPORTS",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-711-071",
+      "level": "famille",
+      "code": "711",
+      "name": "SPORTS PLEIN AIR",
+      "parentId": "rayon-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-711-071",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "RAQUETTE TENNIS",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-711-071",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "RAQUETTE SQUASH",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-711-071",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "RAQUETTES BADMINGTON",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-711-071",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "BALLONS ET ACCESSOIRES",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-711-071",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "TENNIS DE TABLE",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-711-071",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "ROLLER",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-711-071",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "SET ROLLER",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-711-071",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "SKATE ACCESSOIRES",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-711-071",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "AUTRES SPORTS",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-110-711-071",
+      "level": "sous-famille",
+      "code": "110",
+      "name": "FITNESS LEGER",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-111-711-071",
+      "level": "sous-famille",
+      "code": "111",
+      "name": "FITNESS",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-112-711-071",
+      "level": "sous-famille",
+      "code": "112",
+      "name": "FITNESS ACCESSOIRES",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-113-711-071",
+      "level": "sous-famille",
+      "code": "113",
+      "name": "AUTRES FITNESS",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-114-711-071",
+      "level": "sous-famille",
+      "code": "114",
+      "name": "FLECHETTES",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-115-711-071",
+      "level": "sous-famille",
+      "code": "115",
+      "name": "FOOTBALL",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-116-711-071",
+      "level": "sous-famille",
+      "code": "116",
+      "name": "BASKETBALL",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-117-711-071",
+      "level": "sous-famille",
+      "code": "117",
+      "name": "VOLLEYBALL",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-118-711-071",
+      "level": "sous-famille",
+      "code": "118",
+      "name": "ACCESSOIRES SPORT EQUIPE",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-119-711-071",
+      "level": "sous-famille",
+      "code": "119",
+      "name": "AUTRES",
+      "parentId": "famille-711-071",
+      "aliases": []
+    },
+    {
+      "id": "famille-712-071",
+      "level": "famille",
+      "code": "712",
+      "name": "SPORTS AQUATIQUES",
+      "parentId": "rayon-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-712-071",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "LUNETTE PISCINE/BONNET",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-712-071",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "MASK ET TUBA",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-712-071",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "PALMES",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-712-071",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "SET PLONGEE",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-712-071",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "COMBINAISON PLONGEE",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-712-071",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "ACCESSOIRES PLONGEES",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-712-071",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "PISCINE/ACCESSOIRES",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-712-071",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "BODYBOARD/SURF",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-712-071",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "PLANCHE A VOILE/KITE",
+      "parentId": "famille-712-071",
+      "aliases": []
+    },
+    {
+      "id": "famille-713-071",
+      "level": "famille",
+      "code": "713",
+      "name": "PECHE",
+      "parentId": "rayon-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-713-071",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CANNES A PECHE",
+      "parentId": "famille-713-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-713-071",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "MOULINETS",
+      "parentId": "famille-713-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-713-071",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "LIGNES/PLOMB",
+      "parentId": "famille-713-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-713-071",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "LEURRES/HAMECON",
+      "parentId": "famille-713-071",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-713-071",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "ACCESSOIRES PECHES",
+      "parentId": "famille-713-071",
+      "aliases": []
+    },
+    {
+      "id": "rayon-072",
+      "level": "rayon",
+      "code": "072",
+      "name": "BRICOLAGE/AUTO",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-721-072",
+      "level": "famille",
+      "code": "721",
+      "name": "ACCESSOIRE AUTO INTERIEUR",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-721-072",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "ANTENNES",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-721-072",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "HOUSSE DE SIEGE/COUSSIN",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-721-072",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "TAPIS DE SOL",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-721-072",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "PROTECTION VOLANT",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-721-072",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "DESODORISANTS",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-721-072",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "PARE SOLEIL",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-721-072",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "GADGETS",
+      "parentId": "famille-721-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-722-072",
+      "level": "famille",
+      "code": "722",
+      "name": "ACCESSOIRE AUTO EXTERIEUR",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-722-072",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "JERRICAN",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-722-072",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "GALERIE DE TOIT/COFFRE",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-722-072",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "MIRRORS",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-722-072",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "ESSUIE GLASSES",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-722-072",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "PROTEGE ROUE",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-722-072",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "HOUSSE DE VOITURE",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-722-072",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "DECORATION",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-722-072",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "PROTECTION",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-722-072",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-722-072",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "SANGLE DE REMORQUAGE",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-722-072",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "COMPRESSEUR/POMPES",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-212-722-072",
+      "level": "sous-famille",
+      "code": "212",
+      "name": "CABLE DE DEMARRAGE",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-213-722-072",
+      "level": "sous-famille",
+      "code": "213",
+      "name": "PNEUS",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-214-722-072",
+      "level": "sous-famille",
+      "code": "214",
+      "name": "AUTRES",
+      "parentId": "famille-722-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-723-072",
+      "level": "famille",
+      "code": "723",
+      "name": "ACCESSOIRE ELECTR/MECANIK",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-723-072",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "LAMPE/TORCHE",
+      "parentId": "famille-723-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-723-072",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "ALARMS",
+      "parentId": "famille-723-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-723-072",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "OUTILS",
+      "parentId": "famille-723-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-723-072",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "FUSIBLES",
+      "parentId": "famille-723-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-723-072",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "AUTRES",
+      "parentId": "famille-723-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-723-072",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "AMPOULES",
+      "parentId": "famille-723-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-724-072",
+      "level": "famille",
+      "code": "724",
+      "name": "LUBRIFIANTS/HUILE",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-724-072",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "MINERAL",
+      "parentId": "famille-724-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-724-072",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "SEMI SYNTHETIC",
+      "parentId": "famille-724-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-724-072",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SYNTHETIC",
+      "parentId": "famille-724-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-724-072",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BT VITESSE/DIRECT.ASSISTE",
+      "parentId": "famille-724-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-724-072",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "BATEAUX",
+      "parentId": "famille-724-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-724-072",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "AUTRES",
+      "parentId": "famille-724-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-725-072",
+      "level": "famille",
+      "code": "725",
+      "name": "NETTOYAGE/ENTRETIEN",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-725-072",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "EPONGE/ACCESSOIRES",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-725-072",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "SHAMPOING",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-725-072",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "POLISH",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-725-072",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "PLASTIC/CUIR",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-725-072",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "NETTOYAGE ROUE/PNEU",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-725-072",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "MOTEUR ADDITIF",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-725-072",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "LIQUIDE DE FREIN",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-508-725-072",
+      "level": "sous-famille",
+      "code": "508",
+      "name": "LIQUIDE DE NETTOYAGE",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-509-725-072",
+      "level": "sous-famille",
+      "code": "509",
+      "name": "GONFLEUR",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-510-725-072",
+      "level": "sous-famille",
+      "code": "510",
+      "name": "STOP FUITE",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-511-725-072",
+      "level": "sous-famille",
+      "code": "511",
+      "name": "KIT NETOYAGE",
+      "parentId": "famille-725-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-726-072",
+      "level": "famille",
+      "code": "726",
+      "name": "OUTILLAGE",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-726-072",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "OUTILS",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-726-072",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "KIT OUTILS",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-726-072",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "VISSERIE/CLOU",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-726-072",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "CORDES/CADENAS",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-726-072",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "BOITE A OUTILS/RANGEMENT",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-726-072",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "METRE",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-726-072",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "CARTOUCHE",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-726-072",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "FILTRE A EAU",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-726-072",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "PROTECTION",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-610-726-072",
+      "level": "sous-famille",
+      "code": "610",
+      "name": "AUTRES",
+      "parentId": "famille-726-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-727-072",
+      "level": "famille",
+      "code": "727",
+      "name": "PRODUITS ELECTRIK",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-727-072",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "PRISE ELECTRIQUE",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-727-072",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "CABLE ELECTRIK/MULTIPRISE",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-727-072",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "PRISE TELEPHONE",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-727-072",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "AMPOULE",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-727-072",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "SPHERICAL BULBS",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-727-072",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "FLAME BULBS",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-707-727-072",
+      "level": "sous-famille",
+      "code": "707",
+      "name": "SPOT",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-708-727-072",
+      "level": "sous-famille",
+      "code": "708",
+      "name": "NEON",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-709-727-072",
+      "level": "sous-famille",
+      "code": "709",
+      "name": "ENERGY SAVING",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-710-727-072",
+      "level": "sous-famille",
+      "code": "710",
+      "name": "FUNCTIONAL",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-711-727-072",
+      "level": "sous-famille",
+      "code": "711",
+      "name": "INSECT KILLERS",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-712-727-072",
+      "level": "sous-famille",
+      "code": "712",
+      "name": "LED LAMPE",
+      "parentId": "famille-727-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-728-072",
+      "level": "famille",
+      "code": "728",
+      "name": "ISOLANTS",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-728-072",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "SCOTCH",
+      "parentId": "famille-728-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-728-072",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "COLLE",
+      "parentId": "famille-728-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-728-072",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "MASTIC / SILICON",
+      "parentId": "famille-728-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-728-072",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "TEFLON",
+      "parentId": "famille-728-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-729-072",
+      "level": "famille",
+      "code": "729",
+      "name": "OUTILLAGE ELECTRIK",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-729-072",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "MECHE",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-729-072",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "SCIE",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-729-072",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "PONCEUSE",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-729-072",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "OUTILS SANS FIL",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-729-072",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "EQUIPEMENT LOURD",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-729-072",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-907-729-072",
+      "level": "sous-famille",
+      "code": "907",
+      "name": "AUTRES",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-908-729-072",
+      "level": "sous-famille",
+      "code": "908",
+      "name": "NETTOYEUR HTE PRES/ACCESS",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-909-729-072",
+      "level": "sous-famille",
+      "code": "909",
+      "name": "SOUFFLEUR",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-910-729-072",
+      "level": "sous-famille",
+      "code": "910",
+      "name": "GENERATEUR",
+      "parentId": "famille-729-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-731-072",
+      "level": "famille",
+      "code": "731",
+      "name": "BATTERIES",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-731-072",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SALINES",
+      "parentId": "famille-731-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-731-072",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "ALKALINES",
+      "parentId": "famille-731-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-731-072",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "RECHARGEABLE",
+      "parentId": "famille-731-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-731-072",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "CHARGEURS",
+      "parentId": "famille-731-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-731-072",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "LAMPES TORCHE",
+      "parentId": "famille-731-072",
+      "aliases": []
+    },
+    {
+      "id": "famille-732-072",
+      "level": "famille",
+      "code": "732",
+      "name": "PEINTURE",
+      "parentId": "rayon-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-732-072",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PEINTURE",
+      "parentId": "famille-732-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-732-072",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "ACCESSOIRES PEINTURES",
+      "parentId": "famille-732-072",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-732-072",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "ENDUITS",
+      "parentId": "famille-732-072",
+      "aliases": []
+    },
+    {
+      "id": "rayon-073",
+      "level": "rayon",
+      "code": "073",
+      "name": "CULTURE",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-731-073",
+      "level": "famille",
+      "code": "731",
+      "name": "AUDIO",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-731-073",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "K7",
+      "parentId": "famille-731-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-731-073",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "K7 PROMO",
+      "parentId": "famille-731-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-731-073",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CD",
+      "parentId": "famille-731-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-731-073",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "CD PROMO",
+      "parentId": "famille-731-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-731-073",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "RANGEMENT CD/ACCESSOIRES",
+      "parentId": "famille-731-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-732-073",
+      "level": "famille",
+      "code": "732",
+      "name": "VIDEO",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-732-073",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "DVD",
+      "parentId": "famille-732-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-732-073",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "DVD PROMO",
+      "parentId": "famille-732-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-732-073",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "OTHERS",
+      "parentId": "famille-732-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-732-073",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "BLUE RAY DVD",
+      "parentId": "famille-732-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-732-073",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "BLUE RAY DVD PROMO",
+      "parentId": "famille-732-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-733-073",
+      "level": "famille",
+      "code": "733",
+      "name": "ROMAN",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-733-073",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "ARABIC",
+      "parentId": "famille-733-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-733-073",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "JEUNE",
+      "parentId": "famille-733-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-733-073",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "FRENCH",
+      "parentId": "famille-733-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-734-073",
+      "level": "famille",
+      "code": "734",
+      "name": "JOURNAUX",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-734-073",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "QUOTIDIEN ARABE",
+      "parentId": "famille-734-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-734-073",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "QUOTIDIEN LOCAL",
+      "parentId": "famille-734-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-734-073",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "HEBDO Francais",
+      "parentId": "famille-734-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-734-073",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "HEBDO ARABIC",
+      "parentId": "famille-734-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-734-073",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "HEBDO LOCAL",
+      "parentId": "famille-734-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-734-073",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "AUTRES",
+      "parentId": "famille-734-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-735-073",
+      "level": "famille",
+      "code": "735",
+      "name": "LIVRES",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-735-073",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "Francais",
+      "parentId": "famille-735-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-735-073",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ARABE",
+      "parentId": "famille-735-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-735-073",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "LOCAL",
+      "parentId": "famille-735-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-736-073",
+      "level": "famille",
+      "code": "736",
+      "name": "LIVRES PRATIQUES",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-736-073",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "JARDINAGE/BRICOLAGE",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-736-073",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "MEDICAL SANTE",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-736-073",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "CADEAUX HISTOIRE",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-736-073",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "PARENTI/GROSSESSE",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-736-073",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "CUISINE",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-736-073",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "MANAGEMENT",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-736-073",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "RELIGION",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-736-073",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "TOURISME",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-736-073",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "BUSINESS MANAGEMENT",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-610-736-073",
+      "level": "sous-famille",
+      "code": "610",
+      "name": "BIEN ETRE/PSYCHOLOGY",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-611-736-073",
+      "level": "sous-famille",
+      "code": "611",
+      "name": "BIOGRAPHE/AUTOBIOGRAPHIE",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-612-736-073",
+      "level": "sous-famille",
+      "code": "612",
+      "name": "SANTE/FITNESS",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-613-736-073",
+      "level": "sous-famille",
+      "code": "613",
+      "name": "CD ACCESOIRES",
+      "parentId": "famille-736-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-737-073",
+      "level": "famille",
+      "code": "737",
+      "name": "JEUNESSE",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-737-073",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "HISTOIRE",
+      "parentId": "famille-737-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-737-073",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "ACTIVITES",
+      "parentId": "famille-737-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-737-073",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "COLORIAGE",
+      "parentId": "famille-737-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-737-073",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "EDUCATION",
+      "parentId": "famille-737-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-737-073",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "CULTURE GENERALE",
+      "parentId": "famille-737-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-738-073",
+      "level": "famille",
+      "code": "738",
+      "name": "MAGAZINES",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-738-073",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "HEBDO ANGLAIS",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-738-073",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "HEBDO Francais",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-738-073",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "HEBDO LOCAL",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-738-073",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "HEBDO AUTRES",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-738-073",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "MENSUEL ANGLAIS",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-738-073",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "MENSUEL Francais",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-738-073",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "MENSUEL LOCAL",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-738-073",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "AUTRES MENSUEL",
+      "parentId": "famille-738-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-739-073",
+      "level": "famille",
+      "code": "739",
+      "name": "DICTIONNAIRES",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-739-073",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "Francais ANGLAIS",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-739-073",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "ANGLAIS Francais",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-739-073",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "ANGLAIS ARABE",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-739-073",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "ARABE ANGLAIS",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-739-073",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "AUTRES",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-739-073",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "ANGLAIS",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-907-739-073",
+      "level": "sous-famille",
+      "code": "907",
+      "name": "ARABE",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-908-739-073",
+      "level": "sous-famille",
+      "code": "908",
+      "name": "Francais",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-909-739-073",
+      "level": "sous-famille",
+      "code": "909",
+      "name": "ESPAGNOL",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-910-739-073",
+      "level": "sous-famille",
+      "code": "910",
+      "name": "ALLEMAND",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-911-739-073",
+      "level": "sous-famille",
+      "code": "911",
+      "name": "RUSSE",
+      "parentId": "famille-739-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-741-073",
+      "level": "famille",
+      "code": "741",
+      "name": "CARTES ET ACCESSOIRES",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-741-073",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CARTE SIMPLE",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-741-073",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "CELEBRATIONS",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-741-073",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "BOITES",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-741-073",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "EID CARDS",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-741-073",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "ARTICLES DE FETES",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-741-073",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-741-073",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "PAPIERS CADEAUX",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-741-073",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "AUTRES",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-741-073",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "CARTES POSTALES",
+      "parentId": "famille-741-073",
+      "aliases": []
+    },
+    {
+      "id": "famille-742-073",
+      "level": "famille",
+      "code": "742",
+      "name": "AUTRES",
+      "parentId": "rayon-073",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-742-073",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "OTHERS",
+      "parentId": "famille-742-073",
+      "aliases": []
+    },
+    {
+      "id": "rayon-074",
+      "level": "rayon",
+      "code": "074",
+      "name": "PAPETERIE",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-741-074",
+      "level": "famille",
+      "code": "741",
+      "name": "ECRITURE",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-741-074",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "ENVELOPPES",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-741-074",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BLOCK NOTE",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-741-074",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CRAYONS",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-741-074",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "ENCRE",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-741-074",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "SYLO BILLE",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-741-074",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "FEUTRE",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-741-074",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "CRAYON DE COULEUR FEUTRE",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-741-074",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "GOMME ET CORRECTEUR",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-741-074",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "BACK TO SCHOOL",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-110-741-074",
+      "level": "sous-famille",
+      "code": "110",
+      "name": "TAILLE CRAYON",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-111-741-074",
+      "level": "sous-famille",
+      "code": "111",
+      "name": "MARKERS",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-112-741-074",
+      "level": "sous-famille",
+      "code": "112",
+      "name": "COLORIAGE",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-113-741-074",
+      "level": "sous-famille",
+      "code": "113",
+      "name": "ROLLER",
+      "parentId": "famille-741-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-742-074",
+      "level": "famille",
+      "code": "742",
+      "name": "CARNETS/CAHIERS",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-742-074",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "ARABE",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-742-074",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "ENGLAIS",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-742-074",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "Francais",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-742-074",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "AGENDA SCOLAIRE",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-742-074",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "SPECIFIC",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-742-074",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "AUTRES",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-742-074",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "JOURNAL",
+      "parentId": "famille-742-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-743-074",
+      "level": "famille",
+      "code": "743",
+      "name": "FEUILLE PAPIER",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-743-074",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "FEUILLE SIMPLE",
+      "parentId": "famille-743-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-743-074",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "FEUILLE DOUBLE",
+      "parentId": "famille-743-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-743-074",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "PROMO FEUILLE SIMPLE",
+      "parentId": "famille-743-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-743-074",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "PROMO FEUILLE DOUBLE",
+      "parentId": "famille-743-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-744-074",
+      "level": "famille",
+      "code": "744",
+      "name": "FOURNITURES DE BUREAU",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-744-074",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "BLOCK NOTE PETIT FORMAT",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-744-074",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "BLOCK NOTE A INDEX",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-744-074",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "PAPIER PHOTOCOPIE",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-744-074",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "ROULEAU FAX",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-744-074",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "AGENDA DE BUREAU",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-744-074",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "SPECIFIC",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-744-074",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "AUTRES",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-408-744-074",
+      "level": "sous-famille",
+      "code": "408",
+      "name": "EQUIPEMENT DE BUREAU",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-409-744-074",
+      "level": "sous-famille",
+      "code": "409",
+      "name": "LIVRES DE DESSIN",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-410-744-074",
+      "level": "sous-famille",
+      "code": "410",
+      "name": "FEUILLE DE DESSIN",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-411-744-074",
+      "level": "sous-famille",
+      "code": "411",
+      "name": "ACCESSOIRES PEINTURE",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-412-744-074",
+      "level": "sous-famille",
+      "code": "412",
+      "name": "CRAYON/CRAIE",
+      "parentId": "famille-744-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-745-074",
+      "level": "famille",
+      "code": "745",
+      "name": "FOURNITURE SCOLAIRES",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-745-074",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "COLLE/ SCOTCH",
+      "parentId": "famille-745-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-745-074",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ETIQUETTES/POST IT",
+      "parentId": "famille-745-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-745-074",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "MESUREMENT/COMPAS",
+      "parentId": "famille-745-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-745-074",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "AUTRES MATERIEL SCOLAIRE",
+      "parentId": "famille-745-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-745-074",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "PROMOTION",
+      "parentId": "famille-745-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-745-074",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "CISEAUX",
+      "parentId": "famille-745-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-746-074",
+      "level": "famille",
+      "code": "746",
+      "name": "BUREAU/ACCESSOIRES",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-746-074",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "BOITES RANGEMENT BUREAU",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-746-074",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "CLASSEURS BUREAU",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-746-074",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "CLASSEURS SCOLAIRE",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-746-074",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "COUVRE CAHIER/INTERCALAIR",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-746-074",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "AUTRES ARTICLES DE BUREAU",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-746-074",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "RANGEMENT BUREAU",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-746-074",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "CALCULATRICE SCOLAIRE",
+      "parentId": "famille-746-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-747-074",
+      "level": "famille",
+      "code": "747",
+      "name": "CARTABLE/SACS/RANGEMENT",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-747-074",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "TROUSSE",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-747-074",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "BOITE A CRAYONS",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-747-074",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "BABY BAG",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-747-074",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "SAC A DOS",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-747-074",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "CARTABLES",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-747-074",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "VALISE A ROULETTES",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-707-747-074",
+      "level": "sous-famille",
+      "code": "707",
+      "name": "GAMELLE",
+      "parentId": "famille-747-074",
+      "aliases": []
+    },
+    {
+      "id": "famille-748-074",
+      "level": "famille",
+      "code": "748",
+      "name": "CADRES/ALBUMS/POSTERS",
+      "parentId": "rayon-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-748-074",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CADRES",
+      "parentId": "famille-748-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-748-074",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "CADRES VERRES",
+      "parentId": "famille-748-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-748-074",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "ALBUM PHOTO",
+      "parentId": "famille-748-074",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-748-074",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "POSTERS",
+      "parentId": "famille-748-074",
+      "aliases": []
+    },
+    {
+      "id": "rayon-075",
+      "level": "rayon",
+      "code": "075",
+      "name": "EQUIPEMENT DE LA MAISON",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-751-075",
+      "level": "famille",
+      "code": "751",
+      "name": "LUMINAIRE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-751-075",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "LAMPE A POSER",
+      "parentId": "famille-751-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-751-075",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "LAMPE DE BUREAU",
+      "parentId": "famille-751-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-751-075",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "LAMPE HALOGENE",
+      "parentId": "famille-751-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-751-075",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "LAMPADAIRE",
+      "parentId": "famille-751-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-751-075",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "ABAT-JOUR",
+      "parentId": "famille-751-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-751-075",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "GUIRLANDES ET LANTERNES",
+      "parentId": "famille-751-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-752-075",
+      "level": "famille",
+      "code": "752",
+      "name": "VASE ET PHOTOPHORE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-752-075",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PHOTOPHORE ET LUMIGNONS",
+      "parentId": "famille-752-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-752-075",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "LANTERNE",
+      "parentId": "famille-752-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-752-075",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "BOUGEOIR ET CHANDELIER",
+      "parentId": "famille-752-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-752-075",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "VASE ET CACHE POT",
+      "parentId": "famille-752-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-753-075",
+      "level": "famille",
+      "code": "753",
+      "name": "MEUBLE/RANGEMENT",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-753-075",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CHAISE / TABOURET",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-753-075",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BUREAU",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-753-075",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "TABLES",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-753-075",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "RANGEMENT",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-753-075",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "AUTRES",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-753-075",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "PARAVENT",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-753-075",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "EGLO",
+      "parentId": "famille-753-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-754-075",
+      "level": "famille",
+      "code": "754",
+      "name": "DECORATION MURALE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-754-075",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "MIRROIRS",
+      "parentId": "famille-754-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-754-075",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "STICKERS",
+      "parentId": "famille-754-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-754-075",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "TOILE",
+      "parentId": "famille-754-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-755-075",
+      "level": "famille",
+      "code": "755",
+      "name": "OBJET DECO",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-755-075",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "ACCESSOIRES DECO",
+      "parentId": "famille-755-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-755-075",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ACCESSOIRES FUMEURS",
+      "parentId": "famille-755-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-755-075",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "PORTE-BIJOUX",
+      "parentId": "famille-755-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-755-075",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "PATERE / PLAQUE DE PORTE",
+      "parentId": "famille-755-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-755-075",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "DECORATION NOEL",
+      "parentId": "famille-755-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-756-075",
+      "level": "famille",
+      "code": "756",
+      "name": "SANITAIRE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-756-075",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "ACCESSOIRES DOUCHE",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-756-075",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "RIDEAU DE DOUCHE",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-756-075",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "TAPIS DE BAIN",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-756-075",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "ACCESOIRE SALLE DE BAIN",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-756-075",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "ABATTANT WC",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-756-075",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "POUBELLE",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-756-075",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "PESE PERSONNE",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-756-075",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "ACCESSOIRE HYGIENE BEAUTE",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-756-075",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "ACCESSOIRES DE TOILETTE",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-610-756-075",
+      "level": "sous-famille",
+      "code": "610",
+      "name": "MOBILIER DE SDB",
+      "parentId": "famille-756-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-757-075",
+      "level": "famille",
+      "code": "757",
+      "name": "TAPIS",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-757-075",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "TAPIS",
+      "parentId": "famille-757-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-757-075",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "TAPIS PERSE",
+      "parentId": "famille-757-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-757-075",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "TAPIS TURC",
+      "parentId": "famille-757-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-757-075",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "PAILLASSON",
+      "parentId": "famille-757-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-758-075",
+      "level": "famille",
+      "code": "758",
+      "name": "PEINTURE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-758-075",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "PEINTURE",
+      "parentId": "famille-758-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-758-075",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "ACCESSOIRES PEINTURE",
+      "parentId": "famille-758-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-758-075",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "TRAITEMENT BOIS",
+      "parentId": "famille-758-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-758-075",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "AUTOCOLLANT",
+      "parentId": "famille-758-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-759-075",
+      "level": "famille",
+      "code": "759",
+      "name": "ENDUIT/ TRINGLERIE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-759-075",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "TRINGLERIE FER FORGE",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-759-075",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "TRINGLERIE BOIS",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-759-075",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "KIT",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-759-075",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "VITRAGE",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-759-075",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "EMBRASSE",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-759-075",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "AIMANT ET PINCE CROCO",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-907-759-075",
+      "level": "sous-famille",
+      "code": "907",
+      "name": "PINCE",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-908-759-075",
+      "level": "sous-famille",
+      "code": "908",
+      "name": "FONCTIONNEL ET PENDERIE",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-909-759-075",
+      "level": "sous-famille",
+      "code": "909",
+      "name": "STORE",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-910-759-075",
+      "level": "sous-famille",
+      "code": "910",
+      "name": "ISOLATION",
+      "parentId": "famille-759-075",
+      "aliases": []
+    },
+    {
+      "id": "famille-761-075",
+      "level": "famille",
+      "code": "761",
+      "name": "PENDULE/HORLOGE",
+      "parentId": "rayon-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-761-075",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "HORLOGE",
+      "parentId": "famille-761-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-761-075",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PENDULE",
+      "parentId": "famille-761-075",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-761-075",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "REVEIL",
+      "parentId": "famille-761-075",
+      "aliases": []
+    },
+    {
+      "id": "rayon-076",
+      "level": "rayon",
+      "code": "076",
+      "name": "JARDINAGE",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-761-076",
+      "level": "famille",
+      "code": "761",
+      "name": "OUTILLAGE DE JARDIN",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-761-076",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "OUTILS MANUELS",
+      "parentId": "famille-761-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-761-076",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "OUTILS MECANIQUES",
+      "parentId": "famille-761-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-761-076",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "RANGEMENT",
+      "parentId": "famille-761-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-761-076",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "ECHAFAUDAGE",
+      "parentId": "famille-761-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-761-076",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "TONDEUSE",
+      "parentId": "famille-761-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-762-076",
+      "level": "famille",
+      "code": "762",
+      "name": "PLANTES ARTIFICIELLES",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-762-076",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "FAGOTS",
+      "parentId": "famille-762-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-762-076",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "TIGES",
+      "parentId": "famille-762-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-762-076",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "POTS/COMPOSITIONS FLEURS",
+      "parentId": "famille-762-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-762-076",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "PLANTES D'INTERIEUR",
+      "parentId": "famille-762-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-762-076",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "PLANTES D'EXTERIEUR",
+      "parentId": "famille-762-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-763-076",
+      "level": "famille",
+      "code": "763",
+      "name": "GRAINES/BULBES/SEMANCE",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-763-076",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "GRAINES",
+      "parentId": "famille-763-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-763-076",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BULBES",
+      "parentId": "famille-763-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-763-076",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "GAZON",
+      "parentId": "famille-763-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-763-076",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "AUTRES",
+      "parentId": "famille-763-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-764-076",
+      "level": "famille",
+      "code": "764",
+      "name": "DECORATION JARDIN",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-764-076",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "POT FLEURS PLASTIC",
+      "parentId": "famille-764-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-764-076",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "POTS",
+      "parentId": "famille-764-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-764-076",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "CERAMICS",
+      "parentId": "famille-764-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-764-076",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "PANIERS",
+      "parentId": "famille-764-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-764-076",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "ELEMENTS BOIS",
+      "parentId": "famille-764-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-765-076",
+      "level": "famille",
+      "code": "765",
+      "name": "ARROSAGE/PULVERISATION",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-765-076",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "TUYAU ARROSAGE",
+      "parentId": "famille-765-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-765-076",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ACCESSOIRES ARROSAGE",
+      "parentId": "famille-765-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-765-076",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "PULVERISATEUR /ARROSEURS",
+      "parentId": "famille-765-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-766-076",
+      "level": "famille",
+      "code": "766",
+      "name": "GRILLAGE / PROTECTION",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-766-076",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "TUTEURS",
+      "parentId": "famille-766-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-766-076",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "TERREAU",
+      "parentId": "famille-766-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-766-076",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "GRILLAGE",
+      "parentId": "famille-766-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-767-076",
+      "level": "famille",
+      "code": "767",
+      "name": "FERTILIZERS",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-767-076",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "ENGRAIS",
+      "parentId": "famille-767-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-767-076",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "AUTRES",
+      "parentId": "famille-767-076",
+      "aliases": []
+    },
+    {
+      "id": "famille-768-076",
+      "level": "famille",
+      "code": "768",
+      "name": "INSECT.ELECTRIQ./PROTECT.",
+      "parentId": "rayon-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-768-076",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "INSECTICIDES ELECTIQUES",
+      "parentId": "famille-768-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-768-076",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "MOUSTIQUAIRE",
+      "parentId": "famille-768-076",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-768-076",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "x",
+      "parentId": "famille-768-076",
+      "aliases": []
+    },
+    {
+      "id": "rayon-077",
+      "level": "rayon",
+      "code": "077",
+      "name": "BAGGAGE/CAMPING",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-771-077",
+      "level": "famille",
+      "code": "771",
+      "name": "BAGGAGE",
+      "parentId": "rayon-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-771-077",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BAGAGE CABINE DUR",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-771-077",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BAGAGE CABINE SOFT",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-771-077",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "VANITY CASE/ATTACHE CASE",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-771-077",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "VALISE SOUPLE",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-771-077",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "VALISE DURE",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-771-077",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "SACS DE VOYAGE",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-771-077",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-771-077",
+      "aliases": []
+    },
+    {
+      "id": "rayon-078",
+      "level": "rayon",
+      "code": "078",
+      "name": "CAMPING/MEUBLE EXTERNE",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-781-078",
+      "level": "famille",
+      "code": "781",
+      "name": "MOBILIER DE JARDIN",
+      "parentId": "rayon-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-781-078",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "TABLE / CHAISE RESINE",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-781-078",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "TABLE/CHAISE/A. MATERIEL",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-781-078",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "COUSSINS",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-781-078",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "PARASOLS",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-781-078",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "AUTRES",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-781-078",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "BALANCELLE",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-781-078",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "HAMMACK",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-781-078",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "BAIN DE SOLEIL",
+      "parentId": "famille-781-078",
+      "aliases": []
+    },
+    {
+      "id": "famille-782-078",
+      "level": "famille",
+      "code": "782",
+      "name": "CAMPING",
+      "parentId": "rayon-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-782-078",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "BARBECUE",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-782-078",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "BARBECUE ACC / CHARBON",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-782-078",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CHAISE DE CAMPING",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-782-078",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "TENTES",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-782-078",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "COUCHAGE",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-782-078",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "GLACIERE",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-782-078",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "FLASKS / JUGS",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-782-078",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "CUISINE/ECLAIRAGE",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-782-078",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "AUTRES",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-782-078",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "ACCESSOIRES CAMPING",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-782-078",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "PRODUITS PICNIC",
+      "parentId": "famille-782-078",
+      "aliases": []
+    },
+    {
+      "id": "rayon-079",
+      "level": "rayon",
+      "code": "079",
+      "name": "JOUETS/CYCLES",
+      "parentId": "sector-07",
+      "aliases": []
+    },
+    {
+      "id": "famille-791-079",
+      "level": "famille",
+      "code": "791",
+      "name": "JOUET BEBE",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-791-079",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BOIS",
+      "parentId": "famille-791-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-791-079",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PELUCHE",
+      "parentId": "famille-791-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-791-079",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "EDUCATIF",
+      "parentId": "famille-791-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-791-079",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "EVEIL",
+      "parentId": "famille-791-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-791-079",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "MOTRICITE",
+      "parentId": "famille-791-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-791-079",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "AUTRES",
+      "parentId": "famille-791-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-792-079",
+      "level": "famille",
+      "code": "792",
+      "name": "JOUET FILLE",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-792-079",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "POUPON",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-792-079",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "POUSSETTES ET ACCESSOIRES",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-792-079",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "POUPEE",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-792-079",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "POUPEE MANNEQUIN",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-792-079",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "ACCESOIRE POUPEE MANEQUIN",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-792-079",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "CUISINE",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-792-079",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "BEAUTE",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-792-079",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "IMITATION",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-792-079",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "THEMATIQUES",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-792-079",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "AUTRES",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-792-079",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "FIGURINES",
+      "parentId": "famille-792-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-793-079",
+      "level": "famille",
+      "code": "793",
+      "name": "JOUET GARCON",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-793-079",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "ARMES",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-793-079",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BRICOLAGE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-793-079",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "ROBOT",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-793-079",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "DRAGON DINOSAURE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-793-079",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "INTERVENTION",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-793-079",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "VOITURE MINIATURE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-793-079",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "VOITURE TELECOMMANDEE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-308-793-079",
+      "level": "sous-famille",
+      "code": "308",
+      "name": "ROAD RACING DIE CAST",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-309-793-079",
+      "level": "sous-famille",
+      "code": "309",
+      "name": "FIGURINES",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-310-793-079",
+      "level": "sous-famille",
+      "code": "310",
+      "name": "AUTRES",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-311-793-079",
+      "level": "sous-famille",
+      "code": "311",
+      "name": "VOITURE TLCDE REGARGEABLE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-312-793-079",
+      "level": "sous-famille",
+      "code": "312",
+      "name": "AVION / HELICOPTERE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-313-793-079",
+      "level": "sous-famille",
+      "code": "313",
+      "name": "ACCESSOIRES FIGURINES",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-314-793-079",
+      "level": "sous-famille",
+      "code": "314",
+      "name": "VEHICULE A FRICTION",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-315-793-079",
+      "level": "sous-famille",
+      "code": "315",
+      "name": "BATEAU RADIO COMMANDE",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-316-793-079",
+      "level": "sous-famille",
+      "code": "316",
+      "name": "EXTREME HOBBY",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-317-793-079",
+      "level": "sous-famille",
+      "code": "317",
+      "name": "THEMATIQUES",
+      "parentId": "famille-793-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-794-079",
+      "level": "famille",
+      "code": "794",
+      "name": "JOUET MIXTE",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-794-079",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "JEU DE SOCIETE",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-794-079",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "PUZZLES",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-794-079",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "PATE A MODELER",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-794-079",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "LOISIRS CREATIFS",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-794-079",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "PELUCHE",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-794-079",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "CONSTRUCTION",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-794-079",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "LCD GAMES",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-408-794-079",
+      "level": "sous-famille",
+      "code": "408",
+      "name": "TV GAMES",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-409-794-079",
+      "level": "sous-famille",
+      "code": "409",
+      "name": "EDUCATIONAL COMPUTERS",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-410-794-079",
+      "level": "sous-famille",
+      "code": "410",
+      "name": "MUSIC",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-411-794-079",
+      "level": "sous-famille",
+      "code": "411",
+      "name": "HEAVY TOYS",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-412-794-079",
+      "level": "sous-famille",
+      "code": "412",
+      "name": "OTHERS",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-413-794-079",
+      "level": "sous-famille",
+      "code": "413",
+      "name": "JEUX EDUCATIF",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-414-794-079",
+      "level": "sous-famille",
+      "code": "414",
+      "name": "MUSIC",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-415-794-079",
+      "level": "sous-famille",
+      "code": "415",
+      "name": "HALLOWEEN",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-416-794-079",
+      "level": "sous-famille",
+      "code": "416",
+      "name": "YO-YO",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-417-794-079",
+      "level": "sous-famille",
+      "code": "417",
+      "name": "CHARACTER WATCHES",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-418-794-079",
+      "level": "sous-famille",
+      "code": "418",
+      "name": "COSTUMES",
+      "parentId": "famille-794-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-795-079",
+      "level": "famille",
+      "code": "795",
+      "name": "JEUX D ETE",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-795-079",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "PISCINE",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-795-079",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ACCESSOIRES DE PISCINE",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-795-079",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "ARTICLES GONFLABLES",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-795-079",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "JEUX DE PLAGE",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-795-079",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "MOBILER GONFLABLE",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-795-079",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "PISTOLET A EAU",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-795-079",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "JEU DE PLEIN AIR",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-508-795-079",
+      "level": "sous-famille",
+      "code": "508",
+      "name": "BALLE BALLON",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-509-795-079",
+      "level": "sous-famille",
+      "code": "509",
+      "name": "AUTRES",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-510-795-079",
+      "level": "sous-famille",
+      "code": "510",
+      "name": "JEUX D'EAU",
+      "parentId": "famille-795-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-796-079",
+      "level": "famille",
+      "code": "796",
+      "name": "FESTIF /CELEBRATION",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-796-079",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "GUIRLANDES",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-796-079",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "DECORATION",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-796-079",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "DECORATION POUR VITRES",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-796-079",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "DECO ELECTRIQUE LUMINEUX",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-796-079",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "ARBRE DE NOEL",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-796-079",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "ARTICLE DE FETE",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-796-079",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "AUTRES",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-796-079",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "HALOWEEN",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-796-079",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "VALENTINES",
+      "parentId": "famille-796-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-797-079",
+      "level": "famille",
+      "code": "797",
+      "name": "VELO/ENGINS MOTORISES",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-797-079",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "VELO ENFANT",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-797-079",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "VELO HOMME",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-797-079",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "VELO FEMME",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-797-079",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-797-079",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "TROTTEUR",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-797-079",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "SCOOTER TERRESTRE",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-707-797-079",
+      "level": "sous-famille",
+      "code": "707",
+      "name": "SCOOTER MARINE",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-708-797-079",
+      "level": "sous-famille",
+      "code": "708",
+      "name": "QUAD",
+      "parentId": "famille-797-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-798-079",
+      "level": "famille",
+      "code": "798",
+      "name": "DESSIN ET PEINTURE",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-798-079",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CHASSIS",
+      "parentId": "famille-798-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-798-079",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "PEINTURE",
+      "parentId": "famille-798-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-798-079",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "ACCESSOIRE",
+      "parentId": "famille-798-079",
+      "aliases": []
+    },
+    {
+      "id": "famille-799-079",
+      "level": "famille",
+      "code": "799",
+      "name": "DO IT YOURSELF",
+      "parentId": "rayon-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-799-079",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "TRICOT",
+      "parentId": "famille-799-079",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-799-079",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "DIVERS",
+      "parentId": "famille-799-079",
+      "aliases": []
+    }
+  ]
+}

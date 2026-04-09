@@ -1,0 +1,1295 @@
+{
+  "sectorCode": "04",
+  "sectorName": "LIQUIDES",
+  "sectorId": "sector-04",
+  "nodes": [
+    {
+      "id": "rayon-040",
+      "level": "rayon",
+      "code": "040",
+      "name": "VINS/ALCOOLS",
+      "parentId": "sector-04",
+      "aliases": []
+    },
+    {
+      "id": "famille-401-040",
+      "level": "famille",
+      "code": "401",
+      "name": "ALCOOLS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-401-040",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "FLASKS ET MIGNONETTES",
+      "parentId": "famille-401-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-401-040",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "GINS",
+      "parentId": "famille-401-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-401-040",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "TEQUILAS",
+      "parentId": "famille-401-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-401-040",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "VODKAS",
+      "parentId": "famille-401-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-401-040",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "AUTRES ALCOOLS",
+      "parentId": "famille-401-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-402-040",
+      "level": "famille",
+      "code": "402",
+      "name": "RHUMS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-402-040",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "RHUMS BLANCS",
+      "parentId": "famille-402-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-402-040",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "RHUMS BRUNS ET VIEUX",
+      "parentId": "famille-402-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-402-040",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "RHUMS ARRANGES",
+      "parentId": "famille-402-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-403-040",
+      "level": "famille",
+      "code": "403",
+      "name": "WHISKIE SCOTCH ET BOURBON",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-403-040",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "BLEND",
+      "parentId": "famille-403-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-403-040",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BOURBONS",
+      "parentId": "famille-403-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-403-040",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "SINGLE & PURE MALT",
+      "parentId": "famille-403-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-403-040",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "WHISKIES DU MONDE",
+      "parentId": "famille-403-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-404-040",
+      "level": "famille",
+      "code": "404",
+      "name": "APERITIFS ET DIGESTIFS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-404-040",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "A BASE DE FRUITS",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-404-040",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "A BASE DE PLANTES",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-404-040",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "ANISES",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-404-040",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "COGNACS ET ARMAGNACS",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-404-040",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "CREMES DE FRUITS",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-404-040",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "PORTOS ET VINS CUITS",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-404-040",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "PREMIX PUNCHS & COCKTAILs",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-408-404-040",
+      "level": "sous-famille",
+      "code": "408",
+      "name": "APERITIFS SANS ALCOOL",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-409-404-040",
+      "level": "sous-famille",
+      "code": "409",
+      "name": "VINS DOUX NATURELS",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-410-404-040",
+      "level": "sous-famille",
+      "code": "410",
+      "name": "AUTRE APERITIF/DIGESTIF",
+      "parentId": "famille-404-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-405-040",
+      "level": "famille",
+      "code": "405",
+      "name": "BIERES ET PANACHES",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-405-040",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "BIERES",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-405-040",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "BIERES AROMATISEES",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-405-040",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "BIERES DU MONDE",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-405-040",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "BIERES FUTS",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-405-040",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "CAVE A BIERES",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-405-040",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "BIERES SANS ALCOOL",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-405-040",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "PANACHES",
+      "parentId": "famille-405-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-406-040",
+      "level": "famille",
+      "code": "406",
+      "name": "CIDRES",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-406-040",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "CIDRES BRUTS",
+      "parentId": "famille-406-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-406-040",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "CIDRES DOUX",
+      "parentId": "famille-406-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-406-040",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "CIDRES ROSES",
+      "parentId": "famille-406-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-406-040",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "CIDRES AROMATISES",
+      "parentId": "famille-406-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-407-040",
+      "level": "famille",
+      "code": "407",
+      "name": "EFFERVESCENTS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-407-040",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "EFFERVESCENTS BRUTS",
+      "parentId": "famille-407-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-407-040",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "EFFERVESCENTS DEMI SECS",
+      "parentId": "famille-407-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-407-040",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "EFFERVESCENTS ROSES",
+      "parentId": "famille-407-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-407-040",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "EFFERVESCENTS REGIONAUX",
+      "parentId": "famille-407-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-407-040",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "EFFERVESCENTS AROMATISES",
+      "parentId": "famille-407-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-407-040",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "EFFERVESCENTS DU MONDE",
+      "parentId": "famille-407-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-408-040",
+      "level": "famille",
+      "code": "408",
+      "name": "CHAMPAGNES",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-408-040",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CHAMPAGNES BRUTS",
+      "parentId": "famille-408-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-408-040",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "CHAMPAGNES DEMI SECS",
+      "parentId": "famille-408-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-408-040",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "CHAMPAGNES ROSES",
+      "parentId": "famille-408-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-408-040",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "BLC DE BLC ET BLC DE NOIR",
+      "parentId": "famille-408-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-409-040",
+      "level": "famille",
+      "code": "409",
+      "name": "VINS PRIMEURS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-409-040",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "BEAUJOLAIS NOUVEAU",
+      "parentId": "famille-409-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-409-040",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "COTES DU RHONES PRIMEUR",
+      "parentId": "famille-409-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-409-040",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "AUTRES PRIMEURS",
+      "parentId": "famille-409-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-411-040",
+      "level": "famille",
+      "code": "411",
+      "name": "CUBIS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-411-040",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CUBIS ROUGES",
+      "parentId": "famille-411-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-411-040",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "CUBIS BLANCS",
+      "parentId": "famille-411-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-411-040",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CUBIS ROSES",
+      "parentId": "famille-411-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-412-040",
+      "level": "famille",
+      "code": "412",
+      "name": "ALSACES",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-412-040",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PINOTS",
+      "parentId": "famille-412-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-412-040",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "GEWURZTRAMINER",
+      "parentId": "famille-412-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-412-040",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "SYLVANER",
+      "parentId": "famille-412-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-412-040",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "RIESLING",
+      "parentId": "famille-412-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-412-040",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "VOSGES ET JURA",
+      "parentId": "famille-412-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-413-040",
+      "level": "famille",
+      "code": "413",
+      "name": "BEAUJOLAIS ET LYONNAIS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-413-040",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "BEAUJOLAIS/LYONNAIS ROUGE",
+      "parentId": "famille-413-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-413-040",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BEAUJOLAIS/LYONNAIS BLANC",
+      "parentId": "famille-413-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-413-040",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "BEAUJOLAIS/LYONNAIS ROSE",
+      "parentId": "famille-413-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-414-040",
+      "level": "famille",
+      "code": "414",
+      "name": "BORDEAUX",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-414-040",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "BORDEAUX ROUGES",
+      "parentId": "famille-414-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-414-040",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "BORDEAUX BLANCS DOUX",
+      "parentId": "famille-414-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-414-040",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "BORDEAUX BLANCS SECS",
+      "parentId": "famille-414-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-414-040",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BORDEAUX ROSES",
+      "parentId": "famille-414-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-415-040",
+      "level": "famille",
+      "code": "415",
+      "name": "BOURGOGNES",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-415-040",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "BOURGOGNES ROUGES",
+      "parentId": "famille-415-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-415-040",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "BOURGOGNES BLANCS",
+      "parentId": "famille-415-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-415-040",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "BOURGOGNES ROSES",
+      "parentId": "famille-415-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-415-040",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "BOURGOGNES ALIGOTES",
+      "parentId": "famille-415-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-416-040",
+      "level": "famille",
+      "code": "416",
+      "name": "LANGUEDOC ROUSSILLON",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-416-040",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "LANGUEDOC ROUSSILLON RGE",
+      "parentId": "famille-416-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-416-040",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "LANGUEDOC ROUSSILLON BLC",
+      "parentId": "famille-416-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-416-040",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "LANGUEDOC ROUSSILLON RS",
+      "parentId": "famille-416-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-417-040",
+      "level": "famille",
+      "code": "417",
+      "name": "LOIRE ET CENTRE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-417-040",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "LOIRE ET CENTRE ROUGES",
+      "parentId": "famille-417-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-417-040",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "LOIRE ET CENTRE BLANCS",
+      "parentId": "famille-417-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-417-040",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "LOIRE ET CENTRE ROSES",
+      "parentId": "famille-417-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-418-040",
+      "level": "famille",
+      "code": "418",
+      "name": "PROVENCE ET CORSE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-418-040",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "PROVENCE ET CORSE ROUGES",
+      "parentId": "famille-418-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-418-040",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "PROVENCE ET CORSE BLANCS",
+      "parentId": "famille-418-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-418-040",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "PROVENCE ET CORSE ROSES",
+      "parentId": "famille-418-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-419-040",
+      "level": "famille",
+      "code": "419",
+      "name": "SAVOIE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-419-040",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "SAVOIE ROUGES",
+      "parentId": "famille-419-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-419-040",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "SAVOIE BLANCS",
+      "parentId": "famille-419-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-419-040",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "SAVOIE ROSES",
+      "parentId": "famille-419-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-421-040",
+      "level": "famille",
+      "code": "421",
+      "name": "SUD OUEST",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-421-040",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SUD OUEST ROUGES",
+      "parentId": "famille-421-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-421-040",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "SUD OUEST BLANCS DOUX",
+      "parentId": "famille-421-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-421-040",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "SUD OUEST BLANCS SECS",
+      "parentId": "famille-421-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-421-040",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "SUD OUEST ROSES",
+      "parentId": "famille-421-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-422-040",
+      "level": "famille",
+      "code": "422",
+      "name": "VALLEE DU RHONE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-422-040",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "VALLEE DU RHONE ROUGES",
+      "parentId": "famille-422-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-422-040",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "VALLEE DU RHONE BLANCS",
+      "parentId": "famille-422-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-422-040",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "VALLEE DU RHONE ROSES",
+      "parentId": "famille-422-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-423-040",
+      "level": "famille",
+      "code": "423",
+      "name": "VIN S/ALCOOL ET AROMATISE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-423-040",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "VINS SANS ALCOOL",
+      "parentId": "famille-423-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-423-040",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "VINS AROMATISES",
+      "parentId": "famille-423-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-424-040",
+      "level": "famille",
+      "code": "424",
+      "name": "VINS DE PAYS",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-424-040",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "VINS DE PAYS ROUGES",
+      "parentId": "famille-424-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-424-040",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "VINS DE PAYS BLANCS",
+      "parentId": "famille-424-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-424-040",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "VINS DE PAYS ROSES",
+      "parentId": "famille-424-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-425-040",
+      "level": "famille",
+      "code": "425",
+      "name": "VINS DE TABLE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-425-040",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "VINS DE TABLE ROUGES",
+      "parentId": "famille-425-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-425-040",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "VINS DE TABLE BLANCS",
+      "parentId": "famille-425-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-425-040",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "VINS DE TABLE ROSES",
+      "parentId": "famille-425-040",
+      "aliases": []
+    },
+    {
+      "id": "famille-426-040",
+      "level": "famille",
+      "code": "426",
+      "name": "VINS DU MONDE",
+      "parentId": "rayon-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-426-040",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "AFRIQUE DU SUD",
+      "parentId": "famille-426-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-426-040",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "ETHIOPIE",
+      "parentId": "famille-426-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-426-040",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "MAGHREB",
+      "parentId": "famille-426-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-426-040",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "EUROPE",
+      "parentId": "famille-426-040",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-426-040",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "AUTRES VINS DU MONDE",
+      "parentId": "famille-426-040",
+      "aliases": []
+    },
+    {
+      "id": "rayon-041",
+      "level": "rayon",
+      "code": "041",
+      "name": "LIQUIDES",
+      "parentId": "sector-04",
+      "aliases": []
+    },
+    {
+      "id": "famille-411-041",
+      "level": "famille",
+      "code": "411",
+      "name": "LIMONADES SODAS EXTRAIT",
+      "parentId": "rayon-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-411-041",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "LIMONADES",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-411-041",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BOISSON AUX FRUIT GAZEUSE",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-411-041",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "BOISSON AUX FRUITS PLATES",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-411-041",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "BOISSONS ENERGETIQUES",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-411-041",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "BOISSONS A BASE DE THE",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-411-041",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "CLEAR LIMES",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-411-041",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "SODA AU EXTRAIT DE PLANTE",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-411-041",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "COLAS",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-411-041",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "SODA AU EXTRAIT DE FRUIT",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-110-411-041",
+      "level": "sous-famille",
+      "code": "110",
+      "name": "BOISSONS ENFANT",
+      "parentId": "famille-411-041",
+      "aliases": []
+    },
+    {
+      "id": "famille-412-041",
+      "level": "famille",
+      "code": "412",
+      "name": "JUS DE FRUITS",
+      "parentId": "rayon-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-412-041",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PUR JUS DE FRUITS",
+      "parentId": "famille-412-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-412-041",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "JUS DE FRUITS CONCENTRE",
+      "parentId": "famille-412-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-412-041",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "NECTAR DE FRUITS",
+      "parentId": "famille-412-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-412-041",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "JUS LEGUMES",
+      "parentId": "famille-412-041",
+      "aliases": []
+    },
+    {
+      "id": "famille-413-041",
+      "level": "famille",
+      "code": "413",
+      "name": "SIROPS ET CONCENTRES",
+      "parentId": "rayon-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-413-041",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "SIROPS BIDONS",
+      "parentId": "famille-413-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-413-041",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "SIROPS BOUTEILLE",
+      "parentId": "famille-413-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-413-041",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "CONCENTRES NON SUCRES",
+      "parentId": "famille-413-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-413-041",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "AUTRES",
+      "parentId": "famille-413-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-413-041",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "SIROP COCKTAIL",
+      "parentId": "famille-413-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-413-041",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "BIO",
+      "parentId": "famille-413-041",
+      "aliases": []
+    },
+    {
+      "id": "famille-414-041",
+      "level": "famille",
+      "code": "414",
+      "name": "EAUX",
+      "parentId": "rayon-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-414-041",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "EAUX DE SOURCE PLATES",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-414-041",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "EAUX GAZEUSES AROMATISEES",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-414-041",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "PRODUITS REGIONAUX",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-414-041",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "EAUX MINERALES PLATES",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-414-041",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "EAUX MINERALES GAZEUSES",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-414-041",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "EAUX PLATES AROMATISEES",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-414-041",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "BOISSONS FONCTIONNELLES",
+      "parentId": "famille-414-041",
+      "aliases": []
+    },
+    {
+      "id": "famille-415-041",
+      "level": "famille",
+      "code": "415",
+      "name": "LIQUIDES BIO",
+      "parentId": "rayon-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-415-041",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "LIMONADE SODA EXTRAIT BIO",
+      "parentId": "famille-415-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-415-041",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "APERITIFS ET ALCOOL BIO",
+      "parentId": "famille-415-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-415-041",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "JUS DE FRUITS BIO",
+      "parentId": "famille-415-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-415-041",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "SIROPS ET CONCENTRES BIO",
+      "parentId": "famille-415-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-415-041",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "CIDRES BIO",
+      "parentId": "famille-415-041",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-415-041",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "CAVE A BIERES BIO",
+      "parentId": "famille-415-041",
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,1447 @@
+{
+  "sectorCode": "05",
+  "sectorName": "D.H.P.",
+  "sectorId": "sector-05",
+  "nodes": [
+    {
+      "id": "rayon-050",
+      "level": "rayon",
+      "code": "050",
+      "name": "PARFUMERIE",
+      "parentId": "sector-05",
+      "aliases": []
+    },
+    {
+      "id": "famille-501-050",
+      "level": "famille",
+      "code": "501",
+      "name": "RASAGE ET SOINS HOMME",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-501-050",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "OUTILS DE RASAGE",
+      "parentId": "famille-501-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-501-050",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "LAMES DE RASOIRS",
+      "parentId": "famille-501-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-501-050",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "PRODUITS AVANT RASAGE",
+      "parentId": "famille-501-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-501-050",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "PRODUITS APRES RASAGES",
+      "parentId": "famille-501-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-502-050",
+      "level": "famille",
+      "code": "502",
+      "name": "DENTAIRE",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-502-050",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "DENTIFRICES",
+      "parentId": "famille-502-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-502-050",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "SOINS DENTAIRES",
+      "parentId": "famille-502-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-502-050",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "NETTOYANT APPAR. DENTAIRE",
+      "parentId": "famille-502-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-502-050",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "BROSSES DENTS ENFANTS",
+      "parentId": "famille-502-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-502-050",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "BROSSES DENTS ADULTES",
+      "parentId": "famille-502-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-502-050",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-502-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-503-050",
+      "level": "famille",
+      "code": "503",
+      "name": "ACCESSOIRES DE TOILETTE",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-503-050",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "ACCESSOIRES CHEVEUX",
+      "parentId": "famille-503-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-503-050",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "ACCESSOIRES SALLE DE BAIN",
+      "parentId": "famille-503-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-503-050",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "ACCESSOIRES MAQUILLAGE",
+      "parentId": "famille-503-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-503-050",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "ACCESOIRE MANUC./PEDICURE",
+      "parentId": "famille-503-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-503-050",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "ACCESSOIRES AUTRES",
+      "parentId": "famille-503-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-504-050",
+      "level": "famille",
+      "code": "504",
+      "name": "COLORATION",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-504-050",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "COLORATION LONGUE DUREE",
+      "parentId": "famille-504-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-504-050",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "COLORATION TEMPORAIRE",
+      "parentId": "famille-504-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-504-050",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "COLORATION TON SUR TON",
+      "parentId": "famille-504-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-504-050",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "DIVERS",
+      "parentId": "famille-504-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-504-050",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "COLORATION HOMME",
+      "parentId": "famille-504-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-505-050",
+      "level": "famille",
+      "code": "505",
+      "name": "MAQUILLAGE",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-505-050",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "MAQUILLAGE DES YEUX",
+      "parentId": "famille-505-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-505-050",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "MAQUILLAGE ONGLES",
+      "parentId": "famille-505-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-505-050",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "MAQUILLAGE DES LEVRES",
+      "parentId": "famille-505-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-505-050",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "MAQUILLAGE VISAGE",
+      "parentId": "famille-505-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-506-050",
+      "level": "famille",
+      "code": "506",
+      "name": "COTON",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-506-050",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "COTON A DEMAQUILLER",
+      "parentId": "famille-506-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-506-050",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "COTON PREDECOUPE",
+      "parentId": "famille-506-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-506-050",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "COTONS TIGES",
+      "parentId": "famille-506-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-507-050",
+      "level": "famille",
+      "code": "507",
+      "name": "HYGIENE CORPORELLE",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-507-050",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "SAVONS DE TOILETTE",
+      "parentId": "famille-507-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-507-050",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "BAINS",
+      "parentId": "famille-507-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-507-050",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "DOUCHES",
+      "parentId": "famille-507-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-508-050",
+      "level": "famille",
+      "code": "508",
+      "name": "SHAMPOOINGS/A.SHAMP/SOINS",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-508-050",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "SHAMPOOINGS",
+      "parentId": "famille-508-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-508-050",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "APRES SHAMPOOINGS ET SOIN",
+      "parentId": "famille-508-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-508-050",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "LOTIONS CAPILLAIRES",
+      "parentId": "famille-508-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-509-050",
+      "level": "famille",
+      "code": "509",
+      "name": "PARFUMERIE ALCOOLIQUE",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-509-050",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "EAU DE COLOGNE",
+      "parentId": "famille-509-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-509-050",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "EAU DE TOILETTE MASCULINE",
+      "parentId": "famille-509-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-509-050",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "EAU DE TOILETTE FEMININE",
+      "parentId": "famille-509-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-509-050",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "EAU DE TOILETTE ENFANT",
+      "parentId": "famille-509-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-509-050",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "AUTRE",
+      "parentId": "famille-509-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-509-050",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "PARFUM ARAB",
+      "parentId": "famille-509-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-511-050",
+      "level": "famille",
+      "code": "511",
+      "name": "COIFFANTS",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-511-050",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "FIXATEURS",
+      "parentId": "famille-511-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-511-050",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "LAQUES",
+      "parentId": "famille-511-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-511-050",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "PRODUIT PERMANENT-DIVERS",
+      "parentId": "famille-511-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-512-050",
+      "level": "famille",
+      "code": "512",
+      "name": "DEODORANTS",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-512-050",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "DEODORANTS FEMMES",
+      "parentId": "famille-512-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-512-050",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "DEODORANTS HOMMES",
+      "parentId": "famille-512-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-512-050",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "DEODORANTS AUTRES",
+      "parentId": "famille-512-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-513-050",
+      "level": "famille",
+      "code": "513",
+      "name": "SOLAIRES",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-513-050",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "AUTOBRONZANTS",
+      "parentId": "famille-513-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-513-050",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "PRODUITS SOLAIRES ENFANTS",
+      "parentId": "famille-513-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-513-050",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "PRODUITS SOLAIRES ADULTES",
+      "parentId": "famille-513-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-513-050",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "APRES SOLEIL",
+      "parentId": "famille-513-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-513-050",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "AUTRES PRODUITS SOLAIRES",
+      "parentId": "famille-513-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-514-050",
+      "level": "famille",
+      "code": "514",
+      "name": "PARFUMERIE BIO",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-514-050",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "COTON BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-514-050",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "HYGIENE CORPORELLE BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-514-050",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "CAPILLAIRE BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-514-050",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "PARFUMERIE ALCOOLIQUE BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-514-050",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "DEODORANTS BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-514-050",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "PARAPHARMACIE BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-514-050",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "DENTAIRE BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-409-514-050",
+      "level": "sous-famille",
+      "code": "409",
+      "name": "SOINS VISAGE ET CORPS BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-410-514-050",
+      "level": "sous-famille",
+      "code": "410",
+      "name": "DEPILATOIRES BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-411-514-050",
+      "level": "sous-famille",
+      "code": "411",
+      "name": "ACCESOIRE DE TOILETTE BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-412-514-050",
+      "level": "sous-famille",
+      "code": "412",
+      "name": "COLORATION BIO",
+      "parentId": "famille-514-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-515-050",
+      "level": "famille",
+      "code": "515",
+      "name": "PARAPHARMACIE",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-515-050",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "1ER SECOURS",
+      "parentId": "famille-515-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-515-050",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-515-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-515-050",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "DERMATOLOGIE",
+      "parentId": "famille-515-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-515-050",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "PODOLOGIE",
+      "parentId": "famille-515-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-516-050",
+      "level": "famille",
+      "code": "516",
+      "name": "SOINS VISAGE ET CORPS",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-516-050",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "HOMME TOILETTE DU VISAGE",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-516-050",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "HOMME SOINS DU VISAGE",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-516-050",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "HOMME SOINS DU CORPS",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-516-050",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "ANTI-BACTERIENS",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-516-050",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "TOILETTE DU VISAGE",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-516-050",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "SOINS DU VISAGE",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-516-050",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "SOINS DU CORPS",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-516-050",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "SOINS SPECIFIQUES",
+      "parentId": "famille-516-050",
+      "aliases": []
+    },
+    {
+      "id": "famille-517-050",
+      "level": "famille",
+      "code": "517",
+      "name": "DEPILATOIRE/RASAGE FEMME",
+      "parentId": "rayon-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-517-050",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "CREME ET GEL",
+      "parentId": "famille-517-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-517-050",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "MOUSSE",
+      "parentId": "famille-517-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-517-050",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "CIRE CHAUDE",
+      "parentId": "famille-517-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-517-050",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "CIRE FROIDE",
+      "parentId": "famille-517-050",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-517-050",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "AUTRES",
+      "parentId": "famille-517-050",
+      "aliases": []
+    },
+    {
+      "id": "rayon-051",
+      "level": "rayon",
+      "code": "051",
+      "name": "DROGUERIE HYGIENE",
+      "parentId": "sector-05",
+      "aliases": []
+    },
+    {
+      "id": "famille-511-051",
+      "level": "famille",
+      "code": "511",
+      "name": "SACS PROVISIONS",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-511-051",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SACS DE CAISSE",
+      "parentId": "famille-511-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-511-051",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "SACS ISOTHERMES",
+      "parentId": "famille-511-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-512-051",
+      "level": "famille",
+      "code": "512",
+      "name": "VAISSELLE",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-512-051",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PRODUITS LAVE VAISSELLE",
+      "parentId": "famille-512-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-512-051",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "VAISSELLE MAINS",
+      "parentId": "famille-512-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-513-051",
+      "level": "famille",
+      "code": "513",
+      "name": "SPARTERIE BROSSERIE/MENAG",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-513-051",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "SPARTERIE TAPIS BROSSE",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-513-051",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BROSSERIE BALAIS",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-513-051",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "GANTS DE MENAGE",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-513-051",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "EPONGES",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-513-051",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "CHIFFONS",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-513-051",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "ESSUIE TOUT",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-513-051",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "SERPILIERE",
+      "parentId": "famille-513-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-514-051",
+      "level": "famille",
+      "code": "514",
+      "name": "HYGIENE BEBE",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-514-051",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CHANGES BEBE",
+      "parentId": "famille-514-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-514-051",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "CULOTTES",
+      "parentId": "famille-514-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-514-051",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "AUTRES CHANGES BEBE",
+      "parentId": "famille-514-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-514-051",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "ENURESIE",
+      "parentId": "famille-514-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-514-051",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "TOILETTE BEBE",
+      "parentId": "famille-514-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-515-051",
+      "level": "famille",
+      "code": "515",
+      "name": "PAPIERS",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-515-051",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "ESSUIE TOUT UNI",
+      "parentId": "famille-515-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-515-051",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ESSUIE TOUT DECORE",
+      "parentId": "famille-515-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-515-051",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "ROULEAUX",
+      "parentId": "famille-515-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-515-051",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "PAQUETS",
+      "parentId": "famille-515-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-515-051",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "AUTRES",
+      "parentId": "famille-515-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-516-051",
+      "level": "famille",
+      "code": "516",
+      "name": "MOUCHOIRS",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-516-051",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "BOITE",
+      "parentId": "famille-516-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-516-051",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "ETUIS",
+      "parentId": "famille-516-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-516-051",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "NETTOYANTS OPTIQUES",
+      "parentId": "famille-516-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-517-051",
+      "level": "famille",
+      "code": "517",
+      "name": "ART. ABSORBANT/RECURANT",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-517-051",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "ARTICLE ABSORBANT/ESUYAGE",
+      "parentId": "famille-517-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-517-051",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "ARTICLES A RECURER",
+      "parentId": "famille-517-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-518-051",
+      "level": "famille",
+      "code": "518",
+      "name": "PRDT WC/DESODORIS./JAVEL",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-518-051",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "ENTRETIEN WC",
+      "parentId": "famille-518-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-518-051",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "FOSSES SEPTIQUES",
+      "parentId": "famille-518-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-518-051",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "DEBOUCHEURS",
+      "parentId": "famille-518-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-518-051",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "CANALISATION",
+      "parentId": "famille-518-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-518-051",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "DESODORISANTS",
+      "parentId": "famille-518-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-518-051",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "JAVEL",
+      "parentId": "famille-518-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-519-051",
+      "level": "famille",
+      "code": "519",
+      "name": "INSECTICIDES",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-519-051",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "ANTI-VOLANTS",
+      "parentId": "famille-519-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-519-051",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "ANTI-RAMPANTS",
+      "parentId": "famille-519-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-519-051",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "ANTI-MITES",
+      "parentId": "famille-519-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-519-051",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "MULTI-USAGE",
+      "parentId": "famille-519-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-519-051",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "DIVERS",
+      "parentId": "famille-519-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-521-051",
+      "level": "famille",
+      "code": "521",
+      "name": "HYGIENE INTIME",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-521-051",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SERVIETTES",
+      "parentId": "famille-521-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-521-051",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PROTEGE-SLIPS",
+      "parentId": "famille-521-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-521-051",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "TAMPONS",
+      "parentId": "famille-521-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-521-051",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "INCONTINENCE",
+      "parentId": "famille-521-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-521-051",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "TOILETTE INTIME",
+      "parentId": "famille-521-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-522-051",
+      "level": "famille",
+      "code": "522",
+      "name": "ARTICLES MENAGERS",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-522-051",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "EMBALLAGES MENAGERS",
+      "parentId": "famille-522-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-522-051",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "SACS POUBELLES",
+      "parentId": "famille-522-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-523-051",
+      "level": "famille",
+      "code": "523",
+      "name": "ENTRETIEN DU LINGE",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-523-051",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "LESSIVES LIQUIDES",
+      "parentId": "famille-523-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-523-051",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "LESSIVES POUDRES",
+      "parentId": "famille-523-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-523-051",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "DOSETTES",
+      "parentId": "famille-523-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-524-051",
+      "level": "famille",
+      "code": "524",
+      "name": "PRODUITS D'ENTRETIEN",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-524-051",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CUIRS CHAUSSURES",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-524-051",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "COMBUSTIBLES",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-524-051",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "NETTOYANTS SPECIFIQUE SOL",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-524-051",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "NETTOYANTS SPEC. MEUBLE",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-524-051",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "NETTOYANT-GLACES-VITRES",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-524-051",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "NETTOY.MENAG.MULTI USAGES",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-524-051",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "NETTOYANT MENAGER SPEC.",
+      "parentId": "famille-524-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-525-051",
+      "level": "famille",
+      "code": "525",
+      "name": "ASSOUPLISSANTS",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-525-051",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "CLASSIQUES DILUES",
+      "parentId": "famille-525-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-525-051",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "DOSES TABLETTES",
+      "parentId": "famille-525-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-525-051",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "CLASSIQUES BERLINGOT",
+      "parentId": "famille-525-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-525-051",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "ECO-RECHARGES",
+      "parentId": "famille-525-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-525-051",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "ULTRAS",
+      "parentId": "famille-525-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-525-051",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "VOILE SECHE-LINGE",
+      "parentId": "famille-525-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-526-051",
+      "level": "famille",
+      "code": "526",
+      "name": "SOINS DU LINGE",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-526-051",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "SOIN TEXTILE APRES LAVAGE",
+      "parentId": "famille-526-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-526-051",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "ANTICALCAIRE",
+      "parentId": "famille-526-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-526-051",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "SAVONS DE LAVAGE",
+      "parentId": "famille-526-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-526-051",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "SOIN TEXT.AV./PEND.LAVAGE",
+      "parentId": "famille-526-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-527-051",
+      "level": "famille",
+      "code": "527",
+      "name": "DH BIO",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-527-051",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "HYGIENE BEBE BIO",
+      "parentId": "famille-527-051",
+      "aliases": []
+    },
+    {
+      "id": "famille-528-051",
+      "level": "famille",
+      "code": "528",
+      "name": "TABAC",
+      "parentId": "rayon-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-528-051",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CIGARETTES",
+      "parentId": "famille-528-051",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-528-051",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "AUTRES",
+      "parentId": "famille-528-051",
+      "aliases": []
+    }
+  ]
+}
