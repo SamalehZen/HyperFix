@@ -103,22 +103,22 @@
     },
     {
       "term": "vin",
-      "targets": ["rayon-041"],
+      "targets": ["rayon-040"],
       "weight": 1.0
     },
     {
       "term": "eau minérale",
-      "targets": ["rayon-040"],
+      "targets": ["rayon-041"],
       "weight": 1.0
     },
     {
       "term": "jus de fruit",
-      "targets": ["rayon-040"],
+      "targets": ["rayon-041"],
       "weight": 0.9
     },
     {
       "term": "soda",
-      "targets": ["rayon-040"],
+      "targets": ["rayon-041"],
       "weight": 1.0
     },
     {
