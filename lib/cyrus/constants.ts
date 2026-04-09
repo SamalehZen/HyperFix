@@ -23,4 +23,6 @@ export const CLASSIFICATION_SOURCES = [
   "legacy",
 ] as const;
 
-export const CYRUS_V2_ENABLED = true;
+export const CYRUS_V2_ENABLED = process.env.CYRUS_V2_DISABLED !== 'true';
+
+export const CYRUS_V2_DEBUG = process.env.CYRUS_V2_DEBUG === 'true';
