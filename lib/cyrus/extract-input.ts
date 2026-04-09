@@ -183,14 +183,10 @@ export async function extractInputRecordsAsync(
           indexOffset += txtRecords.length;
           records.push(...txtRecords);
         } else if (ext === 'pdf' || contentType.includes('pdf')) {
-          const text = await res.text();
-          const lines = linesFromText(text);
-          const pdfRecords = recordsFromLines(lines, 'pdf', att.name);
-          for (const r of pdfRecords) {
-            r.inputIndex = indexOffset + r.inputIndex;
-          }
-          indexOffset += pdfRecords.length;
-          records.push(...pdfRecords);
+          // PDF parsing requires a dedicated library (pdf-parse) not yet installed.
+          // Skip PDF files for now — proper support will come in a future sprint.
+          console.warn(`[Cyrus V2] Skipping PDF attachment "${att.name}" — PDF parsing not yet supported`);
+          continue;
         }
       } catch {
         continue;
