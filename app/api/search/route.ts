@@ -41,6 +41,7 @@ import { geolocation } from '@vercel/functions';
 import { createStreamResponse } from '@/lib/streaming-heartbeat';
 import { runCyrusPipeline } from '@/lib/cyrus/run-cyrus-pipeline';
 import { SMALL_INPUT_THRESHOLD, CYRUS_V2_ENABLED } from '@/lib/cyrus/constants';
+import { getRAGContextForMessage } from '@/lib/hierarchy-lookup';
 
 
 import { GroqProviderOptions } from '@ai-sdk/groq';
@@ -317,6 +318,15 @@ export async function POST(req: Request) {
 
       const streamStartTime = Date.now();
 
+      let ragContext = '';
+      if (group === 'cyrus') {
+        const lastMsg = messages[messages.length - 1];
+        const msgText = typeof lastMsg.content === 'string'
+          ? lastMsg.content
+          : lastMsg.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('\n') || '';
+        ragContext = await getRAGContextForMessage(msgText);
+      }
+
       const result = streamText({
         model: hyper.languageModel(resolvedModel),
         messages: convertToModelMessages(messages),
@@ -329,6 +339,7 @@ export async function POST(req: Request) {
         experimental_transform: markdownJoinerTransform(),
         system:
           instructions +
+          (group === 'cyrus' && ragContext ? ragContext : '') +
           (customInstructions && (isCustomInstructionsEnabled ?? true)
             ? `\n\nThe user's custom instructions are as follows and YOU MUST FOLLOW THEM AT ALL COSTS: ${customInstructions?.content}`
             : '\n') +

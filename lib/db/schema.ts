@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, boolean, json, varchar, integer, uuid, real } from 'drizzle-orm/pg-core';
+import { pgTable, text, timestamp, boolean, json, varchar, integer, uuid, real, customType } from 'drizzle-orm/pg-core';
 import { generateId } from 'ai';
 import { InferSelectModel } from 'drizzle-orm';
 import { v4 as uuidv4 } from 'uuid';
@@ -334,3 +334,35 @@ export const apiKeyUsage = pgTable(
 
 export type GeminiApiKey = InferSelectModel<typeof geminiApiKeys>;
 export type ApiKeyUsage = InferSelectModel<typeof apiKeyUsage>;
+
+export const vector = customType<{ data: number[]; driverData: string; config: { dimensions: number } }>({
+  dataType(config) {
+    return `vector(${config?.dimensions ?? 768})`;
+  },
+  fromDriver(value: string): number[] {
+    return value.slice(1, -1).split(',').map(Number);
+  },
+  toDriver(value: number[]): string {
+    return `[${value.join(',')}]`;
+  },
+});
+
+export const hierarchyNode = pgTable('hierarchy_node', {
+  id: text('id').primaryKey().$defaultFn(() => generateId()),
+  sectorCode: varchar('sector_code', { length: 10 }).notNull(),
+  sectorName: text('sector_name').notNull(),
+  rayonCode: varchar('rayon_code', { length: 10 }),
+  rayonName: text('rayon_name'),
+  familleCode: varchar('famille_code', { length: 10 }),
+  familleName: text('famille_name'),
+  sousFamilleCode: varchar('sous_famille_code', { length: 10 }),
+  sousFamilleName: text('sous_famille_name'),
+  level: integer('level').notNull(),
+  fullPath: text('full_path').notNull(),
+  enrichedText: text('enriched_text').notNull(),
+  embedding: vector('embedding', { dimensions: 768 }),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+export type HierarchyNode = InferSelectModel<typeof hierarchyNode>;

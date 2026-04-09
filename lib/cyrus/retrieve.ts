@@ -9,6 +9,12 @@ import type {
 } from '@/lib/cyrus/types';
 import { RETRIEVAL_TOP_N } from '@/lib/cyrus/constants';
 import { loadMasterTaxonomy, getFullPath } from '@/lib/cyrus/taxonomy';
+import {
+  findSimilarHierarchyNodes,
+  type HierarchySearchResult,
+} from '@/lib/db/hierarchy';
+
+let ragAvailable: boolean | null = null;
 
 interface TokenizedNode {
   node: TaxonomyNode;
@@ -142,6 +148,103 @@ function ensureIndex(): void {
 
 export function ensureSearchIndex(): void {
   ensureIndex();
+}
+
+function ragNodeToCandidateId(r: HierarchySearchResult): string {
+  const n = r.node;
+  if (n.sousFamilleCode && n.familleCode && n.rayonCode) {
+    return `sf-${n.sousFamilleCode}-${n.familleCode}-${n.rayonCode}`;
+  }
+  if (n.familleCode && n.rayonCode) {
+    return `famille-${n.familleCode}-${n.rayonCode}`;
+  }
+  if (n.rayonCode) {
+    return `rayon-${n.rayonCode}`;
+  }
+  return `sector-${n.sectorCode}`;
+}
+
+function ragResultToCandidates(
+  results: HierarchySearchResult[],
+): CandidateNode[] {
+  return results.map((r) => {
+    const n = r.node;
+    const pathNames: string[] = [n.sectorName];
+    if (n.rayonName) pathNames.push(n.rayonName);
+    if (n.familleName) pathNames.push(n.familleName);
+    if (n.sousFamilleName) pathNames.push(n.sousFamilleName);
+
+    return {
+      nodeId: ragNodeToCandidateId(r),
+      sectorCode: n.sectorCode,
+      path: pathNames,
+      score: r.similarity,
+      reasons: [`rag_similarity:${(r.similarity * 100).toFixed(0)}%`],
+    };
+  });
+}
+
+export async function retrieveCandidatesRAG(
+  normalizedLabel: string,
+  topN: number = RETRIEVAL_TOP_N,
+): Promise<CandidateNode[]> {
+  try {
+    const results = await findSimilarHierarchyNodes(
+      normalizedLabel,
+      topN,
+      0.4,
+    );
+    ragAvailable = true;
+    return ragResultToCandidates(results);
+  } catch {
+    ragAvailable = false;
+    return [];
+  }
+}
+
+function mergeCandidates(
+  tokenCandidates: CandidateNode[],
+  ragCandidates: CandidateNode[],
+  topN: number,
+): CandidateNode[] {
+  const merged = new Map<string, CandidateNode>();
+
+  for (const c of tokenCandidates) {
+    merged.set(c.nodeId, c);
+  }
+
+  for (const rc of ragCandidates) {
+    const existing = merged.get(rc.nodeId);
+    if (existing) {
+      existing.score = Math.min(existing.score + rc.score * 0.5, 1);
+      existing.reasons.push(...rc.reasons);
+    } else {
+      merged.set(rc.nodeId, rc);
+    }
+  }
+
+  return [...merged.values()]
+    .sort((a, b) => b.score - a.score)
+    .slice(0, topN);
+}
+
+export async function retrieveCandidatesHybrid(
+  normalizedLabel: string,
+  topN: number = RETRIEVAL_TOP_N,
+): Promise<CandidateNode[]> {
+  const tokenCandidates = retrieveCandidates(normalizedLabel, topN);
+
+  if (ragAvailable === false) {
+    return tokenCandidates;
+  }
+
+  const ragCandidates = await retrieveCandidatesRAG(normalizedLabel, topN);
+
+  if (ragCandidates.length === 0) {
+    return tokenCandidates;
+  }
+
+  return mergeCandidates(tokenCandidates, ragCandidates, topN);
 }
 
 export function retrieveCandidates(
