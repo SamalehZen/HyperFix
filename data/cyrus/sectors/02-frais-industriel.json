@@ -1,0 +1,1567 @@
+{
+  "sectorCode": "02",
+  "sectorName": "FRAIS INDUSTRIEL",
+  "sectorId": "sector-02",
+  "nodes": [
+    {
+      "id": "rayon-020",
+      "level": "rayon",
+      "code": "020",
+      "name": "PRODUITS FRAIS LACTES",
+      "parentId": "sector-02",
+      "aliases": []
+    },
+    {
+      "id": "famille-201-020",
+      "level": "famille",
+      "code": "201",
+      "name": "PRODUIT FR.LAITIER LS BIO",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-201-020",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "LAITCONSOMMATION BIO",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-201-020",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "FROMAGE BIOLOGIQUE",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-201-020",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "PAIN DE MIE ET PAINS BIO",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-201-020",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "BEURRE & MARGARINES BIO",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-201-020",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "OEUFS BIOLOGIQUES",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-201-020",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "DESSERTS ULTRA FRAIS BIO",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-201-020",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "LAIT FRAIS BIOLOGIQUE",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-201-020",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "CREME FRAICHE BIOLOGIQUE",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-201-020",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "YAOURTS BIOLOGIQUES",
+      "parentId": "famille-201-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-202-020",
+      "level": "famille",
+      "code": "202",
+      "name": "LAIT DE CONSOMMATION",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-202-020",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "LAIT 1/2 ECREME",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-202-020",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "LAIT ECREME",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-202-020",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "LAIT ENTIER",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-202-020",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "LAIT DE CHEVRE",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-202-020",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "LAIT DE SOJA",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-202-020",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "LAIT AROMATISE/PETIT DEJ.",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-202-020",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "LAIT ENFANT",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-202-020",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "LAIT FRAIS",
+      "parentId": "famille-202-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-203-020",
+      "level": "famille",
+      "code": "203",
+      "name": "OEUFS",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-203-020",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "OEUFS FRAIS",
+      "parentId": "famille-203-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-203-020",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "OEUFS DE CAILLE",
+      "parentId": "famille-203-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-204-020",
+      "level": "famille",
+      "code": "204",
+      "name": "DESSERTS ULTRA-FRAIS",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-204-020",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "LIEGEOIS",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-204-020",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "GELIFIES",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-204-020",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SPECIALITES",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-204-020",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "ENTREMETS",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-204-020",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "DESSERTS ALLEGES",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-204-020",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "CREMES DESSERTS",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-204-020",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "MOUSSES",
+      "parentId": "famille-204-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-205-020",
+      "level": "famille",
+      "code": "205",
+      "name": "CREMES ET SAUCES FRAICHES",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-205-020",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "CREME FRAICHE LEGERE",
+      "parentId": "famille-205-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-205-020",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "CREME FRAICHE ENTIERE",
+      "parentId": "famille-205-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-206-020",
+      "level": "famille",
+      "code": "206",
+      "name": "YAOURTS",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-206-020",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "YAOURTS ALLEGES",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-206-020",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "YAOURTS AUX FRUITS",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-206-020",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "YAOURTS A BOIRE",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-206-020",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "YAOURTS SPECIALITES",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-206-020",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "SOJA",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-206-020",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "YAOURTS ET DESSERTS BEBE",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-206-020",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "YAOURTS NATURE",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-206-020",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "YAOURTS POTS VERRE",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-206-020",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "YAOURTS AROMATISES",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-610-206-020",
+      "level": "sous-famille",
+      "code": "610",
+      "name": "YAOURTS BIFIDUS",
+      "parentId": "famille-206-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-207-020",
+      "level": "famille",
+      "code": "207",
+      "name": "FROMAGE ULTRA FRAIS",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-207-020",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "FROMAGES FRAIS BLANC",
+      "parentId": "famille-207-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-207-020",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "FROMAGE FRAIS CAMPAGNE",
+      "parentId": "famille-207-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-207-020",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "FAISSELLES ET SPECIALITES",
+      "parentId": "famille-207-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-207-020",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "FROMAGE PETITS SUISSES",
+      "parentId": "famille-207-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-208-020",
+      "level": "famille",
+      "code": "208",
+      "name": "FROMAGE LIBRE SERVICE",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-208-020",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "PATE MOLLE CROUTE FLEURIE",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-208-020",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "PATES PRESSEES CUITES",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-208-020",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "PATES PRESSEES NON CUITES",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-208-020",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "PATE MOLLE A CROUTE LAVEE",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-208-020",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "PATES PERSILLEES",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-208-020",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "PIK & MIX",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-208-020",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "FROMAGE ENFANT & GRIGNOTA",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-208-020",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "FROMAGE FONDU",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-809-208-020",
+      "level": "sous-famille",
+      "code": "809",
+      "name": "CHEVRES ET BREBIS",
+      "parentId": "famille-208-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-209-020",
+      "level": "famille",
+      "code": "209",
+      "name": "BEURRES",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-209-020",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "MINI BEURRIERS",
+      "parentId": "famille-209-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-209-020",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "BEURRE DOUX",
+      "parentId": "famille-209-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-209-020",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "BEURRES 1/2 SEL/GROS SEL",
+      "parentId": "famille-209-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-211-020",
+      "level": "famille",
+      "code": "211",
+      "name": "CREME LONGUE CONSERVATION",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-211-020",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CREMES SPECIALITES",
+      "parentId": "famille-211-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-211-020",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "CREME UHT LEGERE",
+      "parentId": "famille-211-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-211-020",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CREME UHT ENTIERE",
+      "parentId": "famille-211-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-211-020",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "CREME SOUS PRESSION",
+      "parentId": "famille-211-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-212-020",
+      "level": "famille",
+      "code": "212",
+      "name": "MARGARINES ET MGV",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-212-020",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "MARGARINES STANDARDS",
+      "parentId": "famille-212-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-212-020",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "MARGARINES ALLEGEES",
+      "parentId": "famille-212-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-212-020",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "MARGARINE ANTI-CHOLETEROL",
+      "parentId": "famille-212-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-212-020",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "GRAISSES A FRIRE",
+      "parentId": "famille-212-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-213-020",
+      "level": "famille",
+      "code": "213",
+      "name": "COMPOTES FRAICHES",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-213-020",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "COMPOTES FRAICHES",
+      "parentId": "famille-213-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-213-020",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "COMPOTES FRAICHES ALLEGEE",
+      "parentId": "famille-213-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-214-020",
+      "level": "famille",
+      "code": "214",
+      "name": "PAIN DE MIE ET PAINS",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-214-020",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "PAIN DE MIE ET PAINS",
+      "parentId": "famille-214-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-215-020",
+      "level": "famille",
+      "code": "215",
+      "name": "VIENNOISERIE INDUSTRIELLE",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-215-020",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "VIENNOiserie INDUSTRIELLE",
+      "parentId": "famille-215-020",
+      "aliases": []
+    },
+    {
+      "id": "famille-216-020",
+      "level": "famille",
+      "code": "216",
+      "name": "JUS DE FRUITS FRAIS",
+      "parentId": "rayon-020",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-216-020",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "JUS DE FRUITS FRAIS",
+      "parentId": "famille-216-020",
+      "aliases": []
+    },
+    {
+      "id": "rayon-021",
+      "level": "rayon",
+      "code": "021",
+      "name": "CHARCUTERIE-TRAITEUR",
+      "parentId": "sector-02",
+      "aliases": []
+    },
+    {
+      "id": "famille-211-021",
+      "level": "famille",
+      "code": "211",
+      "name": "SAUCISSERIE",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-211-021",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SAUCISSERIE",
+      "parentId": "famille-211-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-212-021",
+      "level": "famille",
+      "code": "212",
+      "name": "SAUCISSERIE HALAL",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-212-021",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "SAUCISSERIE HALAL",
+      "parentId": "famille-212-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-213-021",
+      "level": "famille",
+      "code": "213",
+      "name": "PLAT CUISINE/ETHNIQUE LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-213-021",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PLATS CUISINE/ETHNIQUE LS",
+      "parentId": "famille-213-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-214-021",
+      "level": "famille",
+      "code": "214",
+      "name": "PLATS CUISINES HALAL LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-214-021",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "PLATS CUISINES HALAL LS",
+      "parentId": "famille-214-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-215-021",
+      "level": "famille",
+      "code": "215",
+      "name": "SAUCISSONS SECS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-215-021",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "SAUCISSONS SECS",
+      "parentId": "famille-215-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-216-021",
+      "level": "famille",
+      "code": "216",
+      "name": "SALAISON MARITIME",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-216-021",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "SAUMON/TRUITE FUMEE",
+      "parentId": "famille-216-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-216-021",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "TRATINABLE DE LA MER",
+      "parentId": "famille-216-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-216-021",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "BLINIS",
+      "parentId": "famille-216-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-216-021",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "AUTRE SAL.MARITIME",
+      "parentId": "famille-216-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-217-021",
+      "level": "famille",
+      "code": "217",
+      "name": "CHARCUTERIE CUITE LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-217-021",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "CHARCUTERIE CUITE LS",
+      "parentId": "famille-217-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-218-021",
+      "level": "famille",
+      "code": "218",
+      "name": "CHARCUTERIE CUIT HALAL LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-218-021",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CHARCUTERIE CUIT HALAL LS",
+      "parentId": "famille-218-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-219-021",
+      "level": "famille",
+      "code": "219",
+      "name": "AIDE CULINAIRE CHARC. LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-219-021",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "AIDE CULINAIRE CHARCUT.LS",
+      "parentId": "famille-219-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-221-021",
+      "level": "famille",
+      "code": "221",
+      "name": "SALAISON/CHARC.TRANCHE LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-221-021",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SALAISON/CHARCUT.TR. LS",
+      "parentId": "famille-221-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-222-021",
+      "level": "famille",
+      "code": "222",
+      "name": "CHARC. TRANCHEE HALAL LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-222-021",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CHARCUTERIE TR. HALAL LS",
+      "parentId": "famille-222-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-223-021",
+      "level": "famille",
+      "code": "223",
+      "name": "PATE/RILLETE/FOIE GRAS LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-223-021",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PATE/RILLETE/FOIE GRAS LS",
+      "parentId": "famille-223-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-224-021",
+      "level": "famille",
+      "code": "224",
+      "name": "TARTES SALEES LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-224-021",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "TARTES SALEES LS",
+      "parentId": "famille-224-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-225-021",
+      "level": "famille",
+      "code": "225",
+      "name": "PATE FRAICHE/QUENELLE LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-225-021",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "PATE FRAICHE/QUENELLE LS",
+      "parentId": "famille-225-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-226-021",
+      "level": "famille",
+      "code": "226",
+      "name": "SALADES FRAICHES LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-226-021",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "SALADES FRAICHES LS",
+      "parentId": "famille-226-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-227-021",
+      "level": "famille",
+      "code": "227",
+      "name": "SALADE FRAICHES HALAL LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-227-021",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "SALADE FRAICHES HALAL LS",
+      "parentId": "famille-227-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-228-021",
+      "level": "famille",
+      "code": "228",
+      "name": "SNACKING FRAIS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-228-021",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "SNACKING FRAIS",
+      "parentId": "famille-228-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-229-021",
+      "level": "famille",
+      "code": "229",
+      "name": "SNACKING FRAIS HALAL LS",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-229-021",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "SNACKING FRAIS HALAL LS",
+      "parentId": "famille-229-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-231-021",
+      "level": "famille",
+      "code": "231",
+      "name": "PATES MENAGERES",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-231-021",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "PATES MENAGERES",
+      "parentId": "famille-231-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-232-021",
+      "level": "famille",
+      "code": "232",
+      "name": "CHARCUTERIE DE VOLAILLE",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-232-021",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CHARCUTERIE DE VOLAILLE",
+      "parentId": "famille-232-021",
+      "aliases": []
+    },
+    {
+      "id": "famille-233-021",
+      "level": "famille",
+      "code": "233",
+      "name": "CHARC. VOLAILLE HALAL",
+      "parentId": "rayon-021",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-233-021",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CHARCUTERIE VOLAILE HALAL",
+      "parentId": "famille-233-021",
+      "aliases": []
+    },
+    {
+      "id": "rayon-022",
+      "level": "rayon",
+      "code": "022",
+      "name": "SURGELES",
+      "parentId": "sector-02",
+      "aliases": []
+    },
+    {
+      "id": "famille-221-022",
+      "level": "famille",
+      "code": "221",
+      "name": "PIZZAS SURGELEES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-221-022",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "PIZZAS ET CALZONE",
+      "parentId": "famille-221-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-222-022",
+      "level": "famille",
+      "code": "222",
+      "name": "PIZZAS SURGELEES HALAL",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-222-022",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PIZZAS SURGELEES HALAL",
+      "parentId": "famille-222-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-223-022",
+      "level": "famille",
+      "code": "223",
+      "name": "BIO SURGELE",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-223-022",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-223-022",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "CRUSTACE MOLL. BIO SURGEL",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-223-022",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "ENTREES BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-223-022",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "GLACES BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-223-022",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "LEGUMES BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-223-022",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "PIZZAS BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-223-022",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "PLATS CUISINE BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-308-223-022",
+      "level": "sous-famille",
+      "code": "308",
+      "name": "POMME-TERRE BIO SURGELE",
+      "parentId": "famille-223-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-224-022",
+      "level": "famille",
+      "code": "224",
+      "name": "POISSONS SURGELES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-224-022",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "POISSONS SURGELES",
+      "parentId": "famille-224-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-224-022",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "FILETS ET MORCEAUX",
+      "parentId": "famille-224-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-224-022",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "POISSONS PANES",
+      "parentId": "famille-224-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-225-022",
+      "level": "famille",
+      "code": "225",
+      "name": "GLACES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-225-022",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "BATONNETS",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-225-022",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "BACS",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-225-022",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "CONES",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-225-022",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "GLACES ARTISANALS",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-225-022",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "GLACONS A RAFRAICHIR",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-225-022",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "POTS INDIVIDUELS",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-225-022",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "SPECIALITES A PARTAGER",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-508-225-022",
+      "level": "sous-famille",
+      "code": "508",
+      "name": "SPECIALITES INDIVIDUELLES",
+      "parentId": "famille-225-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-226-022",
+      "level": "famille",
+      "code": "226",
+      "name": "ENTREES SURGELEES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-226-022",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "ENTREES SURGELEES",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-226-022",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "APERITFS",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-226-022",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "AUTRES",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-226-022",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "COQUILLES",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-226-022",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "ENTREES SURGELEES HALAL",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-226-022",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "ESCARGOTS",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-226-022",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "ETHNIQUES",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-226-022",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "QUICHES/TARTE/TOURTES",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-226-022",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "SNACKS",
+      "parentId": "famille-226-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-227-022",
+      "level": "famille",
+      "code": "227",
+      "name": "ENTREES SURGELEES HALAL",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-227-022",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "ENTREES SURGELEES HALAL",
+      "parentId": "famille-227-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-228-022",
+      "level": "famille",
+      "code": "228",
+      "name": "POMMES DE TERRE SURGELEES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-228-022",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "POMMES DE TERRE SURGELEES",
+      "parentId": "famille-228-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-228-022",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "AUTRES",
+      "parentId": "famille-228-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-228-022",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "FRITES",
+      "parentId": "famille-228-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-228-022",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "POELEE POMMES DE TERRE",
+      "parentId": "famille-228-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-229-022",
+      "level": "famille",
+      "code": "229",
+      "name": "CRUSTACE MOLUSQUE SURGELE",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-229-022",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "CRUSTACE MOLLUSQUE SURGEL",
+      "parentId": "famille-229-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-229-022",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "CREVETTES SURGELES",
+      "parentId": "famille-229-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-231-022",
+      "level": "famille",
+      "code": "231",
+      "name": "LEGUMES SURGELES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-231-022",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "LEGUMES CUISINES, POELEES",
+      "parentId": "famille-231-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-232-022",
+      "level": "famille",
+      "code": "232",
+      "name": "VIANDE/VOLAILLE SURGELEE",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-232-022",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "VIANDE/VOLAILLE SURGELEE",
+      "parentId": "famille-232-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-232-022",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "CANARD SURGELES",
+      "parentId": "famille-232-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-233-022",
+      "level": "famille",
+      "code": "233",
+      "name": "V.VOLAILLE SURGELEE HALAL",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-233-022",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "V.VOLAILLE SURGEL. HALAL",
+      "parentId": "famille-233-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-234-022",
+      "level": "famille",
+      "code": "234",
+      "name": "PATISSERIE SURGELEE",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-234-022",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "PATISSERIE SURGELEE",
+      "parentId": "famille-234-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-235-022",
+      "level": "famille",
+      "code": "235",
+      "name": "PLATS CUISINES SURGELES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-235-022",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "PLATS CUISINES SURGELES",
+      "parentId": "famille-235-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-236-022",
+      "level": "famille",
+      "code": "236",
+      "name": "PLAT CUISINE SURGEL HALAL",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-236-022",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "PLAT CUISINE SURGEL HALAL",
+      "parentId": "famille-236-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-237-022",
+      "level": "famille",
+      "code": "237",
+      "name": "OEUF SURGELES",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-237-022",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "OEUF SURGELES",
+      "parentId": "famille-237-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-238-022",
+      "level": "famille",
+      "code": "238",
+      "name": "MATIERE GRASSE SURGELEE",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-238-022",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "MATIERE GRASSE SURGELEE",
+      "parentId": "famille-238-022",
+      "aliases": []
+    },
+    {
+      "id": "famille-239-022",
+      "level": "famille",
+      "code": "239",
+      "name": "FRUITS SURGELE",
+      "parentId": "rayon-022",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-239-022",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "FRUITS SURGELE",
+      "parentId": "famille-239-022",
+      "aliases": []
+    }
+  ]
+}

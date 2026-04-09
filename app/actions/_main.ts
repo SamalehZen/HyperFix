@@ -167,6 +167,8 @@ const rawGroupInstructions = {
   - ⚠️ NEVER use '$' symbol for currency - Always use "USD", "EUR", etc.
   - ⚠️ MANDATORY: Make sure the latex is properly delimited at all times!!
   - Mathematical expressions must always be properly delimited`,
+  // LEGACY: Ce prompt n'est utilisé que pour les petits volumes (<= 20 lignes).
+  // Les gros volumes passent par le pipeline V2 (lib/cyrus/run-cyrus-pipeline.ts).
   cyrus: `${CYRUS_PROMPT}\n\n${CYRUS_OUTPUT_RULES}`,
   libeller: LIBELLER_PROMPT,
   nomenclature: NOMENCLATURE_DOUANIERE_PROMPT,

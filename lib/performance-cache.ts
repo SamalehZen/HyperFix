@@ -10,7 +10,7 @@ interface CacheEntry<T> {
   lastAccessed: number;
 }
 
-class PerformanceCache<T> {
+export class PerformanceCache<T> {
   private cache = new Map<string, CacheEntry<T>>();
   private readonly maxSize: number;
   private readonly ttl: number;

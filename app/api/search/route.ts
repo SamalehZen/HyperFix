@@ -39,6 +39,8 @@ import { CustomInstructions } from '@/lib/db/schema';
 import { v7 as uuidv7 } from 'uuid';
 import { geolocation } from '@vercel/functions';
 import { createStreamResponse } from '@/lib/streaming-heartbeat';
+import { runCyrusPipeline } from '@/lib/cyrus/run-cyrus-pipeline';
+import { SMALL_INPUT_THRESHOLD, CYRUS_V2_ENABLED } from '@/lib/cyrus/constants';
 
 
 import { GroqProviderOptions } from '@ai-sdk/groq';
@@ -245,6 +247,53 @@ export async function POST(req: Request) {
       }
 
       const setupTime = (Date.now() - requestStartTime) / 1000;
+
+      // --- CYRUS V2 PIPELINE ---
+      if (group === 'cyrus' && CYRUS_V2_ENABLED) {
+        const lastMessage = messages[messages.length - 1];
+        const messageText = typeof lastMessage.content === 'string'
+          ? lastMessage.content
+          : lastMessage.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('\n') || '';
+
+        const lineCount = messageText.split('\n').filter((l: string) => l.trim()).length;
+        const hasAttachments = (lastMessage.experimental_attachments?.length ?? 0) > 0;
+
+        if (lineCount > SMALL_INPUT_THRESHOLD || hasAttachments) {
+          try {
+            const pipelineResult = await runCyrusPipeline(
+              messageText,
+              lastMessage.experimental_attachments,
+            );
+
+            const processingTime = (Date.now() - requestStartTime) / 1000;
+
+            (dataStream as any).write({ type: 'text-start' });
+            (dataStream as any).write({
+              type: 'text-delta',
+              text: pipelineResult.markdown,
+            });
+            (dataStream as any).write({ type: 'text-finish' });
+            (dataStream as any).write({
+              type: 'finish-message',
+              finishReason: 'stop',
+              usage: { inputTokens: 0, outputTokens: 0, totalTokens: 0 },
+              messageMetadata: {
+                model: resolvedModel as string,
+                completionTime: processingTime,
+                createdAt: new Date().toISOString(),
+                totalTokens: 0,
+                inputTokens: 0,
+                outputTokens: 0,
+              },
+            });
+
+            return;
+          } catch (pipelineError) {
+            console.error('[Cyrus V2] Pipeline failed, falling back to legacy:', pipelineError);
+          }
+        }
+      }
+      // --- FIN CYRUS V2 ---
 
       const streamStartTime = Date.now();
 
