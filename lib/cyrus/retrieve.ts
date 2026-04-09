@@ -140,6 +140,10 @@ function ensureIndex(): void {
   }
 }
 
+export function ensureSearchIndex(): void {
+  ensureIndex();
+}
+
 export function retrieveCandidates(
   normalizedLabel: string,
   topN: number = RETRIEVAL_TOP_N,

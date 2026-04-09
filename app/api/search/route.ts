@@ -267,16 +267,9 @@ export async function POST(req: Request) {
 
             const processingTime = (Date.now() - requestStartTime) / 1000;
 
-            (dataStream as any).write({ type: 'text-start' });
-            (dataStream as any).write({
-              type: 'text-delta',
-              text: pipelineResult.markdown,
-            });
-            (dataStream as any).write({ type: 'text-finish' });
-            (dataStream as any).write({
-              type: 'finish-message',
-              finishReason: 'stop',
-              usage: { inputTokens: 0, outputTokens: 0, totalTokens: 0 },
+            const partId = uuidv7();
+            dataStream.write({
+              type: 'start',
               messageMetadata: {
                 model: resolvedModel as string,
                 completionTime: processingTime,
@@ -286,6 +279,33 @@ export async function POST(req: Request) {
                 outputTokens: 0,
               },
             });
+            dataStream.write({ type: 'text-start', id: partId });
+            dataStream.write({
+              type: 'text-delta',
+              id: partId,
+              delta: pipelineResult.markdown,
+            });
+            dataStream.write({ type: 'text-end', id: partId });
+            dataStream.write({
+              type: 'finish',
+              messageMetadata: {
+                model: resolvedModel as string,
+                completionTime: processingTime,
+                createdAt: new Date().toISOString(),
+                totalTokens: 0,
+                inputTokens: 0,
+                outputTokens: 0,
+              },
+            });
+
+            if (user?.id && !shouldBypassRateLimits(resolvedModel, user)) {
+              after(async () => {
+                try {
+                  await incrementMessageUsage({ userId: user.id });
+                } catch (error) {
+                }
+              });
+            }
 
             return;
           } catch (pipelineError) {
