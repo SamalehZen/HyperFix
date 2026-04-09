@@ -12,6 +12,7 @@ import type {
 import {
   BULK_BATCH_SIZE,
   CYRUS_V2_ENABLED,
+  CYRUS_V2_DEBUG,
   ROUTER_HIGH_CONFIDENCE,
   ROUTER_MEDIUM_CONFIDENCE,
 } from '@/lib/cyrus/constants';
@@ -25,6 +26,8 @@ import { routeLabels, getSectorsForLabel } from '@/lib/cyrus/router';
 import { classifyInSector } from '@/lib/cyrus/expert';
 import { validateDecisions } from '@/lib/cyrus/validator';
 import { processBatches } from '@/lib/cyrus/batch';
+import { MetricsCollector } from '@/lib/cyrus/metrics';
+import { CyrusLogger } from '@/lib/cyrus/logger';
 
 // ──────────────────────────────────────────────
 // Legacy Sprint 1 fallback (streamText-compatible)
@@ -191,19 +194,24 @@ Règles :
 
 async function classifyBatchV2(
   records: NormalizedRecord[],
+  metrics?: MetricsCollector,
+  logger?: CyrusLogger,
 ): Promise<FinalClassification[]> {
-  // 1. Retrieve candidates for each label
   const candidatesMap = new Map<string, CandidateNode[]>();
   for (const record of records) {
     const candidates = retrieveCandidates(record.normalizedLabel);
     candidatesMap.set(record.normalizedLabel, candidates);
   }
 
-  // 2. Route labels to sectors
   const labels = records.map((r) => r.normalizedLabel);
   const routingDecisions = await routeLabels(labels, candidatesMap);
 
-  // 3. Group labels by target sector(s)
+  if (metrics) {
+    for (const [, decision] of routingDecisions) {
+      metrics.incrementRouting(decision.confidence);
+    }
+  }
+
   const sectorGroups = new Map<string, NormalizedRecord[]>();
 
   for (const record of records) {
@@ -218,13 +226,16 @@ async function classifyBatchV2(
     }
   }
 
-  // 4. Classify in each sector (parallel, max 3)
   const expertTasks: (() => Promise<{
     sectorCode: string;
     results: Map<string, ExpertDecision>;
   }>)[] = [];
 
   for (const [sectorCode, sectorRecords] of sectorGroups) {
+    if (metrics) {
+      metrics.increment('expertCalls');
+      metrics.addSector(sectorCode);
+    }
     expertTasks.push(async () => {
       const results = await classifyInSector(
         sectorCode,
@@ -257,7 +268,6 @@ async function classifyBatchV2(
   );
   await Promise.all(workers);
 
-  // 5. Merge expert decisions (handle multi-sector routing)
   const mergedDecisions = new Map<
     string,
     ExpertDecision | ExpertDecision[]
@@ -276,7 +286,6 @@ async function classifyBatchV2(
     }
   }
 
-  // 6. Validate and finalize
   return validateDecisions(mergedDecisions, records);
 }
 
@@ -288,176 +297,219 @@ export async function runCyrusPipeline(
   messageContent: string,
   attachments?: Array<{ name: string; contentType: string; url: string }>,
 ): Promise<CyrusPipelineResult> {
+  if (!CYRUS_V2_ENABLED) {
+    throw new Error('Cyrus V2 is disabled');
+  }
+
   const startTime = Date.now();
+  const metrics = new MetricsCollector();
+  const logger = new CyrusLogger();
 
-  // Step 1: Extract input records
-  const inputRecords = await extractInputRecordsAsync(
-    messageContent,
-    attachments,
-  );
-
-  if (inputRecords.length === 0) {
-    const metrics: PipelineMetrics = {
-      totalInput: 0,
-      uniqueLabels: 0,
-      cacheHits: 0,
-      cacheMisses: 0,
-      durationMs: Date.now() - startTime,
-      mode: 'bulk',
-    };
-    return {
-      classifications: [],
-      markdown: '> Aucun article détecté dans votre message.',
-      metrics,
-    };
+  if (CYRUS_V2_DEBUG) {
+    logger.info('pipeline', 'Starting pipeline in DEBUG mode', {
+      messageLength: messageContent.length,
+    });
   }
 
-  // Step 2: Normalize and deduplicate
-  const { uniqueRecords, duplicateMap, totalDuplicates } =
-    normalizeAndDeduplicate(inputRecords);
+  try {
+    // Step 1: Extract input records
+    metrics.startStep('extraction');
+    const inputRecords = await extractInputRecordsAsync(
+      messageContent,
+      attachments,
+    );
+    metrics.endStep('extraction');
 
-  // Step 3: Cache lookup
-  const uniqueKeys = uniqueRecords.map((r) => r.normalizedKey);
-  const cacheHits = lookupCache(uniqueKeys);
-
-  const cacheMisses = uniqueRecords.filter(
-    (r) => !cacheHits.has(r.normalizedKey),
-  );
-
-  const allClassifications = new Map<string, FinalClassification>();
-
-  for (const [key, classification] of cacheHits) {
-    const record = uniqueRecords.find((r) => r.normalizedKey === key);
-    if (record) {
-      allClassifications.set(key, {
-        ...classification,
-        inputIndex: record.inputIndex,
-        source: 'cache',
-      });
+    if (inputRecords.length === 0) {
+      const base: PipelineMetrics = {
+        totalInput: 0,
+        uniqueLabels: 0,
+        cacheHits: 0,
+        cacheMisses: 0,
+        durationMs: Date.now() - startTime,
+        mode: 'bulk',
+      };
+      return {
+        classifications: [],
+        markdown: '> Aucun article détecté dans votre message.',
+        metrics: base,
+      };
     }
-  }
 
-  console.log(
-    `[Cyrus V2] Pipeline start: ${inputRecords.length} input, ${uniqueRecords.length} unique, ${cacheHits.size} cache hits, ${cacheMisses.length} misses`,
-  );
+    // Step 2: Normalize and deduplicate
+    metrics.startStep('normalization');
+    const { uniqueRecords, duplicateMap, totalDuplicates } =
+      normalizeAndDeduplicate(inputRecords);
+    metrics.endStep('normalization');
 
-  // Step 4: Classify cache misses
-  if (cacheMisses.length > 0) {
-    let newClassifications: FinalClassification[] = [];
+    logger.info('normalization', `${inputRecords.length} → ${uniqueRecords.length} uniques (${totalDuplicates} duplicates)`);
 
-    if (CYRUS_V2_ENABLED) {
+    // Step 3: Cache lookup
+    metrics.startStep('cacheLookup');
+    const uniqueKeys = uniqueRecords.map((r) => r.normalizedKey);
+    const cacheHits = lookupCache(uniqueKeys);
+    metrics.endStep('cacheLookup');
+
+    const cacheMisses = uniqueRecords.filter(
+      (r) => !cacheHits.has(r.normalizedKey),
+    );
+
+    const allClassifications = new Map<string, FinalClassification>();
+
+    for (const [key, classification] of cacheHits) {
+      const record = uniqueRecords.find((r) => r.normalizedKey === key);
+      if (record) {
+        allClassifications.set(key, {
+          ...classification,
+          inputIndex: record.inputIndex,
+          source: 'cache',
+        });
+      }
+    }
+
+    logger.info('cache', `${cacheHits.size} hits, ${cacheMisses.length} misses`);
+
+    // Step 4: Classify cache misses
+    if (cacheMisses.length > 0) {
+      let newClassifications: FinalClassification[] = [];
+
       try {
-        // Ensure search index is built
+        metrics.startStep('retrieval');
         buildSearchIndex();
+        metrics.endStep('retrieval');
 
-        // Step 4a: V2 intelligent pipeline via batches
+        metrics.startStep('routing');
+        metrics.startStep('expert');
+
         newClassifications = await processBatches(
           cacheMisses,
-          classifyBatchV2,
+          (batch) => classifyBatchV2(batch, metrics, logger),
           BULK_BATCH_SIZE,
           3,
         );
 
-        console.log(
-          `[Cyrus V2] V2 pipeline classified ${newClassifications.length} labels`,
-        );
+        metrics.endStep('expert');
+        metrics.endStep('routing');
+
+        logger.info('pipeline', `V2 classified ${newClassifications.length} labels`);
       } catch (error) {
-        console.error(
-          '[Cyrus V2] V2 pipeline failed, falling back to legacy:',
-          error,
+        metrics.endStep('expert');
+        metrics.endStep('routing');
+        logger.error(
+          'pipeline',
+          'V2 pipeline failed, falling back to legacy',
+          { error: error instanceof Error ? error.message : String(error) },
         );
         newClassifications = [];
       }
-    }
 
-    // Step 4b: Legacy fallback for any labels not classified by V2
-    const classifiedKeys = new Set(
-      newClassifications
-        .filter((c) => c.sectorCode !== '')
-        .map((c) => c.normalizedLabel.replace(/\s+/g, '_').toLowerCase()),
-    );
-
-    const unclassified = cacheMisses.filter(
-      (r) => !classifiedKeys.has(r.normalizedKey),
-    );
-
-    if (unclassified.length > 0) {
-      console.log(
-        `[Cyrus V2] Legacy fallback for ${unclassified.length} unclassified labels`,
+      const classifiedKeys = new Set(
+        newClassifications
+          .filter((c) => c.sectorCode !== '')
+          .map((c) => c.normalizedLabel.replace(/\s+/g, '_').toLowerCase()),
       );
-      for (let i = 0; i < unclassified.length; i += BULK_BATCH_SIZE) {
-        const batch = unclassified.slice(i, i + BULK_BATCH_SIZE);
-        const legacyResults = await classifyBatchLegacy(batch);
-        for (const [key, classification] of legacyResults) {
-          allClassifications.set(key, classification);
+
+      const unclassified = cacheMisses.filter(
+        (r) => !classifiedKeys.has(r.normalizedKey),
+      );
+
+      if (unclassified.length > 0) {
+        logger.info('legacy', `Fallback for ${unclassified.length} unclassified labels`);
+        for (let i = 0; i < unclassified.length; i += BULK_BATCH_SIZE) {
+          const batch = unclassified.slice(i, i + BULK_BATCH_SIZE);
+          const legacyResults = await classifyBatchLegacy(batch);
+          for (const [key, classification] of legacyResults) {
+            allClassifications.set(key, classification);
+          }
+        }
+      }
+
+      for (const cls of newClassifications) {
+        const key = cls.normalizedLabel.replace(/\s+/g, '_').toLowerCase();
+        allClassifications.set(key, cls);
+      }
+
+      for (const [key, classification] of allClassifications) {
+        if (
+          classification.source !== 'cache' &&
+          classification.status !== 'fallback_used'
+        ) {
+          writeCache(key, classification);
         }
       }
     }
 
-    // Store V2 results
-    for (const cls of newClassifications) {
-      const key = cls.normalizedLabel.replace(/\s+/g, '_').toLowerCase();
-      allClassifications.set(key, cls);
-    }
-
-    // Step 5: Write to cache
-    for (const [key, classification] of allClassifications) {
-      if (
-        classification.source !== 'cache' &&
-        classification.status !== 'fallback_used'
-      ) {
-        writeCache(key, classification);
+    // Step 5: Build final list
+    metrics.startStep('validation');
+    const finalClassifications: FinalClassification[] = [];
+    for (const record of uniqueRecords) {
+      const cls = allClassifications.get(record.normalizedKey);
+      if (cls) {
+        finalClassifications.push(cls);
+      } else {
+        finalClassifications.push({
+          inputIndex: record.inputIndex,
+          rawLabel: record.rawLabel,
+          normalizedLabel: record.normalizedLabel,
+          sectorCode: '',
+          sectorName: '',
+          rayonCode: '',
+          rayonName: '',
+          familleCode: '',
+          familleName: '',
+          sousFamilleCode: '',
+          sousFamilleName: '',
+          confidence: 0,
+          status: 'fallback_used',
+          source: 'expert',
+        });
       }
     }
-  }
+    metrics.endStep('validation');
 
-  // Step 6: Build final list (including fallback for truly missing labels)
-  const finalClassifications: FinalClassification[] = [];
-  for (const record of uniqueRecords) {
-    const cls = allClassifications.get(record.normalizedKey);
-    if (cls) {
-      finalClassifications.push(cls);
-    } else {
-      finalClassifications.push({
-        inputIndex: record.inputIndex,
-        rawLabel: record.rawLabel,
-        normalizedLabel: record.normalizedLabel,
-        sectorCode: '',
-        sectorName: '',
-        rayonCode: '',
-        rayonName: '',
-        familleCode: '',
-        familleName: '',
-        sousFamilleCode: '',
-        sousFamilleName: '',
-        confidence: 0,
-        status: 'fallback_used',
-        source: 'expert',
-      });
+    for (const cls of finalClassifications) {
+      metrics.incrementValidation(cls.status);
     }
+
+    const durationMs = Date.now() - startTime;
+
+    metrics.setBase({
+      totalInput: inputRecords.length,
+      uniqueLabels: uniqueRecords.length,
+      cacheHits: cacheHits.size,
+      cacheMisses: cacheMisses.length,
+      durationMs,
+      mode: 'bulk',
+    });
+
+    const estimatedTokens = Math.round(
+      inputRecords.length * 60 + (metrics.finalize().expertCalls * 2000),
+    );
+    metrics.addTokens(estimatedTokens);
+
+    metrics.logSummary();
+
+    // Step 6: Format output
+    metrics.startStep('formatting');
+    const detailedMetrics = metrics.finalize();
+    const markdown = formatClassificationsToMarkdown(
+      finalClassifications,
+      duplicateMap,
+      detailedMetrics,
+    );
+    metrics.endStep('formatting');
+
+    return {
+      classifications: finalClassifications,
+      markdown,
+      metrics: detailedMetrics,
+    };
+  } catch (error) {
+    console.error('[Cyrus V2] Pipeline error:', {
+      step: metrics.getCurrentStep(),
+      error: error instanceof Error ? error.message : String(error),
+      metrics: metrics.finalize(),
+    });
+    throw error;
   }
-
-  const durationMs = Date.now() - startTime;
-
-  const metrics: PipelineMetrics = {
-    totalInput: inputRecords.length,
-    uniqueLabels: uniqueRecords.length,
-    cacheHits: cacheHits.size,
-    cacheMisses: cacheMisses.length,
-    durationMs,
-    mode: 'bulk',
-  };
-
-  console.log(
-    `[Cyrus V2] Pipeline complete: ${finalClassifications.length} classifications in ${durationMs}ms`,
-  );
-
-  // Step 7: Format output
-  const markdown = formatClassificationsToMarkdown(
-    finalClassifications,
-    duplicateMap,
-    metrics,
-  );
-
-  return { classifications: finalClassifications, markdown, metrics };
 }
