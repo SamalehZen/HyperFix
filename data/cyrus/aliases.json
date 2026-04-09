@@ -133,22 +133,22 @@
     },
     {
       "term": "chaussure",
-      "targets": ["sector-06"],
-      "weight": 0.9
+      "targets": ["rayon-064"],
+      "weight": 1.0
     },
     {
       "term": "pâtes",
-      "targets": ["rayon-030"],
+      "targets": ["rayon-031"],
       "weight": 1.0
     },
     {
       "term": "riz",
-      "targets": ["rayon-030"],
+      "targets": ["rayon-031"],
       "weight": 1.0
     },
     {
       "term": "conserve",
-      "targets": ["rayon-030"],
+      "targets": ["rayon-031"],
       "weight": 0.9
     }
   ]
