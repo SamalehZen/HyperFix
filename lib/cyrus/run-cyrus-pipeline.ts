@@ -372,9 +372,9 @@ export async function runCyrusPipeline(
 
     // Step 4b: Legacy fallback for any labels not classified by V2
     const classifiedKeys = new Set(
-      newClassifications.map((c) =>
-        c.normalizedLabel.replace(/\s+/g, '_').toLowerCase(),
-      ),
+      newClassifications
+        .filter((c) => c.sectorCode !== '')
+        .map((c) => c.normalizedLabel.replace(/\s+/g, '_').toLowerCase()),
     );
 
     const unclassified = cacheMisses.filter(
