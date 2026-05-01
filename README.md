@@ -212,6 +212,42 @@ To run the application locally without Docker:
    ```
 5. Open `http://localhost:3000` in your browser
 
+### Gemini provider configuration (Vertex AI)
+
+Runtime Gemini calls go through Vertex AI using a Google Cloud service account.
+Configure either of the following in `.env.local` (or your hosting provider's
+environment):
+
+Option A — paste the full service account JSON into a single var:
+
+```bash
+GOOGLE_VERTEX_SERVICE_ACCOUNT_JSON='{"type":"service_account","project_id":"your-project","client_email":"sa@your-project.iam.gserviceaccount.com","private_key":"-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n","private_key_id":"..."}'
+# Optional overrides
+GOOGLE_VERTEX_LOCATION=us-central1
+GOOGLE_VERTEX_MODEL=gemini-2.5-flash
+```
+
+Option B — split env vars (handy for secret managers that store fields
+separately):
+
+```bash
+GOOGLE_VERTEX_PROJECT=your-project
+GOOGLE_VERTEX_LOCATION=us-central1                # optional, defaults to us-central1
+GOOGLE_CLIENT_EMAIL=sa@your-project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+GOOGLE_PRIVATE_KEY_ID=...                         # optional
+GOOGLE_VERTEX_MODEL=gemini-2.5-flash              # optional override
+```
+
+Notes:
+- Escaped newlines (`\n`) inside `GOOGLE_PRIVATE_KEY` are normalized
+  automatically.
+- If both forms are provided, explicit `GOOGLE_VERTEX_*` / `GOOGLE_CLIENT_EMAIL`
+  / `GOOGLE_PRIVATE_KEY` env vars take precedence over fields parsed from
+  `GOOGLE_VERTEX_SERVICE_ACCOUNT_JSON`.
+- `GOOGLE_GENERATIVE_AI_API_KEY` (AI Studio) is now optional and only used as
+  a deprecated fallback for local development; production should use Vertex.
+
 # License
 
 This project is licensed under the AGPLv3 License - see the [LICENSE](LICENSE) file for details.

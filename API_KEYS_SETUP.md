@@ -4,6 +4,13 @@
 
 This system manages and rotates Gemini API keys automatically based on quota usage. Keys are encrypted in the database and rotated when usage exceeds 250 calls per day.
 
+> **Vertex AI migration note**: runtime Gemini calls now flow through Vertex AI
+> using a Google Cloud service account. The legacy AI Studio key
+> (`GOOGLE_GENERATIVE_AI_API_KEY`) and the rotating `GEMINI_API_KEY_*` pool are
+> kept only as deprecated fallbacks for local development. See
+> [Vertex AI provider configuration](#vertex-ai-provider-configuration) below
+> for the recommended production setup.
+
 ## Database Setup
 
 ### 1. Create Tables
@@ -44,6 +51,34 @@ GEMINI_API_KEY_2=AIzaSyD_your_second_key
 GEMINI_API_KEY_3=AIzaSyD_your_third_key
 GOOGLE_GENERATIVE_AI_API_KEY=AIzaSyD_fallback_key
 ```
+
+## Vertex AI provider configuration
+
+The runtime AI provider in `ai/providers.ts` now resolves Gemini calls through
+`@ai-sdk/google-vertex` using service account credentials. Configure one of:
+
+```bash
+# Option A: full service account JSON (recommended for Vercel/Render secrets)
+GOOGLE_VERTEX_SERVICE_ACCOUNT_JSON='{"type":"service_account","project_id":"your-project","client_email":"sa@your-project.iam.gserviceaccount.com","private_key":"-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n","private_key_id":"..."}'
+
+# Option B: split env vars (e.g. when secrets are stored field-by-field)
+GOOGLE_VERTEX_PROJECT=your-project
+GOOGLE_CLIENT_EMAIL=sa@your-project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+GOOGLE_PRIVATE_KEY_ID=...                # optional
+
+# Optional overrides (apply to either option)
+GOOGLE_VERTEX_LOCATION=us-central1       # default us-central1
+GOOGLE_VERTEX_MODEL=gemini-2.5-flash     # default gemini-3.1-flash-lite-preview
+```
+
+Notes:
+- `\n` sequences in `GOOGLE_PRIVATE_KEY` (and inside the JSON `private_key`) are
+  unescaped to real newlines automatically.
+- Explicit env vars take precedence over fields parsed from
+  `GOOGLE_VERTEX_SERVICE_ACCOUNT_JSON`.
+- The provider throws a clear configuration error if neither Vertex credentials
+  nor `GOOGLE_GENERATIVE_AI_API_KEY` are present.
 
 ## Admin Dashboard
 
