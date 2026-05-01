@@ -37,7 +37,7 @@ import {
   ArrowRightIcon,
   SigmaIcon,
 } from '@phosphor-icons/react';
-import { getModelConfig } from '@/ai/providers';
+import { getModelConfig } from '@/ai/model-config';
 import { ComprehensiveUserData } from '@/lib/user-data-server';
 import { Spinner } from '../ui/spinner';
 import { markdownTablesToXlsx } from '@/lib/export-xlsx';

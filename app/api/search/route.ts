@@ -15,15 +15,15 @@ import {
   stepCountIs,
   JsonToSseTransformStream,
 } from 'ai';
+import { hyper } from '@/ai/providers';
 import {
-  hyper,
   requiresAuthentication,
   requiresProSubscription,
   shouldBypassRateLimits,
   getModelParameters,
   hasReasoningSupport,
   getModelConfig,
-} from '@/ai/providers';
+} from '@/ai/model-config';
 import {
   createStreamId,
   getChatById,

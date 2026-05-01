@@ -6,7 +6,7 @@ import {
   models,
   requiresAuthentication,
   requiresProSubscription,
-} from '@/ai/providers';
+} from '@/ai/model-config';
 import { Check, ChevronsUpDown, Zap, Sparkles } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogDescription } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
