@@ -54,6 +54,7 @@ import { getCachedCustomInstructionsByUserId } from '@/lib/user-data-server';
 type VertexChatProviderOptions = {
   thinkingConfig?: {
     thinkingBudget?: number;
+    thinkingLevel?: 'low' | 'medium' | 'high';
     includeThoughts?: boolean;
   };
   threshold?:
@@ -263,6 +264,7 @@ export async function POST(req: Request) {
       const setupTime = (Date.now() - requestStartTime) / 1000;
 
       const streamStartTime = Date.now();
+      const shouldIncludeThinking = resolvedModel === 'hyper-default' || hasReasoningSupport(resolvedModel);
 
       const result = streamText({
         model: hyper.languageModel(resolvedModel),
@@ -283,10 +285,10 @@ export async function POST(req: Request) {
         toolChoice: 'auto',
         providerOptions: {
           vertex: {
-            ...(resolvedModel === 'hyper-google-think' || resolvedModel === 'hyper-google-pro-think'
+            ...(shouldIncludeThinking
               ? {
                 thinkingConfig: {
-                  thinkingBudget: 400,
+                  thinkingLevel: 'high',
                   includeThoughts: true,
                 },
               }
