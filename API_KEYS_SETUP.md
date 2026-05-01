@@ -68,8 +68,9 @@ GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\
 GOOGLE_PRIVATE_KEY_ID=...                # optional
 
 # Optional overrides (apply to either option)
-GOOGLE_VERTEX_LOCATION=us-central1       # default us-central1
-GOOGLE_VERTEX_MODEL=gemini-2.5-flash     # default gemini-3.1-flash-lite-preview
+GOOGLE_VERTEX_LOCATION=global            # default global
+GOOGLE_VERTEX_MODEL=gemini-3.1-pro-preview
+GOOGLE_VERTEX_FALLBACK_MODEL=gemini-3.1-flash-lite-preview
 ```
 
 Notes:

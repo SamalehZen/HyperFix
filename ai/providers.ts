@@ -6,17 +6,18 @@ import { google, createGoogleGenerativeAI } from '@ai-sdk/google';
 // need to add `@ai-sdk/provider` as a direct dependency just for the type.
 type HyperLanguageModel = ReturnType<typeof google>;
 
-// Arka backend: single provider mapping to Google Gemini Flash.
-// Default model is gemini-3.1-flash-lite-preview. Override via GOOGLE_VERTEX_MODEL
-// in production (e.g. set to gemini-2.5-flash if the preview alias is unavailable
-// in your Vertex project).
-const DEFAULT_GOOGLE_MODEL = 'gemini-3.1-flash-lite-preview';
-// Fallbacks (documented only; selection is handled at call sites when needed):
-const FALLBACK_GOOGLE_MODELS = ['gemini-3.1-flash-lite-preview', 'gemini-2.5-flash'];
-const DEFAULT_VERTEX_LOCATION = 'us-central1';
+// Arka backend: single provider mapping to Google Gemini.
+// Default model is Gemini 3.1 Pro Preview. Override via GOOGLE_VERTEX_MODEL.
+const DEFAULT_GOOGLE_MODEL = 'gemini-3.1-pro-preview';
+const FALLBACK_GOOGLE_MODEL = 'gemini-3.1-flash-lite-preview';
+const DEFAULT_VERTEX_LOCATION = 'global';
 
 function getResolvedModel(): string {
   return (process.env.GOOGLE_VERTEX_MODEL?.trim() || DEFAULT_GOOGLE_MODEL);
+}
+
+function getFallbackModel(): string {
+  return (process.env.GOOGLE_VERTEX_FALLBACK_MODEL?.trim() || FALLBACK_GOOGLE_MODEL);
 }
 
 interface VertexServiceAccount {
@@ -70,11 +71,32 @@ function readVertexConfig(): VertexConfig | null {
   return { project, location, client_email, private_key, private_key_id };
 }
 
-let cachedModel: HyperLanguageModel | null = null;
-let warnedLegacyFallback = false;
+interface HyperLanguageModels {
+  primary: HyperLanguageModel;
+  fallback?: HyperLanguageModel;
+}
 
-function buildLanguageModel(): HyperLanguageModel {
+let cachedModels: HyperLanguageModels | null = null;
+let warnedLegacyFallback = false;
+let warnedModelFallback = false;
+
+function withFallback(
+  primary: HyperLanguageModel,
+  fallbackModelName: string,
+  createModel: (model: string) => HyperLanguageModel,
+): HyperLanguageModels {
+  const primaryModelName = getResolvedModel();
+  const fallback = fallbackModelName && fallbackModelName !== primaryModelName
+    ? createModel(fallbackModelName)
+    : undefined;
+  return { primary, fallback };
+}
+
+function buildLanguageModels(): HyperLanguageModels {
   const cfg = readVertexConfig();
+  const primaryModelName = getResolvedModel();
+  const fallbackModelName = getFallbackModel();
+
   if (cfg) {
     const vertex = createVertex({
       project: cfg.project,
@@ -87,7 +109,7 @@ function buildLanguageModel(): HyperLanguageModel {
         },
       },
     });
-    return vertex(getResolvedModel());
+    return withFallback(vertex(primaryModelName), fallbackModelName, vertex);
   }
 
   // Legacy AI Studio fallback. Only active when intentionally configured;
@@ -102,7 +124,8 @@ function buildLanguageModel(): HyperLanguageModel {
       );
       warnedLegacyFallback = true;
     }
-    return createGoogleGenerativeAI({ apiKey: legacyApiKey })(getResolvedModel());
+    const googleProvider = createGoogleGenerativeAI({ apiKey: legacyApiKey });
+    return withFallback(googleProvider(primaryModelName), fallbackModelName, googleProvider);
   }
 
   throw new Error(
@@ -113,10 +136,26 @@ function buildLanguageModel(): HyperLanguageModel {
   );
 }
 
-function getLanguageModel(): HyperLanguageModel {
-  if (cachedModel) return cachedModel;
-  cachedModel = buildLanguageModel();
-  return cachedModel;
+function getLanguageModels(): HyperLanguageModels {
+  if (cachedModels) return cachedModels;
+  cachedModels = buildLanguageModels();
+  return cachedModels;
+}
+
+async function runWithModelFallback<T>(operation: (model: HyperLanguageModel) => Promise<T>): Promise<T> {
+  const { primary, fallback } = getLanguageModels();
+  try {
+    return await operation(primary);
+  } catch (error) {
+    if (!fallback) throw error;
+    if (!warnedModelFallback) {
+      console.warn(
+        `[ai/providers] ${primary.modelId} failed; retrying with fallback model ${fallback.modelId}.`,
+      );
+      warnedModelFallback = true;
+    }
+    return operation(fallback);
+  }
 }
 
 // Lazy LanguageModelV2 wrapper. Defers credential resolution until first use
@@ -125,18 +164,18 @@ function getLanguageModel(): HyperLanguageModel {
 const lazyHyperModel: HyperLanguageModel = {
   specificationVersion: 'v2',
   get provider() {
-    return getLanguageModel().provider;
+    return getLanguageModels().primary.provider;
   },
   get modelId() {
-    return getLanguageModel().modelId;
+    return getLanguageModels().primary.modelId;
   },
   get supportedUrls() {
-    return getLanguageModel().supportedUrls;
+    return getLanguageModels().primary.supportedUrls;
   },
   doGenerate: (options: Parameters<HyperLanguageModel['doGenerate']>[0]) =>
-    getLanguageModel().doGenerate(options),
+    runWithModelFallback((model) => model.doGenerate(options)),
   doStream: (options: Parameters<HyperLanguageModel['doStream']>[0]) =>
-    getLanguageModel().doStream(options),
+    runWithModelFallback((model) => model.doStream(options)),
 };
 
 // Single Google provider for all hyper-* model ids expected by the UI.

@@ -11,6 +11,7 @@ export const serverEnv = createEnv({
     GOOGLE_VERTEX_PROJECT: z.string().optional(),
     GOOGLE_VERTEX_LOCATION: z.string().optional(),
     GOOGLE_VERTEX_MODEL: z.string().optional(),
+    GOOGLE_VERTEX_FALLBACK_MODEL: z.string().optional(),
     GOOGLE_CLIENT_EMAIL: z.string().optional(),
     GOOGLE_PRIVATE_KEY: z.string().optional(),
     GOOGLE_PRIVATE_KEY_ID: z.string().optional(),

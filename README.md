@@ -223,8 +223,9 @@ Option A — paste the full service account JSON into a single var:
 ```bash
 GOOGLE_VERTEX_SERVICE_ACCOUNT_JSON='{"type":"service_account","project_id":"your-project","client_email":"sa@your-project.iam.gserviceaccount.com","private_key":"-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n","private_key_id":"..."}'
 # Optional overrides
-GOOGLE_VERTEX_LOCATION=us-central1
-GOOGLE_VERTEX_MODEL=gemini-2.5-flash
+GOOGLE_VERTEX_LOCATION=global
+GOOGLE_VERTEX_MODEL=gemini-3.1-pro-preview
+GOOGLE_VERTEX_FALLBACK_MODEL=gemini-3.1-flash-lite-preview
 ```
 
 Option B — split env vars (handy for secret managers that store fields
@@ -232,11 +233,12 @@ separately):
 
 ```bash
 GOOGLE_VERTEX_PROJECT=your-project
-GOOGLE_VERTEX_LOCATION=us-central1                # optional, defaults to us-central1
+GOOGLE_VERTEX_LOCATION=global                     # optional, defaults to global
 GOOGLE_CLIENT_EMAIL=sa@your-project.iam.gserviceaccount.com
 GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
 GOOGLE_PRIVATE_KEY_ID=...                         # optional
-GOOGLE_VERTEX_MODEL=gemini-2.5-flash              # optional override
+GOOGLE_VERTEX_MODEL=gemini-3.1-pro-preview        # optional override
+GOOGLE_VERTEX_FALLBACK_MODEL=gemini-3.1-flash-lite-preview
 ```
 
 Notes:
