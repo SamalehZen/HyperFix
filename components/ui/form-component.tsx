@@ -10,7 +10,7 @@ import {
   hasPdfSupport,
   getAcceptedFileTypes,
   shouldBypassRateLimits,
-} from '@/ai/providers';
+} from '@/ai/model-config';
 import { X, Check, ChevronsUpDown, Wand2, Upload, CheckIcon, ArrowUpRight, Mic, Shield, ShieldAlert, AlertCircle, FileText, Image as ImageIcon, Clock } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogDescription } from '@/components/ui/dialog';
 import { cn, SearchGroup, SearchGroupId, getSearchGroups, SearchProvider } from '@/lib/utils';
