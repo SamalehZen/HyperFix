@@ -47,23 +47,7 @@ import { ChatMessage } from '@/lib/types';
 import { OpenAIResponsesProviderOptions } from '@ai-sdk/openai';
 import { AnthropicProviderOptions } from '@ai-sdk/anthropic';
 import { getCachedCustomInstructionsByUserId } from '@/lib/user-data-server';
-
-// @ai-sdk/google-vertex 3.x does not export a public per-call options type for
-// chat models; this local shape mirrors the documented Vertex providerOptions
-// surface (thinkingConfig + safety threshold) used below.
-type VertexChatProviderOptions = {
-  thinkingConfig?: {
-    thinkingBudget?: number;
-    includeThoughts?: boolean;
-  };
-  threshold?:
-    | 'HARM_BLOCK_THRESHOLD_UNSPECIFIED'
-    | 'BLOCK_LOW_AND_ABOVE'
-    | 'BLOCK_MEDIUM_AND_ABOVE'
-    | 'BLOCK_ONLY_HIGH'
-    | 'BLOCK_NONE'
-    | 'OFF';
-};
+import { type GoogleLanguageModelOptions } from '@ai-sdk/google';
 
 import { CohereChatModelOptions } from '@ai-sdk/cohere';
 
@@ -263,6 +247,7 @@ export async function POST(req: Request) {
       const setupTime = (Date.now() - requestStartTime) / 1000;
 
       const streamStartTime = Date.now();
+      const shouldIncludeThinking = resolvedModel === 'hyper-default' || hasReasoningSupport(resolvedModel);
 
       const result = streamText({
         model: hyper.languageModel(resolvedModel),
@@ -282,17 +267,17 @@ export async function POST(req: Request) {
           (latitude && longitude ? `\n\nThe user's location is ${latitude}, ${longitude}.` : ''),
         toolChoice: 'auto',
         providerOptions: {
-          vertex: {
-            ...(resolvedModel === 'hyper-google-think' || resolvedModel === 'hyper-google-pro-think'
+          google: {
+            ...(shouldIncludeThinking
               ? {
                 thinkingConfig: {
-                  thinkingBudget: 400,
+                  thinkingLevel: 'high',
                   includeThoughts: true,
                 },
               }
               : {}),
             threshold: "OFF",
-          } satisfies VertexChatProviderOptions,
+          } satisfies GoogleLanguageModelOptions,
         },
         prepareStep: async ({ steps, messages }) => {
           const totalTokens = steps.reduce((sum, step) => sum + (step.usage?.totalTokens ?? 0), 0);
