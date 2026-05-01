@@ -2,7 +2,7 @@ import { UseChatHelpers } from '@ai-sdk/react';
 import { ChatMessage } from '@/lib/types';
 import { SearchGroupId, SearchGroup } from '@/lib/utils';
 import { ComprehensiveUserData } from '@/hooks/use-user-data';
-import { models } from '@/ai/providers';
+import { models } from '@/ai/model-config';
 
 export type DiscountConfig = {
   enabled: boolean;

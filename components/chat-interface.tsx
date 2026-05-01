@@ -37,7 +37,7 @@ import { useOptimizedScroll } from '@/hooks/use-optimized-scroll';
 import { SEARCH_LIMITS } from '@/lib/constants';
 import { ChatSDKError } from '@/lib/errors';
 import { cn, SearchGroupId, invalidateChatsCache } from '@/lib/utils';
-import { requiresProSubscription } from '@/ai/providers';
+import { requiresProSubscription } from '@/ai/model-config';
 import { ConnectorProvider } from '@/lib/connectors';
 
 // State management imports

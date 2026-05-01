@@ -4,7 +4,22 @@ import { z } from 'zod';
 
 export const serverEnv = createEnv({
   server: {
-    GOOGLE_GENERATIVE_AI_API_KEY: z.string().min(1),
+    // Vertex AI Gemini (preferred). Combined validation lives in ai/providers.ts
+    // because deployments may use either the full service account JSON or the
+    // split env vars, but not necessarily both.
+    GOOGLE_VERTEX_SERVICE_ACCOUNT_JSON: z.string().optional(),
+    GOOGLE_VERTEX_PROJECT: z.string().optional(),
+    GOOGLE_VERTEX_LOCATION: z.string().optional(),
+    GOOGLE_VERTEX_MODEL: z.string().optional(),
+    GOOGLE_VERTEX_FALLBACK_MODEL: z.string().optional(),
+    GOOGLE_CLIENT_EMAIL: z.string().optional(),
+    GOOGLE_PRIVATE_KEY: z.string().optional(),
+    GOOGLE_PRIVATE_KEY_ID: z.string().optional(),
+
+    // Deprecated AI Studio key. Kept optional so local dev does not hard-fail
+    // during the Vertex migration; remove once all environments are on Vertex.
+    GOOGLE_GENERATIVE_AI_API_KEY: z.string().optional(),
+
     DATABASE_URL: z.string().min(1),
     REDIS_URL: z.string().min(1),
     BLOB_READ_WRITE_TOKEN: z.string().min(1),
