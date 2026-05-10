@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "generate:openui": "openui generate ai/openui/library.ts --out ai/openui/system-prompt.generated.txt",
+    "dev": "pnpm generate:openui && next dev --turbopack",
+    "build": "pnpm generate:openui && next build",
     "start": "next start",
     "lint": "eslint",
     "fix": "prettier --write .",
@@ -34,6 +35,9 @@
     "@hugeicons/core-free-icons": "^1.0.17",
     "@hugeicons/react": "^1.1.1",
     "@neondatabase/serverless": "^1.0.2",
+    "@openuidev/react-headless": "^0.8.1",
+    "@openuidev/react-lang": "^0.2.4",
+    "@openuidev/react-ui": "^0.11.6",
     "@phosphor-icons/react": "^2.1.10",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
@@ -130,9 +134,11 @@
     "valyu-js": "^2.1.2",
     "vaul": "^1.1.2",
     "xlsx": "^0.18.5",
-    "zod": "4.1.8"
+    "zod": "4.1.8",
+    "zustand": "^4.5.7"
   },
   "devDependencies": {
+    "@openuidev/cli": "^0.0.6",
     "@tailwindcss/postcss": "^4.1.14",
     "@types/google.maps": "^3.58.1",
     "@types/he": "^1.2.3",

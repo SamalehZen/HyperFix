@@ -78,6 +78,7 @@ export const messageMetadataSchema = z.object({
   inputTokens: z.number().nullable(),
   outputTokens: z.number().nullable(),
   totalTokens: z.number().nullable(),
+  renderer: z.enum(['openui', 'markdown']).optional(),
 });
 
 export type MessageMetadata = z.infer<typeof messageMetadataSchema>;

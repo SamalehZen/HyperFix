@@ -41,3 +41,6 @@ certificates
 # Environment files
 *.env
 *.env.*
+
+# OpenUI generated system prompt
+ai/openui/system-prompt.generated.txt

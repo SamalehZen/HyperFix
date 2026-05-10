@@ -201,6 +201,7 @@ const Messages: React.FC<MessagesProps> = React.memo(({
           setMessages={setMessages}
           setSuggestedQuestions={setSuggestedQuestions}
           regenerate={regenerate}
+          sendMessage={sendMessage}
           onHighlight={onHighlight}
           annotations={annotations}
           selectedGroup={selectedGroup}
@@ -219,6 +220,7 @@ const Messages: React.FC<MessagesProps> = React.memo(({
       setMessages,
       setSuggestedQuestions,
       regenerate,
+      sendMessage,
       reasoningVisibilityMap,
       reasoningFullscreenMap,
       setReasoningVisibilityMap,

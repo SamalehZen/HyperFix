@@ -2,7 +2,6 @@ import React, { memo, useCallback, useState, useRef, useEffect } from 'react';
 import isEqual from 'fast-deep-equal';
 import { ReasoningUIPart, DataUIPart, isToolUIPart } from 'ai';
 import { ReasoningPartView } from '@/components/reasoning-part';
-import { MarkdownRenderer } from '@/components/markdown';
 import { ChatTextHighlighter } from '@/components/chat-text-highlighter';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -46,6 +45,7 @@ import { EANSearchResults } from '@/components/ean-search-results';
 import { EANLoadingState } from '@/components/ean-loading-state';
 import { NutritionScores } from '@/components/nutrition-scores';
 import { NutritionTable } from '@/components/nutrition-table';
+import { OpenUIAssistantText } from '@/components/openui-assistant-text';
 
 const ComponentLoader = () => (
   <div className="flex space-x-2 mt-2">
@@ -101,6 +101,7 @@ interface MessagePartRendererProps {
   setMessages: UseChatHelpers<ChatMessage>['setMessages'];
   setSuggestedQuestions: (questions: string[]) => void;
   regenerate: UseChatHelpers<ChatMessage>['regenerate'];
+  sendMessage: UseChatHelpers<ChatMessage>['sendMessage'];
   onHighlight?: (text: string) => void;
   annotations?: DataUIPart<CustomUIDataTypes>[];
   selectedGroup?: import('@/lib/utils').SearchGroupId;
@@ -128,6 +129,7 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
     setMessages,
     setSuggestedQuestions,
     regenerate,
+    sendMessage,
     onHighlight,
     annotations,
     selectedGroup,
@@ -170,7 +172,12 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
         <div key={`${messageIndex}-${partIndex}-text`} className="mt-2">
           <div>
             <ChatTextHighlighter onHighlight={onHighlight} removeHighlightOnClick={true}>
-              <MarkdownRenderer content={part.text} />
+              <OpenUIAssistantText
+                text={part.text}
+                isStreaming={status === 'streaming' && partIndex === parts.length - 1}
+                sendMessage={sendMessage}
+                forceMarkdown={message.metadata?.renderer !== 'openui'}
+              />
             </ChatTextHighlighter>
           </div>
 
@@ -709,6 +716,8 @@ export const MessagePartRenderer = memo<MessagePartRendererProps>(
       prevProps.partIndex === nextProps.partIndex &&
       prevProps.status === nextProps.status &&
       prevProps.hasActiveToolInvocations === nextProps.hasActiveToolInvocations &&
+      prevProps.sendMessage === nextProps.sendMessage &&
+      prevProps.message?.metadata?.renderer === nextProps.message?.metadata?.renderer &&
       isEqual(prevProps.reasoningVisibilityMap, nextProps.reasoningVisibilityMap) &&
       isEqual(prevProps.reasoningFullscreenMap, nextProps.reasoningFullscreenMap) &&
       prevProps.selectedGroup === nextProps.selectedGroup &&
