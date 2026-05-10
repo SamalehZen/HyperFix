@@ -44,6 +44,7 @@ import { createStreamResponse } from '@/lib/streaming-heartbeat';
 import { GroqProviderOptions } from '@ai-sdk/groq';
 import { markdownJoinerTransform } from '@/lib/parser';
 import { ChatMessage } from '@/lib/types';
+import { getOpenUISystemPrompt } from '@/ai/openui/system-prompt';
 import { OpenAIResponsesProviderOptions } from '@ai-sdk/openai';
 import { AnthropicProviderOptions } from '@ai-sdk/anthropic';
 import { getCachedCustomInstructionsByUserId } from '@/lib/user-data-server';
@@ -249,6 +250,8 @@ export async function POST(req: Request) {
       const streamStartTime = Date.now();
       const shouldIncludeThinking = resolvedModel === 'hyper-default' || hasReasoningSupport(resolvedModel);
 
+      const openuiSystemPrompt = getOpenUISystemPrompt();
+
       const result = streamText({
         model: hyper.languageModel(resolvedModel),
         messages: convertToModelMessages(messages),
@@ -258,8 +261,9 @@ export async function POST(req: Request) {
         },
         maxRetries: 10,
         activeTools: [...activeTools],
-        experimental_transform: markdownJoinerTransform(),
         system:
+          openuiSystemPrompt +
+          '\n\n---\n\n' +
           instructions +
           (customInstructions && (isCustomInstructionsEnabled ?? true)
             ? `\n\nThe user's custom instructions are as follows and YOU MUST FOLLOW THEM AT ALL COSTS: ${customInstructions?.content}`
@@ -369,6 +373,7 @@ export async function POST(req: Request) {
                 totalTokens: part.totalUsage?.totalTokens ?? null,
                 inputTokens: part.totalUsage?.inputTokens ?? null,
                 outputTokens: part.totalUsage?.outputTokens ?? null,
+                renderer: 'openui' as const,
               };
             }
           },
