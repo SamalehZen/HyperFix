@@ -1,0 +1,1111 @@
+{
+  "sectorCode": "01",
+  "sectorName": "MARCHE",
+  "sectorId": "sector-01",
+  "nodes": [
+    {
+      "id": "rayon-010",
+      "level": "rayon",
+      "code": "010",
+      "name": "BOUCHERIE",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-101-010",
+      "level": "famille",
+      "code": "101",
+      "name": "STAND TRADITIONNEL",
+      "parentId": "rayon-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-101-010",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BOEUF LOCAL",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-101-010",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BOEUF IMPORT",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-101-010",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "VEAU LOCAL",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-101-010",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "VEAU IMPORT",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-101-010",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "AGNEAU LOCAL",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-101-010",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "AGNEAU IMPORT",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-101-010",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "VOLAILLES",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-101-010",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "PORC",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-101-010",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "PREPARATIONS",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-110-101-010",
+      "level": "sous-famille",
+      "code": "110",
+      "name": "ABATS",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-111-101-010",
+      "level": "sous-famille",
+      "code": "111",
+      "name": "AUTRES VIANDES",
+      "parentId": "famille-101-010",
+      "aliases": []
+    },
+    {
+      "id": "famille-102-010",
+      "level": "famille",
+      "code": "102",
+      "name": "LIBRE SERVICE",
+      "parentId": "rayon-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-102-010",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "BOEUF LOCAL",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-102-010",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "BOEUF IMPORT",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-102-010",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "VEAU LOCAL",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-102-010",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "VEAU IMPORT",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-102-010",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "AGNEAU LOCAL",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-102-010",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "AGNEAU IMPORT",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-102-010",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "VOLAILLES",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-102-010",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "PORC",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-102-010",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "PREPARATIONS",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-102-010",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "ABATS",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-102-010",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "AUTRES VIANDES",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-212-102-010",
+      "level": "sous-famille",
+      "code": "212",
+      "name": "SAUCISSE",
+      "parentId": "famille-102-010",
+      "aliases": []
+    },
+    {
+      "id": "famille-103-010",
+      "level": "famille",
+      "code": "103",
+      "name": "EMBALLAGES BOUCHERIES",
+      "parentId": "rayon-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-103-010",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "EMBALLAGES",
+      "parentId": "famille-103-010",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-103-010",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "FICELLE A ROTIR",
+      "parentId": "famille-103-010",
+      "aliases": []
+    },
+    {
+      "id": "rayon-011",
+      "level": "rayon",
+      "code": "011",
+      "name": "FRUITS ET LEGUMES",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-111-011",
+      "level": "famille",
+      "code": "111",
+      "name": "FRUITS",
+      "parentId": "rayon-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-111-011",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "FRUITS LOCAUX",
+      "parentId": "famille-111-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-111-011",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "FRUITS IMPORTS",
+      "parentId": "famille-111-011",
+      "aliases": []
+    },
+    {
+      "id": "famille-112-011",
+      "level": "famille",
+      "code": "112",
+      "name": "LEGUMES",
+      "parentId": "rayon-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-112-011",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "LEGUMES LOCAUX",
+      "parentId": "famille-112-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-112-011",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "LEGUMES IMPORTS",
+      "parentId": "famille-112-011",
+      "aliases": []
+    },
+    {
+      "id": "famille-113-011",
+      "level": "famille",
+      "code": "113",
+      "name": "VRAC EPICE/FRUIT SEC",
+      "parentId": "rayon-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-113-011",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "EPICES VRAC",
+      "parentId": "famille-113-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-113-011",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "FRUITS SECS VRAC",
+      "parentId": "famille-113-011",
+      "aliases": []
+    },
+    {
+      "id": "famille-114-011",
+      "level": "famille",
+      "code": "114",
+      "name": "FLEURS ET PLANTES",
+      "parentId": "rayon-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-114-011",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "FLEURS LOCALES",
+      "parentId": "famille-114-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-114-011",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "FLEURS IMPORTS",
+      "parentId": "famille-114-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-114-011",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "PLANTES LOCALES",
+      "parentId": "famille-114-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-114-011",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "PLANTES IMPORTS",
+      "parentId": "famille-114-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-114-011",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "FLEURS/PLANTE CONSENTMENT",
+      "parentId": "famille-114-011",
+      "aliases": []
+    },
+    {
+      "id": "famille-115-011",
+      "level": "famille",
+      "code": "115",
+      "name": "LS FRUITS",
+      "parentId": "rayon-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-115-011",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "LS PREPARATION",
+      "parentId": "famille-115-011",
+      "aliases": []
+    },
+    {
+      "id": "famille-116-011",
+      "level": "famille",
+      "code": "116",
+      "name": "EMBALLAGES FRUITS LEGUMES",
+      "parentId": "rayon-011",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-116-011",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "EMBALLAGES",
+      "parentId": "famille-116-011",
+      "aliases": []
+    },
+    {
+      "id": "rayon-012",
+      "level": "rayon",
+      "code": "012",
+      "name": "BOULANGERIE + PATISSERIE",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-121-012",
+      "level": "famille",
+      "code": "121",
+      "name": "BOULANGERIE",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-121-012",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BOULANGERIE",
+      "parentId": "famille-121-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-122-012",
+      "level": "famille",
+      "code": "122",
+      "name": "VIENNOISERIE",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-122-012",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "VIENNOISERIE",
+      "parentId": "famille-122-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-123-012",
+      "level": "famille",
+      "code": "123",
+      "name": "PATISSERIE",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-123-012",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PATISSERIE",
+      "parentId": "famille-123-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-124-012",
+      "level": "famille",
+      "code": "124",
+      "name": "CHOCOLATS",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-124-012",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CHOCOLATS",
+      "parentId": "famille-124-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-125-012",
+      "level": "famille",
+      "code": "125",
+      "name": "PREPARATIONS",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-125-012",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "PREPARATIONS",
+      "parentId": "famille-125-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-126-012",
+      "level": "famille",
+      "code": "126",
+      "name": "PATISSERIE SECHE",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-126-012",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "PATISSERIE SECHE",
+      "parentId": "famille-126-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-127-012",
+      "level": "famille",
+      "code": "127",
+      "name": "PATISSERIES DIVERS",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-127-012",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "PATISSERIES DIVERS",
+      "parentId": "famille-127-012",
+      "aliases": []
+    },
+    {
+      "id": "famille-128-012",
+      "level": "famille",
+      "code": "128",
+      "name": "EMBALLAGES PATISSERIES",
+      "parentId": "rayon-012",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-128-012",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "EMBALLAGES",
+      "parentId": "famille-128-012",
+      "aliases": []
+    },
+    {
+      "id": "rayon-013",
+      "level": "rayon",
+      "code": "013",
+      "name": "POIND CHAUD + ROTISSERIE",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-131-013",
+      "level": "famille",
+      "code": "131",
+      "name": "ROTISSOIRE",
+      "parentId": "rayon-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-131-013",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "POULETS",
+      "parentId": "famille-131-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-131-013",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "DECOUPE POULETS",
+      "parentId": "famille-131-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-131-013",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "DIVERS",
+      "parentId": "famille-131-013",
+      "aliases": []
+    },
+    {
+      "id": "famille-132-013",
+      "level": "famille",
+      "code": "132",
+      "name": "PREPARATIONS FROIDES",
+      "parentId": "rayon-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-132-013",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PREPARATIONS FROIDES",
+      "parentId": "famille-132-013",
+      "aliases": []
+    },
+    {
+      "id": "famille-133-013",
+      "level": "famille",
+      "code": "133",
+      "name": "PREPARATIONS CHAUDES",
+      "parentId": "rayon-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-133-013",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PREPARATIONS CHAUDES",
+      "parentId": "famille-133-013",
+      "aliases": []
+    },
+    {
+      "id": "famille-134-013",
+      "level": "famille",
+      "code": "134",
+      "name": "PREPARATIONS FOURNISSEURS",
+      "parentId": "rayon-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-134-013",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "PREPARATIONS FOURNISSEURS",
+      "parentId": "famille-134-013",
+      "aliases": []
+    },
+    {
+      "id": "famille-135-013",
+      "level": "famille",
+      "code": "135",
+      "name": "EMBALL POINT CHAUD+ROTISS",
+      "parentId": "rayon-013",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-135-013",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "EMBALLAGES",
+      "parentId": "famille-135-013",
+      "aliases": []
+    },
+    {
+      "id": "rayon-014",
+      "level": "rayon",
+      "code": "014",
+      "name": "CHARCUTERIE COUPE",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-141-014",
+      "level": "famille",
+      "code": "141",
+      "name": "CHARCUTERIE COUPE",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-141-014",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CHARCUTERIE COUPE",
+      "parentId": "famille-141-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-141-014",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "HALAL IMPORT",
+      "parentId": "famille-141-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-142-014",
+      "level": "famille",
+      "code": "142",
+      "name": "VOLAILLE",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-142-014",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "VOLAILLE",
+      "parentId": "famille-142-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-143-014",
+      "level": "famille",
+      "code": "143",
+      "name": "BOEUF",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-143-014",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "BOEUF",
+      "parentId": "famille-143-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-144-014",
+      "level": "famille",
+      "code": "144",
+      "name": "OLIVES ET CONDIMENTS",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-144-014",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "OLIVES ET CONDIMENTS",
+      "parentId": "famille-144-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-145-014",
+      "level": "famille",
+      "code": "145",
+      "name": "LS CHARCUTERIE COUPE",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-145-014",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "LS CHARCUTERIE COUPE",
+      "parentId": "famille-145-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-145-014",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "LS OLIVE",
+      "parentId": "famille-145-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-145-014",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "LS PREPARATIONS",
+      "parentId": "famille-145-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-146-014",
+      "level": "famille",
+      "code": "146",
+      "name": "PORC",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-146-014",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "PORC",
+      "parentId": "famille-146-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-147-014",
+      "level": "famille",
+      "code": "147",
+      "name": "VEAU",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-147-014",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "VEAU",
+      "parentId": "famille-147-014",
+      "aliases": []
+    },
+    {
+      "id": "famille-148-014",
+      "level": "famille",
+      "code": "148",
+      "name": "EMBALLAGES CHARCUT COUPE",
+      "parentId": "rayon-014",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-148-014",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "EMBALLAGES",
+      "parentId": "famille-148-014",
+      "aliases": []
+    },
+    {
+      "id": "rayon-015",
+      "level": "rayon",
+      "code": "015",
+      "name": "FROMAGE a LA COUPE",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-151-015",
+      "level": "famille",
+      "code": "151",
+      "name": "ORIGINE FRANCE",
+      "parentId": "rayon-015",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-151-015",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "ORIGINE FRANCE",
+      "parentId": "famille-151-015",
+      "aliases": []
+    },
+    {
+      "id": "famille-152-015",
+      "level": "famille",
+      "code": "152",
+      "name": "LS FRAICHE DECOUPE",
+      "parentId": "rayon-015",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-152-015",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "LS FRAICHE DECOUPE",
+      "parentId": "famille-152-015",
+      "aliases": []
+    },
+    {
+      "id": "famille-153-015",
+      "level": "famille",
+      "code": "153",
+      "name": "ORIGINE LOCALE",
+      "parentId": "rayon-015",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-153-015",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "ORIGINE LOCALE",
+      "parentId": "famille-153-015",
+      "aliases": []
+    },
+    {
+      "id": "famille-154-015",
+      "level": "famille",
+      "code": "154",
+      "name": "PREPARATIONS",
+      "parentId": "rayon-015",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-154-015",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "PREPARATIONS",
+      "parentId": "famille-154-015",
+      "aliases": []
+    },
+    {
+      "id": "famille-155-015",
+      "level": "famille",
+      "code": "155",
+      "name": "EMBALLAGES FROMAGE COUPE",
+      "parentId": "rayon-015",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-155-015",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "EMBALLAGES",
+      "parentId": "famille-155-015",
+      "aliases": []
+    },
+    {
+      "id": "rayon-016",
+      "level": "rayon",
+      "code": "016",
+      "name": "MAREE",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-161-016",
+      "level": "famille",
+      "code": "161",
+      "name": "POISSONS",
+      "parentId": "rayon-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-161-016",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "LOCAL",
+      "parentId": "famille-161-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-161-016",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "IMPORT",
+      "parentId": "famille-161-016",
+      "aliases": []
+    },
+    {
+      "id": "famille-162-016",
+      "level": "famille",
+      "code": "162",
+      "name": "COQUILLAGES ET CRUSTACES",
+      "parentId": "rayon-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-162-016",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "LOCAL",
+      "parentId": "famille-162-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-162-016",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "IMPORT",
+      "parentId": "famille-162-016",
+      "aliases": []
+    },
+    {
+      "id": "famille-163-016",
+      "level": "famille",
+      "code": "163",
+      "name": "LS MAREE",
+      "parentId": "rayon-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-163-016",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "LOCAL",
+      "parentId": "famille-163-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-163-016",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "LS PREPARATIONS",
+      "parentId": "famille-163-016",
+      "aliases": []
+    },
+    {
+      "id": "famille-164-016",
+      "level": "famille",
+      "code": "164",
+      "name": "SURGELES",
+      "parentId": "rayon-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-164-016",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "IMPORT",
+      "parentId": "famille-164-016",
+      "aliases": []
+    },
+    {
+      "id": "famille-165-016",
+      "level": "famille",
+      "code": "165",
+      "name": "EMBALLAGES MAREE",
+      "parentId": "rayon-016",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-165-016",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "EMBALLAGES",
+      "parentId": "famille-165-016",
+      "aliases": []
+    },
+    {
+      "id": "rayon-017",
+      "level": "rayon",
+      "code": "017",
+      "name": "TRAITEUR",
+      "parentId": "sector-01",
+      "aliases": []
+    },
+    {
+      "id": "famille-171-017",
+      "level": "famille",
+      "code": "171",
+      "name": "STAND TRADITIONNEL",
+      "parentId": "rayon-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-171-017",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CONDIMENTS ET OLIVES",
+      "parentId": "famille-171-017",
+      "aliases": []
+    },
+    {
+      "id": "famille-172-017",
+      "level": "famille",
+      "code": "172",
+      "name": "LIBRE SERVICE",
+      "parentId": "rayon-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-172-017",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-172-017",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-172-017",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-172-017",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-172-017",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-172-017",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-172-017",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "A REUTILISER",
+      "parentId": "famille-172-017",
+      "aliases": []
+    },
+    {
+      "id": "famille-173-017",
+      "level": "famille",
+      "code": "173",
+      "name": "PREPARATIONS",
+      "parentId": "rayon-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-173-017",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PREPARATIONS FROIDES",
+      "parentId": "famille-173-017",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-173-017",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "PREPARATIONS CHAUDES",
+      "parentId": "famille-173-017",
+      "aliases": []
+    }
+  ]
+}

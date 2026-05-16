@@ -1,0 +1,2575 @@
+{
+  "sectorCode": "03",
+  "sectorName": "EPICERIE",
+  "sectorId": "sector-03",
+  "nodes": [
+    {
+      "id": "rayon-030",
+      "level": "rayon",
+      "code": "030",
+      "name": "EPICERIE SUCREE",
+      "parentId": "sector-03",
+      "aliases": []
+    },
+    {
+      "id": "famille-301-030",
+      "level": "famille",
+      "code": "301",
+      "name": "PRODUITS SALES APERITIFS",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-301-030",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BISCUITS APERITIFS",
+      "parentId": "famille-301-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-301-030",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "GRAINES",
+      "parentId": "famille-301-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-301-030",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "POP CORN",
+      "parentId": "famille-301-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-301-030",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "AUTRES",
+      "parentId": "famille-301-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-302-030",
+      "level": "famille",
+      "code": "302",
+      "name": "CHIPS",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-302-030",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CHIPS NATURE",
+      "parentId": "famille-302-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-302-030",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "CHIPS AROMATISEES",
+      "parentId": "famille-302-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-302-030",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "AUTRES",
+      "parentId": "famille-302-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-302-030",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "TUILES",
+      "parentId": "famille-302-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-303-030",
+      "level": "famille",
+      "code": "303",
+      "name": "BISCUITS SUCRES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-303-030",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "SEC",
+      "parentId": "famille-303-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-303-030",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "PETITS DEJEUNERS",
+      "parentId": "famille-303-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-303-030",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "FRUITES",
+      "parentId": "famille-303-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-303-030",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "COOKIES",
+      "parentId": "famille-303-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-303-030",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "CHOCOLATES",
+      "parentId": "famille-303-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-303-030",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "GOUTERS",
+      "parentId": "famille-303-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-304-030",
+      "level": "famille",
+      "code": "304",
+      "name": "PATISSERIE ELABOREE",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-304-030",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CAKES",
+      "parentId": "famille-304-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-304-030",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "SPECIALITES ETRANGERES",
+      "parentId": "famille-304-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-304-030",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "PAINS D'EPICES",
+      "parentId": "famille-304-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-304-030",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "PAINS DE MIE ET PAINS",
+      "parentId": "famille-304-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-305-030",
+      "level": "famille",
+      "code": "305",
+      "name": "PATISSERIE TRADITIONNELLE",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-305-030",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "BARRES PATISSIERES + 4/4",
+      "parentId": "famille-305-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-305-030",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "GAUFRES TRADITIONNELLES",
+      "parentId": "famille-305-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-305-030",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "SPECIALITES",
+      "parentId": "famille-305-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-305-030",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "MADELEINES",
+      "parentId": "famille-305-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-305-030",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "CREPES TRADITIONNELLES",
+      "parentId": "famille-305-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-306-030",
+      "level": "famille",
+      "code": "306",
+      "name": "BISCOTTES & ASSIMILES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-306-030",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "BISCOTTES",
+      "parentId": "famille-306-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-306-030",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "PAINS GRILLES SUEDOIS",
+      "parentId": "famille-306-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-306-030",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "ASSIMILES",
+      "parentId": "famille-306-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-306-030",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "EXTRUDES",
+      "parentId": "famille-306-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-307-030",
+      "level": "famille",
+      "code": "307",
+      "name": "CEREALE BARRE CEREALIERE",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-307-030",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "CEREALES ADULTES",
+      "parentId": "famille-307-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-307-030",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "CEREALES ENFANTS",
+      "parentId": "famille-307-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-307-030",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "BARRES CEREALIERES",
+      "parentId": "famille-307-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-308-030",
+      "level": "famille",
+      "code": "308",
+      "name": "TARTINABLE",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-308-030",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CONFITURES",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-308-030",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "CREMES DE MARRONS",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-308-030",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "MIELS",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-308-030",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "PATES A TARTINER",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-308-030",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "SIROP D'ERABLE",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-308-030",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "GELEES - MARMELADES",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-308-030",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "DESSERTS DE FRUITS",
+      "parentId": "famille-308-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-309-030",
+      "level": "famille",
+      "code": "309",
+      "name": "COMPOTES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-309-030",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "BOCAUX-BRICK-BOITE FER",
+      "parentId": "famille-309-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-309-030",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "COUPELLES",
+      "parentId": "famille-309-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-309-030",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "GOURDES INDIVIDUELLES",
+      "parentId": "famille-309-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-311-030",
+      "level": "famille",
+      "code": "311",
+      "name": "CAFES . CHICOREES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-311-030",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CAFES GRAINS",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-311-030",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "CAFES MOULUS",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-311-030",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CAFE + ADJONCTION",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-311-030",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "SOLUBLES PURS",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-311-030",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "DOSETTES / CAPSULES",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-311-030",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "CHICOREE",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-311-030",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "CAPPUCCINO",
+      "parentId": "famille-311-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-312-030",
+      "level": "famille",
+      "code": "312",
+      "name": "PETITS DEJEUNER CACAO",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-312-030",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "POUDRES INSTANTANEES",
+      "parentId": "famille-312-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-312-030",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "INSTANTANES GRANULES",
+      "parentId": "famille-312-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-312-030",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CACAO PUR",
+      "parentId": "famille-312-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-312-030",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "MALTES",
+      "parentId": "famille-312-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-312-030",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "DOSETTES",
+      "parentId": "famille-312-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-312-030",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "AUTRES",
+      "parentId": "famille-312-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-313-030",
+      "level": "famille",
+      "code": "313",
+      "name": "THE - INFUSIONS",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-313-030",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "THE",
+      "parentId": "famille-313-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-313-030",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "INFUSION ET TISANES",
+      "parentId": "famille-313-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-313-030",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "DOSETTES/CAPSULES",
+      "parentId": "famille-313-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-313-030",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "AUTRES",
+      "parentId": "famille-313-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-314-030",
+      "level": "famille",
+      "code": "314",
+      "name": "DESSERT AIDE PATISSIERE",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-314-030",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "DESSERTS A PREPARER",
+      "parentId": "famille-314-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-314-030",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "DESSERT PRETS A CONSOMMER",
+      "parentId": "famille-314-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-314-030",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "LEVURES ET SUCRES",
+      "parentId": "famille-314-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-314-030",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "AIDES A LA PATISSERIE",
+      "parentId": "famille-314-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-315-030",
+      "level": "famille",
+      "code": "315",
+      "name": "SUCRES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-315-030",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "CLASSIQUE",
+      "parentId": "famille-315-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-315-030",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "SPECIALITES",
+      "parentId": "famille-315-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-315-030",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "ALLEGES",
+      "parentId": "famille-315-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-315-030",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "EDULCORANTS",
+      "parentId": "famille-315-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-315-030",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "SIROP D'AGAVE",
+      "parentId": "famille-315-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-316-030",
+      "level": "famille",
+      "code": "316",
+      "name": "FRUITS AU SIROP",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-316-030",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "MACEDOINES",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-316-030",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "ABRICOTS",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-316-030",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "PECHES",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-316-030",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "ANANAS",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-316-030",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "AUTRES",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-316-030",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "INDIVIDUELS",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-316-030",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "COCKTAILS",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-316-030",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "LYCHEES",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-316-030",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "MANGUE",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-610-316-030",
+      "level": "sous-famille",
+      "code": "610",
+      "name": "POIRES",
+      "parentId": "famille-316-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-317-030",
+      "level": "famille",
+      "code": "317",
+      "name": "FRUITS SEC",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-317-030",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "FRUITS SEC",
+      "parentId": "famille-317-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-318-030",
+      "level": "famille",
+      "code": "318",
+      "name": "CHOCOLATS EN TABLETTES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-318-030",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "PATISSIER",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-318-030",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "TABLETTE LAIT/BLC MENAGE",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-318-030",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "TABLETTE PATISSIER",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-318-030",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "TABLETTE LAIT/BLC DEGUSTA",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-318-030",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "TABLETTE NOIR MENAGE",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-318-030",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "TABLETTE NOIR DEGUSTATION",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-318-030",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "PRODUITS BIOLOGIQUES",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-318-030",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "AUTRES",
+      "parentId": "famille-318-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-319-030",
+      "level": "famille",
+      "code": "319",
+      "name": "CONFISERIE DE CHOCOLAT",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-319-030",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "BARRES BISCUITEES",
+      "parentId": "famille-319-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-319-030",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "LUDIQUES ENFANTS",
+      "parentId": "famille-319-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-319-030",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "ROCHERS CHOCO/ACCOMP.CAFE",
+      "parentId": "famille-319-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-319-030",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "BOITAGES PERMANENTS",
+      "parentId": "famille-319-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-319-030",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "PRODUITS BIOLOGIQUES",
+      "parentId": "famille-319-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-319-030",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "BARRES FONDANTES",
+      "parentId": "famille-319-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-321-030",
+      "level": "famille",
+      "code": "321",
+      "name": "CHOCOLATS SAISONNIERS",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-321-030",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CHOCOLATS DE NOEL",
+      "parentId": "famille-321-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-321-030",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "CHOCOLATS DE PAQUE",
+      "parentId": "famille-321-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-321-030",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "AUTRE SAISONNIER",
+      "parentId": "famille-321-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-322-030",
+      "level": "famille",
+      "code": "322",
+      "name": "CONFISERIE DE SUCRE",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-322-030",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "BONBONS FAMILIAUX",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-322-030",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "CONFISERIE SPECIALISEE",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-322-030",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "BONBONS ENFANTS",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-322-030",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "CHEWING-GUM/BUBBLE-GUM",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-322-030",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "CONF DE SUCRE BIOLOGIQUE",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-322-030",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "CONFISERIE REGION/PREM.",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-322-030",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "CONFISERIE SAISONNIERE",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-322-030",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "BONBON AVEC JOUET",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-322-030",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "PETITE CONFISERIE POCHE",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-322-030",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "SANTE FORME",
+      "parentId": "famille-322-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-323-030",
+      "level": "famille",
+      "code": "323",
+      "name": "FARINES",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-323-030",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "FARINES BLANCHES",
+      "parentId": "famille-323-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-323-030",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "FARINES COMPLETES",
+      "parentId": "famille-323-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-323-030",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "AUTRES FARINES",
+      "parentId": "famille-323-030",
+      "aliases": []
+    },
+    {
+      "id": "famille-324-030",
+      "level": "famille",
+      "code": "324",
+      "name": "LAITS INDUSTRIELS",
+      "parentId": "rayon-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-324-030",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CONCENTRE SUCRE",
+      "parentId": "famille-324-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-324-030",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "CONCENTRE NON SUCRE",
+      "parentId": "famille-324-030",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-324-030",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "POUDRE",
+      "parentId": "famille-324-030",
+      "aliases": []
+    },
+    {
+      "id": "rayon-031",
+      "level": "rayon",
+      "code": "031",
+      "name": "EPICERIE SALEE",
+      "parentId": "sector-03",
+      "aliases": []
+    },
+    {
+      "id": "famille-311-031",
+      "level": "famille",
+      "code": "311",
+      "name": "ALIMENTATÂ° INFANTILE IFF",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-311-031",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CEREALES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-311-031",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BISCUITS",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-311-031",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "BOISSONS",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-311-031",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "POTS LEGUMES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-311-031",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "COUPELLES SALEES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-311-031",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "ASSIETTES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-311-031",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "PRODUITS JUNIOR",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-311-031",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "POT DESSERTS-GOUTERS",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-109-311-031",
+      "level": "sous-famille",
+      "code": "109",
+      "name": "COUPELLES SUCREES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-110-311-031",
+      "level": "sous-famille",
+      "code": "110",
+      "name": "POTS FRUITS",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-111-311-031",
+      "level": "sous-famille",
+      "code": "111",
+      "name": "LAITS POUDRES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-112-311-031",
+      "level": "sous-famille",
+      "code": "112",
+      "name": "LAITS LIQUIDES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-113-311-031",
+      "level": "sous-famille",
+      "code": "113",
+      "name": "LAITS DE CROISSANCE",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-114-311-031",
+      "level": "sous-famille",
+      "code": "114",
+      "name": "PETITS DEJEUNERS",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-115-311-031",
+      "level": "sous-famille",
+      "code": "115",
+      "name": "POTAGES",
+      "parentId": "famille-311-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-312-031",
+      "level": "famille",
+      "code": "312",
+      "name": "POMMES DE TERRE",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-312-031",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "FLOCONS NATURE",
+      "parentId": "famille-312-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-312-031",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "PUREE",
+      "parentId": "famille-312-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-313-031",
+      "level": "famille",
+      "code": "313",
+      "name": "PATES ALIMENTAIRES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-313-031",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PATES QS QUOTIDIENNES",
+      "parentId": "famille-313-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-313-031",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "PATES AUX OEUFS",
+      "parentId": "famille-313-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-313-031",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "PATES QS FESTIVES",
+      "parentId": "famille-313-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-314-031",
+      "level": "famille",
+      "code": "314",
+      "name": "LEGUMES SECS-RIZ-CEREALES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-314-031",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "LEGUMES SECS",
+      "parentId": "famille-314-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-314-031",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "RIZ",
+      "parentId": "famille-314-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-314-031",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "AUTRES CEREALES",
+      "parentId": "famille-314-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-314-031",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "SEMOULES",
+      "parentId": "famille-314-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-314-031",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "GRAINES A COUSCOUS",
+      "parentId": "famille-314-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-315-031",
+      "level": "famille",
+      "code": "315",
+      "name": "POTAGES & CROUTONS",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-315-031",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "CROUTONS",
+      "parentId": "famille-315-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-315-031",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "POTAGES",
+      "parentId": "famille-315-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-315-031",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "POTAGE DESHYDRATE SACHET",
+      "parentId": "famille-315-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-316-031",
+      "level": "famille",
+      "code": "316",
+      "name": "CONDIMENTS & SAUCES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-316-031",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "LEGUMES CONDIMENTAIRES",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-316-031",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "KETCHUP",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-316-031",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "SAUCES FROIDES",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-316-031",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "DIVERS",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-316-031",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "CORNICHONS",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-316-031",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "OLIVES",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-316-031",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "MOUTARDES",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-316-031",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "MAYONNAISES",
+      "parentId": "famille-316-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-317-031",
+      "level": "famille",
+      "code": "317",
+      "name": "SAUCES CHAUDES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-317-031",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "PULPE/PUREE/COULIS/CONC.",
+      "parentId": "famille-317-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-317-031",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "SAUCES BASE TOMATES",
+      "parentId": "famille-317-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-317-031",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "SAUCES HORS TOMATES",
+      "parentId": "famille-317-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-318-031",
+      "level": "famille",
+      "code": "318",
+      "name": "EPICES POIVRES SELS",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-318-031",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "EPICES HERBES ET AROMATES",
+      "parentId": "famille-318-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-318-031",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "SELS",
+      "parentId": "famille-318-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-318-031",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "POIVRE",
+      "parentId": "famille-318-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-318-031",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "ACCOMPAGNEMENT SALADE",
+      "parentId": "famille-318-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-319-031",
+      "level": "famille",
+      "code": "319",
+      "name": "AIDES CULINAIRES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-319-031",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "LIANTS ET CHAPELURES",
+      "parentId": "famille-319-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-319-031",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "BOUILLONS ET ASS.CHAUDS",
+      "parentId": "famille-319-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-319-031",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "ASSAISONNEMENTS FROIDS",
+      "parentId": "famille-319-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-319-031",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "DIVERS",
+      "parentId": "famille-319-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-321-031",
+      "level": "famille",
+      "code": "321",
+      "name": "HUILES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-321-031",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "HUILES SANTE",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-321-031",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PRODUITS BIOLOGIQUES",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-321-031",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "ARACHIDE",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-321-031",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "TOURNESOL",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-321-031",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "OLIVE ET POMASSE",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-321-031",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "SPECIALITES",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-321-031",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "MELANGES",
+      "parentId": "famille-321-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-322-031",
+      "level": "famille",
+      "code": "322",
+      "name": "VINAIGRES ET VINAIGRETTES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-322-031",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "VINAIGRES",
+      "parentId": "famille-322-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-322-031",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "VINAIGRES GASTRONOMIQUES",
+      "parentId": "famille-322-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-322-031",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "SAUCE SALADE/VINAIGRETTE",
+      "parentId": "famille-322-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-323-031",
+      "level": "famille",
+      "code": "323",
+      "name": "CONSERVES DE LEGUMES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-323-031",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "MELANGES DE LEGUMES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-323-031",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "ASPERGES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-323-031",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "CHAMPIGNONS DE PARIS",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-323-031",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "CHAMPIGNONS SYLVESTRES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-323-031",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "LEGUMES DIVERS",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-323-031",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "GERMES DE SOJA",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-323-031",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "LEGUMES SECS",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-308-323-031",
+      "level": "sous-famille",
+      "code": "308",
+      "name": "LEGUMES CUISINES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-309-323-031",
+      "level": "sous-famille",
+      "code": "309",
+      "name": "MAIS",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-310-323-031",
+      "level": "sous-famille",
+      "code": "310",
+      "name": "AUTRES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-311-323-031",
+      "level": "sous-famille",
+      "code": "311",
+      "name": "PETITS POIS CUISINES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-312-323-031",
+      "level": "sous-famille",
+      "code": "312",
+      "name": "POIS ET CAROTTES",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-313-323-031",
+      "level": "sous-famille",
+      "code": "313",
+      "name": "HARIC.VERTS BEURRE MT",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-314-323-031",
+      "level": "sous-famille",
+      "code": "314",
+      "name": "FLAGEOLETS",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-315-323-031",
+      "level": "sous-famille",
+      "code": "315",
+      "name": "TOMATE ENTIERE ET PELEE",
+      "parentId": "famille-323-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-324-031",
+      "level": "famille",
+      "code": "324",
+      "name": "CONSERVES DE POISSONS",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-324-031",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "SARDINES",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-324-031",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "SALADES MARINIERES",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-324-031",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "THONS",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-324-031",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "MAQUEREAUX",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-324-031",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "TARTINABLES",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-324-031",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "CRUSTACES ET MOLLUSQUES",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-324-031",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "AUTRES POISSONS",
+      "parentId": "famille-324-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-325-031",
+      "level": "famille",
+      "code": "325",
+      "name": "CONSERVES DE VIANDES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-325-031",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "VIANDES EN CONSERVES",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-325-031",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "FOIE GRAS ET DERIVES",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-325-031",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "SALADES DE VIANDE",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-325-031",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "PATES",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-325-031",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "RILLETTES",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-325-031",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "CONFITS DE FOIE",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-325-031",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "SAUCISSE COCKTAIL/HOT DOG",
+      "parentId": "famille-325-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-326-031",
+      "level": "famille",
+      "code": "326",
+      "name": "PLATS CUISINES A PREPARER",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-326-031",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "LEGUMES SECS",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-326-031",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "PATES ALIMENTAIRES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-326-031",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "RIZ",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-326-031",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "BLE",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-326-031",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "CASSOULET",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-326-031",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "PLAT CUISINE BASE DE PATE",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-607-326-031",
+      "level": "sous-famille",
+      "code": "607",
+      "name": "PLATS A BASE DE LEGUMES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-608-326-031",
+      "level": "sous-famille",
+      "code": "608",
+      "name": "PLAT BARQUETTE INDIVIDUEL",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-609-326-031",
+      "level": "sous-famille",
+      "code": "609",
+      "name": "PLATS EXOTIQUES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-610-326-031",
+      "level": "sous-famille",
+      "code": "610",
+      "name": "PLATS DESHYDRATES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-611-326-031",
+      "level": "sous-famille",
+      "code": "611",
+      "name": "PLATS CUISINES DIVERS",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-612-326-031",
+      "level": "sous-famille",
+      "code": "612",
+      "name": "ESCARGOTS",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-613-326-031",
+      "level": "sous-famille",
+      "code": "613",
+      "name": "CONFITS",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-614-326-031",
+      "level": "sous-famille",
+      "code": "614",
+      "name": "GRAISSES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-615-326-031",
+      "level": "sous-famille",
+      "code": "615",
+      "name": "CHOUCROUTE GARNIE",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-616-326-031",
+      "level": "sous-famille",
+      "code": "616",
+      "name": "PRODUITS BIOLOGIQUES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-617-326-031",
+      "level": "sous-famille",
+      "code": "617",
+      "name": "PLAT CUISINE BASELENTILLE",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-618-326-031",
+      "level": "sous-famille",
+      "code": "618",
+      "name": "QUENELLES",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-619-326-031",
+      "level": "sous-famille",
+      "code": "619",
+      "name": "PLATS PREPARER HALAL",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-620-326-031",
+      "level": "sous-famille",
+      "code": "620",
+      "name": "AUTRES HALAL",
+      "parentId": "famille-326-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-327-031",
+      "level": "famille",
+      "code": "327",
+      "name": "PRODUITS BIO ET EQUITABLE",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-327-031",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "EPICERIE SUCREE BIO",
+      "parentId": "famille-327-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-327-031",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "EPICERIE SALEE BIO",
+      "parentId": "famille-327-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-327-031",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "BOISSONS BIO",
+      "parentId": "famille-327-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-327-031",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "PRODUITS A BASE DE SOJA",
+      "parentId": "famille-327-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-327-031",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "COMMERCE EQUITABLE BIO",
+      "parentId": "famille-327-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-327-031",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "COMMERCE EQUITABLE NN BIO",
+      "parentId": "famille-327-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-328-031",
+      "level": "famille",
+      "code": "328",
+      "name": "PRODUITS DIETETIQUES",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-328-031",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "DIETETIQUE QUOTIDIENNE",
+      "parentId": "famille-328-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-328-031",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "MALADIES / INTOLERANCES",
+      "parentId": "famille-328-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-328-031",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "DIETETIQUE MINCEUR",
+      "parentId": "famille-328-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-328-031",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "DIETETIQUE SPORTIVE",
+      "parentId": "famille-328-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-328-031",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "DIETETIQUE FONCTIONNELLE",
+      "parentId": "famille-328-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-328-031",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "SOJA",
+      "parentId": "famille-328-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-329-031",
+      "level": "famille",
+      "code": "329",
+      "name": "PRODUITS REGIONAUX",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-329-031",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "EPICERIE SALEE",
+      "parentId": "famille-329-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-329-031",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "EPICERIE SUCREE",
+      "parentId": "famille-329-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-329-031",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "AUTRES",
+      "parentId": "famille-329-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-331-031",
+      "level": "famille",
+      "code": "331",
+      "name": "EPICERIE DU MONDE",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-331-031",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "ASIE",
+      "parentId": "famille-331-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-331-031",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "MOYENT ORIENT",
+      "parentId": "famille-331-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-331-031",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "HALAL",
+      "parentId": "famille-331-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-331-031",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "AMERIQUE",
+      "parentId": "famille-331-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-332-031",
+      "level": "famille",
+      "code": "332",
+      "name": "CHAT HUMIDE",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-332-031",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PORTION/BQT INDIVID. CHAT",
+      "parentId": "famille-332-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-332-031",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "BOITE CHAT",
+      "parentId": "famille-332-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-332-031",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "LAIT POUR CHAT",
+      "parentId": "famille-332-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-333-031",
+      "level": "famille",
+      "code": "333",
+      "name": "CHIEN HUMIDE",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-333-031",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "PORTION/BQT INDIVID.CHIEN",
+      "parentId": "famille-333-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-333-031",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BOITE CHIEN",
+      "parentId": "famille-333-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-334-031",
+      "level": "famille",
+      "code": "334",
+      "name": "CHAT SEC",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-334-031",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "SNACKING CHAT",
+      "parentId": "famille-334-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-334-031",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "CROQUETTES CHAT",
+      "parentId": "famille-334-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-335-031",
+      "level": "famille",
+      "code": "335",
+      "name": "CHIEN SEC",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-335-031",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "SNACKING CHIEN",
+      "parentId": "famille-335-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-335-031",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "CROQUETTES CHIEN",
+      "parentId": "famille-335-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-335-031",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "COMPLEMENTS",
+      "parentId": "famille-335-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-336-031",
+      "level": "famille",
+      "code": "336",
+      "name": "LITIERES CHATS",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-336-031",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "NORMALE",
+      "parentId": "famille-336-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-336-031",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "COMPACTE",
+      "parentId": "famille-336-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-336-031",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "PARFUMEE",
+      "parentId": "famille-336-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-336-031",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "AUTRES",
+      "parentId": "famille-336-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-337-031",
+      "level": "famille",
+      "code": "337",
+      "name": "ANIMALERIE",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-337-031",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "ACCESSOIRES CHAT",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-337-031",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "ACCESSOIRES CHIEN",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-337-031",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "ACCESSOIRE AUTRE ANIMAUX",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-337-031",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "SANTE ET TOILETTAGE CHAT",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-337-031",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "SANTE ET TOILETTAGE CHIEN",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-337-031",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "SANTE AUTRES ANIMAUX",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-707-337-031",
+      "level": "sous-famille",
+      "code": "707",
+      "name": "ALIMENTS OISEAUX",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-708-337-031",
+      "level": "sous-famille",
+      "code": "708",
+      "name": "ALIMENTS RONGEURS",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-709-337-031",
+      "level": "sous-famille",
+      "code": "709",
+      "name": "ALIMENTS AUTRES ANIMAUX",
+      "parentId": "famille-337-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-338-031",
+      "level": "famille",
+      "code": "338",
+      "name": "IFFO",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-338-031",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "STANDARDS",
+      "parentId": "famille-338-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-338-031",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "SPECIAUX",
+      "parentId": "famille-338-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-339-031",
+      "level": "famille",
+      "code": "339",
+      "name": "GUM",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-339-031",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "POUDRE",
+      "parentId": "famille-339-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-339-031",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "LIQUIDE",
+      "parentId": "famille-339-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-341-031",
+      "level": "famille",
+      "code": "341",
+      "name": "I.CEREALS",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-341-031",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BLEDINE",
+      "parentId": "famille-341-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-341-031",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PHOSPHATINE",
+      "parentId": "famille-341-031",
+      "aliases": []
+    },
+    {
+      "id": "famille-342-031",
+      "level": "famille",
+      "code": "342",
+      "name": "FOOD",
+      "parentId": "rayon-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-342-031",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "BOISSONS",
+      "parentId": "famille-342-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-342-031",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "BISCUITS",
+      "parentId": "famille-342-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-342-031",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "SUCRES",
+      "parentId": "famille-342-031",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-342-031",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "SALES",
+      "parentId": "famille-342-031",
+      "aliases": []
+    }
+  ]
+}
