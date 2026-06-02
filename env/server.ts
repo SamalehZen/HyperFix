@@ -67,6 +67,10 @@ export const serverEnv = createEnv({
     PUSHER_SECRET: z.string().optional(),
     PUSHER_CLUSTER: z.string().optional(),
     PUSHER_USE_TLS: z.string().optional().default('true'),
+
+    // Headroom context compression (optional - reduces tokens for large prompts)
+    HEADROOM_BASE_URL: z.string().optional(),
+    HEADROOM_API_KEY: z.string().optional(),
   },
   experimental__runtimeEnv: process.env,
 });

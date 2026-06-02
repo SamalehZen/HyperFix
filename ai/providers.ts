@@ -2,6 +2,7 @@ import 'server-only';
 import { customProvider } from 'ai';
 import { createVertex } from '@ai-sdk/google-vertex';
 import { google, createGoogleGenerativeAI } from '@ai-sdk/google';
+import { withHeadroomCompression } from './headroom';
 
 // Reuse the LanguageModelV2 shape exported indirectly via `google` so we don't
 // need to add `@ai-sdk/provider` as a direct dependency just for the type.
@@ -162,7 +163,7 @@ async function runWithModelFallback<T>(operation: (model: HyperLanguageModel) =>
 // Lazy LanguageModelV2 wrapper. Defers credential resolution until first use
 // so that importing this module from client components or during the Next.js
 // build step does not throw when Vertex env vars are absent.
-const lazyHyperModel: HyperLanguageModel = {
+const rawLazyHyperModel: HyperLanguageModel = {
   specificationVersion: 'v2',
   get provider() {
     return getLanguageModels().primary.provider;
@@ -178,6 +179,11 @@ const lazyHyperModel: HyperLanguageModel = {
   doStream: (options: Parameters<HyperLanguageModel['doStream']>[0]) =>
     runWithModelFallback((model) => model.doStream(options)),
 };
+
+// Wrap with Headroom context compression if HEADROOM_BASE_URL is configured.
+// This compresses system prompts and context before sending to the LLM,
+// reducing token usage by 60-95% for large prompts like Cyrus.
+const lazyHyperModel = withHeadroomCompression(rawLazyHyperModel);
 
 // Single Google provider for all hyper-* model ids expected by the UI.
 // We keep all original model ids/labels for UI parity, but route everything to Gemini Flash.

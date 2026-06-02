@@ -85,6 +85,7 @@
     "framer-motion": "^12.23.22",
     "groq-sdk": "^0.37.0",
     "he": "^1.2.0",
+    "headroom-ai": "^0.1.0",
     "highlight.js": "^11.11.1",
     "html2pdf.js": "^0.14.0",
     "jiti": "^2.6.1",
