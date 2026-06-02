@@ -209,6 +209,9 @@ importers:
       he:
         specifier: ^1.2.0
         version: 1.2.0
+      headroom-ai:
+        specifier: ^0.1.0
+        version: 0.1.0(@ai-sdk/provider@2.0.3)(ai@5.0.60(zod@4.1.8))(openai@5.23.2(ws@8.18.3)(zod@4.1.8))
       highlight.js:
         specifier: ^11.11.1
         version: 11.11.1
@@ -3836,6 +3839,24 @@ packages:
   he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
+
+  headroom-ai@0.1.0:
+    resolution: {integrity: sha512-SM5i2kptwsO+KnQqpaLThZVx1ZrmobVw5JRXwF5OvnMvhV/3WbwUI+VvXHTwTCvVq+AAyhkhuVcNXod1piAVuQ==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@ai-sdk/provider': '>=1.0.0'
+      '@anthropic-ai/sdk': '>=0.30.0'
+      ai: '>=6.0.0'
+      openai: '>=4.0.0'
+    peerDependenciesMeta:
+      '@ai-sdk/provider':
+        optional: true
+      '@anthropic-ai/sdk':
+        optional: true
+      ai:
+        optional: true
+      openai:
+        optional: true
 
   highlight.js@11.11.1:
     resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
@@ -9552,6 +9573,12 @@ snapshots:
 
   he@1.2.0: {}
 
+  headroom-ai@0.1.0(@ai-sdk/provider@2.0.3)(ai@5.0.60(zod@4.1.8))(openai@5.23.2(ws@8.18.3)(zod@4.1.8)):
+    optionalDependencies:
+      '@ai-sdk/provider': 2.0.3
+      ai: 5.0.60(zod@4.1.8)
+      openai: 5.23.2(ws@8.18.3)(zod@4.1.8)
+
   highlight.js@11.11.1: {}
 
   html-to-text@9.0.5:
@@ -10641,6 +10668,12 @@ snapshots:
     optionalDependencies:
       ws: 8.18.3
       zod: 3.25.76
+
+  openai@5.23.2(ws@8.18.3)(zod@4.1.8):
+    optionalDependencies:
+      ws: 8.18.3
+      zod: 4.1.8
+    optional: true
 
   optionator@0.9.4:
     dependencies:
