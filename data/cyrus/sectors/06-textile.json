@@ -1,0 +1,3567 @@
+{
+  "sectorCode": "06",
+  "sectorName": "TEXTILE",
+  "sectorId": "sector-06",
+  "nodes": [
+    {
+      "id": "rayon-060",
+      "level": "rayon",
+      "code": "060",
+      "name": "FEMME",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-601-060",
+      "level": "famille",
+      "code": "601",
+      "name": "VTEMENT DE NUIT FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-601-060",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CHEMISE DE NUIT",
+      "parentId": "famille-601-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-601-060",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "PYJAMA",
+      "parentId": "famille-601-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-601-060",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "NUISETTE",
+      "parentId": "famille-601-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-601-060",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "ROBE DE CHAMBRE",
+      "parentId": "famille-601-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-602-060",
+      "level": "famille",
+      "code": "602",
+      "name": "CONFECTION FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-602-060",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "DEBARDEUR",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-602-060",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "2 POLO",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-602-060",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "T-SHIRT",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-602-060",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "SWEATER / PULLOVER",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-602-060",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "CARDIGAN / ENSEMBLE",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-602-060",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "VESTE",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-602-060",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "AUTRES",
+      "parentId": "famille-602-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-603-060",
+      "level": "famille",
+      "code": "603",
+      "name": "CHEMISIER FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-603-060",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CHEMISE DE SOIREE",
+      "parentId": "famille-603-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-603-060",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "CHEMISIER",
+      "parentId": "famille-603-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-604-060",
+      "level": "famille",
+      "code": "604",
+      "name": "PANTALON FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-604-060",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "JEANS",
+      "parentId": "famille-604-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-604-060",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "PANTALON DECONTRACTE",
+      "parentId": "famille-604-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-604-060",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SALOPETTE",
+      "parentId": "famille-604-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-604-060",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BERMUDA",
+      "parentId": "famille-604-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-604-060",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "SHORT",
+      "parentId": "famille-604-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-604-060",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "LEGGING",
+      "parentId": "famille-604-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-605-060",
+      "level": "famille",
+      "code": "605",
+      "name": "ENSEMBLE FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-605-060",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "ENSEMBLE PANTALON",
+      "parentId": "famille-605-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-605-060",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ENSEMBLE SHORT",
+      "parentId": "famille-605-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-605-060",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "ENSEMBLE JUPE",
+      "parentId": "famille-605-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-605-060",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "ENSEMBLE ROBE",
+      "parentId": "famille-605-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-606-060",
+      "level": "famille",
+      "code": "606",
+      "name": "ROBE/JUPE FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-606-060",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "JUPE",
+      "parentId": "famille-606-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-606-060",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "ROBE",
+      "parentId": "famille-606-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-607-060",
+      "level": "famille",
+      "code": "607",
+      "name": "VTEMENT SPORT/PLAGE FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-607-060",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "VETEMENT DE SPORT",
+      "parentId": "famille-607-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-607-060",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "VETEMENT DE PLAGE",
+      "parentId": "famille-607-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-608-060",
+      "level": "famille",
+      "code": "608",
+      "name": "VTEMENT LOCAL FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-608-060",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "JALABEYAH",
+      "parentId": "famille-608-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-608-060",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "ABAYAH",
+      "parentId": "famille-608-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-609-060",
+      "level": "famille",
+      "code": "609",
+      "name": "SOUS-VETEMENT FEMME",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-609-060",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "MAILLOT DE CORPS",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-609-060",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "T-SHIRT",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-609-060",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "STRING",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-609-060",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "SLIP",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-609-060",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "CALECON",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-609-060",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "GAINE",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-907-609-060",
+      "level": "sous-famille",
+      "code": "907",
+      "name": "SOUTIEN-GORGE",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-908-609-060",
+      "level": "sous-famille",
+      "code": "908",
+      "name": "SOUS-VETEMENT LOCAL",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-909-609-060",
+      "level": "sous-famille",
+      "code": "909",
+      "name": "CHAUSSETTE CLASSIC",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-910-609-060",
+      "level": "sous-famille",
+      "code": "910",
+      "name": "CHAUSSETTE DECONTRACTE",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-911-609-060",
+      "level": "sous-famille",
+      "code": "911",
+      "name": "CHAUSSETTE SPORT",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-912-609-060",
+      "level": "sous-famille",
+      "code": "912",
+      "name": "CUISSARDE",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-913-609-060",
+      "level": "sous-famille",
+      "code": "913",
+      "name": "COLLANT",
+      "parentId": "famille-609-060",
+      "aliases": []
+    },
+    {
+      "id": "famille-611-060",
+      "level": "famille",
+      "code": "611",
+      "name": "ACCESSOIRES",
+      "parentId": "rayon-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-611-060",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CEINTURE FEMME",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-611-060",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "FOULARD&CHALES",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-611-060",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "PARAPLUIE",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-611-060",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "ARTICLES CUIR FEMME",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-611-060",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "CHAPEAU FEMME",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-611-060",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "GANTS FEMME",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-611-060",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "BIJOUTERIE FANTAISI FEMME",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-611-060",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "LUNETTES FEMME",
+      "parentId": "famille-611-060",
+      "aliases": []
+    },
+    {
+      "id": "rayon-061",
+      "level": "rayon",
+      "code": "061",
+      "name": "HOMME",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-611-061",
+      "level": "famille",
+      "code": "611",
+      "name": "VTEMENT NUIT HOMME",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-611-061",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "PYJAMA",
+      "parentId": "famille-611-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-611-061",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "ROBE DE CHAMBRE",
+      "parentId": "famille-611-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-612-061",
+      "level": "famille",
+      "code": "612",
+      "name": "CONFECTION HOMME",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-612-061",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "POLO",
+      "parentId": "famille-612-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-612-061",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "T-SHIRT",
+      "parentId": "famille-612-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-612-061",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "SWEATER",
+      "parentId": "famille-612-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-612-061",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "PULLOVER",
+      "parentId": "famille-612-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-612-061",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "CARDIGAN",
+      "parentId": "famille-612-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-612-061",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "VESTE",
+      "parentId": "famille-612-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-613-061",
+      "level": "famille",
+      "code": "613",
+      "name": "CHEMISE HOMME",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-613-061",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CHEMISE CLASSIQUE",
+      "parentId": "famille-613-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-613-061",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "CHEMISE DECONTRACTEE",
+      "parentId": "famille-613-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-614-061",
+      "level": "famille",
+      "code": "614",
+      "name": "PANTALON HOMME",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-614-061",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "JEANS",
+      "parentId": "famille-614-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-614-061",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "PANTALON DECONTRACTE",
+      "parentId": "famille-614-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-614-061",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SALOPETTE",
+      "parentId": "famille-614-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-614-061",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BERMUDA",
+      "parentId": "famille-614-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-614-061",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "SHORT",
+      "parentId": "famille-614-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-615-061",
+      "level": "famille",
+      "code": "615",
+      "name": "VTEMENT SPORT/PLAGE HOMME",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-615-061",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "VETEMENT DE SPORT",
+      "parentId": "famille-615-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-615-061",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "VETEMENT DE PLAGE",
+      "parentId": "famille-615-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-616-061",
+      "level": "famille",
+      "code": "616",
+      "name": "VTEMENT LOCAL HOMME",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-616-061",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "WEZAR",
+      "parentId": "famille-616-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-616-061",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "DISHDASH",
+      "parentId": "famille-616-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-616-061",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "KAFIE",
+      "parentId": "famille-616-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-616-061",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "GATRAH",
+      "parentId": "famille-616-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-616-061",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "AGHAL",
+      "parentId": "famille-616-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-617-061",
+      "level": "famille",
+      "code": "617",
+      "name": "ACCESSOIRES HOMMES",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-617-061",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "CEINTURE HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-617-061",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "PARAPLUIE HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-617-061",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "CUIR HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-617-061",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "CHAPEAU HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-617-061",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "GANTS HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-617-061",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "BRETELLES",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-707-617-061",
+      "level": "sous-famille",
+      "code": "707",
+      "name": "CRAVATE HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-708-617-061",
+      "level": "sous-famille",
+      "code": "708",
+      "name": "FOULARD HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-709-617-061",
+      "level": "sous-famille",
+      "code": "709",
+      "name": "LUNETTES DE SOLEIL HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-710-617-061",
+      "level": "sous-famille",
+      "code": "710",
+      "name": "BIJOU HOMME",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-711-617-061",
+      "level": "sous-famille",
+      "code": "711",
+      "name": "GOLDAS MAN",
+      "parentId": "famille-617-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-618-061",
+      "level": "famille",
+      "code": "618",
+      "name": "SOUS-VETEMENT HOMMES",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-618-061",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "T-SHIRT",
+      "parentId": "famille-618-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-618-061",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "SLIP",
+      "parentId": "famille-618-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-618-061",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "BOXER SHORT",
+      "parentId": "famille-618-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-618-061",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "SOUS-VETEMENT LOCAL",
+      "parentId": "famille-618-061",
+      "aliases": []
+    },
+    {
+      "id": "famille-619-061",
+      "level": "famille",
+      "code": "619",
+      "name": "CHAUSSETTES HOMMES",
+      "parentId": "rayon-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-619-061",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "CHAUSSETTES CLASSIQUE",
+      "parentId": "famille-619-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-619-061",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "CHAUSSETTE DECONTRACTE",
+      "parentId": "famille-619-061",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-619-061",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "CHAUSSETTE SPORT",
+      "parentId": "famille-619-061",
+      "aliases": []
+    },
+    {
+      "id": "rayon-062",
+      "level": "rayon",
+      "code": "062",
+      "name": "BEBE ENFANTS",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-621-062",
+      "level": "famille",
+      "code": "621",
+      "name": "VTEMENT NUIT/INTER. 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-621-062",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "VETEMENT DE NUIT",
+      "parentId": "famille-621-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-621-062",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "VETMENT DE NUIT INTERIEUR",
+      "parentId": "famille-621-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-621-062",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "SS VETMENT BEBE / LAYETTE",
+      "parentId": "famille-621-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-622-062",
+      "level": "famille",
+      "code": "622",
+      "name": "CONFECTION GARCON 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-622-062",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "POLO / T-SHIRT",
+      "parentId": "famille-622-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-622-062",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "SWEATER",
+      "parentId": "famille-622-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-622-062",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CARDIGAN",
+      "parentId": "famille-622-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-623-062",
+      "level": "famille",
+      "code": "623",
+      "name": "CHEMISE GARCON 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-623-062",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CHEMISE UNIE",
+      "parentId": "famille-623-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-623-062",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "CHEMISE IMPRIMEE",
+      "parentId": "famille-623-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-624-062",
+      "level": "famille",
+      "code": "624",
+      "name": "PANTALON GARCON 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-624-062",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "JEANS",
+      "parentId": "famille-624-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-624-062",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "PANTALON",
+      "parentId": "famille-624-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-624-062",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SALOPETTE",
+      "parentId": "famille-624-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-624-062",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BERMUDA",
+      "parentId": "famille-624-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-624-062",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "SHORT",
+      "parentId": "famille-624-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-625-062",
+      "level": "famille",
+      "code": "625",
+      "name": "ENSEMBLE GARCON 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-625-062",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "ENSEMBLE PANTALON",
+      "parentId": "famille-625-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-625-062",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ENSEMBLE SALOPETTE",
+      "parentId": "famille-625-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-625-062",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "ENSEMBLE BERMUDA",
+      "parentId": "famille-625-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-625-062",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "ENSEMBLE SHORT",
+      "parentId": "famille-625-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-626-062",
+      "level": "famille",
+      "code": "626",
+      "name": "VTEMENT SPORT/PLAGE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-626-062",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "VETEMENT DE SPORT",
+      "parentId": "famille-626-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-626-062",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "VETEMENT DE PLAGE",
+      "parentId": "famille-626-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-627-062",
+      "level": "famille",
+      "code": "627",
+      "name": "CONFECTION FILLE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-627-062",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "POLO / T-SHIRT",
+      "parentId": "famille-627-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-627-062",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "SWEATER / PULLOVER",
+      "parentId": "famille-627-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-627-062",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "CARDIGAN / JACKET",
+      "parentId": "famille-627-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-628-062",
+      "level": "famille",
+      "code": "628",
+      "name": "CHEMISE/BLOUSE FILE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-628-062",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "SHIRT",
+      "parentId": "famille-628-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-628-062",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "BLOUSE",
+      "parentId": "famille-628-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-629-062",
+      "level": "famille",
+      "code": "629",
+      "name": "PANTALON FILLE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-629-062",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "JEANS",
+      "parentId": "famille-629-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-629-062",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "TROUSER",
+      "parentId": "famille-629-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-629-062",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "DUNGAREE",
+      "parentId": "famille-629-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-629-062",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "BERMUDA",
+      "parentId": "famille-629-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-629-062",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "SHORT",
+      "parentId": "famille-629-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-629-062",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "LEGGING",
+      "parentId": "famille-629-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-631-062",
+      "level": "famille",
+      "code": "631",
+      "name": "ENSEMBLE FILLE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-631-062",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "SET PANTALON",
+      "parentId": "famille-631-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-631-062",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "SET SALOPPETTE",
+      "parentId": "famille-631-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-631-062",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "SET BERMUDA",
+      "parentId": "famille-631-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-631-062",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "SET SHORT",
+      "parentId": "famille-631-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-631-062",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "SET JUPE",
+      "parentId": "famille-631-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-631-062",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "SET ROBE",
+      "parentId": "famille-631-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-632-062",
+      "level": "famille",
+      "code": "632",
+      "name": "ROBE/JUPE FILLE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-632-062",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "JUPE",
+      "parentId": "famille-632-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-632-062",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "ROBE",
+      "parentId": "famille-632-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-633-062",
+      "level": "famille",
+      "code": "633",
+      "name": "VTEMENT SPORT/PLAGE 0-18M",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-633-062",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "VETEMENT DE SPORT",
+      "parentId": "famille-633-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-633-062",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "VETEMENT PLAGE",
+      "parentId": "famille-633-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-634-062",
+      "level": "famille",
+      "code": "634",
+      "name": "CHAUSSETTES BEBE",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-634-062",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CHAUSSETTE BB BOY 0-18M",
+      "parentId": "famille-634-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-634-062",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "CHAUSSETTE BB FILLE 0-18M",
+      "parentId": "famille-634-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-635-062",
+      "level": "famille",
+      "code": "635",
+      "name": "PYJAMA GARCON 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-635-062",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "PYJAMA",
+      "parentId": "famille-635-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-635-062",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "ROBE DE CHAMBRE",
+      "parentId": "famille-635-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-635-062",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "POLO / T-SHIRT",
+      "parentId": "famille-635-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-635-062",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "SWEATER / PULLOVER",
+      "parentId": "famille-635-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-635-062",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "CARDIGAN / VESTE",
+      "parentId": "famille-635-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-636-062",
+      "level": "famille",
+      "code": "636",
+      "name": "CHEMISE GARCON 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-636-062",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "CHEMISE UNIE",
+      "parentId": "famille-636-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-636-062",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "CHEMISE IMPRIMEE",
+      "parentId": "famille-636-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-637-062",
+      "level": "famille",
+      "code": "637",
+      "name": "PANTALON GARCON 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-637-062",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "JEANS",
+      "parentId": "famille-637-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-637-062",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "PANTALON",
+      "parentId": "famille-637-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-637-062",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "SALOPPETTE",
+      "parentId": "famille-637-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-637-062",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "BERMUDA",
+      "parentId": "famille-637-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-637-062",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "SHORT",
+      "parentId": "famille-637-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-638-062",
+      "level": "famille",
+      "code": "638",
+      "name": "ENSEMBLE GARCON 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-638-062",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "SET PANTALON",
+      "parentId": "famille-638-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-638-062",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "SET SALOPPETTE",
+      "parentId": "famille-638-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-638-062",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "SET BERMUDA",
+      "parentId": "famille-638-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-638-062",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "SET SHORT",
+      "parentId": "famille-638-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-639-062",
+      "level": "famille",
+      "code": "639",
+      "name": "VTEMENT SPORT/PLAGE BOY",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-639-062",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "VETEMENT DE SPORT",
+      "parentId": "famille-639-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-639-062",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "VETEMENT DE PLAGE",
+      "parentId": "famille-639-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-641-062",
+      "level": "famille",
+      "code": "641",
+      "name": "GIRL NIGHTWEAR 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-641-062",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "NIGHT GOWN",
+      "parentId": "famille-641-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-641-062",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "NIGHT T-SHIRT",
+      "parentId": "famille-641-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-641-062",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "PYJAMA",
+      "parentId": "famille-641-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-642-062",
+      "level": "famille",
+      "code": "642",
+      "name": "CONFECTION FILLE 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-642-062",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "POLO / T-SHIRT",
+      "parentId": "famille-642-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-642-062",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "SWEATER / PULLOVER",
+      "parentId": "famille-642-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-642-062",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CARDIGAN / JACKET",
+      "parentId": "famille-642-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-643-062",
+      "level": "famille",
+      "code": "643",
+      "name": "CHEMISIER/BLOUSE FILE 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-643-062",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "SHIRT",
+      "parentId": "famille-643-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-643-062",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "BLOUSE",
+      "parentId": "famille-643-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-644-062",
+      "level": "famille",
+      "code": "644",
+      "name": "PANTALON FILLE 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-644-062",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "JEANS",
+      "parentId": "famille-644-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-644-062",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "PANTALON",
+      "parentId": "famille-644-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-644-062",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SALOPPETTE",
+      "parentId": "famille-644-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-644-062",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BERMUDA",
+      "parentId": "famille-644-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-644-062",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "SHORT",
+      "parentId": "famille-644-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-644-062",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "LEGGING",
+      "parentId": "famille-644-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-645-062",
+      "level": "famille",
+      "code": "645",
+      "name": "ENSEMBLE FILLE 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-645-062",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "SET PANTALON",
+      "parentId": "famille-645-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-645-062",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "SET SALOPPETTE",
+      "parentId": "famille-645-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-645-062",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "SET BERMUDA",
+      "parentId": "famille-645-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-645-062",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "SET SHORT",
+      "parentId": "famille-645-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-645-062",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "SET JUPE",
+      "parentId": "famille-645-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-645-062",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "SET ROBE",
+      "parentId": "famille-645-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-646-062",
+      "level": "famille",
+      "code": "646",
+      "name": "ROBE/JUPE FILLE 2-5",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-646-062",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "JUPE",
+      "parentId": "famille-646-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-646-062",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "ROBE",
+      "parentId": "famille-646-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-647-062",
+      "level": "famille",
+      "code": "647",
+      "name": "VTEMENT SPORT/PLAGE GIRL",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-647-062",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "VETEMENT DE SPORT",
+      "parentId": "famille-647-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-648-062",
+      "level": "famille",
+      "code": "648",
+      "name": "CHAUSSETTE BEBE FILLE",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-648-062",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "KID BOY SOCKS 2-5",
+      "parentId": "famille-648-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-648-062",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "KID GIRL SOCKS 2-5",
+      "parentId": "famille-648-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-649-062",
+      "level": "famille",
+      "code": "649",
+      "name": "PYJAMA GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-649-062",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "PYJAMA",
+      "parentId": "famille-649-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-649-062",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "DRESSING ROBE",
+      "parentId": "famille-649-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-651-062",
+      "level": "famille",
+      "code": "651",
+      "name": "CONFECTION GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-651-062",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "POLO / T-SHIRT",
+      "parentId": "famille-651-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-651-062",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "SWEATER / PULLOVER",
+      "parentId": "famille-651-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-651-062",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CARDIGAN / JACKET",
+      "parentId": "famille-651-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-652-062",
+      "level": "famille",
+      "code": "652",
+      "name": "CHEMISE GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-652-062",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "SHIRT PLAIN",
+      "parentId": "famille-652-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-652-062",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "SHIRT PRINTED",
+      "parentId": "famille-652-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-653-062",
+      "level": "famille",
+      "code": "653",
+      "name": "PANTALON GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-653-062",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "JEANS",
+      "parentId": "famille-653-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-653-062",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "CASUAL TROUSER",
+      "parentId": "famille-653-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-653-062",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "FORMAL TROUSER",
+      "parentId": "famille-653-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-653-062",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "DUNGAREE",
+      "parentId": "famille-653-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-653-062",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "BERMUDA",
+      "parentId": "famille-653-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-653-062",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "SHORT",
+      "parentId": "famille-653-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-654-062",
+      "level": "famille",
+      "code": "654",
+      "name": "ENSEMBLE GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-654-062",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "SET TROUSER",
+      "parentId": "famille-654-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-654-062",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "SET BERMUDA",
+      "parentId": "famille-654-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-654-062",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SET SHORT",
+      "parentId": "famille-654-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-655-062",
+      "level": "famille",
+      "code": "655",
+      "name": "VTEMENT SPORT/PLAGE BOY G",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-655-062",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "SPORTWEAR",
+      "parentId": "famille-655-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-655-062",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "BEACHWEAR",
+      "parentId": "famille-655-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-655-062",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "WEZAR",
+      "parentId": "famille-655-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-656-062",
+      "level": "famille",
+      "code": "656",
+      "name": "VTEMENT LOCAL GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-656-062",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "DISHASH",
+      "parentId": "famille-656-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-656-062",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "VEST",
+      "parentId": "famille-656-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-656-062",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "T-SHIRT",
+      "parentId": "famille-656-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-656-062",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "BRIEF",
+      "parentId": "famille-656-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-656-062",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "BOXER SHORT",
+      "parentId": "famille-656-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-656-062",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "LOCAL UNDERWEAR",
+      "parentId": "famille-656-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-657-062",
+      "level": "famille",
+      "code": "657",
+      "name": "CHAUSSETTES GARCON 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-657-062",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "FORMAL SOCKS",
+      "parentId": "famille-657-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-657-062",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "CASUAL SOCKS",
+      "parentId": "famille-657-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-657-062",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "SPORT SOCKS",
+      "parentId": "famille-657-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-658-062",
+      "level": "famille",
+      "code": "658",
+      "name": "PYJAMA FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-658-062",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "NIGHT GOWN",
+      "parentId": "famille-658-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-658-062",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "NIGHT T-SHIRT",
+      "parentId": "famille-658-062",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-658-062",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "PYJAMA",
+      "parentId": "famille-658-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-659-062",
+      "level": "famille",
+      "code": "659",
+      "name": "CONFECTION FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-661-062",
+      "level": "famille",
+      "code": "661",
+      "name": "CHEMISE/BLOUSE FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-662-062",
+      "level": "famille",
+      "code": "662",
+      "name": "PANTALON FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-663-062",
+      "level": "famille",
+      "code": "663",
+      "name": "ENSEMBLE FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-664-062",
+      "level": "famille",
+      "code": "664",
+      "name": "ROBE/JUPE FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-665-062",
+      "level": "famille",
+      "code": "665",
+      "name": "VTEMENT SPORT/FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-666-062",
+      "level": "famille",
+      "code": "666",
+      "name": "VTEMENT LOCAL FILLE 6-16",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-667-062",
+      "level": "famille",
+      "code": "667",
+      "name": "CHAUSSETTES FILLES 6-17",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "famille-668-062",
+      "level": "famille",
+      "code": "668",
+      "name": "ACCESSOIRES",
+      "parentId": "rayon-062",
+      "aliases": []
+    },
+    {
+      "id": "rayon-063",
+      "level": "rayon",
+      "code": "063",
+      "name": "PUERICULTURE",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-631-063",
+      "level": "famille",
+      "code": "631",
+      "name": "GROS PUERICULTURE ENFANT",
+      "parentId": "rayon-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-631-063",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "VOYAGE/SECURITE",
+      "parentId": "famille-631-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-631-063",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "MEUBLES",
+      "parentId": "famille-631-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-631-063",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "ACCESSOIRES MEUBLES",
+      "parentId": "famille-631-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-631-063",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "POUSSETTE",
+      "parentId": "famille-631-063",
+      "aliases": []
+    },
+    {
+      "id": "famille-632-063",
+      "level": "famille",
+      "code": "632",
+      "name": "PETIT PUERICULTURE ENFANT",
+      "parentId": "rayon-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-632-063",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "REPAS",
+      "parentId": "famille-632-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-632-063",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "HYGIENE",
+      "parentId": "famille-632-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-632-063",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "SECURITE",
+      "parentId": "famille-632-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-632-063",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "JOUETS",
+      "parentId": "famille-632-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-632-063",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "CADEAU DE NAISSANCE",
+      "parentId": "famille-632-063",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-632-063",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "LINGE DE LIT BEBE",
+      "parentId": "famille-632-063",
+      "aliases": []
+    },
+    {
+      "id": "rayon-064",
+      "level": "rayon",
+      "code": "064",
+      "name": "CHAUSSURES",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-641-064",
+      "level": "famille",
+      "code": "641",
+      "name": "CHAUSSURE ENFANT 0-2Y",
+      "parentId": "rayon-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-641-064",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BEBE FILLE 0-2Y",
+      "parentId": "famille-641-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-641-064",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BEBE GARÇON 0-2Y",
+      "parentId": "famille-641-064",
+      "aliases": []
+    },
+    {
+      "id": "famille-642-064",
+      "level": "famille",
+      "code": "642",
+      "name": "CHAUSSURE FILLE 3-16Y",
+      "parentId": "rayon-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-642-064",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CHAUSSURES CLASSIQUE",
+      "parentId": "famille-642-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-642-064",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "CHAUSSURES DECONTRACTEES",
+      "parentId": "famille-642-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-642-064",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CHAUSSURES DE SPORTS",
+      "parentId": "famille-642-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-642-064",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "SANDALS",
+      "parentId": "famille-642-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-642-064",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "SLIPPER",
+      "parentId": "famille-642-064",
+      "aliases": []
+    },
+    {
+      "id": "famille-643-064",
+      "level": "famille",
+      "code": "643",
+      "name": "CHAUSSURE GARCON 3-16Y",
+      "parentId": "rayon-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-643-064",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CLASSIQUE",
+      "parentId": "famille-643-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-643-064",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "DECONTRACTE",
+      "parentId": "famille-643-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-643-064",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "SPORTS",
+      "parentId": "famille-643-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-643-064",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "SANDALS",
+      "parentId": "famille-643-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-643-064",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "SLIPPER",
+      "parentId": "famille-643-064",
+      "aliases": []
+    },
+    {
+      "id": "famille-644-064",
+      "level": "famille",
+      "code": "644",
+      "name": "CHAUSSURE FEMME",
+      "parentId": "rayon-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-644-064",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "FORMAL SHOES",
+      "parentId": "famille-644-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-644-064",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "SPORT SHOES",
+      "parentId": "famille-644-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-644-064",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "SANDALS",
+      "parentId": "famille-644-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-644-064",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "SLIPPER",
+      "parentId": "famille-644-064",
+      "aliases": []
+    },
+    {
+      "id": "famille-645-064",
+      "level": "famille",
+      "code": "645",
+      "name": "CHAUSSURE HOMME",
+      "parentId": "rayon-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-645-064",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "CLASSIQUE",
+      "parentId": "famille-645-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-645-064",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "DECONTRACTE",
+      "parentId": "famille-645-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-645-064",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "CHAUSSURES DE SPORT",
+      "parentId": "famille-645-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-645-064",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "SANDALES",
+      "parentId": "famille-645-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-645-064",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "CHAUSSONS",
+      "parentId": "famille-645-064",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-645-064",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "CHAUSSURE TRAVAIL/SECURITE",
+      "parentId": "famille-645-064",
+      "aliases": []
+    },
+    {
+      "id": "rayon-065",
+      "level": "rayon",
+      "code": "065",
+      "name": "LINGE DE MAISON",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-651-065",
+      "level": "famille",
+      "code": "651",
+      "name": "MERCERIE/LACET/SEMELLE",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-651-065",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "MERCERIE",
+      "parentId": "famille-651-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-651-065",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "LACET",
+      "parentId": "famille-651-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-651-065",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "SEMELLE",
+      "parentId": "famille-651-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-651-065",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "KIT DE COUTURE",
+      "parentId": "famille-651-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-652-065",
+      "level": "famille",
+      "code": "652",
+      "name": "TISSUS AMEUBLEMENT",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-652-065",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "RIDEAUX UNIS",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-652-065",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "RIDEAUX FANTAISIES",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-652-065",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "OCCULTANT",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-652-065",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "VOILAGE",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-652-065",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "RIDEAUX FILS",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-652-065",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "HOUSSE DE CANAPE",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-652-065",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "COUSSINS",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-652-065",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "HOUSSE DE COUSSIN",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-652-065",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "POUF - COUSSIN DE SOL",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-652-065",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "GALETTES",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-652-065",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "BAS DE PORTE",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-212-652-065",
+      "level": "sous-famille",
+      "code": "212",
+      "name": "CIEL DE LIT",
+      "parentId": "famille-652-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-653-065",
+      "level": "famille",
+      "code": "653",
+      "name": "COUVERT./COUETE/COUVRELIT",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-653-065",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "COUVERTURE",
+      "parentId": "famille-653-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-653-065",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "COUETTE",
+      "parentId": "famille-653-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-653-065",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "COUVRE LIT",
+      "parentId": "famille-653-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-653-065",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "PLAID",
+      "parentId": "famille-653-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-654-065",
+      "level": "famille",
+      "code": "654",
+      "name": "LINGE DE LIT",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-654-065",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "COORDONNEES",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-654-065",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "HOUSSE DE COUETTE",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-654-065",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "TAIE D'OREILLER",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-654-065",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "DRAP PLAT",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-654-065",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "DRAP HOUSSE",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-654-065",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "PROTECTION MATELAS",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-654-065",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "MATELAS",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-408-654-065",
+      "level": "sous-famille",
+      "code": "408",
+      "name": "MATTRES",
+      "parentId": "famille-654-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-655-065",
+      "level": "famille",
+      "code": "655",
+      "name": "LINGE DE TOILETTE",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-655-065",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "SERVIETTE DE TOILETTE",
+      "parentId": "famille-655-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-655-065",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "DRAP DE BAIN",
+      "parentId": "famille-655-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-655-065",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "SERVIETTE INVITES",
+      "parentId": "famille-655-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-655-065",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "GANTS/EPONGE",
+      "parentId": "famille-655-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-655-065",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "PEIGNOIR",
+      "parentId": "famille-655-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-655-065",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "TAPIS DE BAIN",
+      "parentId": "famille-655-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-656-065",
+      "level": "famille",
+      "code": "656",
+      "name": "LINGE DE TABLE",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-656-065",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "NAPPE",
+      "parentId": "famille-656-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-656-065",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "SERVIETTE DE TABLE",
+      "parentId": "famille-656-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-656-065",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "SET DE TABLE",
+      "parentId": "famille-656-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-656-065",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "TORCHON",
+      "parentId": "famille-656-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-656-065",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "GANT ET MANIQUE - TABLIER",
+      "parentId": "famille-656-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-657-065",
+      "level": "famille",
+      "code": "657",
+      "name": "OREILLER",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-657-065",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "FIBRE NATUREL",
+      "parentId": "famille-657-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-657-065",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "FIBRE SYNTHETIC",
+      "parentId": "famille-657-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-657-065",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "MEDICAL",
+      "parentId": "famille-657-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-657-065",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "PLUME",
+      "parentId": "famille-657-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-657-065",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "POLOCHON",
+      "parentId": "famille-657-065",
+      "aliases": []
+    },
+    {
+      "id": "famille-658-065",
+      "level": "famille",
+      "code": "658",
+      "name": "PLAGE ET ACCESSOIRES",
+      "parentId": "rayon-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-658-065",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "DRAP DE BAIN",
+      "parentId": "famille-658-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-658-065",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "TAPIS DE PLAGE",
+      "parentId": "famille-658-065",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-658-065",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "TAPIS PICNIC",
+      "parentId": "famille-658-065",
+      "aliases": []
+    },
+    {
+      "id": "rayon-066",
+      "level": "rayon",
+      "code": "066",
+      "name": "BIJOUTERIE",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-661-066",
+      "level": "famille",
+      "code": "661",
+      "name": "BAGUE",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-661-066",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "BAGUE OR",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-661-066",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "BAGUE OR DIAMANT",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-661-066",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "BAGUE OR PIERRE PRECIEUSE",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-661-066",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "BAGUE OR P.SEMI PRECIEUSE",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-661-066",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "BAGUE OR PERLE",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-661-066",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "BAGUE DE MARRIAGE",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-661-066",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "BAGUE ARGENT",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-108-661-066",
+      "level": "sous-famille",
+      "code": "108",
+      "name": "BAGUE FANTAISIE",
+      "parentId": "famille-661-066",
+      "aliases": []
+    },
+    {
+      "id": "famille-662-066",
+      "level": "famille",
+      "code": "662",
+      "name": "BOUCLE D'OREILLE",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-662-066",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CREOLE OR",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-662-066",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "BOUCLE D'OREILLE OR",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-662-066",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "BOUCLE OREILLE OR DIAMOND",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-662-066",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "B.OREILLE OR P. PRECIEUSE",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-662-066",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "B.OREILLE OR S-P.PRECIEUS",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-662-066",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "BOUCLE D'OREILLE PERLE",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-662-066",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "BOUCLE D'OREILLE ARGENT",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-662-066",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "PIERCING OR",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-662-066",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "BOUCLE DOREILLE FANTAISIE",
+      "parentId": "famille-662-066",
+      "aliases": []
+    },
+    {
+      "id": "famille-663-066",
+      "level": "famille",
+      "code": "663",
+      "name": "CHAINE ET COLLIER",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-663-066",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CHAINE",
+      "parentId": "famille-663-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-663-066",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "COLLIER",
+      "parentId": "famille-663-066",
+      "aliases": []
+    },
+    {
+      "id": "famille-664-066",
+      "level": "famille",
+      "code": "664",
+      "name": "BRACELET",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-664-066",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "BRACELET BEBE",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-664-066",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "BRACELET OR",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-664-066",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "BRACELET ARGENT",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-664-066",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "BRACELET DIAMANT",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-664-066",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "BRACELET PIERRE PRECIEUSE",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-664-066",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "BRACELET S-P.PRECIEUSE",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-664-066",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "BRACELET PERLE",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-408-664-066",
+      "level": "sous-famille",
+      "code": "408",
+      "name": "BRACELET FANTAISIE",
+      "parentId": "famille-664-066",
+      "aliases": []
+    },
+    {
+      "id": "famille-665-066",
+      "level": "famille",
+      "code": "665",
+      "name": "PENDANTIF ET MEDAILLON",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-665-066",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "PENDENTIF RELIGIEUX",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-665-066",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "PENDENTIF OR",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-665-066",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "PENDANTIF ARGENT",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-665-066",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "PENDATIF OR DIAMANT",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-665-066",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "PENDANTIF OR/P.PRECIEUSE",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-665-066",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "PENDANTIF OR P-S PRECIEUS",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-665-066",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "PENDANTIF OR PERLE",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-508-665-066",
+      "level": "sous-famille",
+      "code": "508",
+      "name": "PIECES OR",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-509-665-066",
+      "level": "sous-famille",
+      "code": "509",
+      "name": "IDOLE OR",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-510-665-066",
+      "level": "sous-famille",
+      "code": "510",
+      "name": "PENDENTIF/MEDAILLON FANT.",
+      "parentId": "famille-665-066",
+      "aliases": []
+    },
+    {
+      "id": "famille-666-066",
+      "level": "famille",
+      "code": "666",
+      "name": "BROCHE",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-666-066",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "BROCHE OR",
+      "parentId": "famille-666-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-666-066",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "OR ET DIAMANT",
+      "parentId": "famille-666-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-666-066",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "OR AVEC PIERRE PRECIEUSE",
+      "parentId": "famille-666-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-666-066",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "OR AVEC P. SEMI PRECIEUSE",
+      "parentId": "famille-666-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-666-066",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "OR AVEC PERLE",
+      "parentId": "famille-666-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-606-666-066",
+      "level": "sous-famille",
+      "code": "606",
+      "name": "BROCHE ARGENT",
+      "parentId": "famille-666-066",
+      "aliases": []
+    },
+    {
+      "id": "famille-667-066",
+      "level": "famille",
+      "code": "667",
+      "name": "LUNETTES",
+      "parentId": "rayon-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-667-066",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "SOLEIL FEMME",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-667-066",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "SOLEIL HOMME",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-667-066",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "SOLEIL ENFANT",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-667-066",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "SOLEIL BEBE",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-667-066",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "LUNETTES DE LECTURE",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-706-667-066",
+      "level": "sous-famille",
+      "code": "706",
+      "name": "ETUIS",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "sf-707-667-066",
+      "level": "sous-famille",
+      "code": "707",
+      "name": "ENTRETIEN",
+      "parentId": "famille-667-066",
+      "aliases": []
+    },
+    {
+      "id": "rayon-067",
+      "level": "rayon",
+      "code": "067",
+      "name": "BOUTIQUE CADEAUX",
+      "parentId": "sector-06",
+      "aliases": []
+    },
+    {
+      "id": "famille-671-067",
+      "level": "famille",
+      "code": "671",
+      "name": "MONTRES",
+      "parentId": "rayon-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-671-067",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "ENFANT",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-671-067",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "HOMME",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-671-067",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "FEMME",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-671-067",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "PROMO CLOCKS",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-671-067",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "AUTRES",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-671-067",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "SPORTS",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-107-671-067",
+      "level": "sous-famille",
+      "code": "107",
+      "name": "FASHION",
+      "parentId": "famille-671-067",
+      "aliases": []
+    },
+    {
+      "id": "famille-672-067",
+      "level": "famille",
+      "code": "672",
+      "name": "CADEAUX",
+      "parentId": "rayon-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-672-067",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "STYLO",
+      "parentId": "famille-672-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-672-067",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "STYLO ENCRE",
+      "parentId": "famille-672-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-672-067",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CRITERIUM",
+      "parentId": "famille-672-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-672-067",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "COFFRET",
+      "parentId": "famille-672-067",
+      "aliases": []
+    },
+    {
+      "id": "famille-673-067",
+      "level": "famille",
+      "code": "673",
+      "name": "CLOCK",
+      "parentId": "rayon-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-673-067",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "HORLOGE",
+      "parentId": "famille-673-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-673-067",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "PENDULE",
+      "parentId": "famille-673-067",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-673-067",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "PROMO CLOCK",
+      "parentId": "famille-673-067",
+      "aliases": []
+    }
+  ]
+}

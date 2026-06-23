@@ -1,0 +1,1943 @@
+{
+  "sectorCode": "08",
+  "sectorName": "BAZAR LOURD",
+  "sectorId": "sector-08",
+  "nodes": [
+    {
+      "id": "rayon-080",
+      "level": "rayon",
+      "code": "080",
+      "name": "PETIT ELECTROMENAGER",
+      "parentId": "sector-08",
+      "aliases": []
+    },
+    {
+      "id": "famille-801-080",
+      "level": "famille",
+      "code": "801",
+      "name": "PETIT DEJEUNER",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-801-080",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "CAFETIERE",
+      "parentId": "famille-801-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-801-080",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "CAFETIERE EXPRESSO",
+      "parentId": "famille-801-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-801-080",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "MOULIN A CAFE",
+      "parentId": "famille-801-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-801-080",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "BOUILLOIRE",
+      "parentId": "famille-801-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-801-080",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "GRILLE PAIN",
+      "parentId": "famille-801-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-106-801-080",
+      "level": "sous-famille",
+      "code": "106",
+      "name": "TOASTER",
+      "parentId": "famille-801-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-802-080",
+      "level": "famille",
+      "code": "802",
+      "name": "PREPARATION CULINAIRE",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-802-080",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "PRESSE AGRUMES",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-802-080",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "ROBOT ALIMENTAIRE",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-802-080",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "CUISEUR VAPEUR",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-802-080",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "FRITEUSE",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-802-080",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "MACHINE A PAIN",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-802-080",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "MIXEUR FRUIT",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-802-080",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "GRILL BARBECUE",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-802-080",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "HACHOIR",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-802-080",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "CUISEUR VAPEUR",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-802-080",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "MIXER",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-802-080",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "DOMINO GAS",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-212-802-080",
+      "level": "sous-famille",
+      "code": "212",
+      "name": "PLAQUE CHAUFFANTE",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-213-802-080",
+      "level": "sous-famille",
+      "code": "213",
+      "name": "BRULEUR GAS",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-214-802-080",
+      "level": "sous-famille",
+      "code": "214",
+      "name": "ACCESSOIRES ELECTRIQUES",
+      "parentId": "famille-802-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-803-080",
+      "level": "famille",
+      "code": "803",
+      "name": "FOUR MICRO ONDES",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-803-080",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "MICRO ONDES 15/20L",
+      "parentId": "famille-803-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-803-080",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "MICRO ONDES 25/30L",
+      "parentId": "famille-803-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-803-080",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "MINI FOUR <20L",
+      "parentId": "famille-803-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-803-080",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "MINI FOUR>20L",
+      "parentId": "famille-803-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-804-080",
+      "level": "famille",
+      "code": "804",
+      "name": "ENTRETIEN DU LINGE",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-804-080",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "FER DE VOYAGE",
+      "parentId": "famille-804-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-804-080",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "FER SEC",
+      "parentId": "famille-804-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-804-080",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "FER VAPEUR",
+      "parentId": "famille-804-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-804-080",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "CENTRALE VAPEUR",
+      "parentId": "famille-804-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-804-080",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "MACHINE A COUDRE",
+      "parentId": "famille-804-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-805-080",
+      "level": "famille",
+      "code": "805",
+      "name": "BEAUTE/SOINS DU CORPS",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-805-080",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "SECHE CHEVEUX/LISSEUR",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-805-080",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "SOINS DENTAIRE",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-805-080",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "MASSAGE",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-805-080",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "EPILATEUR",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-805-080",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "AUTRES",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-805-080",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "THERMOMETRE",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-805-080",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "TENSIONMETRE",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-508-805-080",
+      "level": "sous-famille",
+      "code": "508",
+      "name": "SOINS DU VISAGE",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-509-805-080",
+      "level": "sous-famille",
+      "code": "509",
+      "name": "SOINS DES ONGLES",
+      "parentId": "famille-805-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-806-080",
+      "level": "famille",
+      "code": "806",
+      "name": "RASOIRS",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-806-080",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "RASOIRS HOMME",
+      "parentId": "famille-806-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-806-080",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "EPILATION FEMME",
+      "parentId": "famille-806-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-806-080",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "TONDEUSE",
+      "parentId": "famille-806-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-806-080",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "EBARBEUSE",
+      "parentId": "famille-806-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-605-806-080",
+      "level": "sous-famille",
+      "code": "605",
+      "name": "EPILATEUR NEZ",
+      "parentId": "famille-806-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-807-080",
+      "level": "famille",
+      "code": "807",
+      "name": "ENTRETIEN DU SOL",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-807-080",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "ASPIRATEUR",
+      "parentId": "famille-807-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-807-080",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "ASPIRATEUR EAU/POUSSIERE",
+      "parentId": "famille-807-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-807-080",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "ASPIRATEUR CIREUR",
+      "parentId": "famille-807-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-807-080",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "ASPIRATEUR A MAIN",
+      "parentId": "famille-807-080",
+      "aliases": []
+    },
+    {
+      "id": "famille-808-080",
+      "level": "famille",
+      "code": "808",
+      "name": "BIEN ETRE/COMFORT",
+      "parentId": "rayon-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-808-080",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "VENTILATEURS",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-808-080",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "REFROIDISSEURS D'AIR",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-808-080",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "ASSAINISSEMENT DE L'AIR",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-808-080",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "FILTRE A EAU",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-808-080",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "FONTAINE",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-808-080",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "RADIATEUR A HUILE",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-808-080",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "RADIATEUR ELECTRIQUE",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-808-080",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "DESHUMIDIFICATEUR",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "sf-809-808-080",
+      "level": "sous-famille",
+      "code": "809",
+      "name": "AFTER SALES SERVICE",
+      "parentId": "famille-808-080",
+      "aliases": []
+    },
+    {
+      "id": "rayon-081",
+      "level": "rayon",
+      "code": "081",
+      "name": "GROS ELECTROMENAGER",
+      "parentId": "sector-08",
+      "aliases": []
+    },
+    {
+      "id": "famille-811-081",
+      "level": "famille",
+      "code": "811",
+      "name": "LAVE LINGE/ SECHE LINGE",
+      "parentId": "rayon-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-811-081",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "TOP LOAD TWIN TUB",
+      "parentId": "famille-811-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-811-081",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "MAL TOP AUTO",
+      "parentId": "famille-811-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-811-081",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "MAL FRONTAL",
+      "parentId": "famille-811-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-811-081",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "SECHE LINGE",
+      "parentId": "famille-811-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-811-081",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "MAL SECHANTE",
+      "parentId": "famille-811-081",
+      "aliases": []
+    },
+    {
+      "id": "famille-812-081",
+      "level": "famille",
+      "code": "812",
+      "name": "LAVE VAISSELLE",
+      "parentId": "rayon-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-812-081",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "LAVE VAISSELLE",
+      "parentId": "famille-812-081",
+      "aliases": []
+    },
+    {
+      "id": "famille-813-081",
+      "level": "famille",
+      "code": "813",
+      "name": "REFRIGERATEUR",
+      "parentId": "rayon-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-813-081",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "FRIGO UP TO 59 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-813-081",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "FRIGO 60 A 99 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-813-081",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "FRIGO 100 A 149 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-813-081",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "FRIGO 150 A 240 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-813-081",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "FRIGO 241 A 330LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-813-081",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "FRIGO 331 A 449 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-307-813-081",
+      "level": "sous-famille",
+      "code": "307",
+      "name": "FRIGO 450 A 549 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-308-813-081",
+      "level": "sous-famille",
+      "code": "308",
+      "name": "FRIGO 550 A 619 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-309-813-081",
+      "level": "sous-famille",
+      "code": "309",
+      "name": "FRIGO 610 A 699 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-310-813-081",
+      "level": "sous-famille",
+      "code": "310",
+      "name": "FRIGO 700 A 799 LITRES",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-311-813-081",
+      "level": "sous-famille",
+      "code": "311",
+      "name": "FRIGO 800 ET >",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-312-813-081",
+      "level": "sous-famille",
+      "code": "312",
+      "name": "FRIGO 23 CU FT",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-313-813-081",
+      "level": "sous-famille",
+      "code": "313",
+      "name": "FRIGO INTEGRE",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-314-813-081",
+      "level": "sous-famille",
+      "code": "314",
+      "name": "CAVE A VIN",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-315-813-081",
+      "level": "sous-famille",
+      "code": "315",
+      "name": "FRIGO DOUBLE PORTE",
+      "parentId": "famille-813-081",
+      "aliases": []
+    },
+    {
+      "id": "famille-814-081",
+      "level": "famille",
+      "code": "814",
+      "name": "CONGELATEUR",
+      "parentId": "rayon-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-814-081",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "CONGELATEUR BAHUT",
+      "parentId": "famille-814-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-814-081",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "CONGELATEUR ARMOIRE",
+      "parentId": "famille-814-081",
+      "aliases": []
+    },
+    {
+      "id": "famille-815-081",
+      "level": "famille",
+      "code": "815",
+      "name": "CUISINIERE",
+      "parentId": "rayon-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-815-081",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "CUISINIERE GAS",
+      "parentId": "famille-815-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-815-081",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "CUISINIERE ELECTRIQUE",
+      "parentId": "famille-815-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-815-081",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "CUISINIERE MIXTE",
+      "parentId": "famille-815-081",
+      "aliases": []
+    },
+    {
+      "id": "famille-816-081",
+      "level": "famille",
+      "code": "816",
+      "name": "AIR CONDITIONNE",
+      "parentId": "rayon-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-816-081",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "CLIM FENETRE 1.5 TON",
+      "parentId": "famille-816-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-816-081",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "CLIM FENETRE 2.0 TON",
+      "parentId": "famille-816-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-816-081",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "SPLIT AC",
+      "parentId": "famille-816-081",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-816-081",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "PORTABLE A/C",
+      "parentId": "famille-816-081",
+      "aliases": []
+    },
+    {
+      "id": "rayon-082",
+      "level": "rayon",
+      "code": "082",
+      "name": "INFORMATIQUE",
+      "parentId": "sector-08",
+      "aliases": []
+    },
+    {
+      "id": "famille-821-082",
+      "level": "famille",
+      "code": "821",
+      "name": "LIVRE ORDINATEUR",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-821-082",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "LIVRE ARABE",
+      "parentId": "famille-821-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-821-082",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "LIVRE ANGLAIS",
+      "parentId": "famille-821-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-821-082",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "LIVRE AVEC VIDEO",
+      "parentId": "famille-821-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-822-082",
+      "level": "famille",
+      "code": "822",
+      "name": "TELEPHONIE",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-822-082",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "TELEPHONE AVEC FIL",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-822-082",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "TELEPHONE A-FIL/REPONDEUR",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-822-082",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "TELEPHONE SANS FIL",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-822-082",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "TELEPHONE S-FIL/REPONDEUR",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-822-082",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "DECT TELEPHONES",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-822-082",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "REPONDEUR",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-822-082",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "ACCESSOIRES TELEPHONE",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-822-082",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "TELEPHONE MOBILE",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-209-822-082",
+      "level": "sous-famille",
+      "code": "209",
+      "name": "MOBILE PHONE",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-210-822-082",
+      "level": "sous-famille",
+      "code": "210",
+      "name": "SMART PHONE",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-211-822-082",
+      "level": "sous-famille",
+      "code": "211",
+      "name": "ACCESSOIRES MOBILE",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-212-822-082",
+      "level": "sous-famille",
+      "code": "212",
+      "name": "MOBILE ACCES/NON-ORIGINAL",
+      "parentId": "famille-822-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-823-082",
+      "level": "famille",
+      "code": "823",
+      "name": "CONSOLES JEUX",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-823-082",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "SONY PLAYSTATION",
+      "parentId": "famille-823-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-823-082",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "MICROSOFT",
+      "parentId": "famille-823-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-823-082",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "NINTENDO",
+      "parentId": "famille-823-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-823-082",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "ACCESOIR SONY PLAYSTATION",
+      "parentId": "famille-823-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-823-082",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "ACCESSOIRES MICROSOFT",
+      "parentId": "famille-823-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-306-823-082",
+      "level": "sous-famille",
+      "code": "306",
+      "name": "ACCESSOIRES NINTENDO",
+      "parentId": "famille-823-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-824-082",
+      "level": "famille",
+      "code": "824",
+      "name": "INFORMATIQUE",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-824-082",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "ORDINATEUR DE BUREAU",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-824-082",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "LAPTOPS",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-403-824-082",
+      "level": "sous-famille",
+      "code": "403",
+      "name": "NET BOOKS",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-404-824-082",
+      "level": "sous-famille",
+      "code": "404",
+      "name": "PDA",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-405-824-082",
+      "level": "sous-famille",
+      "code": "405",
+      "name": "PDA ACCESSORIES",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-406-824-082",
+      "level": "sous-famille",
+      "code": "406",
+      "name": "IMPRIMANTES",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-407-824-082",
+      "level": "sous-famille",
+      "code": "407",
+      "name": "IMPRIMANTE MULTIFONCTION",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-408-824-082",
+      "level": "sous-famille",
+      "code": "408",
+      "name": "ECRANS",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-409-824-082",
+      "level": "sous-famille",
+      "code": "409",
+      "name": "CLAVIERS",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-410-824-082",
+      "level": "sous-famille",
+      "code": "410",
+      "name": "SCANNERS",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-411-824-082",
+      "level": "sous-famille",
+      "code": "411",
+      "name": "ACCESSOIRES LAPTOP",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-412-824-082",
+      "level": "sous-famille",
+      "code": "412",
+      "name": "IMPRIMANTE JET D'ENCRE",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-413-824-082",
+      "level": "sous-famille",
+      "code": "413",
+      "name": "IMPRIMANTE LASER",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-414-824-082",
+      "level": "sous-famille",
+      "code": "414",
+      "name": "TABLETTES",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-415-824-082",
+      "level": "sous-famille",
+      "code": "415",
+      "name": "ACCESSOIRES TABLETTES",
+      "parentId": "famille-824-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-825-082",
+      "level": "famille",
+      "code": "825",
+      "name": "CALCULATRICE",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-825-082",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "STANDARD",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-825-082",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "SCIENTIFIC",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-825-082",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "FINANCIAL",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-825-082",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "AGENDA ELECTRONIC",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-825-082",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "TRADUCTEUR",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-825-082",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "DICTIONNAIRE",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-507-825-082",
+      "level": "sous-famille",
+      "code": "507",
+      "name": "ACCESSOIRES",
+      "parentId": "famille-825-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-826-082",
+      "level": "famille",
+      "code": "826",
+      "name": "BUREAUTIQUE",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-601-826-082",
+      "level": "sous-famille",
+      "code": "601",
+      "name": "FAX MACHINE",
+      "parentId": "famille-826-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-602-826-082",
+      "level": "sous-famille",
+      "code": "602",
+      "name": "FAX ACCESSOIRES",
+      "parentId": "famille-826-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-603-826-082",
+      "level": "sous-famille",
+      "code": "603",
+      "name": "PHOTOCOPIEUR",
+      "parentId": "famille-826-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-604-826-082",
+      "level": "sous-famille",
+      "code": "604",
+      "name": "EQUIPEMENT DE BUREAU",
+      "parentId": "famille-826-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-827-082",
+      "level": "famille",
+      "code": "827",
+      "name": "JEUX VIDEO",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-701-827-082",
+      "level": "sous-famille",
+      "code": "701",
+      "name": "JEUX SONY PLAYSTATION",
+      "parentId": "famille-827-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-702-827-082",
+      "level": "sous-famille",
+      "code": "702",
+      "name": "JEUX MICROSOFT",
+      "parentId": "famille-827-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-703-827-082",
+      "level": "sous-famille",
+      "code": "703",
+      "name": "JEUX NINTENDO",
+      "parentId": "famille-827-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-704-827-082",
+      "level": "sous-famille",
+      "code": "704",
+      "name": "AUTRES JEUX",
+      "parentId": "famille-827-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-705-827-082",
+      "level": "sous-famille",
+      "code": "705",
+      "name": "ACCESSOIRES CONSOLE",
+      "parentId": "famille-827-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-828-082",
+      "level": "famille",
+      "code": "828",
+      "name": "ACESSOIRES INFORMATIQUES",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-801-828-082",
+      "level": "sous-famille",
+      "code": "801",
+      "name": "CARTOUCHE D'ENCRE",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-802-828-082",
+      "level": "sous-famille",
+      "code": "802",
+      "name": "TONER IMPRIMANTE",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-803-828-082",
+      "level": "sous-famille",
+      "code": "803",
+      "name": "JOYSTICK / PAD",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-804-828-082",
+      "level": "sous-famille",
+      "code": "804",
+      "name": "SOURIS / TAPIS",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-805-828-082",
+      "level": "sous-famille",
+      "code": "805",
+      "name": "CABLES ORDINATEUR",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-806-828-082",
+      "level": "sous-famille",
+      "code": "806",
+      "name": "BOITE DE RANGEMENT",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-807-828-082",
+      "level": "sous-famille",
+      "code": "807",
+      "name": "MEUBLE ORDINATEUR",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-808-828-082",
+      "level": "sous-famille",
+      "code": "808",
+      "name": "CASQUES",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-809-828-082",
+      "level": "sous-famille",
+      "code": "809",
+      "name": "MICRO",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-810-828-082",
+      "level": "sous-famille",
+      "code": "810",
+      "name": "CLAVIER",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-811-828-082",
+      "level": "sous-famille",
+      "code": "811",
+      "name": "CAMERA WEB",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-812-828-082",
+      "level": "sous-famille",
+      "code": "812",
+      "name": "HAUT PARLEUR",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-813-828-082",
+      "level": "sous-famille",
+      "code": "813",
+      "name": "PAPIERS",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-814-828-082",
+      "level": "sous-famille",
+      "code": "814",
+      "name": "ROUTERS",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-815-828-082",
+      "level": "sous-famille",
+      "code": "815",
+      "name": "USB",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-816-828-082",
+      "level": "sous-famille",
+      "code": "816",
+      "name": "DISQUE DUR EXTERNE",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-817-828-082",
+      "level": "sous-famille",
+      "code": "817",
+      "name": "AUTRES",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-818-828-082",
+      "level": "sous-famille",
+      "code": "818",
+      "name": "WRITABLE CD'S / DVD'S",
+      "parentId": "famille-828-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-829-082",
+      "level": "famille",
+      "code": "829",
+      "name": "LOGICIEL",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-901-829-082",
+      "level": "sous-famille",
+      "code": "901",
+      "name": "JEUX ORDINATEUR",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-902-829-082",
+      "level": "sous-famille",
+      "code": "902",
+      "name": "JEUX PEDAGOGIQUE",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-903-829-082",
+      "level": "sous-famille",
+      "code": "903",
+      "name": "UTILITAIRES",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-904-829-082",
+      "level": "sous-famille",
+      "code": "904",
+      "name": "BUSINESS",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-905-829-082",
+      "level": "sous-famille",
+      "code": "905",
+      "name": "DESSINS GRAPHIQUES",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-906-829-082",
+      "level": "sous-famille",
+      "code": "906",
+      "name": "ARABE",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-907-829-082",
+      "level": "sous-famille",
+      "code": "907",
+      "name": "VIDEO",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-908-829-082",
+      "level": "sous-famille",
+      "code": "908",
+      "name": "AUTRES LOGICIELS",
+      "parentId": "famille-829-082",
+      "aliases": []
+    },
+    {
+      "id": "famille-830-082",
+      "level": "famille",
+      "code": "830",
+      "name": "GPS",
+      "parentId": "rayon-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-830-082",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "GPS UNITS",
+      "parentId": "famille-830-082",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-830-082",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "GPS ACCESSORIES",
+      "parentId": "famille-830-082",
+      "aliases": []
+    },
+    {
+      "id": "rayon-083",
+      "level": "rayon",
+      "code": "083",
+      "name": "TELEVISION",
+      "parentId": "sector-08",
+      "aliases": []
+    },
+    {
+      "id": "famille-831-083",
+      "level": "famille",
+      "code": "831",
+      "name": "TELEVISION",
+      "parentId": "rayon-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-831-083",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "TV PLASMA",
+      "parentId": "famille-831-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-831-083",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "TV LCD",
+      "parentId": "famille-831-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-831-083",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "TV COMBO",
+      "parentId": "famille-831-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-831-083",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "TV LED",
+      "parentId": "famille-831-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-105-831-083",
+      "level": "sous-famille",
+      "code": "105",
+      "name": "PROJECTEUR",
+      "parentId": "famille-831-083",
+      "aliases": []
+    },
+    {
+      "id": "famille-832-083",
+      "level": "famille",
+      "code": "832",
+      "name": "ACCESSOIRES",
+      "parentId": "rayon-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-832-083",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "CABLES",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-832-083",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "MEUBLE TV",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-832-083",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "TELECOMMANDE",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-832-083",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "ANTENNE",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-832-083",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "SACS",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-832-083",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "BATTERIES",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-207-832-083",
+      "level": "sous-famille",
+      "code": "207",
+      "name": "ADAPTATEURS",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-208-832-083",
+      "level": "sous-famille",
+      "code": "208",
+      "name": "MISCELLANEOUS",
+      "parentId": "famille-832-083",
+      "aliases": []
+    },
+    {
+      "id": "famille-833-083",
+      "level": "famille",
+      "code": "833",
+      "name": "CAMERA VIDEO",
+      "parentId": "rayon-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-833-083",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "CAMESCOPE VHS-C",
+      "parentId": "famille-833-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-833-083",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "CAMESCOPE 8MM",
+      "parentId": "famille-833-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-833-083",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "CAMESCOPE DIGITAL",
+      "parentId": "famille-833-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-304-833-083",
+      "level": "sous-famille",
+      "code": "304",
+      "name": "PROJECTEUR",
+      "parentId": "famille-833-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-305-833-083",
+      "level": "sous-famille",
+      "code": "305",
+      "name": "HARD DISK RECORDER",
+      "parentId": "famille-833-083",
+      "aliases": []
+    },
+    {
+      "id": "famille-834-083",
+      "level": "famille",
+      "code": "834",
+      "name": "LECTEUR VIDEO",
+      "parentId": "rayon-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-401-834-083",
+      "level": "sous-famille",
+      "code": "401",
+      "name": "LECTEUR DVD",
+      "parentId": "famille-834-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-402-834-083",
+      "level": "sous-famille",
+      "code": "402",
+      "name": "LECTEUR DVD ENREGISTREUR",
+      "parentId": "famille-834-083",
+      "aliases": []
+    },
+    {
+      "id": "famille-835-083",
+      "level": "famille",
+      "code": "835",
+      "name": "ANTENNE SATELLITE",
+      "parentId": "rayon-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-501-835-083",
+      "level": "sous-famille",
+      "code": "501",
+      "name": "RECEPTEUR ANALOGIQUE",
+      "parentId": "famille-835-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-502-835-083",
+      "level": "sous-famille",
+      "code": "502",
+      "name": "RECEPTEUR DIGITAL",
+      "parentId": "famille-835-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-503-835-083",
+      "level": "sous-famille",
+      "code": "503",
+      "name": "ANTENNE PARABOLIQUE",
+      "parentId": "famille-835-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-504-835-083",
+      "level": "sous-famille",
+      "code": "504",
+      "name": "LNB",
+      "parentId": "famille-835-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-505-835-083",
+      "level": "sous-famille",
+      "code": "505",
+      "name": "KIT PACKAGE",
+      "parentId": "famille-835-083",
+      "aliases": []
+    },
+    {
+      "id": "sf-506-835-083",
+      "level": "sous-famille",
+      "code": "506",
+      "name": "RENT / PACKAGE",
+      "parentId": "famille-835-083",
+      "aliases": []
+    },
+    {
+      "id": "rayon-084",
+      "level": "rayon",
+      "code": "084",
+      "name": "HIFI & SON",
+      "parentId": "sector-08",
+      "aliases": []
+    },
+    {
+      "id": "famille-841-084",
+      "level": "famille",
+      "code": "841",
+      "name": "PETIT SON",
+      "parentId": "rayon-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-101-841-084",
+      "level": "sous-famille",
+      "code": "101",
+      "name": "RADIO POCKET",
+      "parentId": "famille-841-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-102-841-084",
+      "level": "sous-famille",
+      "code": "102",
+      "name": "ONDES COURTES RADIO",
+      "parentId": "famille-841-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-103-841-084",
+      "level": "sous-famille",
+      "code": "103",
+      "name": "CLOCK RADIO",
+      "parentId": "famille-841-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-104-841-084",
+      "level": "sous-famille",
+      "code": "104",
+      "name": "RADIO CASSETTE",
+      "parentId": "famille-841-084",
+      "aliases": []
+    },
+    {
+      "id": "famille-842-084",
+      "level": "famille",
+      "code": "842",
+      "name": "AUTO RADIO",
+      "parentId": "rayon-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-201-842-084",
+      "level": "sous-famille",
+      "code": "201",
+      "name": "AUTO RADIO K7",
+      "parentId": "famille-842-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-202-842-084",
+      "level": "sous-famille",
+      "code": "202",
+      "name": "AUTO RADIO CD",
+      "parentId": "famille-842-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-203-842-084",
+      "level": "sous-famille",
+      "code": "203",
+      "name": "AMPLIFICATEUR",
+      "parentId": "famille-842-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-204-842-084",
+      "level": "sous-famille",
+      "code": "204",
+      "name": "CD CHANGER",
+      "parentId": "famille-842-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-205-842-084",
+      "level": "sous-famille",
+      "code": "205",
+      "name": "KIT AUTO RADIO",
+      "parentId": "famille-842-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-206-842-084",
+      "level": "sous-famille",
+      "code": "206",
+      "name": "HAUT PARLEURS",
+      "parentId": "famille-842-084",
+      "aliases": []
+    },
+    {
+      "id": "famille-843-084",
+      "level": "famille",
+      "code": "843",
+      "name": "MP3/MP4",
+      "parentId": "rayon-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-301-843-084",
+      "level": "sous-famille",
+      "code": "301",
+      "name": "MP-3 /MP4/ IPOD",
+      "parentId": "famille-843-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-302-843-084",
+      "level": "sous-famille",
+      "code": "302",
+      "name": "ACCESOIRE MP3/MP4/IPOD",
+      "parentId": "famille-843-084",
+      "aliases": []
+    },
+    {
+      "id": "sf-303-843-084",
+      "level": "sous-famille",
+      "code": "303",
+      "name": "DOCK STATION",
+      "parentId": "famille-843-084",
+      "aliases": []
+    }
+  ]
+}

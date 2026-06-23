@@ -253,6 +253,17 @@ const Messages: React.FC<MessagesProps> = React.memo(({
     return (status === 'submitted' || status === 'streaming') && selectedGroup === 'cyrus' && !hasActiveToolInvocations;
   }, [status, selectedGroup, hasActiveToolInvocations]);
 
+  // Detect bulk Cyrus mode: last user message has > 20 lines
+  const isCyrusBulkMode = useMemo(() => {
+    if (selectedGroup !== 'cyrus') return false;
+    const lastUserMsg = [...memoizedMessages].reverse().find((m) => m.role === 'user');
+    if (!lastUserMsg) return false;
+    const textPart = lastUserMsg.parts?.find((p: any) => p.type === 'text' && p.text);
+    if (!textPart || textPart.type !== 'text') return false;
+    const lineCount = (textPart as any).text.split('\n').filter((l: string) => l.trim().length > 0).length;
+    return lineCount > 20;
+  }, [selectedGroup, memoizedMessages]);
+
   const shouldShowNomenclatureLoader = useMemo(() => {
     return (status === 'submitted' || status === 'streaming') && selectedGroup === 'nomenclature' && !hasActiveToolInvocations;
   }, [status, selectedGroup, hasActiveToolInvocations]);
@@ -407,7 +418,7 @@ const Messages: React.FC<MessagesProps> = React.memo(({
           className={`flex items-start ${shouldReserveLoaderMinHeight ? 'min-h-[calc(100vh-18rem)]' : ''} !m-0 !p-0`}
         >
           <div className="w-full !m-0 !p-0">
-            <CyrusLoadingState />
+            <CyrusLoadingState bulkMode={isCyrusBulkMode} />
           </div>
         </div>
       )}

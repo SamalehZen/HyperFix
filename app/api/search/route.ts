@@ -39,6 +39,9 @@ import { CustomInstructions } from '@/lib/db/schema';
 import { v7 as uuidv7 } from 'uuid';
 import { geolocation } from '@vercel/functions';
 import { createStreamResponse } from '@/lib/streaming-heartbeat';
+import { runCyrusPipeline } from '@/lib/cyrus/run-cyrus-pipeline';
+import { SMALL_INPUT_THRESHOLD, CYRUS_V2_ENABLED } from '@/lib/cyrus/constants';
+import { getRAGContextForMessage } from '@/lib/hierarchy-lookup';
 
 
 import { GroqProviderOptions } from '@ai-sdk/groq';
@@ -246,8 +249,84 @@ export async function POST(req: Request) {
 
       const setupTime = (Date.now() - requestStartTime) / 1000;
 
+      // --- CYRUS V2 PIPELINE ---
+      if (group === 'cyrus' && CYRUS_V2_ENABLED) {
+        const lastMessage = messages[messages.length - 1];
+        const messageText = typeof lastMessage.content === 'string'
+          ? lastMessage.content
+          : lastMessage.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('\n') || '';
+
+        const lineCount = messageText.split('\n').filter((l: string) => l.trim()).length;
+        const hasAttachments = (lastMessage.experimental_attachments?.length ?? 0) > 0;
+
+        if (lineCount > SMALL_INPUT_THRESHOLD || hasAttachments) {
+          try {
+            const pipelineResult = await runCyrusPipeline(
+              messageText,
+              lastMessage.experimental_attachments,
+            );
+
+            const processingTime = (Date.now() - requestStartTime) / 1000;
+
+            const partId = uuidv7();
+            dataStream.write({
+              type: 'start',
+              messageMetadata: {
+                model: resolvedModel as string,
+                completionTime: processingTime,
+                createdAt: new Date().toISOString(),
+                totalTokens: 0,
+                inputTokens: 0,
+                outputTokens: 0,
+              },
+            });
+            dataStream.write({ type: 'text-start', id: partId });
+            dataStream.write({
+              type: 'text-delta',
+              id: partId,
+              delta: pipelineResult.markdown,
+            });
+            dataStream.write({ type: 'text-end', id: partId });
+            dataStream.write({
+              type: 'finish',
+              messageMetadata: {
+                model: resolvedModel as string,
+                completionTime: processingTime,
+                createdAt: new Date().toISOString(),
+                totalTokens: 0,
+                inputTokens: 0,
+                outputTokens: 0,
+              },
+            });
+
+            if (user?.id && !shouldBypassRateLimits(resolvedModel, user)) {
+              after(async () => {
+                try {
+                  await incrementMessageUsage({ userId: user.id });
+                } catch (error) {
+                }
+              });
+            }
+
+            return;
+          } catch (pipelineError) {
+            console.error('[Cyrus V2] Pipeline failed, falling back to legacy:', pipelineError);
+          }
+        }
+      }
+      // --- FIN CYRUS V2 ---
+
       const streamStartTime = Date.now();
       const shouldIncludeThinking = resolvedModel === 'hyper-default' || hasReasoningSupport(resolvedModel);
+
+      let ragContext = '';
+      if (group === 'cyrus') {
+        const lastMsg = messages[messages.length - 1];
+        const msgText = typeof lastMsg.content === 'string'
+          ? lastMsg.content
+          : lastMsg.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('\n') || '';
+        ragContext = await getRAGContextForMessage(msgText);
+      }
 
       const result = streamText({
         model: hyper.languageModel(resolvedModel),
@@ -261,6 +340,7 @@ export async function POST(req: Request) {
         experimental_transform: markdownJoinerTransform(),
         system:
           instructions +
+          (group === 'cyrus' && ragContext ? ragContext : '') +
           (customInstructions && (isCustomInstructionsEnabled ?? true)
             ? `\n\nThe user's custom instructions are as follows and YOU MUST FOLLOW THEM AT ALL COSTS: ${customInstructions?.content}`
             : '\n') +

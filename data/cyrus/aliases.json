@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "aliases": [
+    {
+      "term": "yaourt",
+      "targets": ["rayon-020"],
+      "weight": 1.0
+    },
+    {
+      "term": "yogurt",
+      "targets": ["rayon-020"],
+      "weight": 1.0
+    },
+    {
+      "term": "lait",
+      "targets": ["rayon-020"],
+      "weight": 0.9
+    },
+    {
+      "term": "fromage",
+      "targets": ["rayon-020", "rayon-015"],
+      "weight": 0.9
+    },
+    {
+      "term": "beurre",
+      "targets": ["rayon-020"],
+      "weight": 1.0
+    },
+    {
+      "term": "crème fraîche",
+      "targets": ["rayon-020"],
+      "weight": 1.0
+    },
+    {
+      "term": "steak",
+      "targets": ["rayon-010"],
+      "weight": 1.0
+    },
+    {
+      "term": "poulet",
+      "targets": ["rayon-010", "rayon-013"],
+      "weight": 0.9
+    },
+    {
+      "term": "saucisse",
+      "targets": ["rayon-010", "rayon-014"],
+      "weight": 0.8
+    },
+    {
+      "term": "jambon",
+      "targets": ["rayon-014"],
+      "weight": 1.0
+    },
+    {
+      "term": "poisson",
+      "targets": ["rayon-016"],
+      "weight": 1.0
+    },
+    {
+      "term": "crevette",
+      "targets": ["rayon-016"],
+      "weight": 1.0
+    },
+    {
+      "term": "pain",
+      "targets": ["rayon-012"],
+      "weight": 1.0
+    },
+    {
+      "term": "croissant",
+      "targets": ["rayon-012"],
+      "weight": 1.0
+    },
+    {
+      "term": "gâteau",
+      "targets": ["rayon-012"],
+      "weight": 0.9
+    },
+    {
+      "term": "shampoing",
+      "targets": ["rayon-050"],
+      "weight": 1.0
+    },
+    {
+      "term": "shampooing",
+      "targets": ["rayon-050"],
+      "weight": 1.0
+    },
+    {
+      "term": "dentifrice",
+      "targets": ["rayon-050"],
+      "weight": 1.0
+    },
+    {
+      "term": "lessive",
+      "targets": ["rayon-051"],
+      "weight": 1.0
+    },
+    {
+      "term": "bière",
+      "targets": ["rayon-040"],
+      "weight": 1.0
+    },
+    {
+      "term": "vin",
+      "targets": ["rayon-040"],
+      "weight": 1.0
+    },
+    {
+      "term": "eau minérale",
+      "targets": ["rayon-041"],
+      "weight": 1.0
+    },
+    {
+      "term": "jus de fruit",
+      "targets": ["rayon-041"],
+      "weight": 0.9
+    },
+    {
+      "term": "soda",
+      "targets": ["rayon-041"],
+      "weight": 1.0
+    },
+    {
+      "term": "t-shirt",
+      "targets": ["sector-06"],
+      "weight": 0.9
+    },
+    {
+      "term": "pantalon",
+      "targets": ["sector-06"],
+      "weight": 0.9
+    },
+    {
+      "term": "chaussure",
+      "targets": ["rayon-064"],
+      "weight": 1.0
+    },
+    {
+      "term": "pâtes",
+      "targets": ["rayon-031"],
+      "weight": 1.0
+    },
+    {
+      "term": "riz",
+      "targets": ["rayon-031"],
+      "weight": 1.0
+    },
+    {
+      "term": "conserve",
+      "targets": ["rayon-031"],
+      "weight": 0.9
+    }
+  ]
+}
