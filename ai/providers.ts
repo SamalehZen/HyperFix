@@ -2,6 +2,7 @@ import 'server-only';
 import { customProvider } from 'ai';
 import { createVertex } from '@ai-sdk/google-vertex';
 import { google, createGoogleGenerativeAI } from '@ai-sdk/google';
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 
 // Reuse the LanguageModelV2 shape exported indirectly via `google` so we don't
 // need to add `@ai-sdk/provider` as a direct dependency just for the type.
@@ -179,6 +180,56 @@ const lazyHyperModel: HyperLanguageModel = {
     runWithModelFallback((model) => model.doStream(options)),
 };
 
+// OpenCode Zen (https://opencode.ai/zen/v1): DeepSeek V4 Flash Free.
+// Used only when OPENCODE_ZEN_API_KEY is configured. Exposed to the UI as
+// `hyper-deepseek-v4-flash-free` so the whole app keeps routing through `hyper`.
+const OPENCODE_ZEN_BASE_URL = 'https://opencode.ai/zen/v1';
+const OPENCODE_ZEN_MODEL = 'deepseek-v4-flash-free';
+
+let cachedZenModel: HyperLanguageModel | null = null;
+let warnedMissingZenKey = false;
+
+function getZenLanguageModel(): HyperLanguageModel {
+  const apiKey = process.env.OPENCODE_ZEN_API_KEY?.trim();
+  if (!apiKey) {
+    if (!warnedMissingZenKey) {
+      console.warn(
+        '[ai/providers] OPENCODE_ZEN_API_KEY is not set. The DeepSeek V4 Flash Free model will fall back to the primary provider.',
+      );
+      warnedMissingZenKey = true;
+    }
+    return getLanguageModels().primary;
+  }
+  if (!cachedZenModel) {
+    const zen = createOpenAICompatible({
+      name: 'opencode-zen',
+      baseURL: OPENCODE_ZEN_BASE_URL,
+      apiKey,
+    });
+    cachedZenModel = zen(OPENCODE_ZEN_MODEL);
+  }
+  return cachedZenModel;
+}
+
+// Lazy wrapper. Defers credential resolution until first use so importing this
+// module during the Next.js build step never throws when the key is absent.
+const lazyZenModel: HyperLanguageModel = {
+  specificationVersion: 'v2',
+  get provider() {
+    return getZenLanguageModel().provider;
+  },
+  get modelId() {
+    return getZenLanguageModel().modelId;
+  },
+  get supportedUrls() {
+    return getZenLanguageModel().supportedUrls;
+  },
+  doGenerate: (options: Parameters<HyperLanguageModel['doGenerate']>[0]) =>
+    getZenLanguageModel().doGenerate(options),
+  doStream: (options: Parameters<HyperLanguageModel['doStream']>[0]) =>
+    getZenLanguageModel().doStream(options),
+};
+
 // Single Google provider for all hyper-* model ids expected by the UI.
 // We keep all original model ids/labels for UI parity, but route everything to Gemini Flash.
 export const hyper = customProvider({
@@ -203,6 +254,7 @@ export const hyper = customProvider({
     'hyper-deepseek-chat': lazyHyperModel,
     'hyper-deepseek-chat-think': lazyHyperModel,
     'hyper-deepseek-r1': lazyHyperModel,
+    'hyper-deepseek-v4-flash-free': lazyZenModel,
     'hyper-qwen-coder': lazyHyperModel,
     'hyper-qwen-3-next': lazyHyperModel,
     'hyper-qwen-3-next-think': lazyHyperModel,

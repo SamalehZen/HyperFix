@@ -14,6 +14,9 @@ importers:
       '@ai-sdk/google-vertex':
         specifier: 3.0.136
         version: 3.0.136(zod@4.1.8)
+      '@ai-sdk/openai-compatible':
+        specifier: 1.0.39
+        version: 1.0.39(zod@4.1.8)
       '@ai-sdk/react':
         specifier: 2.0.60
         version: 2.0.60(react@19.2.0)(zod@4.1.8)

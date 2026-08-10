@@ -20,6 +20,10 @@ export const serverEnv = createEnv({
     // during the Vertex migration; remove once all environments are on Vertex.
     GOOGLE_GENERATIVE_AI_API_KEY: z.string().optional(),
 
+    // OpenCode Zen provider (https://opencode.ai/zen). Optional; when set,
+    // the hyper-deepseek-v4-flash-free model routes through OpenCode Zen.
+    OPENCODE_ZEN_API_KEY: z.string().optional(),
+
     DATABASE_URL: z.string().min(1),
     REDIS_URL: z.string().min(1),
     BLOB_READ_WRITE_TOKEN: z.string().min(1),
