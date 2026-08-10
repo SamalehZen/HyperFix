@@ -44,9 +44,8 @@ export const ModelSwitcher: React.FC<ModelSwitcherProps> = React.memo(
 
     const isSubscriptionLoading = useMemo(() => user && !subscriptionData, [user, subscriptionData]);
 
-    const THINK_MODELS = ['hyper-google-think', 'hyper-google-think-v2', 'hyper-google-think-v3'];
     const COMING_SOON_MODELS = new Set(['hyper-google-think-v2', 'hyper-google-think-v3']);
-    const availableModels = useMemo(() => models.filter(m => THINK_MODELS.includes(m.value)), []);
+    const availableModels = useMemo(() => models, []);
 
     const [showUpgradeDialog, setShowUpgradeDialog] = useState(false);
     const [showSignInDialog, setShowSignInDialog] = useState(false);
@@ -364,10 +363,10 @@ export const ModelSwitcher: React.FC<ModelSwitcherProps> = React.memo(
     );
 
     useEffect(() => {
-      if (!THINK_MODELS.includes(selectedModel) || COMING_SOON_MODELS.has(selectedModel)) {
-        setSelectedModel('hyper-google-think');
+      if (!availableModels.some((m) => m.value === selectedModel) || COMING_SOON_MODELS.has(selectedModel)) {
+        setSelectedModel('hyper-default');
       }
-    }, []);
+    }, [availableModels, selectedModel, setSelectedModel]);
 
     useEffect(() => {
       if (isSubscriptionLoading) return;

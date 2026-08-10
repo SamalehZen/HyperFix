@@ -23,6 +23,8 @@ import {
   getModelParameters,
   hasReasoningSupport,
   getModelConfig,
+  hasPdfSupport,
+  hasVisionSupport,
 } from '@/ai/model-config';
 import {
   createStreamId,
@@ -87,7 +89,23 @@ export async function POST(req: Request) {
   const streamId = 'stream-' + uuidv7();
 
   const rawModel = typeof model === 'string' ? model.trim() : '';
-  const resolvedModel = getModelConfig(rawModel) ? rawModel : 'hyper-default';
+  let resolvedModel = getModelConfig(rawModel) ? rawModel : 'hyper-default';
+
+  // Text agents (libeller, cyrus, nomenclature, eanexpert, chat) must not route
+  // through Vertex. If the user picked a pdf/vision model in the ModelSwitcher,
+  // fall back to the OpenCode Zen text model unless we are in the PDF→Excel group
+  // or the current message actually contains image/pdf attachments (which need a
+  // vision-capable model).
+  const hasFileMessage = Array.isArray(messages) && messages.some((msg: any) =>
+    Array.isArray(msg?.parts) &&
+    msg.parts.some((part: any) =>
+      part?.type === 'file' &&
+      (part.mediaType === 'application/pdf' || String(part.mediaType || '').startsWith('image/')),
+    ),
+  );
+  if (group !== 'pdfExcel' && !hasFileMessage && (hasPdfSupport(resolvedModel) || hasVisionSupport(resolvedModel))) {
+    resolvedModel = 'hyper-default';
+  }
 
 
 
