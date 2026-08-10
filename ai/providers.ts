@@ -234,7 +234,7 @@ const lazyZenModel: HyperLanguageModel = {
 // We keep all original model ids/labels for UI parity, but route everything to Gemini Flash.
 export const hyper = customProvider({
   languageModels: {
-    'hyper-default': lazyHyperModel,
+    'hyper-default': lazyZenModel,
     'hyper-nano': lazyHyperModel,
     'hyper-name': lazyHyperModel,
     'hyper-grok-3': lazyHyperModel,
